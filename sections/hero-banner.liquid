@@ -1,10 +1,11 @@
+{{ 'hero-banner.css' | asset_url | stylesheet_tag }}
+
 {%- assign hasBg = false -%}
 
 {% if section.settings.bg_image %}
   {%- assign hasBg = true -%}
   {%- assign bg_image = section.settings.bg_image | img_url: 'master' -%}
 {% endif %}
-
 
 <div class="hero-banner" style="background-color: {{ section.settings.bg_color }}; {%  if hasBg %}background-image: url({{ bg_image }});{% endif %}" >
   <div class="container content-position-{{ section.settings.text_alignment }}">
