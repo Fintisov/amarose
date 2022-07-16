@@ -1,5 +1,8 @@
 {
   "current": {
+    "social_facebook_link": "#",
+    "social_instagram_link": "#",
+    "social_youtube_link": "#",
     "cart_type": "drawer",
     "sections": {
       "announcement-bar": {
@@ -69,33 +72,36 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Products",
+              "menu": "products"
             }
           },
-          "footer-1": {
-            "type": "text",
+          "b6cc11b1-6126-42dc-b7db-2524b9c64b72": {
+            "type": "link_list",
             "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "Learn",
+              "menu": "learn"
+            }
+          },
+          "b9f95d3b-dddd-47c8-a938-72b5b3b3b289": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Support",
+              "menu": "support"
             }
           }
         },
         "block_order": [
           "footer-0",
-          "footer-1"
+          "b6cc11b1-6126-42dc-b7db-2524b9c64b72",
+          "b9f95d3b-dddd-47c8-a938-72b5b3b3b289"
         ],
         "settings": {
-          "color_scheme": "background-1",
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe to our emails",
-          "show_social": false,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
-          "payment_enable": true,
-          "margin_top": 0,
-          "padding_top": 36,
-          "padding_bottom": 36
+          "newsletter_heading": "Subscribe & Save  10% Off Your Next Order",
+          "show_social": true,
+          "copyright": "<p>©️2021 Amarose. All Rights Reserved.<\/p>",
+          "bottom_menu": "footer"
         }
       }
     },
