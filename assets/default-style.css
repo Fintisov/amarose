@@ -1,0 +1,80 @@
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0; }
+  @media screen and (max-width: 992px) {
+    .container {
+      max-width: 720px; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 540px; } }
+  @media screen and (max-width: 576px) {
+    .container {
+      max-width: 100%; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "futura", suns-serif;
+  color: #2A3241;
+  font-weight: 400;
+  line-height: 1.3; }
+
+h1 {
+  font-size: 42px; }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 34px; } }
+  h1.lg {
+    font-size: 48px; }
+  @media screen and (max-width: 767px) {
+    h1.lg {
+      font-size: 32px; } }
+
+h2 {
+  font-size: 40px; }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 30px; } }
+
+h3 {
+  font-size: 32px; }
+  @media screen and (max-width: 767px) {
+    h3 {
+      font-size: 27px; } }
+
+h4 {
+  font-size: 24px; }
+  @media screen and (max-width: 767px) {
+    h4 {
+      font-size: 22px; } }
+
+p {
+  font-family: "futura", suns-serif;
+  color: #2A3241;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5; }
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 16px; } }
+  p.lg {
+    font-size: 22px; }
+  @media screen and (max-width: 767px) {
+    p.lg {
+      font-size: 18px; } }
+  p.sm {
+    font-size: 16px; }
+  @media screen and (max-width: 767px) {
+    p.sm {
+      font-size: 14px; } }
+  p.underline {
+    text-decoration-line: underline; }
+  p.strikethrough {
+    position: relative; }
+  p.caps {
+    text-transform: uppercase; }
+
+a {
+  display: block;
+  width: max-content;
+  margin: 10px; }
