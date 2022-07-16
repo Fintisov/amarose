@@ -13,15 +13,15 @@
 
 // Color
 $black: #2A3241;
-$grey: #5E697E;
-$greyLight: #F1F3F6;
+$midGrey: #5E697E;
+$lightGrey: #F1F3F6;
 $white: #ffffff;
 $pink: #DE3D64;
 $purple: #850B65;
 $rose: #BA3A7D;
-$beige: rgba(255, 187, 171, 0.25);
-$blush: #F08B84;
-$blushLight: #FFBBAB;
+$blush-25: rgba(255, 187, 171, 0.25);
+$roseMid: #F08B84;
+$blush: #FFBBAB;
 $green: #30CD9C;
 $gradientGold: linear-gradient(180deg, #A35B40 0%, #C88264 48.44%, #F3B393 70.31%, #89493B 100%);
 
@@ -133,12 +133,24 @@ p {
 
   &.underline {
     text-decoration-line: underline;
+
+    /*    position: relative;
+        width: max-content;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: black;
+        }*/
   }
 
   &.strikethrough {
-    position: relative;
-
-    //text-decoration-line: line-through;
+    text-decoration-line: line-through;
   }
 
   &.caps {
@@ -151,5 +163,155 @@ p {
 a {
   display: block;
   width: max-content;
-  margin: 10px;
+  margin: 30px 0;
+
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $futura;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $black;
+  padding: 12.5px 24px;
+  border-radius: 60px;
+
+  @include max-screen(767) {
+    font-size: 16px;
+    padding: 9.5px 24px;
+  }
+
+  //button--sm
+  &--sm {
+    padding: 9.5px 32px;
+    font-size: 16px;
+
+    @include max-screen(767) {
+      font-size: 14px;
+      padding: 5px 24px;
+    }
+  }
+
+  //button--lg
+  &--lg {
+    padding: 11.5px 32px;
+    font-size: 22px;
+    line-height: 1.5;
+
+    @include max-screen(767) {
+      font-size: 18px;
+      padding: 12px 24px;
+    }
+  }
+
+  &.primary-button {
+    color: $white;
+    background-color: $rose;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+      transition: 0.3s;
+    }
+  }
+
+  &.secondary-button {
+    background-color: $blush-25;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $rose;
+      transition: 0.3s;
+    }
+  }
+
+  &.outline-button {
+    color: $purple;
+    background-color: $white;
+    border: 1px solid $purple;
+    padding: 11.5px 23px;
+    transition: 0.3s;
+
+    @include max-screen(767) {
+      padding: 8.5px 23px;
+    }
+
+    &.button--sm {
+      padding: 8.5px 31px;
+
+      @include max-screen(767) {
+        padding: 4px 23px;
+      }
+    }
+
+    &.button--lg {
+      padding: 10.5px 31px;
+
+      @include max-screen(767) {
+        padding: 11.5px 23px;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+      transition: 0.3s;
+    }
+  }
+
+  &.disabled-button {
+    color: $midGrey;
+    background-color: $lightGrey;
+    cursor: default;
+
+    &:hover {
+      color: $midGrey;
+    }
+  }
+
+  // button--icon
+  &--icon {
+    svg {
+      margin-right: 10px;
+      @include max-screen(767) {
+        width: 24px;
+        height: 24px;
+      }
+
+      @include max-screen(767) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  // button--arrow
+  &--arrow {
+    svg {
+      margin-right: 10px;
+
+      @include max-screen(767) {
+        width: 14px;
+        height: 14px;
+      }
+      path {
+        stroke: $black;
+        transition: 0.3s;
+      }
+    }
+
+    &:hover {
+      path {
+        stroke: $white;
+        transition: 0.3s;
+      }
+    }
+  }
+
 }
