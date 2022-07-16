@@ -1,4 +1,106 @@
 {
   "current": {
+    "cart_type": "drawer",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "timer": "2022, 09, 01",
+          "content": "<p>Memorial Offer: <strong>55% Off Everything<\/strong> <\/p><p><em>Hurry Up! Use Code:<\/em>MEMORIAL5<\/p>",
+          "button_text": "Shop Now",
+          "button_url": "#"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "2c1dcaa9-81b3-491e-9e32-076211186e20": {
+            "type": "two-boxes",
+            "settings": {
+              "title": "Shop",
+              "text01": "Buy One, Get One! Moisturizer",
+              "text_link01": "Shop Now",
+              "link01": "#",
+              "image01": "shopify:\/\/shop_images\/Card.jpg",
+              "text_alignment01": "top",
+              "text02": "10% OFF Boosting Moisturizer SHOP NOW",
+              "text_link02": "",
+              "link02": "#",
+              "image02": "shopify:\/\/shop_images\/Card_1.jpg",
+              "text_alignment02": "center"
+            }
+          },
+          "70fcdfa0-b2a2-44cc-884b-6157e43e8292": {
+            "type": "one-box",
+            "settings": {
+              "title": "Journal",
+              "image": "shopify:\/\/shop_images\/Thumbnail.png",
+              "top_text": "HOT OFF THE PRESS",
+              "text": "<p>5 Things You Should Absolutely NEVER Try with Vitamin C.<\/p>",
+              "button_text": "Click Here",
+              "button_url": "#"
+            }
+          },
+          "73c1e128-07c3-470f-b005-12b316a6d58f": {
+            "type": "one-box",
+            "settings": {
+              "title": "About",
+              "image": "shopify:\/\/shop_images\/Thumbnail.jpg",
+              "top_text": "",
+              "text": "<p>Find out what makes our products special.<\/p>",
+              "button_text": "The Amarose Touch",
+              "button_url": "#"
+            }
+          }
+        },
+        "block_order": [
+          "2c1dcaa9-81b3-491e-9e32-076211186e20",
+          "70fcdfa0-b2a2-44cc-884b-6157e43e8292",
+          "73c1e128-07c3-470f-b005-12b316a6d58f"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Logo_1.png",
+          "menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "text",
+            "settings": {
+              "heading": "Heading",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": false,
+          "enable_country_selector": true,
+          "enable_language_selector": true,
+          "payment_enable": true,
+          "margin_top": 0,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   }
 }
