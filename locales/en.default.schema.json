@@ -2463,6 +2463,9 @@
         "heading": {
           "label": "Heading"
         },
+        "text": {
+          "label": "text"
+        },
         "cover_image": {
           "label": "Cover image"
         },
