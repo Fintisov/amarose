@@ -990,6 +990,16 @@
         ],
         "default": "inverse",
         "label": "t:settings_schema.badges.settings.sold_out_badge_color_scheme.label"
+      },
+      {
+        "type": "range",
+        "id": "days_new",
+        "min": 0,
+        "max": 300,
+        "step": 3,
+        "unit": "day",
+        "label": "t:settings_schema.global.settings.days_new.label",
+        "default": 30
       }
     ]
   },
