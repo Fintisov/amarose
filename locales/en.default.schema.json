@@ -405,7 +405,7 @@
       }
     },
     "differentiators": {
-      "name": "differentiators",
+      "name": "Differentiators",
       "settings": {
         "title": {
           "label": "Title"
@@ -728,6 +728,9 @@
         },
         "image": {
           "label": "Custom collection image"
+        },
+        "mobile_image": {
+          "label": "Image for mobile"
         },
         "show_description": {
           "label": "Show collection description from the admin"
