@@ -1,82 +1,65 @@
-{%- for block in section.blocks -%}
-  {%- case block.type -%}
-    {%- when 'announcement' -%}
-      <div class="announcement-bar color-{{ block.settings.color_scheme }} gradient" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
-        {%- if block.settings.text != blank -%}
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
-          {%- endif -%}
-              <p class="announcement-bar__message h5">
-                {{ block.settings.text | escape }}
-                {%- if block.settings.link != blank -%}
-                  {% render 'icon-arrow' %}
-                {%- endif -%}
-              </p>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
+{% if section.settings.timer != blank %}
+  <script src="{{ 'timer.js' | asset_url }}" defer="defer"></script>
+{%  endif %}
+
+<div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
+  <div class="container container__announcement-bar">
+    {% if section.settings.timer != blank %}
+      <div class="announcement-timer hidden" data-timer="{{ section.settings.timer }}">
+          <div class="timer__items">
+            <div class="timer__item timer__days">0</div>
+            <div class="timer__item timer__hours">0</div>
+            <div class="timer__item timer__minutes">0</div>
+            <div class="timer__item timer__seconds">0</div>
+          </div>
       </div>
-  {%- endcase -%}
-{%- endfor -%}
+    {%  endif %}
+
+    {% if section.settings.content != blank %}
+      <div class="announcement-message">
+        {{ section.settings.content }}
+      </div>
+    {% endif %}
+
+    <div class="announcement-btn">
+      {% if section.settings.button_url != blank %}
+        <a href="{{ section.settings.button_url }}" class="primary-button">{{ section.settings.button_text }}</a>
+      {% endif %}
+      <button type="button" class="close-button" aria-label="{{ 'accessibility.close' | t }}">
+        {%  render 'icon-close' %}
+      </button>
+    </div>
+  </div>
+</div>
+
 
 {% schema %}
 {
   "name": "t:sections.announcement-bar.name",
-  "max_blocks": 12,
-  "blocks": [
+  "settings": [
     {
-      "type": "announcement",
-      "name": "t:sections.announcement-bar.blocks.announcement.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "default": "Welcome to our store",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
-        },
-        {
-          "type": "select",
-          "id": "color_scheme",
-          "options": [
-            {
-              "value": "accent-1",
-              "label": "t:sections.all.colors.accent_1.label"
-            },
-            {
-              "value": "accent-2",
-              "label": "t:sections.all.colors.accent_2.label"
-            },
-            {
-              "value": "background-1",
-              "label": "t:sections.all.colors.background_1.label"
-            },
-            {
-              "value": "background-2",
-              "label": "t:sections.all.colors.background_2.label"
-            },
-            {
-              "value": "inverse",
-              "label": "t:sections.all.colors.inverse.label"
-            }
-          ],
-          "default": "accent-1",
-          "label": "t:sections.all.colors.label"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
-        }
-      ]
+      "type": "text",
+      "id": "timer",
+      "label": "Timer",
+      "info": "2023, 08, 01"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "default": "<p>Welcome to our store</p>",
+      "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "default": "Shop Now",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
     }
-  ],
-  "default": {
-    "blocks": [
-      {
-        "type": "announcement"
-      }
-    ]
-  }
+  ]
 }
 {% endschema %}
