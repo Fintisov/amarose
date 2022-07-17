@@ -404,6 +404,24 @@
         "name": "Apps"
       }
     },
+    "differentiators": {
+      "name": "differentiators",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "text": {
+          "label": "Text"
+        },
+        "list": {
+          "label": "Item"
+        },
+        "list_item": {
+          "title": "Title",
+          "icon_name": "Icon svg code"
+        }
+      }
+    },
     "collage": {
       "name": "Collage",
       "settings": {
