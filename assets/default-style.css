@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   max-width: 1180px;
   width: 100%;
@@ -188,4 +189,126 @@ a {
       transition: 0.3s; }
   .button--arrow:hover path {
     stroke: #ffffff;
+    transition: 0.3s; }
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  /* стили при наведении курсора на checkbox */
+  /* стили для активного чекбокса (при нажатии на него) */
+  /* стили для чекбокса, находящегося в фокусе */
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии disabled */ }
+  .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+    background-color: rgba(255, 187, 171, 0.25);
+    transition: 0.3s; }
+  .custom-checkbox > input:not(:disabled):active + span::before {
+    background-color: #2A3241;
+    transition: 0.3s; }
+  .custom-checkbox > input:focus + span::before {
+    background-color: rgba(255, 187, 171, 0.25);
+    transition: 0.3s; }
+  .custom-checkbox > input:focus:not(:checked) + span::before {
+    background-color: #ffffff;
+    transition: 0.3s; }
+  .custom-checkbox > input:checked + span::before {
+    background-color: #2A3241;
+    background-image: url("checked.svg");
+    background-size: cover;
+    background-position: center; }
+  .custom-checkbox > input:disabled + span {
+    color: #5E697E; }
+    .custom-checkbox > input:disabled + span:before {
+      color: #F1F3F6;
+      background-color: #F1F3F6;
+      cursor: default; }
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+  display: inline-flex;
+  align-items: baseline;
+  user-select: none;
+  font-family: "futura", suns-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #2A3241;
+  /* создание в label псевдоэлемента before со следующими стилями */ }
+  .custom-checkbox > span:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #5E697E;
+    border-radius: 5px;
+    margin-right: 8px;
+    background-color: #ffffff;
+    transition: 0.3s; }
+
+/* для элемента input c type="radio" */
+.custom-radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  /* стили при наведении курсора на радио */
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  /* стили для радиокнопки, находящейся в фокусе */
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  /* стили для радиокнопки, находящейся в состоянии disabled */ }
+  .custom-radio > input:not(:disabled):not(:checked) + span:hover::after {
+    background-color: rgba(255, 187, 171, 0.25);
+    transition: 0.3s; }
+  .custom-radio > input:not(:disabled):active + span::after {
+    background-color: rgba(255, 187, 171, 0.25);
+    transition: 0.3s; }
+  .custom-radio > input:focus + span::after {
+    background-color: rgba(255, 187, 171, 0.25);
+    transition: 0.3s; }
+  .custom-radio > input:focus:not(:checked) + span::after {
+    background-color: rgba(255, 187, 171, 0.25);
+    transition: 0.3s; }
+  .custom-radio > input:checked + span::after {
+    background-color: #2A3241;
+    transition: 0.3s; }
+  .custom-radio > input:disabled + span {
+    color: #5E697E; }
+    .custom-radio > input:disabled + span:after {
+      background-color: #F1F3F6;
+      transition: 0.3s; }
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio > span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: "futura", suns-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #2A3241;
+  /* создание в label псевдоэлемента  before и after со следующими стилями */ }
+  .custom-radio > span:before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #5E697E;
+    border-radius: 50%;
+    background-color: #F1F3F6;
+    margin-right: 8px; }
+  .custom-radio > span:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
     transition: 0.3s; }
