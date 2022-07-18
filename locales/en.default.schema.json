@@ -332,6 +332,30 @@
           "label": "Vertical space"
         }
       }
+    },
+    "ingredients": {
+      "name": "Ingredients",
+      "settings": {
+        "headers": {
+          "header_1": "Ingredient 1",
+          "header_2": "Ingredient 2",
+          "header_3": "Ingredient 3",
+          "header_4": "Ingredient 4",
+          "header_5": "Ingredient 5",
+          "header_6": "Ingredient 6",
+          "header_7": "Ingredient 7",
+          "header_8": "Ingredient 8",
+          "header_9": "Ingredient 9",
+          "header_10": "Ingredient 10",
+          "header_11": "Ingredient 11",
+          "header_12": "Ingredient 12"
+        },
+        "ingredients_content": {
+          "title": "Title",
+          "description": "Description",
+          "icon": "Svg icon code"
+        }
+      }
     }
   },
   "sections": {
@@ -824,6 +848,24 @@
       },
       "presets": {
         "name": "Grid collection"
+      }
+    },
+    "ingredients": {
+      "name": "Ingredients",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "button": {
+          "label": "Button text",
+          "url": "Button Url"
+        }
+      },
+      "presets": {
+        "name": "Ingredients"
       }
     },
     "featured-product": {
