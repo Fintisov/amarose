@@ -1200,5 +1200,248 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.ingredients.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_1"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_1",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title",
+        "default": "Vitamin A"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_1",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description",
+        "default": "Also called Retinol, improves collagen productions, improves the appearance of lines & wrinkles."
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_1",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_2"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_2",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title",
+        "default": "Vitamin B"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_2",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description",
+        "default": "Also called Niacinamide, improves uneven skin tone, and reveals your skin’s natural radiance"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_2",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_3"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_3",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title",
+        "default": "Vitamin C"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_3",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description",
+        "default": "This vital nutrient provides antioxidant protection, and promotes collagen production."
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_3",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_4"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_4",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title",
+        "default": "Vitamin E"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_4",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description",
+        "default": "Supports cells regeneration and delivers antioxidant and anti-inflammatory protection."
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_4",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_5"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_5",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title",
+        "default": "Caffeine"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_5",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description",
+        "default": "Increases microcirculation helps reduce inflammation and puffiness, while tightening the skin, and reducing wrinkles."
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_5",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_6"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_6",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_6",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_6",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_7"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_7",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_7",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_7",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_8"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_8",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_8",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_8",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_9"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_9",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_9",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_9",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_10"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_10",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_10",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_10",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_11"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_11",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_11",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_11",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.ingredients.settings.headers.header_12"
+      },
+      {
+        "type": "text",
+        "id": "ingredient_title_12",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.title"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_description_12",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.description"
+      },
+      {
+        "type": "textarea",
+        "id": "ingredient_icon_12",
+        "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
+      }
+    ]
   }
 ]
