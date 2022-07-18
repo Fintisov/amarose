@@ -4,15 +4,20 @@
 
 <div class="ingredients">
   <div class="ingredients__header">
-    {% if section.settings.collection.title != blank %}
+    {% if section.settings.title != blank %}
       <h2 class="ingredients__title">
-        {{ section.settings.collection.title | escape }}
+        {{ section.settings.title | escape }}
       </h2>
     {% endif %}
-    {% if section.settings.collection.title != blank %}
-      <h2 class="ingredients__title">
-        {{ section.settings.collection.title | escape }}
-      </h2>
+    {% if section.settings.description != blank %}
+      <p class="ingredients__text">
+        {{ section.settings.description | escape }}
+      </p>
+    {% endif %}
+    {% if section.settings.button_text != blank %}
+      <a href="{{ section.settings.button_url | escape }}" class="ingredients__btn">
+        {{ section.settings.button_text | escape }}
+      </a>
     {% endif %}
   </div>
   {% render 'ingredients-list' %}
