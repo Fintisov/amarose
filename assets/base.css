@@ -870,8 +870,7 @@ details[open] .modal-overlay::after {
   box-shadow: none;
 }
 
-.text-area,
-.select {
+.text-area {
   display: flex;
   position: relative;
   width: 100%;
@@ -950,15 +949,6 @@ details[open] .modal-overlay::after {
   letter-spacing: 0.04rem;
 }
 
-.field__input:focus,
-.field__input:not(:placeholder-shown),
-.field__input:-webkit-autofill,
-.customer .field input:focus,
-.customer .field input:not(:placeholder-shown),
-.customer .field input:-webkit-autofill {
-  padding: 2.2rem 1.5rem 0.8rem 2rem;
-  margin: var(--inputs-border-width);
-}
 
 .field__input::-webkit-search-cancel-button,
 .customer .field input::-webkit-search-cancel-button {

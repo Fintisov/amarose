@@ -16,14 +16,14 @@ $black: #2A3241;
 $midGrey: #5E697E;
 $lightGrey: #F1F3F6;
 $white: #ffffff;
-$pink: #DE3D64;
+$errorState: #DE3D64;
 $purple: #850B65;
 $rose: #BA3A7D;
 $blush-25: rgba(255, 187, 171, 0.25);
 $roseMid: #F08B84;
 $blush: #FFBBAB;
 $green: #30CD9C;
-$gradientGold: linear-gradient(180deg, #A35B40 0%, #C88264 48.44%, #F3B393 70.31%, #89493B 100%);
+$goldGradient: linear-gradient(180deg, #A35B40 0%, #C88264 48.44%, #F3B393 70.31%, #89493B 100%);
 
 // Fonts
 $futura: "futura", suns-serif;
@@ -51,6 +51,9 @@ $futura: "futura", suns-serif;
 }
 
 // ___ Typography ___
+* {
+  font-family: $futura;
+}
 
 h1,
 h2,
@@ -158,13 +161,21 @@ p {
   }
 }
 
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
 // ___ Elements ___
 
 a {
-  display: block;
-  width: max-content;
-  margin: 30px 0;
-
   text-decoration: none;
 }
 
@@ -172,6 +183,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: max-content;
   font-family: $futura;
   font-size: 18px;
   font-weight: 500;
@@ -185,8 +197,7 @@ a {
     padding: 9.5px 24px;
   }
 
-  //button--sm
-  &--sm {
+  &.button--sm {
     padding: 9.5px 32px;
     font-size: 16px;
 
@@ -196,8 +207,7 @@ a {
     }
   }
 
-  //button--lg
-  &--lg {
+  &.button--lg {
     padding: 11.5px 32px;
     font-size: 22px;
     line-height: 1.5;
@@ -275,14 +285,21 @@ a {
     }
   }
 
-  // button--icon
-  &--icon {
+  &.button-icon {
+    padding: 7.5px 32px;
+    font-size: 22px;
+    line-height: 1.5;
+
+    @include max-screen(767) {
+      padding: 9px 30px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
     svg {
       margin-right: 10px;
-      @include max-screen(767) {
-        width: 24px;
-        height: 24px;
-      }
+      width: 24px;
+      height: 24px;
 
       @include max-screen(767) {
         width: 14px;
@@ -291,20 +308,32 @@ a {
     }
   }
 
-  // button--arrow
-  &--arrow {
+  &.button-icon--sm {
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 1.28;
+
+    @include max-screen(767) {
+      padding: 5px 30px 6px;
+      font-size: 14px;
+    }
+
     svg {
       margin-right: 10px;
+      width: 24px;
+      height: 24px;
 
       @include max-screen(767) {
         width: 14px;
         height: 14px;
       }
+    }
+  }
 
-      path {
-        stroke: $black;
-        transition: 0.3s;
-      }
+  &.button--arrow {
+    path {
+      stroke: $black;
+      transition: 0.3s;
     }
 
     &:hover {
@@ -314,7 +343,6 @@ a {
       }
     }
   }
-
 }
 
 // ====== custom-checkbox
@@ -360,6 +388,7 @@ a {
   /* стили для чекбокса, находящегося в состоянии disabled */
   &:disabled + span {
     color: $midGrey;
+    cursor: not-allowed;
 
     &:before {
       color: $lightGrey;
@@ -393,7 +422,6 @@ a {
     transition: 0.3s;
   }
 }
-
 
 // ====== custom-radio
 
@@ -436,6 +464,7 @@ a {
   /* стили для радиокнопки, находящейся в состоянии disabled */
   &:disabled + span {
     color: $midGrey;
+    cursor: not-allowed;
 
     &:after {
       background-color: $lightGrey;
@@ -484,3 +513,153 @@ a {
   }
 }
 
+.select {
+  width: max-content;
+  border-radius: 30px;
+  background-color: $lightGrey;
+  transition: 0.3s;
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    padding: 13px 44px 13px 20px;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    outline: none;
+    background-color: transparent;
+    background-image: url("arrow-select.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    min-width: 247px;
+    max-width: max-content;
+    transition: 0.3s;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+    }
+
+    &:focus {
+      border: 1px solid $roseMid;
+      transition: 0.3s;
+    }
+  }
+
+  &:hover {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+}
+
+.field {
+  .field__input {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    padding: 20px 40px 5px 20px;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    background-color: $lightGrey;
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $midGrey;
+    transition: background-color 0.3s, border 0.3s;
+
+    @include max-screen(767) {
+      height: 40px;
+      font-size: 16px;
+      padding: 16px 34px 1px 20px;
+    }
+
+    &:focus {
+      border-radius: 30px;
+
+      & ~ .field__label {
+        font-size: 10px;
+      }
+    }
+
+    &:hover {
+      background-color: $blush-25;
+    }
+
+    &:focus {
+      border: 1px solid $roseMid;
+      background-color: $lightGrey;
+
+      ~ .field__label {
+        top: 12px;
+        font-size: 10px;
+      }
+    }
+
+    &:disabled:hover {
+      background-color: $lightGrey;
+      cursor: not-allowed;
+    }
+
+    &:not(:placeholder-shown) {
+
+
+      ~ .field__label {
+        top: 12px;
+        font-size: 10px;
+      }
+    }
+
+    &.validate-error {
+      border: 1px solid $errorState;
+      background-image: url("exit-mid_grey.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      transition: background-image 0.3s;
+
+      @include max-screen(767) {
+        -webkit-background-size: 14px;
+        background-size: 14px;
+      }
+    }
+
+    &.validate-true {
+      border: 1px solid $green;
+      background-image: url("checked-green.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      transition: background-image 0.3s;
+
+      @include max-screen(767) {
+        -webkit-background-size: 14px;
+        background-size: 14px;
+      }
+    }
+  }
+
+  .field__label {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $midGrey;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    @include max-screen(767) {
+      font-size: 14px;
+    }
+  }
+}
