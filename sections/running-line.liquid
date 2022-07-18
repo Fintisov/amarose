@@ -1,0 +1,44 @@
+<section class="running-line">
+  <h2 class="visually-hidden">{{ section.settings.title }}</h2>
+  <ul class="running-line__list">
+    {% for block in section.blocks %}
+      <li class="running-line__list-item">
+        {{ block.settings.running_line_item }}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+
+{% schema %}
+{
+  "name": "t:sections.running_line.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Running line",
+      "label": "t:sections.running_line.settings.title.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.running_line.settings.blocks.name",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "running_line_item",
+          "default": "NO ARTIFICIAL COLORS",
+          "label": "t:sections.running_line.settings.blocks.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.running_line.presets.name"
+    }
+  ]
+}
+{% endschema %}

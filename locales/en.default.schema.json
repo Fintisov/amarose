@@ -868,6 +868,21 @@
         "name": "Ingredients"
       }
     },
+    "running_line": {
+      "name": "Running line",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "Running line item",
+          "label": "Running line item"
+        }
+      },
+      "presets": {
+        "name": "Running line"
+      }
+    },
     "featured-product": {
       "name": "Featured product",
       "blocks": {
