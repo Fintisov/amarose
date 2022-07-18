@@ -883,6 +883,47 @@
         "name": "Running line"
       }
     },
+    "how_it_works": {
+      "name": "How it works",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "header": {
+          "content": "Product card"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button",
+          "info": "Optimal with popup or drawer cart type."
+        },
+        "blocks": {
+          "name": "Product",
+          "label": "Product"
+        }
+      },
+      "presets": {
+        "name": "How it works"
+      }
+    },
     "featured-product": {
       "name": "Featured product",
       "blocks": {
