@@ -662,9 +662,89 @@ a {
       font-size: 14px;
     }
   }
+}
 
-  &.newsletter {
-    //todo__fin закончить поле newsletter-input
+.field-newsletter {
+  position: relative;
+  border-radius: 30px;
+
+  &:hover {
+    > .field-newsletter__input {
+      border: 1px solid $blush;
+    }
+
+    > .field-newsletter__button {
+      background-color: $blush-25;
+    }
+  }
+
+  .field-newsletter__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
+  .field-newsletter__input {
+    width: 100%;
+    padding: 11.5px 70px 11.5px 20px;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $midGrey;
+    transition: border 0.3s;
+
+    &:focus {
+      border: 1px solid $blush;
+    }
+
+    &.validate-error {
+      border: 1px solid $errorState;
+    }
+
+    &:not(:placeholder-shown) {
+      color: $black;
+    }
+  }
+
+  .field-newsletter__button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 62px;
+    height: calc(100% - 2px);
+    padding: 0;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      path {
+        transition: fill 0.3s;
+      }
+    }
+
+    &:active {
+      background-color: $rose;
+
+      path {
+        fill: $white;
+      }
+    }
   }
 }
 

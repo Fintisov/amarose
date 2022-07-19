@@ -8,10 +8,14 @@
 <div class=""><label class="custom-radio"> <input name="test" type="radio" value="a1" checked="checked"/> <span>Option Text</span>
 </label> <label class="custom-radio"> <input name="test" type="radio" value="a3"/> <span>Option Text</span> </label>
   <label class="custom-radio"> <input name="test" type="radio" value="a3"/> <span>Option Text</span> </label> <label
-    class="custom-radio"> <input name="test" type="radio" value="a4" disabled="disabled"/> <span>Option Text</span>
-  </label></div>
+    class="custom-radio"> <input name="test" type="radio" value="a4" disabled="disabled"/>
+    <span>Option Text</span>
+  </label>
+</div>
 <br/><br/>
+
 <p class="lg fw-500">select</p>
+
 <div>
   <div class="select"><select>
     <option value="Option 1">Option 1</option>
@@ -22,7 +26,9 @@
     <option value="Option length">Option that has too long of a value to fit</option>
   </select></div>
 </div>
+
 <br/>
+
 <div>
   <div class="select"><select disabled="disabled">
     <option value="Option 1">Option 1</option>
@@ -33,15 +39,17 @@
     <option value="Option length">Option that has too long of a value to fit</option>
   </select></div>
 </div>
+
 <br/><br/>
+
 <p class="lg fw-500">input</p>
 
-<div class="field newsletter">
-  <input class="field__input " data-verification="" id="NewsletterForm--footer" type="email"
+<div class="field-newsletter">
+  <label class="field-newsletter__label" for="NewsletterForm--footer"> Email </label>
+  <input class="field-newsletter__input " data-verification id="NewsletterForm--footer" type="email"
          name="contact[email]" value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email"
-         placeholder="Email" required=""/>
-  <label class="field__label" for="NewsletterForm--footer"> Email </label>
-  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe"
+         placeholder="Enter your email" required=""/>
+  <button type="submit" class="field-newsletter__button" name="commit" id="Subscribe"
           aria-label="Subscribe">
     <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -57,7 +65,7 @@
 </div>
 
 <div class="field">
-  <input class="field__input" id="login" type="text" data-verification="" name="" placeholder="Login"/>
+  <input class="field__input" id="login" type="text" data-verification name="" placeholder="Login"/>
   <label class="field__label" for="login">Login</label>
 </div>
 
