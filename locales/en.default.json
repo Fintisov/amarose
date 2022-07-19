@@ -72,9 +72,14 @@
       "external": "Opens external website."
     },
     "loading": "Loading...",
-    "total_reviews": "total reviews",
+    "total_reviews": {
+      "one": "review",
+      "other": "reviews"
+    },
     "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-    "collapsible_content_title": "Collapsible content"
+    "collapsible_content_title": "Collapsible content",
+    "hello": "Hello!",
+    "new_customer": "New Customer?"
   },
   "blogs": {
     "article": {
@@ -102,7 +107,8 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Add to cart",
+      "add_to_cart": "Add to Bag",
+      "add_to_cart_link": "View product",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",
@@ -142,6 +148,7 @@
       "share": "Share this product",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
+      "new_tag": "New",
       "vendor": "Vendor",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",
@@ -341,6 +348,7 @@
     },
     "log_in": "Log in",
     "log_out": "Log out",
+    "sign_up": "Sign Up",
     "login_page": {
       "cancel": "Cancel",
       "create_account": "Create account",

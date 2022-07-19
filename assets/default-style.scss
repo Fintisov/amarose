@@ -1,0 +1,750 @@
+// Mixin
+@mixin max-screen($res) {
+  @media screen and (max-width: $res + px) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res + "px") {
+    @content;
+  }
+}
+
+// Color
+$black: #2A3241;
+$midGrey: #5E697E;
+$lightGrey: #F1F3F6;
+$white: #ffffff;
+$errorState: #DE3D64;
+$purple: #850B65;
+$rose: #BA3A7D;
+$blush-25: rgba(255, 187, 171, 0.25);
+$roseMid: #F08B84;
+$blush: #FFBBAB;
+$green: #30CD9C;
+$goldGradient: linear-gradient(180deg, #A35B40 0%, #C88264 48.44%, #F3B393 70.31%, #89493B 100%);
+
+// Fonts
+$futura: "futura", suns-serif;
+
+//================= Style ==============
+
+.container {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+
+
+  @include max-screen(992) {
+    max-width: 720px;
+  }
+
+  @include max-screen(768) {
+    max-width: 540px;
+  }
+
+  @include max-screen(576) {
+    max-width: 100%;
+  }
+}
+
+// ___ Typography ___
+* {
+  font-family: $futura;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $futura;
+  color: $black;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 42px;
+
+  @include max-screen(767) {
+    font-size: 34px;
+  }
+
+  &.lg {
+    font-size: 48px;
+
+    @include max-screen(767) {
+      font-size: 32px;
+    }
+  }
+}
+
+h2 {
+  font-size: 40px;
+
+  @include max-screen(767) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+
+  @include max-screen(767) {
+    font-size: 27px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+
+  @include max-screen(767) {
+    font-size: 22px;
+  }
+}
+
+p {
+  font-family: $futura;
+  color: $black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  @include max-screen(767) {
+    font-size: 16px;
+  }
+
+  &.lg {
+    font-size: 22px;
+
+    @include max-screen(767) {
+      font-size: 18px;
+    }
+  }
+
+  &.sm {
+    font-size: 16px;
+
+    @include max-screen(767) {
+      font-size: 14px;
+    }
+  }
+
+  &.underline {
+    text-decoration-line: underline;
+
+    /*    position: relative;
+        width: max-content;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: black;
+        }*/
+  }
+
+  &.strikethrough {
+    text-decoration-line: line-through;
+  }
+
+  &.caps {
+    text-transform: uppercase;
+  }
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+// ___ Elements ___
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  font-family: $futura;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $black;
+  padding: 12.5px 24px;
+  border-radius: 60px;
+
+  @include max-screen(767) {
+    font-size: 16px;
+    padding: 9.5px 24px;
+  }
+
+  &.button--sm {
+    padding: 9.5px 32px;
+    font-size: 16px;
+
+    @include max-screen(767) {
+      font-size: 14px;
+      padding: 5px 24px;
+    }
+  }
+
+  &.button--lg {
+    padding: 11.5px 32px;
+    font-size: 22px;
+    line-height: 1.5;
+
+    @include max-screen(767) {
+      font-size: 18px;
+      padding: 12px 24px;
+    }
+  }
+
+  &.primary-button {
+    color: $white;
+    background-color: $rose;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+      transition: 0.3s;
+    }
+  }
+
+  &.secondary-button {
+    background-color: $blush-25;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $rose;
+      transition: 0.3s;
+    }
+  }
+
+  &.outline-button {
+    color: $purple;
+    background-color: $white;
+    border: 1px solid $purple;
+    padding: 11.5px 23px;
+    transition: 0.3s;
+
+    @include max-screen(767) {
+      padding: 8.5px 23px;
+    }
+
+    &.button--sm {
+      padding: 8.5px 31px;
+
+      @include max-screen(767) {
+        padding: 4px 23px;
+      }
+    }
+
+    &.button--lg {
+      padding: 10.5px 31px;
+
+      @include max-screen(767) {
+        padding: 11.5px 23px;
+      }
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+      transition: 0.3s;
+    }
+  }
+
+  &.disabled-button {
+    color: $midGrey;
+    background-color: $lightGrey;
+    cursor: default;
+
+    &:hover {
+      color: $midGrey;
+    }
+  }
+
+  &.button-icon {
+    padding: 7.5px 32px;
+    font-size: 22px;
+    line-height: 1.5;
+
+    @include max-screen(767) {
+      padding: 9px 30px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    svg {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+
+      @include max-screen(767) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &.button-icon--sm {
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 1.28;
+
+    @include max-screen(767) {
+      padding: 5px 30px 6px;
+      font-size: 14px;
+    }
+
+    svg {
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+
+      @include max-screen(767) {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &.button--arrow {
+    path {
+      stroke: $black;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      path {
+        stroke: $white;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+// ====== custom-checkbox
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  /* стили при наведении курсора на checkbox */
+  &:not(:disabled):not(:checked) + span:hover::before {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+
+  /* стили для активного чекбокса (при нажатии на него) */
+  &:not(:disabled):active + span::before {
+    background-color: $black;
+    transition: 0.3s;
+  }
+
+  /* стили для чекбокса, находящегося в фокусе */
+  &:focus + span::before {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  &:focus:not(:checked) + span::before {
+    background-color: $white;
+    transition: 0.3s;
+  }
+
+  /* стили для чекбокса, находящегося в состоянии checked */
+  &:checked + span::before {
+    background-color: $black;
+    background-image: url("checked.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  &:disabled + span {
+    color: $midGrey;
+    cursor: not-allowed;
+
+    &:before {
+      color: $lightGrey;
+      background-color: $lightGrey;
+      cursor: default;
+    }
+  }
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox > span {
+  display: inline-flex;
+  align-items: baseline;
+  user-select: none;
+  font-family: $futura;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $black;
+
+  /* создание в label псевдоэлемента before со следующими стилями */
+  &:before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $midGrey;
+    border-radius: 5px;
+    margin-right: 8px;
+    background-color: $white;
+    transition: 0.3s;
+  }
+}
+
+// ====== custom-radio
+
+/* для элемента input c type="radio" */
+.custom-radio > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  /* стили при наведении курсора на радио */
+  &:not(:disabled):not(:checked) + span:hover::after {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  &:not(:disabled):active + span::after {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+
+  /* стили для радиокнопки, находящейся в фокусе */
+  &:focus + span::after {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  &:focus:not(:checked) + span::after {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  &:checked + span::after {
+    background-color: $black;
+    transition: 0.3s;
+  }
+
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  &:disabled + span {
+    color: $midGrey;
+    cursor: not-allowed;
+
+    &:after {
+      background-color: $lightGrey;
+      transition: 0.3s;
+    }
+  }
+
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio > span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: $futura;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $black;
+
+  /* создание в label псевдоэлемента  before и after со следующими стилями */
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid $midGrey;
+    border-radius: 50%;
+    background-color: $lightGrey;
+    margin-right: 8px;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: $white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+}
+
+.select {
+  width: max-content;
+  border-radius: 30px;
+  background-color: $lightGrey;
+  transition: 0.3s;
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    padding: 13px 44px 13px 20px;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    outline: none;
+    background-color: transparent;
+    background-image: url("arrow-select.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    min-width: 247px;
+    max-width: max-content;
+    transition: 0.3s;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+
+    }
+
+    &:focus {
+      border: 1px solid $roseMid;
+      transition: 0.3s;
+    }
+  }
+
+  &:hover {
+    background-color: $blush-25;
+    transition: 0.3s;
+  }
+}
+
+.field {
+  .field__input {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    padding: 20px 40px 5px 20px;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    background-color: $lightGrey;
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $midGrey;
+    transition: background-color 0.3s, border 0.3s;
+
+    @include max-screen(767) {
+      height: 40px;
+      font-size: 16px;
+      padding: 16px 34px 1px 20px;
+    }
+
+    &:focus {
+      border-radius: 30px;
+
+      & ~ .field__label {
+        font-size: 10px;
+      }
+    }
+
+    &:hover {
+      background-color: $blush-25;
+    }
+
+    &:focus {
+      border: 1px solid $roseMid;
+      background-color: $lightGrey;
+
+      ~ .field__label {
+        top: 12px;
+        font-size: 10px;
+      }
+    }
+
+    &:disabled:hover {
+      background-color: $lightGrey;
+      cursor: not-allowed;
+    }
+
+    &:not(:placeholder-shown) {
+
+
+      ~ .field__label {
+        top: 12px;
+        font-size: 10px;
+      }
+    }
+
+    &.validate-error {
+      border: 1px solid $errorState;
+      background-image: url("exit-mid_grey.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      transition: background-image 0.3s;
+
+      @include max-screen(767) {
+        -webkit-background-size: 14px;
+        background-size: 14px;
+      }
+    }
+
+    &.validate-true {
+      border: 1px solid $green;
+      background-image: url("checked-green.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      transition: background-image 0.3s;
+
+      @include max-screen(767) {
+        -webkit-background-size: 14px;
+        background-size: 14px;
+      }
+    }
+  }
+
+  .field__label {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $midGrey;
+    top: 50%;
+    transform: translateY(-50%);
+
+
+    @include max-screen(767) {
+      font-size: 14px;
+    }
+  }
+}
+
+.field-newsletter {
+  position: relative;
+  border-radius: 30px;
+
+  &:hover {
+    > .field-newsletter__input {
+      border: 1px solid $blush;
+    }
+
+    > .field-newsletter__button {
+      background-color: $blush-25;
+    }
+  }
+
+  .field-newsletter__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
+  .field-newsletter__input {
+    width: 100%;
+    padding: 11.5px 70px 11.5px 20px;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $midGrey;
+    transition: border 0.3s;
+
+    &:focus {
+      border: 1px solid $blush;
+    }
+
+    &.validate-error {
+      border: 1px solid $errorState;
+    }
+
+    &:not(:placeholder-shown) {
+      color: $black;
+    }
+  }
+
+  .field-newsletter__button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 62px;
+    height: calc(100% - 2px);
+    padding: 0;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      path {
+        transition: fill 0.3s;
+      }
+    }
+
+    &:active {
+      background-color: $rose;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
+

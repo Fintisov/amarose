@@ -14,6 +14,9 @@
         "corner_radius": {
           "label": "Corner radius"
         },
+        "days_new": {
+          "label": "Number of days product is new"
+        },
         "horizontal_offset": {
           "label": "Horizontal offset"
         },
@@ -329,6 +332,30 @@
           "label": "Vertical space"
         }
       }
+    },
+    "ingredients": {
+      "name": "Ingredients",
+      "settings": {
+        "headers": {
+          "header_1": "Ingredient 1",
+          "header_2": "Ingredient 2",
+          "header_3": "Ingredient 3",
+          "header_4": "Ingredient 4",
+          "header_5": "Ingredient 5",
+          "header_6": "Ingredient 6",
+          "header_7": "Ingredient 7",
+          "header_8": "Ingredient 8",
+          "header_9": "Ingredient 9",
+          "header_10": "Ingredient 10",
+          "header_11": "Ingredient 11",
+          "header_12": "Ingredient 12"
+        },
+        "ingredients_content": {
+          "title": "Title",
+          "description": "Description",
+          "icon": "Svg icon code"
+        }
+      }
     }
   },
   "sections": {
@@ -399,6 +426,24 @@
       },
       "presets": {
         "name": "Apps"
+      }
+    },
+    "differentiators": {
+      "name": "Differentiators",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "text": {
+          "label": "Text"
+        },
+        "list": {
+          "label": "Item"
+        },
+        "list_item": {
+          "title": "Title",
+          "icon_name": "Icon svg code"
+        }
       }
     },
     "collage": {
@@ -694,6 +739,234 @@
       },
       "presets": {
         "name": "Featured collection"
+      }
+    },
+    "grid-collection": {
+      "name": "Grid collection",
+      "settings": {
+        "title": {
+          "label": "Custom collection Heading"
+        },
+        "description": {
+          "label": "Custom collection Description"
+        },
+        "image": {
+          "label": "Custom collection image"
+        },
+        "mobile_image": {
+          "label": "Image for mobile"
+        },
+        "show_description": {
+          "label": "Show collection description from the admin"
+        },
+        "description_style": {
+          "label": "Description style",
+          "options__1": {
+            "label": "Body"
+          },
+          "options__2": {
+            "label": "Subtitle"
+          },
+          "options__3": {
+            "label": "Uppercase"
+          }
+        },
+        "collection": {
+          "label": "Collection"
+        },
+        "products_to_show": {
+          "label": "Maximum products to show"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "show_view_all": {
+          "label": "Enable \"View all\" if collection has more products than shown"
+        },
+        "view_all_style": {
+          "label": "\"View all\" style",
+          "options__1": {
+            "label": "Link"
+          },
+          "options__2": {
+            "label": "Outline button"
+          },
+          "options__3": {
+            "label": "Solid button"
+          }
+        },
+        "enable_desktop_slider": {
+          "label": "Enable carousel on desktop"
+        },
+        "full_width": {
+          "label": "Make products full width"
+        },
+        "header": {
+          "content": "Product card"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_vendor": {
+          "label": "Show vendor"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button",
+          "info": "Optimal with popup or drawer cart type."
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "Enable swipe on mobile"
+        }
+      },
+      "presets": {
+        "name": "Grid collection"
+      }
+    },
+    "ingredients": {
+      "name": "Ingredients",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "button": {
+          "label": "Button text",
+          "url": "Button Url"
+        }
+      },
+      "presets": {
+        "name": "Ingredients"
+      }
+    },
+    "search": {
+      "name": "Search",
+      "settings": {
+        "title": {
+          "label": "Title"
+        }
+      },
+      "presets": {
+        "name": "Search"
+      }
+    },
+    "block_links": {
+      "name": "Block links",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "Block link",
+          "title": "Title",
+          "url": "URL",
+          "icon": "Default icon",
+          "image": "Image"
+        }
+      },
+      "presets": {
+        "name": "Block links"
+      }
+    },
+    "faq_list": {
+      "name": "FAQ list",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "FAQ list item",
+          "question": "Question",
+          "answer": "Answer"
+        }
+      },
+      "presets": {
+        "name": "FAQ list"
+      }
+    },
+    "running_line": {
+      "name": "Running line",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "Running line item",
+          "label": "Running line item"
+        }
+      },
+      "presets": {
+        "name": "Running line"
+      }
+    },
+    "how_it_works": {
+      "name": "How it works",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "header": {
+          "content": "Product card"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button",
+          "info": "Optimal with popup or drawer cart type."
+        },
+        "blocks": {
+          "name": "Product",
+          "label": "Product"
+        }
+      },
+      "presets": {
+        "name": "How it works"
       }
     },
     "featured-product": {
@@ -2335,6 +2608,9 @@
       "settings": {
         "heading": {
           "label": "Heading"
+        },
+        "text": {
+          "label": "text"
         },
         "cover_image": {
           "label": "Cover image"

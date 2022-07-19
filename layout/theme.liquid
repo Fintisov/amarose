@@ -30,6 +30,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'form-script.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
     {%- liquid
@@ -194,6 +195,8 @@
       }
     {% endstyle %}
 
+    {{ 'fonts.css' | asset_url | stylesheet_tag }}
+    {{ 'default-style.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
@@ -222,13 +225,14 @@
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
-
     {% section 'announcement-bar' %}
     {% section 'header' %}
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
 
+    {% section 'question-section' %}
     {% section 'footer' %}
 
     <ul hidden>
@@ -268,5 +272,15 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script>
+      function initFreshChat() {
+        window.fcWidget.init({
+          token: "d4ec65b0-6378-47e4-90b3-c241d5eeb7d4",
+          host: "https://wchat.eu.freshchat.com",
+        });
+      }
+      function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.eu.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+    </script>
   </body>
 </html>
