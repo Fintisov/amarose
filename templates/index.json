@@ -52,6 +52,35 @@
         "text": "All our products are made with care - using only vegan-friendly, high quality ingredients - and never tested on animals."
       }
     },
+    "16582582924f93d67a": {
+      "type": "video",
+      "settings": {
+        "heading": "Formulated to provide skin nutrition for optimal skin health.",
+        "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
+        "cover_image": "shopify:\/\/shop_images\/Rectangle_42.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
+      }
+    },
+    "1658258250814617ed": {
+      "type": "apps",
+      "blocks": {
+        "9ad9c069-0e69-406a-9465-72e2735558d9": {
+          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "9ad9c069-0e69-406a-9465-72e2735558d9"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "165804645803b40e7b": {
       "type": "featured-blog",
       "settings": {
@@ -68,6 +97,8 @@
     "165781071790c254de",
     "1658046660491a8b79",
     "1658051938fe853300",
+    "16582582924f93d67a",
+    "1658258250814617ed",
     "165804645803b40e7b"
   ]
 }
