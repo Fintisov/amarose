@@ -879,6 +879,40 @@
         "name": "Search"
       }
     },
+    "block_links": {
+      "name": "Block links",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "Block link",
+          "title": "Title",
+          "url": "URL",
+          "icon": "Default icon",
+          "image": "Image"
+        }
+      },
+      "presets": {
+        "name": "Block links"
+      }
+    },
+    "faq_list": {
+      "name": "FAQ list",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "FAQ list item",
+          "question": "Question",
+          "answer": "Answer"
+        }
+      },
+      "presets": {
+        "name": "FAQ list"
+      }
+    },
     "running_line": {
       "name": "Running line",
       "settings": {
