@@ -32,8 +32,8 @@
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
-      "next": "Next page",
-      "previous": "Previous page"
+      "next": "Next",
+      "previous": "Prev"
     },
     "search": {
       "search": "Search"

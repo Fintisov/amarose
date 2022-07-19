@@ -428,6 +428,18 @@
         "name": "Apps"
       }
     },
+    "blog-filter": {
+      "name": "Blog-filter",
+      "settings": {
+        "filter_heading": {
+          "label": "Title"
+        },
+        "link_all": "Text for All link"
+      },
+      "presets": {
+        "name": "Blog-filter"
+      }
+    },
     "differentiators": {
       "name": "Differentiators",
       "settings": {
