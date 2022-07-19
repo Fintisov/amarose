@@ -22,7 +22,7 @@
       <ul id="Slider-{{ section.id }}"
         class="blog__posts articles-wrapper grid"
         role="list" >
-        {%- for article in section.settings.blog.articles limit: 3 -%}
+        {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
           <li class="blog__post grid__item">
             {% render 'article-card', blog: section.settings.blog, article: article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
           </li>
@@ -72,6 +72,15 @@
       "id": "show_author",
       "default": false,
       "label": "t:sections.featured-blog.settings.show_author.label"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 3,
+      "max": 30,
+      "step": 3,
+      "default": 3,
+      "label": "t:sections.featured-blog.settings.post_limit.label"
     }
   ],
   "presets": [
