@@ -1,0 +1,27 @@
+<section class="search">
+  {% if section.settings.title != blank %}
+    <h2 class="visually-hidden">{{ section.settings.title }}</h2>
+  {% endif %}
+  {% render 'search' %}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.search.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Search",
+      "label": "t:sections.search.settings.title.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.search.presets.name"
+    }
+  ]
+}
+{% endschema %}

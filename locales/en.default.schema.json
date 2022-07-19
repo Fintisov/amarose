@@ -868,6 +868,17 @@
         "name": "Ingredients"
       }
     },
+    "search": {
+      "name": "Search",
+      "settings": {
+        "title": {
+          "label": "Title"
+        }
+      },
+      "presets": {
+        "name": "Search"
+      }
+    },
     "running_line": {
       "name": "Running line",
       "settings": {

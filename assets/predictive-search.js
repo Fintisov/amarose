@@ -43,6 +43,7 @@ class PredictiveSearch extends HTMLElement {
 
   onFocus() {
     const searchTerm = this.getQuery();
+    console.log(1111, searchTerm);
 
     if (!searchTerm.length) return;
 
