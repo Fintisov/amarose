@@ -1,12 +1,15 @@
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print"
+      onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
 
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print"
+        onload="this.media='all'">
 {%- endif -%}
 
 <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -44,20 +47,27 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" width="25" height="24" viewBox="0 0 25 24" fill="none">
-    <path d="M11.069 19C15.4872 19 19.069 15.4183 19.069 11C19.069 6.58172 15.4872 3 11.069 3C6.65069 3 3.06897 6.58172 3.06897 11C3.06897 15.4183 6.65069 19 11.069 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M21.069 21.0004L16.719 16.6504" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path
+      d="M11.069 19C15.4872 19 19.069 15.4183 19.069 11C19.069 6.58172 15.4872 3 11.069 3C6.65069 3 3.06897 6.58172 3.06897 11C3.06897 15.4183 6.65069 19 11.069 19Z"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21.069 21.0004L16.719 16.6504" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round"/>
   </symbol>
 
   <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
-    <path d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z" fill="currentColor"/>
+    <path
+      d="M.865 15.978a.5.5 0 00.707.707l7.433-7.431 7.579 7.282a.501.501 0 00.846-.37.5.5 0 00-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 10-.707-.708L8.991 7.853 1.413.573a.5.5 0 10-.693.72l7.563 7.268-7.418 7.417z"
+      fill="currentColor"/>
   </symbol>
 </svg>
+
 <div class="header-wrapper">
   <header class="header page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
-          <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+          <summary class="header__icon header__icon--menu header__icon--summary link focus-inset"
+                   aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
               {% render 'icon-close' %}
@@ -67,14 +77,15 @@
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 {%- if shop.customer_accounts_enabled -%}
-                  <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                     class="menu-drawer__account link focus-inset h5 primary-button">
+                  <a
+                    href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                    class="menu-drawer__account link focus-inset h5 primary-button">
                     {% render 'icon-account' %}
                     {%- liquid
                       if customer
-                      echo 'customer.account_fallback' | t
+                        echo 'customer.account_fallback' | t
                       else
-                      echo 'customer.log_in' | t
+                        echo 'customer.log_in' | t
                       endif
                     -%}
                   </a>
@@ -86,14 +97,17 @@
                       <li>
                         {%- if link.links != blank -%}
                           <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
-                            <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+                            <summary
+                              class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
                               {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
                             </summary>
-                            <div id="link-{{ link.title | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
+                            <div id="link-{{ link.title | escape }}"
+                                 class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
                               <div class="menu-drawer__inner-submenu">
-                                <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                <button class="menu-drawer__close-button link link--text focus-inset"
+                                        aria-expanded="true">
                                   {% render 'icon-arrow' %}
                                   {{ link.title | escape }}
                                 </button>
@@ -101,25 +115,30 @@
                                   {%- for childlink in link.links -%}
                                     <li>
                                       {%- if childlink.links == blank -%}
-                                        <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                        <a href="{{ childlink.url }}"
+                                           class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
                                           {{ childlink.title | escape }}
                                         </a>
                                       {%- else -%}
                                         <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
-                                          <summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                          <summary
+                                            class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
                                             {{ childlink.title | escape }}
                                             {% render 'icon-arrow' %}
                                             {% render 'icon-caret' %}
                                           </summary>
-                                          <div id="childlink-{{ childlink.title | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                            <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+                                          <div id="childlink-{{ childlink.title | escape }}"
+                                               class="menu-drawer__submenu has-submenu gradient motion-reduce">
+                                            <button class="menu-drawer__close-button link link--text focus-inset"
+                                                    aria-expanded="true">
                                               {% render 'icon-arrow' %}
                                               {{ childlink.title | escape }}
                                             </button>
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
-                                                  <a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                  <a href="{{ grandchildlink.url }}"
+                                                     class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                                     {{ grandchildlink.title | escape }}
                                                   </a>
                                                 </li>
@@ -135,7 +154,8 @@
                             </div>
                           </details>
                         {%- else -%}
-                          <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+                          <a href="{{ link.url }}"
+                             class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
                             {{ link.title | escape }}
                           </a>
                         {%- endif -%}
@@ -144,7 +164,7 @@
                   </ul>
                 </nav>
 
-                {% if section.settings.button_text01  != blank and section.settings.button_text02 != blank %}
+                {% if section.settings.button_text01 != blank and section.settings.button_text02 != blank %}
                   <div class="menu-drawer__utility-links">
                     {% if section.settings.info_title != blank %}
                       <h3>{{ section.settings.info_title }}</h3>
@@ -172,25 +192,25 @@
       </header-drawer>
     {%- endif -%}
 
-    {%- if request.page_type == 'index' -%}
-      <h1 class="header__heading">
-    {%- endif -%}
-        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-          {%- if section.settings.logo != blank -%}
-            {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-            {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-              class: 'header__heading-logo',
-              widths: '50, 100, 150, 200, 250, 300, 400, 500',
-              height: section.settings.logo.height,
-              width: section.settings.logo.width,
-              alt: logo_alt
-            }}
-          {%- else -%}
-            <span class="h2">{{ shop.name }}</span>
-          {%- endif -%}
-        </a>
-    {%- if request.page_type == 'index' -%}
-      </h1>
+  {%- if request.page_type == 'index' -%}
+    <h1 class="header__heading">
+      {%- endif -%}
+      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+        {%- if section.settings.logo != blank -%}
+          {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+          {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+          class: 'header__heading-logo',
+          widths: '50, 100, 150, 200, 250, 300, 400, 500',
+          height: section.settings.logo.height,
+          width: section.settings.logo.width,
+          alt: logo_alt
+          }}
+        {%- else -%}
+          <span class="h2">{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+      {%- if request.page_type == 'index' -%}
+    </h1>
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
@@ -205,16 +225,19 @@
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                     </summary>
 
-                    <div id="MegaMenu-Content-{{ forloop.index }}" class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
-                      <ul class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}" role="list">
+                    <div id="MegaMenu-Content-{{ forloop.index }}"
+                         class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
+                      <ul
+                        class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                        role="list">
                         {%- for childlink in link.links -%}
                           <li>
                             <a href="{{ childlink.url }}"
                                class="mega-menu__link mega-menu__link--level-2 link
                                {% if childlink.title == 'Shop All' %}mega-menu__link--color{% endif %}
                                {% if childlink.current %} mega-menu__link--active{% endif %}"
-                               {% if childlink.current %} aria-current="page"{% endif %}>
-                                {{ childlink.title | escape }}
+                            {% if childlink.current %} aria-current="page"{% endif %}>
+                              {{ childlink.title | escape }}
                               {% if childlink.title == 'Shop All' %}
                                 {% render 'icon-arrow-r' %}
                               {% endif %}
@@ -223,7 +246,8 @@
                               <ul class="list-unstyled" role="list">
                                 {%- for grandchildlink in childlink.links -%}
                                   <li>
-                                    <a href="{{ grandchildlink.url }}" class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                    <a href="{{ grandchildlink.url }}"
+                                       class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
                                       {{ grandchildlink.title | escape }}
                                     </a>
                                   </li>
@@ -235,12 +259,14 @@
                       </ul>
 
                       {%- for block in section.blocks -%}
-                        {% if block.settings.title == link.title  %}
+                        {% if block.settings.title == link.title %}
                           {%- case block.type -%}
                             {%- when 'two-boxes' -%}
                               <div class="menu-boxes">
                                 {% if block.settings.link01 != blank and block.settings.image01 != blank %}
-                                  <a href="{{ block.settings.link01 }}" class="menu-box menu-box__text-{{ block.settings.text_alignment01 }}" style="background-image: url({{ block.settings.image01 }})">
+                                  <a href="{{ block.settings.link01 }}"
+                                     class="menu-box menu-box__text-{{ block.settings.text_alignment01 }}"
+                                     style="background-image: url({{ block.settings.image01 }})">
                                     <span class="menu-box__title">{{ block.settings.text01 }}</span>
                                     {% if block.settings.text_link01 != blank %}
                                       <span class="menu-box__link-title">{{ block.settings.text_link01 }}</span>
@@ -249,7 +275,9 @@
                                 {% endif %}
 
                                 {% if block.settings.link02 != blank and block.settings.image02 != blank %}
-                                  <a href="{{ block.settings.link02 }}" class="menu-box menu-box__text-{{ block.settings.text_alignment02 }}" style="background-image: url({{ block.settings.image02 }})">
+                                  <a href="{{ block.settings.link02 }}"
+                                     class="menu-box menu-box__text-{{ block.settings.text_alignment02 }}"
+                                     style="background-image: url({{ block.settings.image02 }})">
                                     <span class="menu-box__title">{{ block.settings.text02 }}</span>
                                     {% if block.settings.text_link02 != blank %}
                                       <span class="menu-box__link-title">{{ block.settings.text_link02 }}</span>
@@ -258,10 +286,10 @@
                                 {% endif %}
                               </div>
                             {%- when 'one-box' -%}
-                            {% if block.settings.text != blank and block.settings.image != blank %}
-                              <div class="menu-one-box">
-                                {% if block.settings.image != blank %}
-                                  {{ block.settings.image | image_url: width: 452 | image_tag:
+                              {% if block.settings.text != blank and block.settings.image != blank %}
+                                <div class="menu-one-box">
+                                  {% if block.settings.image != blank %}
+                                    {{ block.settings.image | image_url: width: 452 | image_tag:
                                     loading: 'lazy',
                                     width: block.settings.image.width,
                                     height: block.settings.image.height,
@@ -269,24 +297,24 @@
                                     sizes: sizes,
                                     widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
                                     alt: block.settings.image.alt | escape
-                                  }}
-                                  <div class="menu-one-box__holder">
-                                    {% if block.settings.top-text != blank %}
-                                      <span class="menu-one-box__top-title">{{ block.settings.top-text }}</span>
-                                    {% endif %}
+                                    }}
+                                    <div class="menu-one-box__holder">
+                                      {% if block.settings.top-text != blank %}
+                                        <span class="menu-one-box__top-title">{{ block.settings.top-text }}</span>
+                                      {% endif %}
 
-                                    {{ block.settings.text }}
+                                      {{ block.settings.text }}
 
-                                    {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                      <a href="{{ block.settings.button_url }}">
-                                        {{ block.settings.button_text }}
-                                        {% render 'icon-arrow-r' %}
-                                      </a>
-                                    {% endif %}
-                                  </div>
-                                {% endif %}
-                              </div>
-                            {% endif %}
+                                      {% if block.settings.button_url != blank and block.settings.button_text != blank %}
+                                        <a href="{{ block.settings.button_url }}">
+                                          {{ block.settings.button_text }}
+                                          {% render 'icon-arrow-r' %}
+                                        </a>
+                                      {% endif %}
+                                    </div>
+                                  {% endif %}
+                                </div>
+                              {% endif %}
                           {%- endcase -%}
                         {% endif %}
                       {% endfor %}
@@ -295,7 +323,8 @@
                   </details>
                 </header-menu>
               {%- else -%}
-                <a href="{{ link.url }}" class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
+                <a href="{{ link.url }}"
+                   class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
                   <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                 </a>
               {%- endif -%}
@@ -308,7 +337,8 @@
     <div class="header__icons">
       <details-modal class="header__search">
         <details>
-          <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+                   aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
               <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                 <use href="#icon-search"/>
@@ -319,20 +349,23 @@
             </span>
           </summary>
 
-          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
+          <div class="search-modal modal__content gradient" role="dialog" aria-modal="true"
+               aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
-            <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
-              {%- if settings.predictive_search_enabled -%}
-                <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
-              {%- endif -%}
+            <div
+              class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}"
+              tabindex="-1">
+            {%- if settings.predictive_search_enabled -%}
+              <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+                {%- endif -%}
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                   <div class="field">
                     <input class="search__input field__input"
-                      id="Search-In-Modal"
-                      type="search"
-                      name="q"
-                      value=""
-                      placeholder="{{ 'general.search.search' | t }}"
+                           id="Search-In-Modal"
+                           type="search"
+                           name="q"
+                           value=""
+                           placeholder="{{ 'general.search.search' | t }}"
                       {%- if settings.predictive_search_enabled -%}
                         role="combobox"
                         aria-expanded="false"
@@ -358,7 +391,8 @@
                   {%- if settings.predictive_search_enabled -%}
                     <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
                       <div class="predictive-search__loading-state">
-                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="spinner"
+                             viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                           <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                         </svg>
                       </div>
@@ -367,10 +401,11 @@
                     <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                   {%- endif -%}
                 </form>
-              {%- if settings.predictive_search_enabled -%}
-                </predictive-search>
+                {%- if settings.predictive_search_enabled -%}
+              </predictive-search>
               {%- endif -%}
-              <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+              <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset"
+                      aria-label="{{ 'accessibility.close' | t }}">
                 <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                   <use href="#icon-close"/>
                 </svg>
@@ -382,80 +417,86 @@
 
       {%- if shop.customer_accounts_enabled -%}
 
-      {%- if customer -%}
-        <a href="{{ routes.account_url }}" class="header__icon header__icon--account link focus-inset">
-          {% render 'icon-account' %}
-          <span class="visually-hidden">
-           {{'customer.account_fallback' | t }}
+        {%- if customer -%}
+          <a href="{{ routes.account_url }}" class="header__icon header__icon--account link focus-inset">
+            {% render 'icon-account' %}
+            <span class="visually-hidden">
+           {{ 'customer.account_fallback' | t }}
           </span>
-        </a>
-      {%- else -%}
+          </a>
+        {%- else -%}
 
-        <details-modal class="header__account">
-          <details>
-            <summary class="header__icon header__icon--account header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+          <details-modal class="header__account">
+            <details>
+              <summary class="header__icon header__icon--account header__icon--summary link focus-inset modal__toggle"
+                       aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
               <span style="background-color: yellowgreen;">
                  {% render 'icon-account' %}
               </span>
-            </summary>
+              </summary>
 
-            <div class="account-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-              <div class="modal-overlay"></div>
-              <div class="account-modal__content" tabindex="-1">
-                <div class="account-modal__frame">
-                  <div class="search-modal__text">
-                    <h2>{{ "accessibility.hello" | t }}</h2>
-                    <a href="{{ routes.account_login_url }}" class="button primary-button">{{ 'customer.log_in' | t }}</a>
-                    <p>{{ 'accessibility.new_customer' | t }} <a href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a></p>
-                  </div>
-                  <div class="account-modal__boxes">
-                    {%- for block in section.blocks -%}
-                      {%- case block.type -%}
-                      {%- when 'one-box' -%}
-                        {% if block.settings.text != blank and block.settings.image != blank %}
-                          <div class="menu-one-box">
-                            {% if block.settings.image != blank %}
-                              {{ block.settings.image | image_url: width: 452 | image_tag:
-                              loading: 'lazy',
-                              width: block.settings.image.width,
-                              height: block.settings.image.height,
-                              class: 'menu-one-box__image',
-                              sizes: sizes,
-                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                              alt: block.settings.image.alt | escape
-                              }}
-                              <div class="menu-one-box__holder">
-                                {% if block.settings.top-text != blank %}
-                                  <span class="menu-one-box__top-title">{{ block.settings.top-text }}</span>
-                                {% endif %}
+              <div class="account-modal modal__content gradient" role="dialog" aria-modal="true"
+                   aria-label="{{ 'general.search.search' | t }}">
+                <div class="modal-overlay"></div>
+                <div class="account-modal__content" tabindex="-1">
+                  <div class="account-modal__frame">
+                    <div class="search-modal__text">
+                      <h2>{{ "accessibility.hello" | t }}</h2>
+                      <a href="{{ routes.account_login_url }}"
+                         class="button primary-button">{{ 'customer.log_in' | t }}</a>
+                      <p>{{ 'accessibility.new_customer' | t }} <a
+                          href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a></p>
+                    </div>
+                    <div class="account-modal__boxes">
+                      {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                          {%- when 'one-box' -%}
+                            {% if block.settings.text != blank and block.settings.image != blank %}
+                              <div class="menu-one-box">
+                                {% if block.settings.image != blank %}
+                                  {{ block.settings.image | image_url: width: 452 | image_tag:
+                                  loading: 'lazy',
+                                  width: block.settings.image.width,
+                                  height: block.settings.image.height,
+                                  class: 'menu-one-box__image',
+                                  sizes: sizes,
+                                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                  alt: block.settings.image.alt | escape
+                                  }}
+                                  <div class="menu-one-box__holder">
+                                    {% if block.settings.top-text != blank %}
+                                      <span class="menu-one-box__top-title">{{ block.settings.top-text }}</span>
+                                    {% endif %}
 
-                                {{ block.settings.text }}
+                                    {{ block.settings.text }}
 
-                                {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                  <a href="{{ block.settings.button_url }}">
-                                    {{ block.settings.button_text }}
-                                    {% render 'icon-arrow-r' %}
-                                  </a>
+                                    {% if block.settings.button_url != blank and block.settings.button_text != blank %}
+                                      <a href="{{ block.settings.button_url }}">
+                                        {{ block.settings.button_text }}
+                                        {% render 'icon-arrow-r' %}
+                                      </a>
+                                    {% endif %}
+                                  </div>
                                 {% endif %}
                               </div>
                             {% endif %}
-                          </div>
-                        {% endif %}
-                      {%- endcase -%}
-                    {% endfor %}
+                        {%- endcase -%}
+                      {% endfor %}
+                    </div>
                   </div>
+                  <button type="button"
+                          class="account-modal__close-button modal__close-button link link--text focus-inset"
+                          aria-label="{{ 'accessibility.close' | t }}">
+                    <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                      <use href="#icon-close"/>
+                    </svg>
+                  </button>
                 </div>
-                <button type="button" class="account-modal__close-button modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
-                  <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                    <use href="#icon-close"/>
-                  </svg>
-                </button>
               </div>
-            </div>
-          </details>
-        </details-modal>
+            </details>
+          </details-modal>
 
-      {%- endif -%}
+        {%- endif -%}
 
       {%- endif -%}
 
@@ -494,18 +535,19 @@
       "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
     {% endif %}
     "sameAs": [
-      {{ settings.social_twitter_link | json }},
-      {{ settings.social_facebook_link | json }},
-      {{ settings.social_pinterest_link | json }},
-      {{ settings.social_instagram_link | json }},
-      {{ settings.social_tiktok_link | json }},
-      {{ settings.social_tumblr_link | json }},
-      {{ settings.social_snapchat_link | json }},
-      {{ settings.social_youtube_link | json }},
+      {{ settings.social_twitter_link | json }}
+      {{ settings.social_facebook_link | json }}
+      {{ settings.social_pinterest_link | json }}
+      {{ settings.social_instagram_link | json }}
+      {{ settings.social_tiktok_link | json }}
+      {{ settings.social_tumblr_link | json }}
+      {{ settings.social_snapchat_link | json }}
+      {{ settings.social_youtube_link | json }}
       {{ settings.social_vimeo_link | json }}
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -522,6 +564,7 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
   </script>
 {%- endif -%}
 
