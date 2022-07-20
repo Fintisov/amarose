@@ -3011,6 +3011,22 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "account_menu": {
+      "name": "Account menu",
+      "settings": {
+        "title": "Account menu",
+        "blocks": {
+          "name": "Account menu item",
+          "title": "Account menu",
+          "link": "Link",
+          "link_description": "My Orders: /account?view=orders, My Addresses: /account/addresses, Logout: /account/logout",
+          "icon": "Svg code"
+        }
+      },
+      "presets": {
+        "name": "Account menu"
+      }
     }
   }
 }
