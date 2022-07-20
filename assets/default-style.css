@@ -1,9 +1,9 @@
 @charset "UTF-8";
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px 0; }
+  padding: 0 10px; }
   @media screen and (max-width: 992px) {
     .container {
       max-width: 720px; } }
@@ -12,7 +12,8 @@
       max-width: 540px; } }
   @media screen and (max-width: 576px) {
     .container {
-      max-width: 100%; } }
+      max-width: 100%;
+      padding: 0 20px; } }
 
 * {
   font-family: "futura", suns-serif; }
