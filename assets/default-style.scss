@@ -1,40 +1,10 @@
-// Mixin
-@mixin max-screen($res) {
-  @media screen and (max-width: $res + px) {
-    @content;
-  }
-}
-
-@mixin min-screen($res) {
-  @media screen and (min-width: $res + "px") {
-    @content;
-  }
-}
-
-// Color
-$black: #2A3241;
-$midGrey: #5E697E;
-$lightGrey: #F1F3F6;
-$white: #ffffff;
-$errorState: #DE3D64;
-$purple: #850B65;
-$rose: #BA3A7D;
-$blush-25: rgba(255, 187, 171, 0.25);
-$roseMid: #F08B84;
-$blush: #FFBBAB;
-$green: #30CD9C;
-$goldGradient: linear-gradient(180deg, #A35B40 0%, #C88264 48.44%, #F3B393 70.31%, #89493B 100%);
-
-// Fonts
-$futura: "futura", suns-serif;
-
-//================= Style ==============
+@import "_variables.scss";
 
 .container {
-  max-width: 1180px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 0 10px;
 
 
   @include max-screen(992) {
@@ -47,6 +17,7 @@ $futura: "futura", suns-serif;
 
   @include max-screen(576) {
     max-width: 100%;
+    padding: 0 20px;
   }
 }
 
