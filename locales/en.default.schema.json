@@ -434,7 +434,9 @@
         "filter_heading": {
           "label": "Title"
         },
-        "link_all": "Text for All link"
+        "filter_all": {
+          "label": "Title for tag all"
+        }
       },
       "presets": {
         "name": "Blog-filter"

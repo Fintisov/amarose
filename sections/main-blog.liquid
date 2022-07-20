@@ -2,7 +2,6 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
-
 {%- paginate blog.articles by section.settings.post_limit -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
     <h1 class="title--primary">{{ blog.title | escape }}</h1>
@@ -22,7 +21,14 @@
         </div>
       {%- endfor -%}
     </div>
-
+-----
+    {% for tag in article.tags %}
+      {{ forloop.index }} ++++{{ tag }}
+      {% if forloop.index == 1 %}
+        {{ tag }}
+      {% endif %}
+    {% endfor %}
+    
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}

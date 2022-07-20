@@ -1,9 +1,9 @@
 {% if section.settings.filter_heading != blank %}
-  <span class="visually-hidden">{{ section.settings.filter_heading }}</span>
+  <span class="title_blog-filter visually-hidden">{{ section.settings.filter_heading }}</span>
 {% endif %}
 
 {% if blog.tags.size > 0 %}
-  <div class="blog__filter scrollbar-style">
+  <div class="list_blog-filter scrollbar-style">
     <a {% if hasNoCurrentTag %}class="tag-active"{% endif %} href="{{ blog.url }}">{{ section.settings.link_all }}</a>
     {% for tag in blog.all_tags %}
       <a {% if current_tags.first == tag %}class="tag-active"{% endif %} href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag }}</a>
@@ -27,7 +27,7 @@
         "type": "text",
         "id": "link_all",
         "default": "ALL",
-        "label": "t:sections.blog-filter.settings.link_all"
+        "label": "t:sections.blog-filter.settings.filter_all.label"
       }
     ],
     "presets": [
