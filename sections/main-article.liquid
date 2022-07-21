@@ -31,10 +31,14 @@
             </div>
           </div>
         {%- endif -%}
-        {% for tag in article.tags %}
-          {% if forloop.index == 1 %}
-            {{ tag }}
-          {% endif %}
+
+        <div class="article-tag">
+          {% for tag in article.tags %}
+            {% if forloop.index == 1 %}
+              <span class="article-tag__item">{{ tag }}</span>
+            {% endif %}
+        </div>
+
         {% endfor %}
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
