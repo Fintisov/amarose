@@ -387,14 +387,16 @@
       "total_duties": "Duties"
     },
     "orders": {
-      "title": "Order history",
-      "order_number": "Order",
+      "title": "My Orders",
+      "order_number": "Order #",
       "order_number_link": "Order number {{ number }}",
       "date": "Date",
       "payment_status": "Payment status",
-      "fulfillment_status": "Fulfillment status",
+      "fulfillment_status": "Status",
       "total": "Total",
-      "none": "You haven't placed any orders yet."
+      "link_text": "See Details",
+      "none": "You have not placed any orders with us yet.",
+      "paginate": "Page {{ current_page }} of {{ items }}"
     },
     "recover_password": {
       "title": "Reset your password",
