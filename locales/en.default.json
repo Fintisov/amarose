@@ -355,15 +355,17 @@
     "sign_up": "Sign Up",
     "login_page": {
       "cancel": "Cancel",
-      "create_account": "Create account",
-      "email": "Email",
-      "forgot_password": "Forgot your password?",
+      "create_account_text": "Don’t have an account yet? ",
+      "create_account": " Sign Up",
+      "email": "Enter Your Email",
+      "forgot_password": "Forgot Password",
       "guest_continue": "Continue",
       "guest_title": "Continue as a guest",
-      "password": "Password",
+      "password": "Enter Your Password",
       "title": "Login",
-      "sign_in": "Sign in",
-      "submit": "Submit"
+      "sign_in": "Login",
+      "submit": "Request Password Reset",
+      "error": "* Required"
     },
     "order": {
       "title": "Order {{ name }}",
@@ -401,9 +403,8 @@
       "none": "You haven't placed any orders yet."
     },
     "recover_password": {
-      "title": "Reset your password",
-      "subtext": "We will send you an email to reset your password",
-      "success": "We've sent you an email with a link to update your password."
+      "title": "Forgot Password",
+      "success": "Check your email. If there’s an account associated with the email you provided, you’ll receive a link to reset your password."
     },
     "register": {
       "title": "Create account",

@@ -356,6 +356,18 @@
           "icon": "Svg icon code"
         }
       }
+    },
+    "login": {
+      "name": "Login, Register and Password pages",
+      "settings": {
+        "logo": "Logo",
+        "background": "Page background",
+        "return": {
+          "text": "Return text",
+          "link": "Return link",
+          "icon": "Return icon"
+        }
+      }
     }
   },
   "sections": {

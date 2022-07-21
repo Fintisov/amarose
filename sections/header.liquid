@@ -196,7 +196,9 @@
     <h1 class="header__heading">
       {%- endif -%}
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-        {%- if section.settings.logo != blank -%}
+        {%- if section.settings.logo_svg != blank -%}
+          <span class="header__heading-logo logo--svg">{{ section.settings.logo_svg }}</span>
+        {%- elsif section.settings.logo != blank -%}
           {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
           {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
           class: 'header__heading-logo',
