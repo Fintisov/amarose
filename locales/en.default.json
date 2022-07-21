@@ -404,7 +404,8 @@
     },
     "recover_password": {
       "title": "Forgot Password",
-      "success": "Check your email. If there’s an account associated with the email you provided, you’ll receive a link to reset your password."
+      "success": "Check your email. If there’s an account associated with the email you provided, you’ll receive a link to reset your password.",
+      "success_home_link_text": "Return to Shop"
     },
     "register": {
       "title": "Create account",
