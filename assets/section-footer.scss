@@ -1,0 +1,148 @@
+@import "_variables";
+
+.footer {
+
+}
+
+.footer-block--newsletter {
+  max-width: 335px;
+  width: 100%;
+  margin-right: 142px;
+}
+
+.footer__content-top {
+  background-color: $blush-25;
+  padding: 64px 0;
+
+  .footer__content-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-block__heading {
+  margin-bottom: 24px;
+
+  p {
+    font-family: $futura;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.64;
+    color: $black;
+  }
+}
+
+.footer__newsletter {
+  margin-bottom: 24px;
+}
+
+.footer__list-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .list-social__item {
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+
+  .list-social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: $rose;
+    border-radius: 50%;
+  }
+}
+
+.footer__blocks-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+}
+
+.footer-block--menu {
+  padding-right: 16px;
+
+  .footer-block__heading {
+    font-family: $futura;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: $black;
+  }
+
+  .footer-block__details-content {
+    .item {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .link {
+      font-family: $futura;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $black;
+    }
+  }
+
+  &:first-of-type {
+    .item:last-of-type {
+      .link {
+        color: $rose;
+      }
+    }
+  }
+}
+
+.footer__content-bottom {
+  background-color: $midGrey;
+  padding: 3px 0;
+
+  .footer__content-bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__copyright {
+    margin-right: 30px;
+
+    p {
+      display: inline;
+      font-family: $futura;
+      font-size: 16px;
+      line-height: 1.4;
+      color: $lightGrey;
+    }
+  }
+
+  .footer__bottom-menu {
+    display: flex;
+    align-items: center;
+
+    .elem {
+      &:not(:last-of-type) {
+        margin-right: 30px;
+      }
+
+      .link {
+        font-family: $futura;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: $lightGrey;
+        text-decoration: underline;
+      }
+    }
+  }
+}

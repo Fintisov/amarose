@@ -44,7 +44,8 @@
         font-family: "futura", suns-serif;
         font-weight: 500;
         font-size: 20px;
-        line-height: 1.1; }
+        line-height: 1.1;
+        color: #ffffff; }
 
 .announcement-message {
   padding: 4px 20px; }
