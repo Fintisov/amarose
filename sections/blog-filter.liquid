@@ -1,0 +1,39 @@
+{% if section.settings.filter_heading != blank %}
+  <h2 class="blog-filter__title visually-hidden">{{ section.settings.filter_heading }}</h2>
+{% endif %}
+
+{% if blog.tags.size > 0 %}
+  <div class="blog-filter__list">
+    <a {% if hasNoCurrentTag %}class="tag-active"{% endif %} href="{{ blog.url }}">{{ section.settings.link_all }}</a>
+    {% for tag in blog.all_tags %}
+      <a {% if current_tags.first == tag %}class="tag-active"{% endif %} href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag }}</a>
+    {%- endfor -%}
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "t:sections.blog-filter.name",
+    "tag": "section",
+    "class": "blog-filter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "filter_heading",
+        "default": "Blog filters",
+        "label": "t:sections.blog-filter.settings.filter_heading.label"
+      },
+      {
+        "type": "text",
+        "id": "link_all",
+        "default": "ALL",
+        "label": "t:sections.blog-filter.settings.filter_all.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.blog-filter.presets.name"
+      }
+    ]
+  }
+{% endschema %}
