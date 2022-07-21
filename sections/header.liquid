@@ -444,7 +444,11 @@
                   <div class="account-modal__frame">
                     <div class="search-modal__text">
                       {% if customer %}
+                        <h2>{{ section.settings.customer_title }}</h2>
 
+                        {% for link in section.settings.customer_menu.links -%}
+                          {{ link.title | link_to: link.url }}
+                        {%- endfor %}
                       {% else %}
                         <h2>{{ "accessibility.hello" | t }}</h2>
                         <a href="{{ routes.account_login_url }}"
@@ -605,14 +609,14 @@
     {
       "type": "link_list",
       "id": "customer_menu",
-      "default": "customer-menu",
       "label": "t:sections.header.settings.customer_menu.menu"
     },
     {
       "type": "textarea",
       "id": "customer_icons_list",
-      "default": "main-menu",
-      "label": "t:sections.header.settings.customer_menu.icons_list"
+      "default": "icon.svg",
+      "label": "t:sections.header.settings.customer_menu.icons_list",
+      "info": "t:sections.header.settings.customer_menu.icons_list_info"
     },
     {
       "type": "header",
