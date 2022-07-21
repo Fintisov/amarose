@@ -1225,6 +1225,13 @@
         },
         "margin_bottom": {
           "label": "Bottom margin"
+        },
+        "customer_menu": {
+          "header": "Customer menu",
+          "title": "Title",
+          "menu": "Menu",
+          "icons_list": "Icons list",
+          "icons_list_info": "Like as: account-icon.svg,order-icon.png"
         }
       }
     },

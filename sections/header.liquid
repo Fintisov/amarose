@@ -443,11 +443,17 @@
                 <div class="account-modal__content" tabindex="-1">
                   <div class="account-modal__frame">
                     <div class="search-modal__text">
-                      <h2>{{ "accessibility.hello" | t }}</h2>
-                      <a href="{{ routes.account_login_url }}"
-                         class="button primary-button">{{ 'customer.log_in' | t }}</a>
-                      <p>{{ 'accessibility.new_customer' | t }} <a
-                          href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a></p>
+                      {% if customer %}
+
+                      {% else %}
+                        <h2>{{ "accessibility.hello" | t }}</h2>
+                        <a href="{{ routes.account_login_url }}"
+                           class="button primary-button">{{ 'customer.log_in' | t }}</a>
+                        <p>
+                          {{ 'accessibility.new_customer' | t }}
+                          <a href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a>
+                        </p>
+                      {% endif %}
                     </div>
                     <div class="account-modal__boxes">
                       {%- for block in section.blocks -%}
@@ -585,6 +591,28 @@
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.customer_menu.header"
+    },
+    {
+      "type": "text",
+      "id": "customer_title",
+      "default": "Welcome Back!",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "link_list",
+      "id": "customer_menu",
+      "default": "customer-menu",
+      "label": "t:sections.header.settings.customer_menu.menu"
+    },
+    {
+      "type": "textarea",
+      "id": "customer_icons_list",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.customer_menu.icons_list"
     },
     {
       "type": "header",

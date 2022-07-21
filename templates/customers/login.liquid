@@ -89,7 +89,7 @@
         {%- if recover_success == true -%}
           <p class="form__message" tabindex="-1" autofocus>
             {{ 'customer.recover_password.success' | t }}
-            <a href="" class="button primary-button button--sm">
+            <a href="{{ routes.root_url }}" class="button primary-button button--sm">
               {{ 'customer.recover_password.success_home_link_text' | t }}
             </a>
           </p>
