@@ -1,6 +1,8 @@
 <div class="orders page-width">
   <h1 class="orders__title">{{ 'customer.orders.title' | t }}</h1>
 
+  {% section 'account-menu' %}
+
   {% paginate customer.orders by 10 %}
     {%- if customer.orders.size > 0 -%}
       <table role="table" class="order-history">
