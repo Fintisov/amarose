@@ -1,9 +1,9 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
-<div class="customer account">
+<div class="customer account account-template">
   {% section 'account-menu' %}
 
-  <div>
+  <div class="account-template__content">
     <h1>{{ 'customer.account.title' | t }}</h1>
     <a href="{{ routes.account_logout_url }}">
       <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 19">
