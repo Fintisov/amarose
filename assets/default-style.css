@@ -15,6 +15,11 @@
       max-width: 100%;
       padding: 0 20px; } }
 
+ul, ol {
+  padding: 0;
+  list-style: none;
+  margin: 0; }
+
 * {
   font-family: "futura", suns-serif; }
 
@@ -74,19 +79,7 @@ p {
       font-size: 14px; } }
   p.underline {
     text-decoration-line: underline;
-    /*    position: relative;
-        width: max-content;
-
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background: black;
-        }*/ }
+    text-underline-offset: 4px; }
   p.strikethrough {
     text-decoration-line: line-through; }
   p.caps {
