@@ -63,7 +63,11 @@
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/Logo_1.png",
+          "logo_svg": "",
           "menu": "main-menu",
+          "customer_title": "Welcome Back!",
+          "customer_menu": "customer-menu",
+          "customer_icons_list": "icon.svg",
           "info_title": "Have questions?",
           "button_text01": "Email",
           "button_svg01": "<svg width=\"25\" height=\"25\" viewbox=\"0 0 25 25\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M22.5 2.5L11.5 13.5\" stroke=\"#BA3A7D\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M22.5 2.5L15.5 22.5L11.5 13.5L2.5 9.5L22.5 2.5Z\" stroke=\"#BA3A7D\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
@@ -105,10 +109,23 @@
         ],
         "settings": {
           "newsletter_enable": true,
-          "newsletter_heading": "Subscribe & Save  10% Off Your Next Order",
+          "newsletter_heading": "<p>Subscribe & Save  10% Off Your Next Order<\/p>",
           "show_social": true,
           "copyright": "<p>©️2021 Amarose. All Rights Reserved.<\/p>",
           "bottom_menu": "footer"
+        }
+      },
+      "question-section": {
+        "type": "question-section",
+        "settings": {
+          "heading": "",
+          "content": "",
+          "button_text01": "",
+          "button_svg01": "",
+          "button_url01": "",
+          "button_text02": "",
+          "button_svg02": "",
+          "button_url02": ""
         }
       }
     },
