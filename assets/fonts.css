@@ -21,3 +21,12 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Regular.woff2') format('woff2'),
+  url('GTWalsheimPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

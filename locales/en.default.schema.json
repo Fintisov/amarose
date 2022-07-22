@@ -356,6 +356,18 @@
           "icon": "Svg icon code"
         }
       }
+    },
+    "login": {
+      "name": "Login, Register and Password pages",
+      "settings": {
+        "logo": "Logo",
+        "background": "Page background",
+        "return": {
+          "text": "Return text",
+          "link": "Return link",
+          "icon": "Return icon"
+        }
+      }
     }
   },
   "sections": {
@@ -426,6 +438,20 @@
       },
       "presets": {
         "name": "Apps"
+      }
+    },
+    "blog-filter": {
+      "name": "Blog-filter",
+      "settings": {
+        "filter_heading": {
+          "label": "Title"
+        },
+        "filter_all": {
+          "label": "Title for tag all"
+        }
+      },
+      "presets": {
+        "name": "Blog-filter"
       }
     },
     "differentiators": {
@@ -1199,6 +1225,13 @@
         },
         "margin_bottom": {
           "label": "Bottom margin"
+        },
+        "customer_menu": {
+          "header": "Customer menu",
+          "title": "Title",
+          "menu": "Menu",
+          "icons_list": "Icons list",
+          "icons_list_info": "Like as: account-icon.svg,order-icon.png"
         }
       }
     },

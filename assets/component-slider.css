@@ -1,21 +1,13 @@
-
-/* component-grid */
 .grid {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
   padding: 0;
   list-style: none;
-  column-gap: var(--grid-mobile-horizontal-spacing);
-  row-gap: var(--grid-mobile-vertical-spacing);
+  column-gap: 15px;
+  row-gap: 15px;
 }
 
-@media screen and (min-width: 750px) {
-  .grid {
-    column-gap: var(--grid-desktop-horizontal-spacing);
-    row-gap: var(--grid-desktop-vertical-spacing);
-  }
-}
 
 .grid:last-child {
   margin-bottom: 0;

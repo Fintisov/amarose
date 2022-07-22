@@ -1,19 +1,29 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
 {% if section.settings.timer != blank %}
   <script src="{{ 'timer.js' | asset_url }}" defer="defer"></script>
-{%  endif %}
+{% endif %}
 
 <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
-  <div class="page-width container__announcement-bar">
+  <div class="container container__announcement-bar">
     {% if section.settings.timer != blank %}
       <div class="announcement-timer hidden" data-timer="{{ section.settings.timer }}">
-          <div class="timer__items">
-            <div class="timer__item timer__days">0</div>
-            <div class="timer__item timer__hours">0</div>
-            <div class="timer__item timer__minutes">0</div>
-            <div class="timer__item timer__seconds">0</div>
+        <div class="timer__items">
+          <div class="timer__item">
+            <span class="timer__elem timer__days">0</span>
+            Days
           </div>
+          <div class="timer__item">
+            <span class="timer__elem timer__hours">0</span>
+            Hrs
+          </div>
+          <div class="timer__item">
+            <span class="timer__elem timer__minutes">0</span>
+            Min
+          </div>
+        </div>
       </div>
-    {%  endif %}
+    {% endif %}
 
     {% if section.settings.content != blank %}
       <div class="announcement-message">
@@ -23,10 +33,10 @@
 
     <div class="announcement-btn">
       {% if section.settings.button_url != blank %}
-        <a href="{{ section.settings.button_url }}" class="primary-button">{{ section.settings.button_text }}</a>
+        <a href="{{ section.settings.button_url }}" class="button primary-button">{{ section.settings.button_text }}</a>
       {% endif %}
       <button type="button" class="close-button" aria-label="{{ 'accessibility.close' | t }}">
-        {%  render 'icon-close' %}
+        {% render 'icon-close' %}
       </button>
     </div>
   </div>
