@@ -32,6 +32,14 @@
           </div>
         {%- endif -%}
 
+        <div class="article-tag">
+          {% for tag in article.tags %}
+            {% if forloop.index == 1 %}
+              <span class="article-tag__item">{{ tag }}</span>
+            {% endif %}
+        </div>
+
+        {% endfor %}
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
             <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
@@ -47,7 +55,7 @@
 
         {%- when 'content'-%}
           <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
-              {{ article.content }}
+            {{ article.content }}
           </div>
 
         {%- when 'share' -%}
@@ -164,7 +172,7 @@
             </div>
           {%- endif -%}
 
-          <div{% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
+          <div {% if blog.moderated? == false %} class="article-template__comments-fields"{% endif %}>
             <div class="article-template__comment-fields">
               <div class="field field--with-error">
                 <input
