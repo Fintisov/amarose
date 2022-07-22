@@ -370,6 +370,7 @@
     "order": {
       "title": "Order {{ name }}",
       "date_html": "Placed on {{ date }}",
+      "items_title": "Items",
       "cancelled_html": "Order Cancelled on {{ date }}",
       "cancelled_reason": "Reason: {{ reason }}",
       "billing_address": "Billing Address",

@@ -1,7 +1,7 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 <div class="orders page-width account-template">
-  {% section 'account-menu' %}
+  {% render 'account-menu' %}
 
   <div class="account-template__content">
     <h1 class="orders__title">{{ 'customer.orders.title' | t }}</h1>

@@ -368,6 +368,21 @@
           "icon": "Return icon"
         }
       }
+    },
+    "customer": {
+      "name": "Account pages",
+      "customer_menu": {
+        "header": "Customer menu",
+        "title": "Title",
+        "menu": "Menu",
+        "icons_list": "Icons list",
+        "icons_list_info": "account-icon.svg,order-icon.png"
+      },
+      "order": {
+        "header": "Previous link",
+        "prev_text": "Previous text",
+        "prev_link": "Previous link"
+      }
     }
   },
   "sections": {
@@ -3043,22 +3058,6 @@
       },
       "presets": {
         "name": "Collapsible content"
-      }
-    },
-    "account_menu": {
-      "name": "Account menu",
-      "settings": {
-        "title": "Account menu",
-        "blocks": {
-          "name": "Account menu item",
-          "title": "Account menu",
-          "link": "Link",
-          "link_description": "My Orders: /account?view=orders, My Addresses: /account/addresses, Logout: /account/logout",
-          "icon": "Svg code"
-        }
-      },
-      "presets": {
-        "name": "Account menu"
       }
     }
   }
