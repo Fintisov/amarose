@@ -1443,5 +1443,37 @@
         "label": "t:settings_schema.ingredients.settings.ingredients_content.icon"
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.login.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "login_logo",
+        "label": "t:settings_schema.login.settings.logo"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "t:settings_schema.login.settings.background"
+      },
+      {
+        "type": "text",
+        "id": "return_text",
+        "default": "Return to Shop",
+        "label": "t:settings_schema.login.settings.return.text"
+      },
+      {
+        "type": "url",
+        "id": "return_link",
+        "default": "\/",
+        "label": "t:settings_schema.login.settings.return.link"
+      },
+      {
+        "type": "text",
+        "id": "return_icon",
+        "label": "t:settings_schema.login.settings.return.icon"
+      }
+    ]
   }
 ]
