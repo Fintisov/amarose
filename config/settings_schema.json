@@ -1475,5 +1475,30 @@
         "label": "t:settings_schema.login.settings.return.icon"
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.shipping.name",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shipping_text",
+        "label": "t:settings_schema.shipping.settings.text"
+      },
+      {
+        "type": "textarea",
+        "id": "shipping_svg",
+        "label": "t:settings_schema.shipping.settings.svg_code"
+      },
+      {
+        "type": "text",
+        "id": "shipping_text_2",
+        "label": "t:settings_schema.shipping.settings.text"
+      },
+      {
+        "type": "textarea",
+        "id": "shipping_svg_2",
+        "label": "t:settings_schema.shipping.settings.svg_code"
+      }
+    ]
   }
 ]
