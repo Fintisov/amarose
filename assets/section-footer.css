@@ -4,7 +4,7 @@
   margin-right: 142px; }
 
 .footer__content-top {
-  background-color: rgba(255, 187, 171, 0.25);
+  background-color: #FFEEEA;
   padding: 64px 0; }
   .footer__content-top .footer__content-top-wrapper {
     display: flex;
@@ -21,6 +21,8 @@
 
 .footer__newsletter {
   margin-bottom: 24px; }
+  .footer__newsletter .field-newsletter .field__input {
+    min-height: 56px; }
 
 .footer__list-social {
   display: flex;

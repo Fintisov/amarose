@@ -4,8 +4,6 @@
   display: none;
 }
 
-
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -33,6 +31,7 @@ ul, ol {
   margin: 0;
 
 }
+
 // ___ Typography ___
 * {
   font-family: $futura;
@@ -533,11 +532,39 @@ a {
 }
 
 .field {
+  position: relative;
+
+  .field__label {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: $midGrey;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include max-screen(767) {
+      font-size: 14px;
+    }
+  }
+
+  .field__label--hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
   .field__input {
     position: relative;
     width: 100%;
-    height: 48px;
+    min-height: 48px;
     padding: 20px 40px 5px 20px;
+    margin: 0;
     border: 1px solid $lightGrey;
     border-radius: 30px;
     background-color: $lightGrey;
@@ -547,6 +574,10 @@ a {
     line-height: 1.4;
     color: $midGrey;
     transition: background-color 0.3s, border 0.3s;
+
+    &::placeholder {
+      opacity: 0;
+    }
 
     @include max-screen(767) {
       height: 40px;
@@ -582,8 +613,6 @@ a {
     }
 
     &:not(:placeholder-shown) {
-
-
       ~ .field__label {
         top: 12px;
         font-size: 10px;
@@ -596,7 +625,7 @@ a {
       background-size: 24px;
       background-repeat: no-repeat;
       background-position: right 20px center;
-      transition: background-image 0.3s;
+      transition: background-image 0.3s, border 0.3s;
 
       @include max-screen(767) {
         -webkit-background-size: 14px;
@@ -610,7 +639,7 @@ a {
       background-size: 24px;
       background-repeat: no-repeat;
       background-position: right 20px center;
-      transition: background-image 0.3s;
+      transition: background-image 0.3s, border 0.3s;
 
       @include max-screen(767) {
         -webkit-background-size: 14px;
@@ -619,103 +648,108 @@ a {
     }
   }
 
-  .field__label {
-    font-family: $futura;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.4;
-    color: $midGrey;
-    top: 50%;
-    transform: translateY(-50%);
+  &.field--no-fly {
+    display: block;
 
-
-    @include max-screen(767) {
-      font-size: 14px;
-    }
-  }
-}
-
-.field-newsletter {
-  position: relative;
-  border-radius: 30px;
-
-  &:hover {
-    > .field-newsletter__input {
-      border: 1px solid $blush;
+    .field__label {
+      position: static;
+      transform: none;
     }
 
-    > .field-newsletter__button {
-      background-color: $blush-25;
+    .field__input {
+      padding: 5px 40px 5px 20px;
+      background-color: $white;
+
+      &::placeholder {
+        opacity: 1;
+      }
+
+      &:not(:placeholder-shown) {
+        color: $black;
+      }
     }
   }
 
-  .field-newsletter__label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    margin: -1px;
-    padding: 0;
-    border: 0;
-  }
-
-  .field-newsletter__input {
-    width: 100%;
-    padding: 11.5px 70px 11.5px 20px;
-    border: 1px solid $lightGrey;
-    border-radius: 30px;
-    font-family: $futura;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.4;
-    color: $midGrey;
-    transition: border 0.3s;
-
-    &:focus {
-      border: 1px solid $blush;
-    }
-
-    &.validate-error {
-      border: 1px solid $errorState;
-    }
-
-    &:not(:placeholder-shown) {
-      color: $black;
-    }
-  }
-
-  .field-newsletter__button {
+  .field__button {
     position: absolute;
     top: 1px;
     right: 1px;
-    width: 62px;
+    width: 40px;
     height: calc(100% - 2px);
     padding: 0;
+    opacity: 1;
+    z-index: 1;
     border-radius: 30px;
     border: none;
     cursor: pointer;
     background-color: transparent;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, z-index 0.3s, opacity 0.3s;
+  }
 
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+  &.field-newsletter {
 
-      path {
-        transition: fill 0.3s;
+    &:hover {
+      > .field__input {
+        border: 1px solid $blush;
+      }
+
+      > .field__button {
+        background-color: $blush-25;
       }
     }
 
-    &:active {
-      background-color: $rose;
+    .field__input {
+      padding: 11.5px 70px 11.5px 20px;
+      font-weight: 400;
+      font-size: 16px;
 
-      path {
-        fill: $white;
+      &:focus {
+        border: 1px solid $blush;
+        background-color: $white;
+      }
+
+      &:focus:not(.validate-error) {
+        + .field__button {
+          background-color: $rose;
+
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      &.validate-error {
+        ~ .field__button {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+
+      &.validate-true {
+        border: 1px solid $blush;
+        background-image: none;
+      }
+    }
+
+    .field__button {
+      width: 62px;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        path {
+          transition: fill 0.3s;
+        }
       }
     }
   }
-}
 
+  &.field-search {
+    .field__input {
+      padding-right: 100px;
+    }
+  }
+}

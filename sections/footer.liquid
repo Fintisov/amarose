@@ -27,15 +27,15 @@
                 {%- form 'customer', id: 'ContactFooter', class: 'newsletter-form' -%}
                   <input type="hidden" name="contact[tags]" value="newsletter">
                   <div class="newsletter-form__field-wrapper">
-                    <div class="field-newsletter">
-                      <label class="field-newsletter__label" for="NewsletterForm--{{ section.id }}">
+                    <div class="field field--no-fly field-newsletter ">
+                      <label class="field__label--hidden" for="NewsletterForm--{{ section.id }}">
                         {{ 'newsletter.label' | t }}
                       </label>
                       <input
                         id="NewsletterForm--{{ section.id }}"
                         type="email"
                         name="contact[email]"
-                        class="field-newsletter__input"
+                        class="field__input"
                         data-verification
                         value="{{ form.email }}"
                         aria-required="true"
@@ -52,7 +52,7 @@
                         placeholder="{{ 'newsletter.label' | t }}"
                         required
                       >
-                      <button type="submit" class="field-newsletter__button" name="commit" id="Subscribe"
+                      <button type="submit" class="field__button" name="commit" id="Subscribe"
                               aria-label="{{ 'newsletter.button_label' | t }}">
                         {% render 'icon-newsletter' %}
                       </button>
