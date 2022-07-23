@@ -221,18 +221,9 @@
             </div>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              {%- render 'price-pdp', product: product, use_variant: true, price_class: 'price--large' -%}
             </div>
-            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-              <div class="product__tax caption rte">
-                {%- if shop.taxes_included -%}
-                  {{ 'products.product.include_taxes' | t }}
-                {%- endif -%}
-                {%- if shop.shipping_policy.body != blank -%}
-                  {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                {%- endif -%}
-              </div>
-            {%- endif -%}
+
             <div {{ block.shopify_attributes }}>
               {%- assign product_form_installment_id = 'product-form-installment-' | append: section.id -%}
               {%- form 'product', product, id: product_form_installment_id, class: 'installment caption-large' -%}
@@ -417,7 +408,7 @@
                     <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
                     <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
                     <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
                   </svg>
                   <span class="product-form__error-message"></span>
                 </div>
@@ -428,9 +419,14 @@
                     <button
                       type="submit"
                       name="add"
-                      class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                      class="product-form__submit button primary-button button-icon"
                       {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
+                      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M3 6H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
                         <span>
                           {%- if product.selected_or_first_available_variant.available -%}
                             {{ 'products.product.add_to_cart' | t }}
@@ -450,6 +446,24 @@
                   </div>
                 {%- endform -%}
               </product-form>
+
+              {% if settings.shipping_text != blank and settings.shipping_text_2 != blank %}
+                <div class="product-info">
+                  {% if settings.shipping_text != blank %}
+                    <div class="product-info__line">
+                      {{ settings.shipping_svg }}
+                      {{ settings.shipping_text }}
+                    </div>
+                  {% endif %}
+                  {% if settings.shipping_text_2 != blank %}
+                    <div class="product-info__line">
+                      {{ settings.shipping_svg_2 }}
+                      {{ settings.shipping_text_2 }}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+
 
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
@@ -498,6 +512,9 @@
             {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
+
+
+
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}

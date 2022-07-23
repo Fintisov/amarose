@@ -368,6 +368,13 @@
           "icon": "Return icon"
         }
       }
+    },
+    "shipping": {
+      "name": "Shipping info",
+      "settings": {
+        "text": "Text",
+        "svg_code": "SVG code"
+      }
     }
   },
   "sections": {
