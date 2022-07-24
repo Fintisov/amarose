@@ -409,12 +409,16 @@
       "success_home_link_text": "Return to Shop"
     },
     "register": {
-      "title": "Create account",
+      "title": "Sign Up",
       "first_name": "First name",
       "last_name": "Last name",
-      "email": "Email",
-      "password": "Password",
-      "submit": "Create"
+      "email": "Enter Your  Email",
+      "password": "Create Password",
+      "confirm_password": "Confirm Password",
+      "submit": "Sign Up",
+      "info_title": "Login Information",
+      "login_link_text": "Return to Login",
+      "form_error": "Please fill out the required fields."
     },
     "reset_password": {
       "title": "Reset account password",
