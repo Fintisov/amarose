@@ -1453,6 +1453,11 @@
         "label": "t:settings_schema.login.settings.logo"
       },
       {
+        "type": "textarea",
+        "id": "login_logo_svg",
+        "label": "t:settings_schema.login.settings.logo_svg"
+      },
+      {
         "type": "image_picker",
         "id": "background_image",
         "label": "t:settings_schema.login.settings.background"
@@ -1473,6 +1478,39 @@
         "type": "text",
         "id": "return_icon",
         "label": "t:settings_schema.login.settings.return.icon"
+      },
+      {
+        "type": "url",
+        "id": "register_redirect_link",
+        "label": "t:settings_schema.login.settings.form_redirect_url"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.login.settings.register_complete.header"
+      },
+      {
+        "type": "text",
+        "id": "register_complete_title",
+        "default": "Success!",
+        "label": "t:settings_schema.login.settings.register_complete.title"
+      },
+      {
+        "type": "textarea",
+        "id": "register_complete_text",
+        "default": "You can now access faster checkout, order history, and more.",
+        "label": "t:settings_schema.login.settings.register_complete.text"
+      },
+      {
+        "type": "text",
+        "id": "register_complete_link_text",
+        "default": "Return to Shop",
+        "label": "t:settings_schema.login.settings.register_complete.link_text"
+      },
+      {
+        "type": "url",
+        "id": "register_complete_link_url",
+        "default": "/",
+        "label": "t:settings_schema.login.settings.register_complete.link_url"
       }
     ]
   },
