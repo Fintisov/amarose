@@ -421,11 +421,10 @@
       "form_error": "Please fill out the required fields."
     },
     "reset_password": {
-      "title": "Reset account password",
-      "subtext": "Enter a new password for {{ email }}",
-      "password": "Password",
-      "password_confirm": "Confirm password",
-      "submit": "Reset password"
+      "title": "Reset Password",
+      "password": "Create New Password",
+      "password_confirm": "Confirm Password",
+      "submit": "Reset Password"
     }
   },
   "gift_cards": {
