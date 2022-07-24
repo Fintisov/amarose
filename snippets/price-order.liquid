@@ -45,6 +45,6 @@
   <span>{{ line_item.final_price | money }}</span>
 {%- endif -%}
 
-{% if line_item.line_level_total_discount != blank %}
+{% if line_item.line_level_total_discount %}
   <span>{{ line_item.line_level_total_discount }}</span>
 {% endif %}

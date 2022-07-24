@@ -123,6 +123,20 @@
         </div>
 
         <div>
+          <h2>{{ 'customer.order.shipping_method' | t }}</h2>
+          {%- for shipping_method in order.shipping_methods -%}
+            <div role="row">
+              <div>{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</div>
+              <div>{{ shipping_method.price | money }}</div>
+            </div>
+          {%- endfor -%}
+          ++++
+          <p>
+            <strong>{{ customer.order.shipping_method.title }}:</strong>
+          </p>
+        </div>
+
+        <div>
           <h2>{{ 'customer.order.billing_address' | t }}</h2>
           <p>
             <strong>{{ 'customer.order.payment_status' | t }}:</strong>

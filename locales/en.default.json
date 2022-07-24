@@ -377,6 +377,7 @@
       "cancelled_html": "Order Cancelled on {{ date }}",
       "cancelled_reason": "Reason: {{ reason }}",
       "billing_address": "Billing Address",
+      "shipping_method": "Shipping Method",
       "payment_status": "Payment Status",
       "shipping_address": "Shipping To",
       "fulfillment_status": "Fulfillment Status",
