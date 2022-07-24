@@ -361,12 +361,12 @@
       "name": "Login, Register and Password pages",
       "settings": {
         "logo": "Logo",
-        "logo_svg": "labelLogo SVG code",
+        "logo_svg": "Logo SVG code",
         "background": "Page background",
         "return": {
           "text": "Return text",
           "link": "Return link",
-          "icon": "Return icon"
+          "icon": "Return icon SVG code"
         },
         "form_redirect_url": "Form redirect url",
         "register_complete": {
@@ -457,7 +457,7 @@
       }
     },
     "blog-filter": {
-      "name": "Blog-filter",
+      "name": "Blog filter",
       "settings": {
         "filter_heading": {
           "label": "Title"

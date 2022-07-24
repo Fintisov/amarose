@@ -24,7 +24,14 @@
         {%- for feature_article in section.settings.blog.articles limit: secondary_post_limit -%}
           {% unless feature_article.handle == article.handle or forloop.index == secondary_post_limit %}
             <li class="blog__post grid__item">
-              {% render 'article-card', blog: section.settings.blog, article: feature_article, media_aspect_ratio: 1.66, show_image: section.settings.show_image, show_date: section.settings.show_date, show_author: section.settings.show_author, show_excerpt: true %}
+              {% render 'article-card',
+                blog: section.settings.blog,
+                article: feature_article,
+                media_aspect_ratio: 1.66,
+                show_image: true,
+                show_date: section.settings.show_date,
+                show_author: section.settings.show_author,
+                show_excerpt: true %}
             </li>
           {% endunless %}
         {%- endfor -%}
@@ -54,13 +61,6 @@
       "type": "blog",
       "id": "blog",
       "label": "t:sections.featured-blog.settings.blog.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_image",
-      "default": true,
-      "label": "t:sections.featured-blog.settings.show_image.label",
-      "info": "t:sections.featured-blog.settings.show_image.info"
     },
     {
       "type": "checkbox",

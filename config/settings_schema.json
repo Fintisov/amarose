@@ -1475,7 +1475,7 @@
         "label": "t:settings_schema.login.settings.return.link"
       },
       {
-        "type": "text",
+        "type": "textarea",
         "id": "return_icon",
         "label": "t:settings_schema.login.settings.return.icon"
       },
@@ -1540,3 +1540,4 @@
     ]
   }
 ]
+

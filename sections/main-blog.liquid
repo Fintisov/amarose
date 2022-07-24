@@ -13,22 +13,21 @@
             article: article,
             media_height: section.settings.image_height,
             media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
+            show_image: true,
             show_date: section.settings.show_date,
             show_author: section.settings.show_author,
-            show_excerpt: true 
+            show_excerpt: true
           -%}
         </div>
       {%- endfor -%}
     </div>
------
     {% for tag in article.tags %}
       {{ forloop.index }} ++++{{ tag }}
       {% if forloop.index == 1 %}
         {{ tag }}
       {% endif %}
     {% endfor %}
-    
+
     {%- if paginate.pages > 1 -%}
       {%- render 'pagination', paginate: paginate -%}
     {%- endif -%}
@@ -58,7 +57,7 @@
       "default": false,
       "label": "t:sections.main-blog.settings.show_author.label"
     },
-    {  
+    {
       "type": "range",
       "id": "post_limit",
       "min": 3,
