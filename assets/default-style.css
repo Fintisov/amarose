@@ -141,7 +141,7 @@ a {
       background-color: #850B65;
       transition: 0.3s; }
   .button.secondary-button {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
     .button.secondary-button:hover {
       color: #ffffff;
@@ -228,13 +228,13 @@ a {
   /* стили для чекбокса, находящегося в состоянии checked */
   /* стили для чекбокса, находящегося в состоянии disabled */ }
   .custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
   .custom-checkbox > input:not(:disabled):active + span::before {
     background-color: #2A3241;
     transition: 0.3s; }
   .custom-checkbox > input:focus + span::before {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
   .custom-checkbox > input:focus:not(:checked) + span::before {
     background-color: #ffffff;
@@ -286,16 +286,16 @@ a {
   /* стили для радиокнопки, находящейся в состоянии checked */
   /* стили для радиокнопки, находящейся в состоянии disabled */ }
   .custom-radio > input:not(:disabled):not(:checked) + span:hover::after {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
   .custom-radio > input:not(:disabled):active + span::after {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
   .custom-radio > input:focus + span::after {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
   .custom-radio > input:focus:not(:checked) + span::after {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
   .custom-radio > input:checked + span::after {
     background-color: #2A3241;
@@ -373,88 +373,23 @@ a {
       border: 1px solid #F08B84;
       transition: 0.3s; }
   .select:hover {
-    background-color: rgba(255, 187, 171, 0.25);
+    background-color: #FFEEEA;
     transition: 0.3s; }
 
-.field .field__input {
-  position: relative;
-  width: 100%;
-  height: 48px;
-  padding: 20px 40px 5px 20px;
-  border: 1px solid #F1F3F6;
-  border-radius: 30px;
-  background-color: #F1F3F6;
-  font-family: "futura", suns-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.4;
-  color: #5E697E;
-  transition: background-color 0.3s, border 0.3s; }
-@media screen and (max-width: 767px) {
-  .field .field__input {
-    height: 40px;
-    font-size: 16px;
-    padding: 16px 34px 1px 20px; } }
-  .field .field__input:focus {
-    border-radius: 30px; }
-    .field .field__input:focus ~ .field__label {
-      font-size: 10px; }
-  .field .field__input:hover {
-    background-color: rgba(255, 187, 171, 0.25); }
-  .field .field__input:focus {
-    border: 1px solid #F08B84;
-    background-color: #F1F3F6; }
-    .field .field__input:focus ~ .field__label {
-      top: 12px;
-      font-size: 10px; }
-  .field .field__input:disabled:hover {
-    background-color: #F1F3F6;
-    cursor: not-allowed; }
-  .field .field__input:not(:placeholder-shown) ~ .field__label {
-    top: 12px;
-    font-size: 10px; }
-  .field .field__input.validate-error {
-    border: 1px solid #DE3D64;
-    background-image: url("exit-mid_grey.svg");
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: right 20px center;
-    transition: background-image 0.3s; }
-@media screen and (max-width: 767px) {
-  .field .field__input.validate-error {
-    -webkit-background-size: 14px;
-    background-size: 14px; } }
-  .field .field__input.validate-true {
-    border: 1px solid #30CD9C;
-    background-image: url("checked-green.svg");
-    background-size: 24px;
-    background-repeat: no-repeat;
-    background-position: right 20px center;
-    transition: background-image 0.3s; }
-@media screen and (max-width: 767px) {
-  .field .field__input.validate-true {
-    -webkit-background-size: 14px;
-    background-size: 14px; } }
-.field .field__label {
-  font-family: "futura", suns-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  color: #5E697E;
-  top: 50%;
-  transform: translateY(-50%); }
-@media screen and (max-width: 767px) {
+.field {
+  position: relative; }
   .field .field__label {
-    font-size: 14px; } }
-
-.field-newsletter {
-  position: relative;
-  border-radius: 30px; }
-  .field-newsletter:hover > .field-newsletter__input {
-    border: 1px solid #FFBBAB; }
-  .field-newsletter:hover > .field-newsletter__button {
-    background-color: rgba(255, 187, 171, 0.25); }
-  .field-newsletter .field-newsletter__label {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #5E697E;
+    top: 50%;
+    transform: translateY(-50%); }
+  @media screen and (max-width: 767px) {
+    .field .field__label {
+      font-size: 14px; } }
+  .field .field__label--hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -463,43 +398,123 @@ a {
     margin: -1px;
     padding: 0;
     border: 0; }
-  .field-newsletter .field-newsletter__input {
+  .field .field__input {
+    position: relative;
     width: 100%;
-    padding: 11.5px 70px 11.5px 20px;
+    min-height: 48px;
+    padding: 20px 40px 5px 20px;
+    margin: 0;
     border: 1px solid #F1F3F6;
     border-radius: 30px;
+    background-color: #F1F3F6;
     font-family: "futura", suns-serif;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 1.4;
     color: #5E697E;
-    transition: border 0.3s; }
-    .field-newsletter .field-newsletter__input:focus {
-      border: 1px solid #FFBBAB; }
-    .field-newsletter .field-newsletter__input.validate-error {
-      border: 1px solid #DE3D64; }
-    .field-newsletter .field-newsletter__input:not(:placeholder-shown) {
-      color: #2A3241; }
-  .field-newsletter .field-newsletter__button {
+    transition: background-color 0.3s, border 0.3s; }
+    .field .field__input::placeholder {
+      opacity: 0; }
+  @media screen and (max-width: 767px) {
+    .field .field__input {
+      height: 40px;
+      font-size: 16px;
+      padding: 16px 34px 1px 20px; } }
+    .field .field__input:focus {
+      border-radius: 30px; }
+      .field .field__input:focus ~ .field__label {
+        font-size: 10px; }
+    .field .field__input:hover {
+      background-color: #FFEEEA; }
+    .field .field__input:focus {
+      border: 1px solid #F08B84;
+      background-color: #F1F3F6; }
+      .field .field__input:focus ~ .field__label {
+        top: 12px;
+        font-size: 10px; }
+    .field .field__input:disabled:hover {
+      background-color: #F1F3F6;
+      cursor: not-allowed; }
+    .field .field__input:not(:placeholder-shown) ~ .field__label {
+      top: 12px;
+      font-size: 10px; }
+    .field .field__input.validate-error {
+      border: 1px solid #DE3D64;
+      background-image: url("exit-mid_grey.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      transition: background-image 0.3s, border 0.3s; }
+  @media screen and (max-width: 767px) {
+    .field .field__input.validate-error {
+      -webkit-background-size: 14px;
+      background-size: 14px; } }
+    .field .field__input.validate-true {
+      border: 1px solid #30CD9C;
+      background-image: url("checked-green.svg");
+      background-size: 24px;
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      transition: background-image 0.3s, border 0.3s; }
+  @media screen and (max-width: 767px) {
+    .field .field__input.validate-true {
+      -webkit-background-size: 14px;
+      background-size: 14px; } }
+  .field.field--no-fly {
+    display: block; }
+    .field.field--no-fly .field__label {
+      position: static;
+      transform: none; }
+    .field.field--no-fly .field__input {
+      padding: 5px 40px 5px 20px;
+      background-color: #ffffff; }
+      .field.field--no-fly .field__input::placeholder {
+        opacity: 1; }
+      .field.field--no-fly .field__input:not(:placeholder-shown) {
+        color: #2A3241; }
+  .field .field__button {
     position: absolute;
     top: 1px;
     right: 1px;
-    width: 62px;
+    width: 40px;
     height: calc(100% - 2px);
     padding: 0;
+    opacity: 1;
+    z-index: 1;
     border-radius: 30px;
     border: none;
     cursor: pointer;
     background-color: transparent;
-    transition: background-color 0.3s; }
-    .field-newsletter .field-newsletter__button svg {
+    transition: background-color 0.3s, z-index 0.3s, opacity 0.3s; }
+  .field.field-newsletter:hover > .field__input {
+    border: 1px solid #FFBBAB; }
+  .field.field-newsletter:hover > .field__button {
+    background-color: #FFEEEA; }
+  .field.field-newsletter .field__input {
+    padding: 11.5px 70px 11.5px 20px;
+    font-weight: 400;
+    font-size: 16px; }
+    .field.field-newsletter .field__input:focus {
+      border: 1px solid #FFBBAB;
+      background-color: #ffffff; }
+    .field.field-newsletter .field__input:focus:not(.validate-error) + .field__button {
+      background-color: #BA3A7D; }
+      .field.field-newsletter .field__input:focus:not(.validate-error) + .field__button path {
+        fill: #ffffff; }
+    .field.field-newsletter .field__input.validate-error ~ .field__button {
+      opacity: 0;
+      z-index: -1; }
+    .field.field-newsletter .field__input.validate-true {
+      border: 1px solid #FFBBAB;
+      background-image: none; }
+  .field.field-newsletter .field__button {
+    width: 62px; }
+    .field.field-newsletter .field__button svg {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-      .field-newsletter .field-newsletter__button svg path {
+      .field.field-newsletter .field__button svg path {
         transition: fill 0.3s; }
-    .field-newsletter .field-newsletter__button:active {
-      background-color: #BA3A7D; }
-      .field-newsletter .field-newsletter__button:active path {
-        fill: #ffffff; }
+  .field.field-search .field__input {
+    padding-right: 100px; }

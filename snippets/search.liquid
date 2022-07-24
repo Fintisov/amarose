@@ -3,9 +3,9 @@
   <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
 {%- endif -%}
   <form action="{{ routes.search_url }}" method="get" role="search" class="search">
-    <div class="field">
+    <div class="field field--no-fly field-search">
       <input
-        class="search__input field__input"
+        class="field__input"
         id="Search-In-Template"
         type="search"
         name="q"
@@ -24,7 +24,7 @@
           spellcheck="false"
         {%- endif -%}
       >
-      <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+      <label class="field__label--hidden" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
       <input name="options[prefix]" type="hidden" value="last">
 
       {%- if settings.predictive_search_enabled -%}
@@ -39,7 +39,7 @@
         <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
       {%- endif -%}
 
-      <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+      <button type="submit" class="field__button" aria-label="{{ 'general.search.search' | t }}">
         <svg class="icon icon-search">
           <use xlink:href="#icon-search">
         </svg>

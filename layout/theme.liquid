@@ -217,7 +217,10 @@
     </script>
   </head>
 
-  {% if template.name == 'login' %}
+  {% if template.name == 'login'
+    or template.name == 'register'
+    or template.name == 'reset_password'
+    or template.suffix == 'register-complete' %}
     {% assign is_only_content = true %}
   {% endif %}
 

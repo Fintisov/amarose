@@ -28,6 +28,8 @@
                 width="{{ article.image.width }}"
                 height="{{ article.image.height }}"
                 alt="{{ article.image.alt | escape }}">
+
+              <strong class="article-template__hero-title">{{ article.title | escape }}</strong>
             </div>
           </div>
         {%- endif -%}
