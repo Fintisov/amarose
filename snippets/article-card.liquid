@@ -16,14 +16,21 @@
     {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
 {% endcomment %}
 
+<style>
+  .article-card__image {
+    height: 100px;
+    background-size: cover;
+    display: block !important;
+  }
+</style>
 
 {%- if article and article != empty -%}
 <div class="card article-card">
-
   <div class="card__inner">
-  {%- if show_image == true and article.metafields.custom.image_for_blog_page != blank -%}
-    <div class="article-card__image 1" style="background-image: url({{ article.metafields.custom.image_for_blog_page | img_url:"master" }})"></div>
-  {% elsif show_image == true and article.image %}
+
+  {%- if article.metafields.custom.image_for_blog_page != blank -%}
+   <div class="article-card__image 1" style="background-image: url({{ article.metafields.custom.image_for_blog_page | img_url:"master" }})"></div>
+  {% elsif article.image %}
     <div class="article-card__image 2" style="background-image: url({{ article.image.src | img_url:"master" }})"></div>
   {%- endif -%}
 
