@@ -1729,6 +1729,9 @@
         "enable_sorting": {
           "label": "Enable sorting"
         },
+        "enable_search": {
+          "label": "Enable search"
+        },
         "image_ratio": {
           "label": "Image ratio",
           "options__1": {
