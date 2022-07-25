@@ -42,7 +42,7 @@
       {% endif %}
       {%- for article in predictive_search.resources.articles -%}
         <li class="predictive-search__list-item predictive-search__list-item-article" role="option" aria-selected="false">
-          <a href="{{ article.url }}">{{ article.title }}</a>
+          <a class="predictive-search__lint-text" href="{{ article.url }}">{{ article.title }}</a>
         </li>
       {%- endfor -%}
       {% if predictive_search.resources.pages.size > 0  %}
@@ -54,13 +54,12 @@
       {% endif %}
       {%- for page in predictive_search.resources.pages -%}
         <li class="predictive-search__list-item predictive-search__list-item-page" role="option" aria-selected="false">
-          <a href="{{ page.url }}">{{ page.title }}</a>
+          <a class="predictive-search__lint-text" href="{{ page.url }}">{{ page.title }}</a>
         </li>
       {%- endfor -%}
-      <li id="predictive-search-option-search-keywords" class="predictive-search__list-item" role="option">
+      <li id="predictive-search-option-search-keywords" class="predictive-search-keywords predictive-search__list-item" role="option">
         <button class="predictive-search__item predictive-search__item--term link link--text h5 animate-arrow" tabindex="-1">
           {{ 'templates.search.search_for' | t: terms: predictive_search.terms }}
-          {% render 'icon-arrow' %}
         </button>
       </li>
     </ul>

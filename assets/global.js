@@ -12,20 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".announcement-bar .close-button").addEventListener("click", () => {
     document.querySelector(".announcement-bar").style.display = "none";
   });
-
-  function closeSearch() {
-    const searchSection = document.querySelector(".header__search");
-
-    searchSection.addEventListener("click", (e) => {
-      let detailsSection = searchSection.querySelector("details");
-
-      if (e.target.classList.contains("search-modal__content") && detailsSection.hasAttribute("open")) {
-        detailsSection.removeAttribute("open");
-      }
-    })
-  }
-
-  closeSearch();
 })
 
 
