@@ -136,7 +136,7 @@
                                       {%- if childlink.links == blank -%}
                                         {% if childlink.title contains '--label' %}
                                           <span class="menu-drawer__menu-item no-link--text list-menu__item">
-                                            {{ childlink.title | escape  | remove: "--label" }}
+                                            {{ childlink.title | escape | remove: "--label" }}
                                           </span>
                                         {% else %}
                                           <a href="{{ childlink.url }}"
@@ -164,7 +164,7 @@
                                                 <li>
                                                   {% if childlink.title contains '--label' %}
                                                     <span class="menu-drawer__menu-item no-link--text list-menu__item">
-                                                      {{ childlink.title | escape  | remove: "--label" }}
+                                                      {{ childlink.title | escape | remove: "--label" }}
                                                     </span>
                                                   {% else %}
                                                     <a href="{{ grandchildlink.url }}"
@@ -274,7 +274,7 @@
                                  class="mega-menu__link mega-menu__link--level-2 link
                                {% if childlink.title == 'Shop All' %}mega-menu__link--color{% endif %}
                                {% if childlink.current %} mega-menu__link--active{% endif %}"
-                                {% if childlink.current %} aria-current="page"{% endif %}>
+                              {% if childlink.current %} aria-current="page"{% endif %}>
                                 {{ childlink.title | escape }}
                                 {% if childlink.title == 'Shop All' %}
                                   {% render 'icon-arrow-r' %}
@@ -340,12 +340,13 @@
                                     alt: block.settings.image.alt | escape
                                     }}
                                     <div class="menu-one-box__holder">
-                                      {% if block.settings.top_text != blank %}
-                                        <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
-                                      {% endif %}
+                                      <div class="menu-one-box__text-wrapper">
+                                        {% if block.settings.top_text != blank %}
+                                          <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
+                                        {% endif %}
 
-                                      {{ block.settings.text }}
-
+                                        {{ block.settings.text }}
+                                      </div>
                                       {% if block.settings.button_url != blank and block.settings.button_text != blank %}
                                         <a href="{{ block.settings.button_url }}">
                                           {{ block.settings.button_text }}
@@ -404,7 +405,8 @@
                   {%- endif -%}
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                     <div class="field field--no-fly field-search">
-                      <label class="field__label--hidden" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                      <label class="field__label--hidden"
+                             for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
                       <input class="field__input"
                              id="Search-In-Modal"
                              type="search"
@@ -425,9 +427,10 @@
                         {%- endif -%}
                       >
                       <input type="hidden" name="options[prefix]" value="last">
-                      <button class="field__button" aria-label="{{ 'general.search.search' | t }}">
+                      <button class="field__button field__button--search"
+                              aria-label="{{ 'general.search.search' | t }}">
                         <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                          <use href="#icon-search" />
+                          <use href="#icon-search"/>
                         </svg>
                       </button>
                     </div>
@@ -445,11 +448,10 @@
                       <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                     {%- endif -%}
 
-                    <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset"
+                    <button type="button"
+                            class="search-modal__close-button modal__close-button link link--text focus-inset"
                             aria-label="{{ 'accessibility.close' | t }}">
-                      <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                        <use href="#icon-close"/>
-                      </svg>
+                      {% render 'icon-close' %}
                     </button>
                   </form>
                   {%- if settings.predictive_search_enabled -%}
@@ -487,14 +489,15 @@
                       {% endif %}
 
                       {% if section.settings.customer_menu.links.size > 0 %}
-                        {% assign icons_list = section.settings.customer_icons_list | split: ','%}
+                        {% assign icons_list = section.settings.customer_icons_list | split: ',' %}
                         <ul>
                           {% for link in section.settings.customer_menu.links -%}
                             <li>
                               <a href="{{ link.url }}"
                                  class="{% if page_handle == link.url %} active{% endif %}">
                                 {% if icons_list[forloop.index0] != blank %}
-                                  <img class="icon" src="{{ icons_list[forloop.index0] | file_url }}" alt="{{ icons_list[forloop.index0] }}">
+                                  <img class="icon" src="{{ icons_list[forloop.index0] | file_url }}"
+                                       alt="{{ icons_list[forloop.index0] }}">
                                 {% endif %}
                                 {{ link.title }}
                               </a>
@@ -529,11 +532,13 @@
                                 alt: block.settings.image.alt | escape
                                 }}
                                 <div class="menu-one-box__holder">
-                                  {% if block.settings.top_text != blank %}
-                                    <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
-                                  {% endif %}
+                                  <div class="menu-one-box__text-wrapper">
+                                    {% if block.settings.top_text != blank %}
+                                      <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
+                                    {% endif %}
 
-                                  {{ block.settings.text }}
+                                    {{ block.settings.text }}
+                                  </div>
 
                                   {% if block.settings.button_url != blank and block.settings.button_text != blank %}
                                     <a href="{{ block.settings.button_url }}">
@@ -622,6 +627,11 @@
 
 
 
+
+
+
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -638,6 +648,11 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
+
+
+
+
+
 
 
 

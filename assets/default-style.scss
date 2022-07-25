@@ -658,7 +658,6 @@ a {
 
     .field__input {
       padding: 5px 40px 5px 20px;
-      background-color: $white;
 
       &::placeholder {
         opacity: 1;
@@ -750,6 +749,21 @@ a {
   &.field-search {
     .field__input {
       padding-right: 100px;
+      font-weight: 400;
+      color: $midGrey;
+
+      &:focus {
+        background-color: $white;
+      }
+
+      &:not(:placeholder-shown) {
+        background-color: $white;
+      }
+    }
+
+    .field__button--search {
+      width: 24px;
+      right: 32px;
     }
   }
 }
