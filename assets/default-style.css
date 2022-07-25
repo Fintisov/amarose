@@ -466,8 +466,7 @@ a {
       position: static;
       transform: none; }
     .field.field--no-fly .field__input {
-      padding: 5px 40px 5px 20px;
-      background-color: #ffffff; }
+      padding: 5px 40px 5px 20px; }
       .field.field--no-fly .field__input::placeholder {
         opacity: 1; }
       .field.field--no-fly .field__input:not(:placeholder-shown) {
@@ -517,4 +516,13 @@ a {
       .field.field-newsletter .field__button svg path {
         transition: fill 0.3s; }
   .field.field-search .field__input {
-    padding-right: 100px; }
+    padding-right: 100px;
+    font-weight: 400;
+    color: #5E697E; }
+    .field.field-search .field__input:focus {
+      background-color: #ffffff; }
+    .field.field-search .field__input:not(:placeholder-shown) {
+      background-color: #ffffff; }
+  .field.field-search .field__button--search {
+    width: 24px;
+    right: 32px; }
