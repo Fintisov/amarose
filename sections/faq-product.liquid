@@ -1,0 +1,68 @@
+<section class="faq-product">
+  {% if section.settings.title != blank %}
+    <h2 class="faq-product__title">{{ section.settings.title }}</h2>
+  {% endif %}
+
+  <div class="faq-product__list-questions">
+    {%- for block in section.blocks -%}
+      <div class="faq-product__list-questions-item" data-question-{{ block.id }}>
+        {% if block.settings.question != blank %}
+          <div class="faq-product__list-item-header">
+            <button class="faq-product__list-item-button">{{ block.settings.question }}</button>
+          </div>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+
+  <div class="faq-product__list-answers">
+    {%- for block in section.blocks -%}
+      <div class="faq-product__list-answers-item" data-answer-{{ block.id }}>
+        {% if block.settings.answer != blank %}
+          <div class="faq-product__list-item-content">
+            {{ block.settings.answer }}
+          </div>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.faq_product.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Frequently Asked Questions",
+      "label": "t:sections.faq_product.settings.title.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block_link",
+      "name": "t:sections.faq_product.settings.blocks.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "t:sections.faq_product.settings.blocks.question"
+        },
+        {
+          "type": "html",
+          "id": "answer",
+          "label": "t:sections.faq_product.settings.blocks.answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq_product.presets.name"
+    }
+  ]
+}
+{% endschema %}
