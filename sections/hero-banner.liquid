@@ -8,7 +8,7 @@
 {% endif %}
 
 <div class="hero-banner" style="background-color: {{ section.settings.bg_color }}; {%  if hasBg %}background-image: url({{ bg_image }});{% endif %}" >
-  <div class="page-width page-width-position-{{ section.settings.text_alignment }}">
+  <div class="container page-width-position-{{ section.settings.text_alignment }}">
 
     {% if section.settings.image != blank %}
       {{ section.settings.image | image_url: width: 1920 | image_tag:
@@ -35,7 +35,7 @@
         </div>
       {% endif %}
       {% if section.settings.button_url != blank and section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_url }}" class="primary-button">
+        <a href="{{ section.settings.button_url }}" class="button primary-button">
           {{ section.settings.button_text }}
         </a>
       {% endif %}
