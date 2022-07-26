@@ -102,6 +102,7 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
+/*
 
 .predictive-search__item {
   display: flex;
@@ -174,3 +175,4 @@ predictive-search[loading] .predictive-search__results-list:first-child {
   object-fit: contain;
   font-family: 'object-fit: contain';
 }
+*/

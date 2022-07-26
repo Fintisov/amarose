@@ -22,7 +22,8 @@
 .footer__newsletter {
   margin-bottom: 24px; }
   .footer__newsletter .field-newsletter .field__input {
-    min-height: 56px; }
+    min-height: 56px;
+    background-color: #ffffff; }
 
 .footer__list-social {
   display: flex;
