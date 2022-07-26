@@ -345,17 +345,21 @@
       "zip": "ZIP code",
       "phone": "Phone Number",
       "set_default": "Set as default address",
-      "add": "Add address",
+      "add": "Save",
       "update": "Save Changes",
       "cancel": "Discard",
       "address_back": "Back to My Addresses",
       "edit": "Edit",
       "delete": "Delete",
       "delete_confirm": "Are you sure you wish to delete this address?",
-      "empty_addresses": "There are no addresses yet."
+      "empty_addresses": "There are no addresses yet.",
+
+      "address_popup_title": "Are you sure you want to delete the {{ street }} address?",
+      "address_popup_description": "This action cannot be undone.",
+      "address_popup_discard": "Discard",
+      "address_popup_delete": "Delete"
     },
     "log_in": "Log in",
-
     "log_out": "Log out",
     "sign_up": "Sign Up",
     "login_page": {

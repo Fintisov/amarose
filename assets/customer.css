@@ -747,16 +747,28 @@ li[data-address] > h2 {
 .js-form-edit .main-address-header,
 .js-form-add .main-address-header,
 .js-form-add .addresses-empty-text,
-.js-form-add .addresses-list {
+.js-form-add .addresses-list,
+.remove-address-popup {
   display: none;
 }
 
 .js-form-edit .edit-address-box,
-.js-form-add .add-address-box {
+.js-form-add .add-address-box,
+.address-popup-open .remove-address-popup {
   display: block;
 }
 
 .addresses-icon {
   width: 20px;
   height: 21px;
+}
+
+.remove-address-popup {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+
 }

@@ -30,6 +30,7 @@
           type="button"
           aria-expanded="false"
           aria-controls="AddAddress"
+          class="button primary-button"
         >
           {{ 'customer.addresses.add_new' | t }}
         </button>
@@ -142,8 +143,7 @@
                 <button
                   type="button"
                   aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
-                  data-target="{{ address.url }}"
-                  data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                  data-address-popup-opener
                 >
                   <svg class="addresses-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 21">
                     <use href="#icon-remove" />
@@ -155,6 +155,27 @@
                 <p>{{ address.address1 }} {{ address.address2 }}</p>
                 <p>{{ address.city }} {{ address.zip }}</p>
                 <p>{{ address.phone }}</p>
+              </div>
+
+              <div class="remove-address-popup">
+                <p>{{ 'customer.addresses.address_popup_title' | t: street: address.address1 }}</p>
+                <p>{{ 'customer.addresses.address_popup_description' | t }}</p>
+                <button
+                  type="button"
+                  data-address-popup-opener
+                  class="button outline-button"
+                >
+                  {{ 'customer.addresses.address_popup_discard' | t }}
+                </button>
+                <button
+                  type="button"
+                  aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
+                  data-target="{{ address.url }}"
+                  data-confirm-message="{{ 'customer.addresses.delete_confirm' | t }}"
+                  class="button primary-button"
+                >
+                  {{ 'customer.addresses.address_popup_delete' | t }}
+                </button>
               </div>
 
               <div class="edit-address-box" id="EditAddress_{{ address.id }}">
