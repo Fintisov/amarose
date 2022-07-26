@@ -1,5 +1,6 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'collection-grid.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'template-collection.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if section.settings.enable_quick_add -%}
@@ -9,8 +10,8 @@
 {%- endif -%}
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="collection-grid section-{{ section.id }}-padding">
-    <div class="collection-grid__header title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}">
+<div class="collection-grid container section-{{ section.id }}-padding">
+    <div class="collection-grid__header  title-wrapper title-wrapper--no-top-margin {% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}">
       <h2 class="collection-grid__title">
         {% if section.settings.title != blank %}
           {{ section.settings.title | escape }}

@@ -1,0 +1,4 @@
+.collection-grid {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 20px; }

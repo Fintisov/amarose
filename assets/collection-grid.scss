@@ -1,0 +1,17 @@
+@import "_variables";
+
+.collection-grid {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 20px;
+}
+
+.collection-grid__header {
+  .collection-grid__title {
+    
+  }
+
+  .collection-grid__description {
+
+  }
+}
