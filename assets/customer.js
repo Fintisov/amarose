@@ -61,6 +61,9 @@ class CustomerAddresses {
   }
 
   _toggleExpanded(target) {
+    console.log(111, target.getAttribute('aria-controls'));
+    const targetClass = target.getAttribute('aria-controls') === 'AddAddress' ? 'js-form-add' : 'js-form-edit';
+    target.closest(selectors.customerAddresses).classList.toggle(targetClass)
     target.setAttribute(
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
@@ -81,7 +84,7 @@ class CustomerAddresses {
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
     // eslint-disable-next-line no-alert
-    if (confirm(currentTarget.getAttribute(attributes.confirmMessage))) {
+    if (currentTarget.getAttribute(attributes.confirmMessage)) {
       Shopify.postLink(currentTarget.dataset.target, {
         parameters: { _method: 'delete' },
       });

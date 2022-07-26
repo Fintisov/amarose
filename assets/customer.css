@@ -740,3 +740,23 @@ li[data-address] > h2 {
     flex-basis: calc(50% - 1rem);
   }
 }
+
+.edit-address-box,
+.add-address-box,
+.js-form-edit .address-box,
+.js-form-edit .main-address-header,
+.js-form-add .main-address-header,
+.js-form-add .addresses-empty-text,
+.js-form-add .addresses-list {
+  display: none;
+}
+
+.js-form-edit .edit-address-box,
+.js-form-add .add-address-box {
+  display: block;
+}
+
+.addresses-icon {
+  width: 20px;
+  height: 21px;
+}
