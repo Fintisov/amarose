@@ -10,7 +10,17 @@
 <noscript>{{ 'template-collection.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="collection-grid section-{{ section.id }}-padding">
-    <div class="collection-grid__header title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}">
+
+  {% if section.settings.image != blank %}
+    {% assign collection_image = section.settings.image %}
+  {% elsif section.settings.collection.image != blank %}
+    {% assign collection_image = section.settings.collection.image %}
+  {% endif %}
+
+
+    <div class="collection-grid__header title-wrapper title-wrapper--no-top-margin page-width"
+         style="background-image: url({{ collection_image | img_url: 'master' }})"
+    >
       <h2 class="collection-grid__title">
         {% if section.settings.title != blank %}
           {{ section.settings.title | escape }}
@@ -27,32 +37,8 @@
           {% endif %}
         </div>
       {%- endif -%}
-
-      {% if section.settings.image != blank %}
-        {% assign collection_image = section.settings.image %}
-      {% elsif section.settings.collection.image != blank %}
-        {% assign collection_image = section.settings.collection.image %}
-      {% endif %}
-
-      {% if collection_image !=blank %}
-        <img
-          srcset="{%- if collection_image.width >= 165 -%}{{ collection_image | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if collection_image.width >= 360 -%}{{ collection_image | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if collection_image.width >= 533 -%}{{ collection_image | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if collection_image.width >= 720 -%}{{ collection_image | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if collection_image.width >= 940 -%}{{ collection_image | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if collection_image.width >= 1066 -%}{{ collection_image | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ collection_image | image_url }} {{ collection_image.width }}w"
-          src="{{ collection_image | image_url: width: 533 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-          alt="{{ collection_image.alt | escape }}"
-          class="motion-reduce"
-          {% unless lazy_load == false %}loading="lazy"{% endunless %}
-          width="{{ collection_image.width }}"
-          height="{{ collection_image.height }}"
-        >
-      {% endif %}
     </div>
+
 
   <div class="collection-grid__list">
     <ul class="grid product-grid contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
