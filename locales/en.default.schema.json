@@ -1254,6 +1254,14 @@
         }
       }
     },
+    "main-404": {
+      "name": "Not Found",
+      "settings": {
+        "background_image": {
+          "label": "Background image"
+        }
+      }
+    },
     "image-banner": {
       "name": "Image banner",
       "settings": {
