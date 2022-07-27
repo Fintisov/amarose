@@ -218,6 +218,7 @@
     }
   }
 }
+
 .menu-boxes {
   display: flex;
   column-gap: 20px;
@@ -347,15 +348,18 @@
     }
   }
 
-  .modal__content {
-    background-color: $lightGrey;
-    opacity: 0;
-    transition: 0.3s opacity;
-  }
+  details {
+    .modal__content, .account-modal {
+      background-color: $lightGrey;
+      opacity: 0;
+      transition: 0.3s opacity;
+    }
 
-  details[open] {
-    .modal__content {
-      opacity: 1;
+    &[open] {
+      .modal__content, .account-modal {
+        opacity: 1;
+        transition: 0.3s opacity;
+      }
     }
   }
 }

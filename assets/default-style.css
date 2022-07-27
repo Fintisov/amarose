@@ -23,12 +23,6 @@ ul, ol {
   list-style: none;
   margin: 0; }
 
-body {
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none; }
-
 * {
   font-family: "futura", suns-serif; }
 

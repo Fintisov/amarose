@@ -247,12 +247,13 @@
     width: 24px; }
   .header-icons .header-icons__elem:not(:last-child) {
     margin-right: 20px; }
-  .header-icons .modal__content {
+  .header-icons details .modal__content, .header-icons details .account-modal {
     background-color: #F1F3F6;
     opacity: 0;
     transition: 0.3s opacity; }
-  .header-icons details[open] .modal__content {
-    opacity: 1; }
+  .header-icons details[open] .modal__content, .header-icons details[open] .account-modal {
+    opacity: 1;
+    transition: 0.3s opacity; }
 
 .header__search .search-modal__form {
   position: relative; }
