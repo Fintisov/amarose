@@ -831,6 +831,7 @@ details[open] .modal-overlay::after {
   outline: 0;
   border-radius: var(--inputs-radius);
 }
+/*
 
 .field__input:focus-visible,
 .select__select:focus-visible,
@@ -851,6 +852,7 @@ details[open] .modal-overlay::after {
   outline: 0;
   border-radius: var(--inputs-radius);
 }
+*/
 
 .localization-form__select:focus {
   outline: 0;
@@ -886,13 +888,10 @@ details[open] .modal-overlay::after {
 /* Field */
 
 .field {
-  position: relative;
-  width: 100%;
-  display: flex;
   transition: box-shadow var(--duration-short) ease;
 }
 
-.customer .field {
+.customer {
   display: flex;
 }
 
@@ -940,11 +939,6 @@ details[open] .modal-overlay::after {
 .field__input::-webkit-search-cancel-button,
 .customer .field input::-webkit-search-cancel-button {
   display: none;
-}
-
-.field__input::placeholder,
-.customer .field input::placeholder {
-  opacity: 0;
 }
 
 .field__button {

@@ -361,12 +361,28 @@
       "name": "Login, Register and Password pages",
       "settings": {
         "logo": "Logo",
+        "logo_svg": "Logo SVG code",
         "background": "Page background",
         "return": {
           "text": "Return text",
           "link": "Return link",
-          "icon": "Return icon"
+          "icon": "Return icon SVG code"
+        },
+        "form_redirect_url": "Form redirect url",
+        "register_complete": {
+          "header": "Register complete page",
+          "title": "Title",
+          "text": "text",
+          "link_text": "Button text",
+          "link_url": "Button link"
         }
+      }
+    },
+    "shipping": {
+      "name": "Shipping info",
+      "settings": {
+        "text": "Text",
+        "svg_code": "SVG code"
       }
     }
   },
@@ -441,7 +457,7 @@
       }
     },
     "blog-filter": {
-      "name": "Blog-filter",
+      "name": "Blog filter",
       "settings": {
         "filter_heading": {
           "label": "Title"
@@ -1185,6 +1201,9 @@
       "settings": {
         "logo": {
           "label": "Logo image"
+        },
+        "logo_svg": {
+          "label": "labelLogo SVG code"
         },
         "logo_width": {
           "unit": "px",

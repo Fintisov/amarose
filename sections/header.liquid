@@ -134,10 +134,16 @@
                                   {%- for childlink in link.links -%}
                                     <li>
                                       {%- if childlink.links == blank -%}
-                                        <a href="{{ childlink.url }}"
-                                           class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
-                                          {{ childlink.title | escape }}
-                                        </a>
+                                        {% if childlink.title contains '--label' %}
+                                          <span class="menu-drawer__menu-item no-link--text list-menu__item">
+                                            {{ childlink.title | escape | remove: "--label" }}
+                                          </span>
+                                        {% else %}
+                                          <a href="{{ childlink.url }}"
+                                             class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+                                            {{ childlink.title | escape }}
+                                          </a>
+                                        {% endif %}
                                       {%- else -%}
                                         <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
                                           <summary
@@ -156,10 +162,16 @@
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
-                                                  <a href="{{ grandchildlink.url }}"
-                                                     class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                                    {{ grandchildlink.title | escape }}
-                                                  </a>
+                                                  {% if childlink.title contains '--label' %}
+                                                    <span class="menu-drawer__menu-item no-link--text list-menu__item">
+                                                      {{ childlink.title | escape | remove: "--label" }}
+                                                    </span>
+                                                  {% else %}
+                                                    <a href="{{ grandchildlink.url }}"
+                                                       class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                                      {{ grandchildlink.title | escape }}
+                                                    </a>
+                                                  {% endif %}
                                                 </li>
                                               {%- endfor -%}
                                             </ul>
@@ -240,29 +252,43 @@
           {%- for link in section.settings.menu.links -%}
             <li class="list-menu__elem">
               {%- if link.links != blank -%}
-                <header-menu>
-                  <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                  <div id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
                     <summary class="header__menu-item list-menu__item link focus-inset">
                       <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
                     </summary>
 
+                    {%- assign hasInnerBlock = false -%}
+                    {%- for block in section.blocks -%}
+                      {% if block.settings.title == link.title %}
+                        {%- assign hasInnerBlock = true -%}
+                      {% endif %}
+                    {% endfor %}
+
                     <div id="MegaMenu-Content-{{ forloop.index }}"
-                         class="mega-menu__content gradient motion-reduce global-settings-popup" tabindex="-1">
+                         class="mega-menu__content gradient motion-reduce global-settings-popup {% if hasInnerBlock %}mega-menu__has-block{% endif %}" tabindex="-1">
                       <ul
                         class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                         role="list">
                         {%- for childlink in link.links -%}
-                          <li>
-                            <a href="{{ childlink.url }}"
-                               class="mega-menu__link mega-menu__link--level-2 link
-                               {% if childlink.title == 'Shop All' %}mega-menu__link--color{% endif %}
+                          <li class="mega-menu__elem">
+                            {% if childlink.title contains '--label' %}
+                              <span class="mega-menu__link mega-menu__link-not-link">
+                                {{ childlink.title | escape | remove: "--label" }}
+                              </span>
+                            {% else %}
+                              <a href="{{ childlink.url }}"
+                                 class="mega-menu__link mega-menu__link--level-2 link
+                               {% if childlink.title == 'Shop All' or childlink.title == 'See All' %}mega-menu__link--color{% endif %}
                                {% if childlink.current %} mega-menu__link--active{% endif %}"
-                            {% if childlink.current %} aria-current="page"{% endif %}>
-                              {{ childlink.title | escape }}
-                              {% if childlink.title == 'Shop All' %}
-                                {% render 'icon-arrow-r' %}
-                              {% endif %}
-                            </a>
+                              {% if childlink.current %} aria-current="page"{% endif %}>
+                                {{ childlink.title | escape }}
+                                {% if childlink.title == 'Shop All' or childlink.title == 'See All' %}
+                                  {% render 'icon-arrow-r' %}
+                                {% endif %}
+                              </a>
+                            {% endif %}
+
+
                             {%- if childlink.links != blank -%}
                               <ul class="list-unstyled" role="list">
                                 {%- for grandchildlink in childlink.links -%}
@@ -287,7 +313,7 @@
                                 {% if block.settings.link01 != blank and block.settings.image01 != blank %}
                                   <a href="{{ block.settings.link01 }}"
                                      class="menu-box menu-box__text-{{ block.settings.text_alignment01 }}"
-                                     style="background-image: url({{ block.settings.image01 }})">
+                                     style="background-image: url({{ block.settings.image01 | img_url: 'master' }})">
                                     <span class="menu-box__title">{{ block.settings.text01 }}</span>
                                     {% if block.settings.text_link01 != blank %}
                                       <span class="menu-box__link-title">{{ block.settings.text_link01 }}</span>
@@ -298,7 +324,7 @@
                                 {% if block.settings.link02 != blank and block.settings.image02 != blank %}
                                   <a href="{{ block.settings.link02 }}"
                                      class="menu-box menu-box__text-{{ block.settings.text_alignment02 }}"
-                                     style="background-image: url({{ block.settings.image02 }})">
+                                     style="background-image: url({{ block.settings.image02 | img_url: 'master' }})">
                                     <span class="menu-box__title">{{ block.settings.text02 }}</span>
                                     {% if block.settings.text_link02 != blank %}
                                       <span class="menu-box__link-title">{{ block.settings.text_link02 }}</span>
@@ -320,12 +346,13 @@
                                     alt: block.settings.image.alt | escape
                                     }}
                                     <div class="menu-one-box__holder">
-                                      {% if block.settings.top-text != blank %}
-                                        <span class="menu-one-box__top-title">{{ block.settings.top-text }}</span>
-                                      {% endif %}
+                                      <div class="menu-one-box__text-wrapper">
+                                        {% if block.settings.top_text != blank %}
+                                          <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
+                                        {% endif %}
 
-                                      {{ block.settings.text }}
-
+                                        {{ block.settings.text }}
+                                      </div>
                                       {% if block.settings.button_url != blank and block.settings.button_text != blank %}
                                         <a href="{{ block.settings.button_url }}">
                                           {{ block.settings.button_text }}
@@ -341,8 +368,7 @@
                       {% endfor %}
 
                     </div>
-                  </details>
-                </header-menu>
+                  </div>
               {%- else -%}
                 <a href="{{ link.url }}"
                    class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
@@ -383,8 +409,10 @@
                 <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
                   {%- endif -%}
                   <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
-                    <div class="field">
-                      <input class="search__input field__input"
+                    <div class="field field--no-fly field-search">
+                      <label class="field__label--hidden"
+                             for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
+                      <input class="field__input"
                              id="Search-In-Modal"
                              type="search"
                              name="q"
@@ -403,11 +431,11 @@
                           spellcheck="false"
                         {%- endif -%}
                       >
-                      <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
                       <input type="hidden" name="options[prefix]" value="last">
-                      <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                      <button class="field__button field__button--search"
+                              aria-label="{{ 'general.search.search' | t }}">
                         <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                          <use href="#icon-search">
+                          <use href="#icon-search"/>
                         </svg>
                       </button>
                     </div>
@@ -424,16 +452,16 @@
 
                       <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                     {%- endif -%}
+
+                    <button type="button"
+                            class="search-modal__close-button modal__close-button link link--text focus-inset"
+                            aria-label="{{ 'accessibility.close' | t }}">
+                      {% render 'icon-close' %}
+                    </button>
                   </form>
                   {%- if settings.predictive_search_enabled -%}
                 </predictive-search>
                 {%- endif -%}
-                <button type="button" class="search-modal__close-button modal__close-button link link--text focus-inset"
-                        aria-label="{{ 'accessibility.close' | t }}">
-                  <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                    <use href="#icon-close"/>
-                  </svg>
-                </button>
               </div>
             </div>
           </details>
@@ -443,13 +471,11 @@
       {%- if shop.customer_accounts_enabled -%}
 
 
-        <details-modal class="header__account">
+        <details-modal class="header-icons__elem header__account">
           <details>
             <summary class="header__icon header__icon--account header__icon--summary link focus-inset modal__toggle"
                      aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-              <span style="background-color: yellowgreen;">
-                 {% render 'icon-account' %}
-              </span>
+              {% render 'icon-account' %}
             </summary>
 
             <div class="account-modal modal__content gradient" role="dialog" aria-modal="true"
@@ -459,7 +485,7 @@
                 <div class="account-modal__frame">
                   <div class="search-modal__text">
                     {% if customer %}
-                      <h2>{{ section.settings.customer_title }}</h2>
+                      <h2 class="account-modal__title">{{ section.settings.customer_title }}</h2>
 
                       {% assign page_handle = '/' | append: template.name %}
 
@@ -468,14 +494,15 @@
                       {% endif %}
 
                       {% if section.settings.customer_menu.links.size > 0 %}
-                        {% assign icons_list = section.settings.customer_icons_list | split: ','%}
+                        {% assign icons_list = section.settings.customer_icons_list | split: ',' %}
                         <ul>
                           {% for link in section.settings.customer_menu.links -%}
                             <li>
                               <a href="{{ link.url }}"
                                  class="{% if page_handle == link.url %} active{% endif %}">
                                 {% if icons_list[forloop.index0] != blank %}
-                                  <img class="icon" src="{{ icons_list[forloop.index0] | file_url }}" alt="{{ icons_list[forloop.index0] }}">
+                                  <img class="icon" src="{{ icons_list[forloop.index0] | file_url }}"
+                                       alt="{{ icons_list[forloop.index0] }}">
                                 {% endif %}
                                 {{ link.title }}
                               </a>
@@ -484,12 +511,12 @@
                         </ul>
                       {% endif %}
                     {% else %}
-                      <h2>{{ "accessibility.hello" | t }}</h2>
+                      <h2 class="account-modal__title">{{ "accessibility.hello" | t }}</h2>
                       <a href="{{ routes.account_login_url }}"
-                         class="button primary-button">{{ 'customer.log_in' | t }}</a>
-                      <p>
+                         class="account-modal__button button primary-button">{{ 'customer.log_in' | t }}</a>
+                      <p class="account-modal__text-link">
                         {{ 'accessibility.new_customer' | t }}
-                        <a href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a>
+                        <a class="link" href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a>
                       </p>
                     {% endif %}
                   </div>
@@ -510,11 +537,13 @@
                                 alt: block.settings.image.alt | escape
                                 }}
                                 <div class="menu-one-box__holder">
-                                  {% if block.settings.top-text != blank %}
-                                    <span class="menu-one-box__top-title">{{ block.settings.top-text }}</span>
-                                  {% endif %}
+                                  <div class="menu-one-box__text-wrapper">
+                                    {% if block.settings.top_text != blank %}
+                                      <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
+                                    {% endif %}
 
-                                  {{ block.settings.text }}
+                                    {{ block.settings.text }}
+                                  </div>
 
                                   {% if block.settings.button_url != blank and block.settings.button_text != blank %}
                                     <a href="{{ block.settings.button_url }}">
@@ -530,13 +559,13 @@
                     {% endfor %}
                   </div>
                 </div>
-                <button type="button"
+{% comment %}                <button type="button"
                         class="account-modal__close-button modal__close-button link link--text focus-inset"
                         aria-label="{{ 'accessibility.close' | t }}">
                   <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                     <use href="#icon-close"/>
                   </svg>
-                </button>
+                </button>{% endcomment %}
               </div>
             </div>
           </details>
@@ -602,6 +631,12 @@
 
 
 
+
+
+
+
+
+
 </script>
 
 {%- if request.page_type == 'index' -%}
@@ -625,6 +660,12 @@
 
 
 
+
+
+
+
+
+
   </script>
 {%- endif -%}
 
@@ -641,7 +682,7 @@
     {
       "type": "textarea",
       "id": "logo_svg",
-      "label": "Logo SVG code"
+      "label": "t:sections.header.settings.logo_svg.label"
     },
     {
       "type": "link_list",

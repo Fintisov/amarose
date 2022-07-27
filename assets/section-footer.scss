@@ -34,6 +34,13 @@
 
 .footer__newsletter {
   margin-bottom: 24px;
+
+  .field-newsletter {
+    .field__input {
+      min-height: 56px;
+      background-color: $white;
+    }
+  }
 }
 
 .footer__list-social {

@@ -8,7 +8,7 @@
 {% endif %}
 
 <div class="hero-banner" style="background-color: {{ section.settings.bg_color }}; {%  if hasBg %}background-image: url({{ bg_image }});{% endif %}" >
-  <div class="page-width page-width-position-{{ section.settings.text_alignment }}">
+  <div class="container page-width-position-{{ section.settings.text_alignment }}">
 
     {% if section.settings.image != blank %}
       {{ section.settings.image | image_url: width: 1920 | image_tag:
@@ -22,9 +22,9 @@
       }}
     {% endif %}
 
-    <div class="hero-banner__content">
+    <div class="hero-banner__content {% if section.settings.show_bg %}hero-banner__content--has-bg{% endif %}">
       {% if section.settings.sub_heading != blank %}
-        <span class="hero-banner__sub-heading">{{ section.settings.sub_heading }}</span>
+        <span class="hero-banner__sub-heading hero-banner__sub-heading-{{ section.settings.sub_heading_color }}">{{ section.settings.sub_heading }}</span>
       {% endif %}
       {% if section.settings.heading != blank %}
         <h2 class="hero-banner__title">{{ section.settings.heading }}</h2>
@@ -35,13 +35,21 @@
         </div>
       {% endif %}
       {% if section.settings.button_url != blank and section.settings.button_text != blank %}
-        <a href="{{ section.settings.button_url }}" class="primary-button">
+        <a href="{{ section.settings.button_url }}" class="button primary-button">
           {{ section.settings.button_text }}
         </a>
       {% endif %}
     </div>
   </div>
 </div>
+
+{% if section.settings.bg_image_mobile != blank %}
+  @media only screen and (max-width: 767px) {
+    .hero-banner {
+      background-image: url({{ section.settings.bg_image_mobile }});
+    }
+  }
+{% endif %}
 
 {% schema %}
 {
@@ -52,6 +60,11 @@
         "type": "image_picker",
         "id": "bg_image",
         "label": "Background Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image_mobile",
+        "label": "Background Mobile Image"
       },
       {
         "type": "color",
@@ -89,9 +102,35 @@
         "content": "Content Settings"
       },
       {
+        "type": "checkbox",
+        "id": "show_bg",
+        "default": false,
+        "label": "Show Bg"
+      },
+      {
         "type": "text",
         "id": "sub_heading",
         "label": "Top Subheading"
+      },
+      {
+        "type": "radio",
+        "id": "sub_heading_color",
+        "label": "Top Subheading bg color",
+        "options": [
+          {
+            "value": "pink",
+            "label": "Pink"
+          },
+          {
+            "value": "white",
+            "label": "White"
+          },
+          {
+            "value": "gray",
+            "label": "Gray"
+          }
+        ],
+        "default": "pink"
       },
       {
         "type": "html",

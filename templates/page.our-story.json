@@ -1,12 +1,41 @@
 {
   "sections": {
-    "main": {
-      "type": "our-story",
+    "hero-banner": {
+      "type": "hero-banner",
       "settings": {
+        "bg_image": "shopify:\/\/shop_images\/General.png",
+        "bg_color": "#ebc2c0",
+        "text_alignment": "center",
+        "sub_heading": "OUR STORY",
+        "heading": "Inspiring Strength and Beauty",
+        "description": "<p>Wrestler Mandy Rose found a solution to keeping her skin clean and healthy while traveling the world.<\/p>",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
+    "1658680767c6abc35b": {
+      "type": "video",
+      "settings": {
+        "heading": "Powerful Nutrition For Stronger, Healthier Skin",
+        "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
+        "cover_image": "shopify:\/\/shop_images\/Rectangle_42.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": ""
+      }
+    },
+    "165868083633467195": {
+      "type": "ingredients",
+      "settings": {
+        "title": "Vitamin and Nutrient Infused Clean Beauty",
+        "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
+        "button_text": "Shop Now",
+        "button_url": "#"
       }
     }
   },
   "order": [
-    "our-story"
+    "hero-banner",
+    "1658680767c6abc35b",
+    "165868083633467195"
   ]
 }

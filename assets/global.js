@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   setFooterDate()
+
+  document.querySelector(".announcement-bar .close-button").addEventListener("click", () => {
+    document.querySelector(".announcement-bar").style.display = "none";
+  });
 })
 
 
