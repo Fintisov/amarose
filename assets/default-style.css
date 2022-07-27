@@ -101,6 +101,9 @@ p {
 a {
   text-decoration: none; }
 
+button {
+  border: none; }
+
 .button {
   display: flex;
   align-items: center;
@@ -215,6 +218,9 @@ a {
   .button.button--arrow:hover path {
     stroke: #ffffff;
     transition: 0.3s; }
+
+.w-100 {
+  width: 100%; }
 
 /* для элемента input c type="checkbox" */
 .custom-checkbox > input {

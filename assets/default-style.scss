@@ -149,6 +149,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
 .button {
   display: flex;
   align-items: center;
@@ -313,6 +317,10 @@ a {
       }
     }
   }
+}
+
+.w-100 {
+  width: 100%;
 }
 
 // ====== custom-checkbox

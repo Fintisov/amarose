@@ -1,11 +1,74 @@
 .card-wrapper {
-  color: inherit;
-  height: 100%;
-  position: relative;
-  text-decoration: none;
-}
-
-.card {
-  text-decoration: none;
-}
-
+  width: 380px;
+  height: auto;
+  border: 1px solid #F1F3F6;
+  border-radius: 20px;
+  overflow: hidden; }
+  .card-wrapper .card__inner {
+    position: relative; }
+    .card-wrapper .card__inner .card__media {
+      max-width: 380px;
+      width: 100%;
+      height: 334px; }
+      .card-wrapper .card__inner .card__media .media {
+        height: 100%; }
+      .card-wrapper .card__inner .card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .card-wrapper .card__inner .card__badge {
+      padding: 2px 12px;
+      background-color: #ffffff;
+      border-radius: 32px;
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      line-height: 1; }
+      .card-wrapper .card__inner .card__badge .tag-new {
+        font-family: "futura", suns-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.25;
+        color: #5E697E; }
+  .card-wrapper .card__content {
+    padding: 20px; }
+    .card-wrapper .card__content .rating {
+      margin-bottom: 10px; }
+      .card-wrapper .card__content .rating .rating-count {
+        font-family: "futura", suns-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.3;
+        color: #5E697E;
+        text-decoration: underline; }
+    .card-wrapper .card__content .card__information-wrapper {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 10px;
+      margin-bottom: 20px; }
+      .card-wrapper .card__content .card__information-wrapper .information-content {
+        flex: 0 0 258px; }
+        .card-wrapper .card__content .card__information-wrapper .information-content .title {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          height: 66px; }
+          .card-wrapper .card__content .card__information-wrapper .information-content .title a {
+            font-family: "futura", suns-serif;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 1.5;
+            color: #2A3241; }
+        .card-wrapper .card__content .card__information-wrapper .information-content .text {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          font-family: "futura", suns-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.5;
+          color: #5E697E; }
+      .card-wrapper .card__content .card__information-wrapper .price-wrapper {
+        width: max-content; }

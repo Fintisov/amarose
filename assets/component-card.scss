@@ -1,0 +1,116 @@
+@import "_variables";
+
+.card-wrapper {
+  width: 380px;
+  height: auto;
+  border: 1px solid $lightGrey;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .card__inner {
+    position: relative;
+
+    .card__media {
+      max-width: 380px;
+      width: 100%;
+      height: 334px;
+
+      .media {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .card__badge {
+      padding: 2px 12px;
+      background-color: $white;
+      border-radius: 32px;
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      line-height: 1;
+
+      .tag-new {
+        font-family: $futura;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.25;
+        color: $midGrey;
+      }
+    }
+  }
+
+  .card__content {
+    padding: 20px;
+
+    .rating {
+      margin-bottom: 10px;
+
+      .rating-count {
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.3;
+        color: $midGrey;
+        text-decoration: underline;
+      }
+    }
+
+    .card__information-wrapper {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 10px;
+      margin-bottom: 20px;
+
+      .information-content {
+        flex: 0 0 258px;
+
+        .title {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          height: 66px;
+          a {
+            font-family: $futura;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 1.5;
+            color: $black;
+          }
+        }
+
+        .text {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+
+          font-family: $futura;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.5;
+          color: $midGrey;
+        }
+      }
+
+      .price-wrapper {
+        width: max-content;
+        .price-item {
+
+        }
+      }
+
+
+    }
+
+    .quick-add {
+
+    }
+  }
+}
