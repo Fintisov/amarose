@@ -81,6 +81,15 @@
                 >
               {%- endif -%}
             </div>
+            <div class="card__badge {{ settings.badge_position }}">
+              {%- if card_product.available == false -%}
+                <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
+                {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+                <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
+              {% else %}
+                {% render 'tag-new' %}
+              {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
         <div class="card__content">
@@ -94,9 +103,7 @@
               <p>{{ card_product.metafields.custom.indications_for_use }}</p>
             {% endif %}
           </div>
-          <div class="card__badge {{ settings.badge_position }}">
-            {% render 'tag-new' %}
-          </div>
+
         </div>
       </div>
       <div class="card__content">
@@ -153,13 +160,18 @@
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
-                  class="quick-add__submit button button--full-width button--secondary"
+                  class="quick-add__submit button button--full-width secondary-button button-icon"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   aria-live="polite"
                   data-sold-out-message="true"
                   {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                 >
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M3 6H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
                   <span>
                     {%- if card_product.selected_or_first_available_variant.available -%}
                       {{ 'products.product.add_to_cart' | t }}
@@ -182,13 +194,8 @@
         {%- else -%}
           <a class="button button--full-width button--secondary" href="{{ card_product.url }}">{{ 'products.product.add_to_cart_link' | t }}</a>
         {%- endif -%}
-        <div class="card__badge {{ settings.badge_position }}">
-          {%- if card_product.available == false -%}
-            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
-          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
-            <span id="Badge-{{ section_id }}-{{ card_product.id }}" class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
-          {%- endif -%}
-        </div>
+
+
       </div>
     </div>
   </div>

@@ -22,7 +22,7 @@
       }}
     {% endif %}
 
-    <div class="hero-banner__content">
+    <div class="hero-banner__content {% if section.settings.show_bg %}hero-banner__content--has-bg{% endif %}">
       {% if section.settings.sub_heading != blank %}
         <span class="hero-banner__sub-heading hero-banner__sub-heading-{{ section.settings.sub_heading_color }}">{{ section.settings.sub_heading }}</span>
       {% endif %}
@@ -100,6 +100,12 @@
       {
         "type": "header",
         "content": "Content Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_bg",
+        "default": false,
+        "label": "Show Bg"
       },
       {
         "type": "text",
