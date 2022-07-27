@@ -110,7 +110,8 @@
       .header__inline-menu .list-menu .list-menu__elem:hover .mega-menu__content {
         z-index: 10;
         pointer-events: auto;
-        opacity: 1; }
+        opacity: 1;
+        transform: translate(-30%, 4px) scale(1); }
       .header__inline-menu .list-menu .list-menu__elem .list-menu__item {
         font-family: "futura", suns-serif;
         font-weight: 400;
@@ -128,7 +129,7 @@
         background-color: #ffffff;
         min-width: 920px;
         min-height: 346px;
-        transform: translate(-30%, 4px);
+        transform: translate(-30%, 4px) scale(0);
         z-index: -10;
         pointer-events: none;
         opacity: 0;
