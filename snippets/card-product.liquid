@@ -97,7 +97,7 @@
       </div>
       <div class="card__content">
 
-        <div class="rating">
+        <div class="rating-wrapper">
           {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
             {% liquid
               assign rating_decimal = 0
@@ -162,7 +162,7 @@
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
-                  class="button secondary-button button--icon w-100"
+                  class="button secondary-button button-icon w-100"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   aria-live="polite"
@@ -195,7 +195,7 @@
             </product-form>
           </div>
         {%- else -%}
-          <a class="button button--full-width button--secondary"
+          <a class="button secondary-button w-100"
              href="{{ card_product.url }}">{{ 'products.product.add_to_cart_link' | t }}</a>
         {%- endif -%}
 
