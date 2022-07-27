@@ -4,8 +4,9 @@
       "type": "hero-banner",
       "settings": {
         "bg_color": "#ffded6",
+        "image": "shopify:\/\/shop_images\/Homepage_Image_Transparent.png",
         "text_alignment": "left",
-        "show_bg": false,
+        "show_bg": true,
         "sub_heading": "On Sale",
         "sub_heading_color": "pink",
         "heading": "Beauty Boost Cleanser",
