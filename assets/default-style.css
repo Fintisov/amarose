@@ -3,10 +3,14 @@
   display: none; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px; }
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media screen and (max-width: 1300px) {
+    .container {
+      max-width: 960px; } }
   @media screen and (max-width: 992px) {
     .container {
       max-width: 720px; } }

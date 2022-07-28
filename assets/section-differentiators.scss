@@ -38,10 +38,12 @@
 }
 
 .differentiators__list {
-  width: max-content;
+  max-width: 580px;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  column-gap: 20px;
+  gap: 20px;
 
 }
 
@@ -72,6 +74,7 @@
   }
 
   .differentiators__list-item-title {
+    margin-top: auto;
     width: 210px;
     height: 66px;
     overflow: hidden;

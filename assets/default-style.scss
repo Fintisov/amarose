@@ -5,11 +5,15 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 
+  @include max-screen(1300) {
+    max-width: 960px;
+  }
 
   @include max-screen(992) {
     max-width: 720px;
