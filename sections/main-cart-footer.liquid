@@ -20,8 +20,20 @@
               {% render block %}
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
-                <div class="totals">
+                <div class="totals sub--totals">
                   <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+                  <p class="totals__subtotal-value">{{ cart.original_total_price | money_with_currency }}</p>
+                </div>
+
+                {% if cart.total_discount > 0 %}
+                  <div class="totals discount">
+                    <h2 class="totals__subtotal">{{ 'sections.cart.total_discount' | t }}</h2>
+                    <p class="totals__subtotal-value">-{{ cart.total_discount | money_with_currency }}</p>
+                  </div>
+                {% endif %}
+
+                <div class="totals">
+                  <h2 class="totals__subtotal">{{ 'sections.cart.total' | t }}</h2>
                   <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
 
@@ -69,6 +81,11 @@
                   {{ content_for_additional_checkout_buttons }}
                 </div>
               {%- endif -%}
+
+              <div class="field field--no-fly field-newsletter">
+                <label class="field__label--hidden" for="coupon">{{ 'sections.cart.coupon.label' | t }}</label>
+                <input class="field__input" type="text" id="coupon" name="discount" placeholder="{{ 'sections.cart.coupon.placeholder' | t }}">
+              </div>
           {%- endcase -%}
         {% endfor %}
 

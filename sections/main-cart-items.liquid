@@ -189,15 +189,18 @@
                     </div>
 
                     <div class="cart-item__price-wrapper">
-                      {%- if item.original_line_price != item.final_line_price -%}
-                        <span class="price price--end">
-                          {{ item.final_line_price | money }}
-                        </span>
-                      {%- else -%}
-                        <span class="price price--end">
-                          {{ item.original_line_price | money }}
-                        </span>
-                      {%- endif -%}
+                      <p>
+                        {{ 'sections.cart.total' | t }}
+                        {%- if item.original_line_price != item.final_line_price -%}
+                          <span class="price price--end">
+                            {{ item.final_line_price | money }}
+                          </span>
+                        {%- else -%}
+                          <span class="price price--end">
+                            {{ item.original_line_price | money }}
+                          </span>
+                        {%- endif -%}
+                      </p>
 
                       {%- if item.variant.available and item.unit_price_measurement -%}
                         <div class="unit-price caption">

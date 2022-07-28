@@ -247,10 +247,12 @@
       "title": "Shopping Bag",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
+      "total_discount": "Discount",
       "subtotal": "Subtotal",
+      "total": "Total",
       "new_subtotal": "New subtotal",
       "note": "Order special instructions",
-      "checkout": "Check out",
+      "checkout": "Continue to Checkout",
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
@@ -270,7 +272,11 @@
         "title": "Have an account?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
       },
-      "save": "Save"
+      "save": "Save",
+      "coupon": {
+        "label": "Enter Coupon Code",
+        "placeholder": "Enter Coupon Code"
+      }
     },
     "footer": {
       "payment": "Payment methods"
