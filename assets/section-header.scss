@@ -371,7 +371,9 @@
   }
 
   .search-modal__content {
+    overflow: auto;
     padding-top: 20px;
+    padding-bottom: 20px;
     align-items: start;
   }
 
