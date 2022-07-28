@@ -2169,6 +2169,12 @@
     "main-search": {
       "name": "Search results",
       "settings": {
+        "enable_search": {
+          "label": "Enable search"
+        },
+        "header_search": {
+          "content": "Enable search"
+        },
         "columns_desktop": {
           "label": "Number of columns on desktop"
         },
