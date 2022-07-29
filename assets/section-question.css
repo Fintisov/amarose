@@ -54,7 +54,10 @@
   line-height: 1.25;
   color: white;
   text-overflow: ellipsis;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: 0.3s background-color; }
+  .contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4); }
   .contact-btn .icon-box {
     position: relative;
     min-width: 50px;

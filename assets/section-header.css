@@ -385,3 +385,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 30px; }
+
+.cart-drawer {
+  background-color: #F1F3F6; }
