@@ -24,7 +24,8 @@
   padding: 80px 0; }
   .video-section .video__title-wrapper {
     max-width: 552px;
-    width: 100%; }
+    width: 100%;
+    margin-left: auto; }
     .video-section .video__title-wrapper .title {
       font-family: "futura", suns-serif;
       font-weight: 400;

@@ -16,21 +16,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover; }
-    .card-wrapper .card__inner .card__badge {
-      padding: 2px 12px;
-      background-color: #ffffff;
-      border-radius: 32px;
+    .card-wrapper .card__inner .badge-wrapper {
       position: absolute;
       top: 12px;
       right: 14px;
-      line-height: 1;
-      cursor: default; }
-      .card-wrapper .card__inner .card__badge .badge {
-        font-family: "futura", suns-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.25;
-        color: #5E697E; }
+      line-height: 1; }
   .card-wrapper .card__content {
     padding: 20px;
     min-height: 207px; }

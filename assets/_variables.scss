@@ -12,6 +12,14 @@
   }
 }
 
+@mixin line-text-hidden($col: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $col; /* количество строк */
+}
+
 // Color
 $black: #2A3241;
 $midGrey: #5E697E;

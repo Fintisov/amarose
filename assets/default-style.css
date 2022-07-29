@@ -22,6 +22,25 @@
       max-width: 100%;
       padding: 0 20px; } }
 
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media screen and (max-width: 1300px) {
+    .container-fluid {
+      max-width: 960px; } }
+  @media screen and (max-width: 992px) {
+    .container-fluid {
+      max-width: 720px; } }
+  @media screen and (max-width: 768px) {
+    .container-fluid {
+      max-width: 540px; } }
+  @media screen and (max-width: 576px) {
+    .container-fluid {
+      max-width: 100%;
+      padding: 0 20px; } }
+
 ul, ol {
   padding: 0;
   list-style: none;
@@ -537,3 +556,49 @@ button {
   .field.field-search .field__button--search {
     width: 24px;
     right: 32px; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 12px;
+  font-family: "futura", suns-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #5E697E;
+  background-color: #ffffff;
+  border-radius: 32px;
+  cursor: default;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+  .badge.badge--grey {
+    color: #ffffff;
+    background-color: #5E697E; }
+
+.link-arrow {
+  display: flex;
+  font-family: "futura", suns-serif;
+  font-size: 16px;
+  font-weight: 500;
+  align-items: center;
+  color: #BA3A7D;
+  line-height: 1; }
+  .link-arrow svg {
+    flex: 0 0 24px; }
+
+#insta-feed {
+  display: flex !important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; }
+  #insta-feed h2 {
+    width: 100%;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px !important; }
+  #insta-feed .instafeed-container {
+    flex: 1 1 15%; }
