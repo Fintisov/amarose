@@ -354,7 +354,7 @@
                                         {{ block.settings.text }}
                                       </div>
                                       {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                        <a href="{{ block.settings.button_url }}">
+                                        <a class="link-arrow" href="{{ block.settings.button_url }}">
                                           {{ block.settings.button_text }}
                                           {% render 'icon-arrow-r' %}
                                         </a>
@@ -472,7 +472,7 @@
 
 
         <details-modal class="header-icons__elem header__account">
-          <details>
+          <details >
             <summary class="header__icon header__icon--account header__icon--summary link focus-inset modal__toggle"
                      aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
               {% render 'icon-account' %}
@@ -546,7 +546,7 @@
                                   </div>
 
                                   {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                    <a href="{{ block.settings.button_url }}">
+                                    <a class="link-arrow" href="{{ block.settings.button_url }}">
                                       {{ block.settings.button_text }}
                                       {% render 'icon-arrow-r' %}
                                     </a>
@@ -559,13 +559,15 @@
                     {% endfor %}
                   </div>
                 </div>
-{% comment %}                <button type="button"
+{% comment %}
+                      <button type="button"
                         class="account-modal__close-button modal__close-button link link--text focus-inset"
                         aria-label="{{ 'accessibility.close' | t }}">
                   <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                     <use href="#icon-close"/>
                   </svg>
-                </button>{% endcomment %}
+                </button>
+{% endcomment %}
               </div>
             </div>
           </details>
@@ -574,15 +576,8 @@
 
       {%- endif -%}
 
-      <div class="header-icons__elem">
+      <div class="header-icons__elem header__bag">
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-          {%- liquid
-            if cart == empty
-              render 'icon-cart-empty'
-            else
-              render 'icon-cart'
-            endif
-          -%}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
             <div class="cart-count-bubble">
@@ -592,6 +587,13 @@
               <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
             </div>
           {%- endif -%}
+          {%- liquid
+            if cart == empty
+              render 'icon-cart-empty'
+            else
+              render 'icon-cart'
+            endif
+          -%}
         </a>
       </div>
 

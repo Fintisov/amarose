@@ -23,18 +23,25 @@
       line-height: 1; }
   .card-wrapper .card__content {
     padding: 20px;
-    min-height: 207px; }
-    .card-wrapper .card__content .rating-wrapper {
+    min-height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .card-wrapper .card__content .jdgm-widget {
       display: block;
       min-height: 29px;
       margin-bottom: 10px; }
-      .card-wrapper .card__content .rating-wrapper .rating-count {
+      .card-wrapper .card__content .jdgm-widget .jdgm-prev-badge__stars {
+        margin-right: 10px; }
+      .card-wrapper .card__content .jdgm-widget .jdgm-prev-badge__text {
         font-family: "futura", suns-serif;
         font-weight: 400;
         font-size: 18px;
         line-height: 1.3;
         color: #5E697E;
         text-decoration: underline; }
+      .card-wrapper .card__content .jdgm-widget .jdgm-star {
+        color: #F08B84; }
     .card-wrapper .card__content .card__information-wrapper {
       display: flex;
       justify-content: space-between;

@@ -36,19 +36,31 @@
   .card__content {
     padding: 20px;
     min-height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .rating-wrapper {
+
+    .jdgm-widget {
       display: block;
       min-height: 29px;
       margin-bottom: 10px;
 
-      .rating-count {
+      .jdgm-prev-badge__stars {
+        margin-right: 10px;
+      }
+
+      .jdgm-prev-badge__text {
         font-family: $futura;
         font-weight: 400;
         font-size: 18px;
         line-height: 1.3;
         color: $midGrey;
         text-decoration: underline;
+      }
+
+      .jdgm-star {
+        color: $roseMid;
       }
     }
 

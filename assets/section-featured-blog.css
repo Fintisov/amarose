@@ -74,3 +74,8 @@
         -webkit-line-clamp: 2;
         /* количество строк */
         margin: 0 0 15px; }
+      .blog__posts .blog__post .article-card__information .link-arrow {
+        height: 24px;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden; }
