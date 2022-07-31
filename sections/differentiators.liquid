@@ -15,16 +15,18 @@
 
       <ul class="differentiators__list">
         {%- for block in section.blocks -%}
-          <li class="differentiators__list-item">
-            {% if block.settings.list_item_icon_name != blank %}
-              <div class="differentiators__list-item-icon">
-                {{ block.settings.list_item_icon_name }}
-              </div>
-            {% endif %}
-            {% if block.settings.list_item_title != blank %}
-              <h3 class="differentiators__list-item-title">{{ block.settings.list_item_title }}</h3>
-            {% endif %}
-          </li>
+          {% if block.settings.list_item_icon_name != blank and block.settings.list_item_title != blank %}
+            <li class="differentiators__list-item">
+              {% if block.settings.list_item_icon_name != blank %}
+                <div class="differentiators__list-item-icon">
+                  {{ block.settings.list_item_icon_name }}
+                </div>
+              {% endif %}
+              {% if block.settings.list_item_title != blank %}
+                <h3 class="differentiators__list-item-title">{{ block.settings.list_item_title }}</h3>
+              {% endif %}
+            </li>
+          {% endif %}
         {%- endfor -%}
       </ul>
     </div>
