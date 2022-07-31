@@ -1691,7 +1691,11 @@
       }
     },
     "main-cart-items": {
-      "name": "Items"
+      "name": "Items",
+      "settings": {
+        "show_options": "Show product options",
+        "show_properties": "Show product properties"
+      }
     },
     "main-collection-banner": {
       "name": "Collection banner",
