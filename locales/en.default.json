@@ -32,10 +32,12 @@
     "pagination": {
       "label": "Pagination",
       "page": "Page {{ number }}",
-      "next": "Next Page",
-      "previous": "Previous Page"
+      "next": "Next page",
+      "previous": "Previous page"
     },
     "pagination_link": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
       "next": "Next",
       "previous": "Prev"
     },
@@ -112,7 +114,7 @@
   "products": {
     "product": {
       "add_to_cart": "Add to Bag",
-      "add_to_cart_link": "View product",
+      "add_to_cart_link": "View",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",
       "description": "Description",

@@ -955,6 +955,22 @@
         "name": "FAQ list"
       }
     },
+    "faq_product": {
+      "name": "FAQ Product",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "blocks": {
+          "name": "FAQ product item",
+          "question": "Question",
+          "answer": "Answer"
+        }
+      },
+      "presets": {
+        "name": "FAQ product"
+      }
+    },
     "running_line": {
       "name": "Running line",
       "settings": {
