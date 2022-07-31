@@ -35,12 +35,12 @@
   {%- endif -%}
 
   <div class="article-card__information">
-    {% for tag in aticle.tags %}
-      <span class="article-card__tag">{{ tag }}</span>
-    {% endfor %}
+    {% if article.tags[0] != blank %}
+      <p class="circle-divider badge badge--grey article-card__tag">{{ article.tags[0] }}</p>
+    {% endif %}
     <div class="article-card__info caption-with-letter-spacing h5">
       {%- if show_date -%}
-        <span class="circle-divider badge badge--grey">{{ article.published_at | time_tag: format: 'date' }}</span>
+        <span>{{ article.published_at | time_tag: format: 'date' }}</span>
       {%- endif -%}
       {%- if show_author -%}
         <span>{{ article.author }}</span>
@@ -64,11 +64,9 @@
       {%- endif -%}
 
       <a class="link-arrow" href="{{ article.url }}">
-        {{ article.title | truncate: 50 | escape }}
+        {{ 'blogs.article.card_text_link' | t }}
         {% render 'icon-arrow-r' %}
       </a>
-
-
     </div>
   </div>
 </div>
