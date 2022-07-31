@@ -1,1 +1,13 @@
-{"sections":{"main":{"type":"main-404","settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/406.jpg"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
