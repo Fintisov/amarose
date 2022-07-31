@@ -17,7 +17,6 @@
 {% endcomment %}
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
-
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -200,8 +199,6 @@
           <a class="button secondary-button w-100"
              href="{{ card_product.url }}">{{ 'products.product.add_to_cart_link' | t }}</a>
         {%- endif -%}
-
-
       </div>
     </div>
   </div>
