@@ -1,10 +1,10 @@
-{{ 'video-section.css' | asset_url | stylesheet_tag }}
+{{ 'section-video.css' | asset_url | stylesheet_tag }}
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 <div class="video-section isolate section-{{ section.id }}-padding">
-  <div class="page-width">
+  <div class="container">
     {%- unless section.settings.heading == blank or section.settings.text == blank -%}
-      <div class="title-wrapper title-wrapper--no-top-margin">
+      <div class="video__title-wrapper title-wrapper--no-top-margin">
         {%- unless section.settings.heading == blank -%}
           <h2 class="title">{{ section.settings.heading }}</h2>
         {%- endunless -%}
@@ -13,15 +13,15 @@
         {%- endunless -%}
       </div>
     {%- endunless -%}
-  </div>
-  <noscript>
-    <div class="video-section__media"
-      {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
-    >
-      <a href="{{ section.settings.video_url }}" class="video-section__poster media media--transparent media--landscape{% if section.settings.cover_image == blank %} video-section__placeholder{% endif %}">
-        {%- if section.settings.cover_image != blank -%}
-          <img
-            srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375 }} 375w,{%- endif -%}
+    <noscript>
+      <div class="video-section__media"
+        {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+      >
+        <a href="{{ section.settings.video_url }}"
+           class="video-section__poster media media--transparent media--landscape{% if section.settings.cover_image == blank %} video-section__placeholder{% endif %}">
+          {%- if section.settings.cover_image != blank -%}
+            <img
+              srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375 }} 375w,{%- endif -%}
               {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750 }} 750w,{%- endif -%}
               {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
               {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
@@ -30,6 +30,40 @@
               {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
               {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
               {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
+              src="{{ section.settings.cover_image | image_url: width: 1920 }}"
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+              alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+              loading="lazy"
+              width="{{ section.settings.cover_image.width }}"
+              height="{{ section.settings.cover_image.height }}"
+            >
+          {%- else -%}
+            {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+          {%- endif -%}
+        </a>
+      </div>
+    </noscript>
+    <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings"
+                    data-media-id="{{ section.settings.video_url.id }}"
+      {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+    >
+      <button
+        id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
+        class="video-section__poster media deferred-media__poster media--landscape"
+        type="button"
+        aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
+      >
+        {%- if section.settings.cover_image != blank -%}
+          <img
+            srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375 }} 375w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+            {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+            {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
             src="{{ section.settings.cover_image | image_url: width: 1920 }}"
             sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
             alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
@@ -40,52 +74,30 @@
         {%- else -%}
           {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
         {%- endif -%}
-      </a>
-    </div>
-  </noscript>
-  <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings" data-media-id="{{ section.settings.video_url.id }}"
-    {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
-  >
-    <button
-      id="Deferred-Poster-Modal-{{ section.settings.video_url.id }}"
-      class="video-section__poster media deferred-media__poster media--landscape"
-      type="button"
-      aria-label="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
-    >
-      {%- if section.settings.cover_image != blank -%}
-        <img
-          srcset="{%- if section.settings.cover_image.width >= 375 -%}{{ section.settings.cover_image | image_url: width: 375 }} 375w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 750 -%}{{ section.settings.cover_image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 1100 -%}{{ section.settings.cover_image | image_url: width: 1100 }} 1100w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 1500 -%}{{ section.settings.cover_image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 1780 -%}{{ section.settings.cover_image | image_url: width: 1780 }} 1780w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 2000 -%}{{ section.settings.cover_image | image_url: width: 2000 }} 2000w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 3000 -%}{{ section.settings.cover_image | image_url: width: 3000 }} 3000w,{%- endif -%}
-            {%- if section.settings.cover_image.width >= 3840 -%}{{ section.settings.cover_image | image_url: width: 3840 }} 3840w,{%- endif -%}
-            {{ section.settings.cover_image | image_url }} {{ section.settings.cover_image.width }}w"
-          src="{{ section.settings.cover_image | image_url: width: 1920 }}"
-          sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-          alt="{{ 'sections.video.load_video' | t: description: section.settings.description | escape }}"
-          loading="lazy"
-          width="{{ section.settings.cover_image.width }}"
-          height="{{ section.settings.cover_image.height }}"
-        >
-      {%- else -%}
-        {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-      {%- endif -%}
-      <span class="deferred-media__poster-button motion-reduce">
+        <span class="deferred-media__poster-button motion-reduce">
         {%- render 'icon-play' -%}
       </span>
-    </button>
-    <template>
-      {%- if section.settings.video_url.type == 'youtube' -%}
-        <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1" class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
-      {%- else -%}
-        <iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo" allow="autoplay; encrypted-media" allowfullscreen title="{{ section.settings.description | escape }}"></iframe>
-      {%- endif -%}
-    </template>
-  </deferred-media>
+      </button>
+      <template>
+        {%- if section.settings.video_url.type == 'youtube' -%}
+          <iframe src="https://www.youtube.com/embed/{{ section.settings.video_url.id }}?enablejsapi=1"
+                  class="js-youtube" allow="autoplay; encrypted-media" allowfullscreen
+                  title="{{ section.settings.description | escape }}"></iframe>
+        {%- else -%}
+          <iframe src="https://player.vimeo.com/video/{{ section.settings.video_url.id }}" class="js-vimeo"
+                  allow="autoplay; encrypted-media" allowfullscreen
+                  title="{{ section.settings.description | escape }}"></iframe>
+        {%- endif -%}
+      </template>
+    </deferred-media>
+  </div>
 </div>
+
+<style>
+  .deferred-media {
+    display: block;
+  }
+</style>
 
 {% schema %}
 {

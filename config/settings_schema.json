@@ -1509,7 +1509,7 @@
       {
         "type": "url",
         "id": "register_complete_link_url",
-        "default": "/",
+        "default": "\/",
         "label": "t:settings_schema.login.settings.register_complete.link_url"
       }
     ]
@@ -1540,4 +1540,3 @@
     ]
   }
 ]
-

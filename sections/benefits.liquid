@@ -8,7 +8,7 @@
 <section class="benefit-section" {%  if hasBg %}style="background-image: url({{ bg_image }});"{% endif %}>
   <div class="container">
     <div class="benefit-section--holder">
-        {{ section.settings.content }}
+      {{ section.settings.content }}
       {{ section.settings.content_html }}
 
       <div class="benefit-blocks">
@@ -29,45 +29,45 @@
   "name": "Benefits",
   "max_blocks": 4,
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "bg_image",
-      "label": "Background Image"
-    },
-    {
-      "type": "richtext",
-      "id": "content",
-      "default": "<p></p>",
-      "label": "Top content"
-    },
-    {
-      "type": "html",
-      "id": "content_html",
-      "label": "Top content HTML"
-    }
-  ],
+  {
+    "type": "image_picker",
+    "id": "bg_image",
+    "label": "Background Image"
+  },
+  {
+    "type": "richtext",
+    "id": "content",
+    "default": "<p></p>",
+    "label": "Top content"
+  },
+  {
+    "type": "html",
+    "id": "content_html",
+    "label": "Top content HTML"
+  }
+],
   "blocks": [
-    {
-      "type": "box",
-      "name": "Box",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "svg_code",
-          "label": "SVG code"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
-    }
-  ],
+  {
+    "type": "box",
+    "name": "Box",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "svg_code",
+        "label": "SVG code"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text"
+      }
+    ]
+  }
+],
   "presets": [
-    {
-      "name": "Benefits"
-    }
-  ]
+  {
+    "name": "Benefits"
+  }
+]
 }
 {% endschema %}

@@ -1,41 +1,50 @@
 {{ 'component-question.css' | asset_url | stylesheet_tag }}
+{{ 'section-question.css' | asset_url | stylesheet_tag }}
 <noscript>{{ 'component-question.css' | asset_url | stylesheet_tag }}</noscript>
 
-
 <section class="question-section">
-  <div class="page-width">
-    {% if section.settings.heading != blank and section.settings.content != blank %}
-      <div class="question-section__text">
-        {% if section.settings.heading != blank %}
-          <h3 class="question-section__title">{{ section.settings.heading }}</h3>
+  <div class="container">
+    <div class="question-section__content-wrapper">
+      {% if section.settings.heading != blank and section.settings.content != blank %}
+        <div class="question-section__content">
+          {% if section.settings.heading != blank %}
+            <h3 class="question-section__title">{{ section.settings.heading }}</h3>
+          {% endif %}
+          {{ section.settings.content }}
+        </div>
+      {% endif %}
+      <div class="question-section__button-grout">
+        {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
+          <a href="#" class="contact-btn">
+            {% if section.settings.button_svg01 != blank %}
+              <div class="icon-box">
+                {{ section.settings.button_svg01 }}
+              </div>
+            {% endif %}
+
+            {{ section.settings.button_text01 }}
+            <div class="icon-box--arrow">
+              {% render 'icon-arrow-r' %}
+            </div>
+          </a>
         {% endif %}
-        {{ section.settings.content }}
+
+        {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
+          <a href="#" class="contact-btn">
+            {% if section.settings.button_svg02 != blank %}
+              <div class="icon-box">
+                {{ section.settings.button_svg02 }}
+              </div>
+            {% endif %}
+
+            {{ section.settings.button_text02 }}
+
+            <div class="icon-box--arrow">
+              {% render 'icon-arrow-r' %}
+            </div>
+          </a>
+        {% endif %}
       </div>
-    {% endif %}
-    <div class="question-section__wrapper">
-      {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
-        <a href="#" class="button">
-          {% if section.settings.button_svg01 != blank %}
-            <div class="question__button-svg">
-              {{ section.settings.button_svg01 }}
-            </div>
-          {% endif %}
-
-          {{ section.settings.button_text01 }}
-        </a>
-      {% endif %}
-
-      {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
-        <a href="#" class="button">
-          {% if section.settings.button_svg02 != blank %}
-            <div class="question__button-svg">
-              {{ section.settings.button_svg02 }}
-            </div>
-          {% endif %}
-
-          {{ section.settings.button_text02 }}
-        </a>
-      {% endif %}
     </div>
   </div>
 </section>

@@ -1254,6 +1254,14 @@
         }
       }
     },
+    "main-404": {
+      "name": "Not Found",
+      "settings": {
+        "background_image": {
+          "label": "Background image"
+        }
+      }
+    },
     "image-banner": {
       "name": "Image banner",
       "settings": {
@@ -1683,7 +1691,11 @@
       }
     },
     "main-cart-items": {
-      "name": "Items"
+      "name": "Items",
+      "settings": {
+        "show_options": "Show product options",
+        "show_properties": "Show product properties"
+      }
     },
     "main-collection-banner": {
       "name": "Collection banner",
@@ -2161,6 +2173,12 @@
     "main-search": {
       "name": "Search results",
       "settings": {
+        "enable_search": {
+          "label": "Enable search"
+        },
+        "header_search": {
+          "content": "Enable search"
+        },
         "columns_desktop": {
           "label": "Number of columns on desktop"
         },

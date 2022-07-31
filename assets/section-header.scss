@@ -212,12 +212,17 @@
             &.mega-menu__link-not-link {
               font-weight: 400;
             }
+
+            svg {
+              flex: 0 0 24px;
+            }
           }
         }
       }
     }
   }
 }
+
 .menu-boxes {
   display: flex;
   column-gap: 20px;
@@ -347,15 +352,18 @@
     }
   }
 
-  .modal__content {
-    background-color: $lightGrey;
-    opacity: 0;
-    transition: 0.3s opacity;
-  }
+  details {
+    .modal__content, .account-modal {
+      background-color: $lightGrey;
+      opacity: 0;
+      transition: 0.3s opacity;
+    }
 
-  details[open] {
-    .modal__content {
-      opacity: 1;
+    &[open] {
+      .modal__content, .account-modal {
+        opacity: 1;
+        transition: 0.3s opacity;
+      }
     }
   }
 }
@@ -367,7 +375,9 @@
   }
 
   .search-modal__content {
+    overflow: auto;
     padding-top: 20px;
+    padding-bottom: 20px;
     align-items: start;
   }
 
@@ -561,4 +571,10 @@
       row-gap: 30px;
     }
   }
+}
+
+// cart-drawer
+
+.cart-drawer {
+  background-color: $lightGrey;
 }

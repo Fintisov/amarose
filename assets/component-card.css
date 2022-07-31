@@ -16,25 +16,19 @@
         width: 100%;
         height: 100%;
         object-fit: cover; }
-    .card-wrapper .card__inner .card__badge {
-      padding: 2px 12px;
-      background-color: #ffffff;
-      border-radius: 32px;
+    .card-wrapper .card__inner .badge-wrapper {
       position: absolute;
       top: 12px;
       right: 14px;
       line-height: 1; }
-      .card-wrapper .card__inner .card__badge .tag-new {
-        font-family: "futura", suns-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.25;
-        color: #5E697E; }
   .card-wrapper .card__content {
-    padding: 20px; }
-    .card-wrapper .card__content .rating {
+    padding: 20px;
+    min-height: 207px; }
+    .card-wrapper .card__content .rating-wrapper {
+      display: block;
+      min-height: 29px;
       margin-bottom: 10px; }
-      .card-wrapper .card__content .rating .rating-count {
+      .card-wrapper .card__content .rating-wrapper .rating-count {
         font-family: "futura", suns-serif;
         font-weight: 400;
         font-size: 18px;
@@ -47,28 +41,46 @@
       column-gap: 10px;
       margin-bottom: 20px; }
       .card-wrapper .card__content .card__information-wrapper .information-content {
-        flex: 0 0 258px; }
-        .card-wrapper .card__content .card__information-wrapper .information-content .title {
+        min-height: 60px;
+        flex: 0 0 220px; }
+        .card-wrapper .card__content .card__information-wrapper .information-content .title a {
+          width: 220px;
+          font-family: "futura", suns-serif;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 1.5;
+          color: #2A3241;
           overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          height: 66px; }
-          .card-wrapper .card__content .card__information-wrapper .information-content .title a {
-            font-family: "futura", suns-serif;
-            font-weight: 500;
-            font-size: 22px;
-            line-height: 1.5;
-            color: #2A3241; }
+          text-overflow: ellipsis;
+          white-space: nowrap; }
         .card-wrapper .card__content .card__information-wrapper .information-content .text {
+          width: 220px;
           overflow: hidden;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           font-family: "futura", suns-serif;
           font-weight: 400;
           font-size: 18px;
           line-height: 1.5;
           color: #5E697E; }
       .card-wrapper .card__content .card__information-wrapper .price-wrapper {
-        width: max-content; }
+        width: max-content;
+        text-align: end;
+        margin-top: auto; }
+        .card-wrapper .card__content .card__information-wrapper .price-wrapper .price-item--sale {
+          font-family: "futura", suns-serif;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 1.5;
+          color: #850B65; }
+        .card-wrapper .card__content .card__information-wrapper .price-wrapper .price-item--regular {
+          font-family: "futura", suns-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.3;
+          color: #5E697E; }
+    .card-wrapper .card__content .quick-add {
+      margin-bottom: 0; }
+      .card-wrapper .card__content .quick-add .button-icon:hover path {
+        stroke: #ffffff;
+        transition: 0.3s; }
