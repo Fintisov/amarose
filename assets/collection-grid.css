@@ -44,9 +44,9 @@
   gap: 20px; }
 @media screen and (max-width: 1300px) {
   .collection-grid__list .product-grid {
-    justify-content: center; } }
-  .collection-grid__list .product-grid .grid__item {
-    width: 50%; }
-    .collection-grid__list .product-grid .grid__item .card-wrapper {
-      max-width: 380px;
-      width: 100%; }
+    justify-content: center; }
+    .collection-grid__list .product-grid .grid__item {
+      width: 50%; }
+      .collection-grid__list .product-grid .grid__item .card-wrapper {
+        max-width: 380px;
+        width: 100%; } }
