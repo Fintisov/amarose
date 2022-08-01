@@ -22,18 +22,20 @@
 
 .video-section {
   padding: 80px 0; }
-  .video-section .video-section__content-wrapper {
+  .video-section .video-section__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 20px; }
-  .video-section .video-content-wrapper {
+  .video-section .video-section__media {
     max-width: 590px;
     width: 100%; }
-    .video-section .video-content-wrapper .deferred-media__poster-button {
+    .video-section .video-section__media .deferred-media__poster-button {
       background-color: #ffffff; }
-      .video-section .video-content-wrapper .deferred-media__poster-button .icon-play path {
+      .video-section .video-section__media .deferred-media__poster-button .icon-play path {
         fill: #BA3A7D; }
+    .video-section .video-section__media img {
+      object-fit: cover; }
   .video-section .video__title-wrapper {
     max-width: 552px;
     width: 100%;
