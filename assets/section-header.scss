@@ -8,11 +8,11 @@
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 400px), rgba(255, 238, 234, 1) calc(50% - 400px));
   }
 
-  @include max-screen(992) {
+  @include max-screen(991) {
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 300px), rgba(255, 238, 234, 1) calc(50% - 300px));
   }
 
-  @include max-screen(768) {
+  @include max-screen(767) {
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 210px), rgba(255, 238, 234, 1) calc(50% - 210px));
   }
 
@@ -81,7 +81,7 @@
     margin: 0;
     text-align: center;
 
-    @include max-screen(992) {
+    @include max-screen(991) {
       font-size: 18px;
     }
 
@@ -97,7 +97,7 @@
       font-weight: 500;
       color: $black;
 
-      @include max-screen(992) {
+      @include max-screen(991) {
         font-size: 14px;
       }
     }
@@ -151,7 +151,7 @@
   padding: 0 15px;
   height: max-content;
 
-  @include max-screen(992) {
+  @include max-screen(991) {
     display: none;
   }
 
