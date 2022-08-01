@@ -68,7 +68,7 @@
       font-weight: 400;
       line-height: 1.5;
 
-      @include max-screen(575) {
+      @include max-screen(767) {
         min-width: 32px;
         min-height: 35px;
       }
@@ -80,7 +80,7 @@
         line-height: 1.1;
         color: $white;
 
-        @include max-screen(575) {
+        @include max-screen(767) {
           font-size: 16px;
 
         }
@@ -149,7 +149,7 @@
   align-items: center;
 
   .button {
-    @include max-screen(575) {
+    @include max-screen(767) {
       padding: 8px 6px;
       min-height: 34px;
       font-size: 14px;
@@ -427,6 +427,8 @@
 }
 
 .menu-drawer-container {
+  min-width: 112px;
+
   .menu-drawer {
     background-color: $white;
     width: 100%;

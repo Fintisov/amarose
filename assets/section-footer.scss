@@ -8,11 +8,25 @@
   max-width: 335px;
   width: 100%;
   margin-right: 142px;
+
+  @include max-screen(1300) {
+    margin-right: 50px;
+  }
+
+
+  @include max-screen(992) {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 .footer__content-top {
   background-color: $blush-25;
   padding: 64px 0;
+
+  @include max-screen(992) {
+    padding: 32px 0;
+  }
 
   .footer__content-top-wrapper {
     display: flex;
@@ -23,17 +37,31 @@
 .footer-block__heading {
   margin-bottom: 24px;
 
+  @include max-screen(992) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
   p {
     font-family: $futura;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.64;
     color: $black;
+
+    @include max-screen(992) {
+      font-size: 22px;
+      line-height: 1.5;
+    }
   }
 }
 
 .footer__newsletter {
   margin-bottom: 24px;
+
+  @include max-screen(992) {
+    margin-bottom: 15px;
+  }
 
   .field-newsletter {
     .field__input {
@@ -47,6 +75,10 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  @include max-screen(992) {
+    justify-content: center;
+  }
 
   .list-social__item {
     &:not(:last-of-type) {
@@ -71,7 +103,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-
+  @include max-screen(992) {
+    display: none;
+  }
 }
 
 .footer-block--menu {
@@ -119,10 +153,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include max-screen(992) {
+      flex-direction: column;
+    }
   }
 
   .footer__copyright {
     margin-right: 30px;
+
+    @include max-screen(992) {
+      margin-right: 0;
+    }
 
     p {
       display: inline;
@@ -130,25 +172,32 @@
       font-size: 16px;
       line-height: 1.4;
       color: $lightGrey;
+
+      @include max-screen(992) {
+        font-size: 14px;
+      }
     }
   }
 
   .footer__bottom-menu {
     display: flex;
     align-items: center;
+    column-gap: 30px;
 
-    .elem {
-      &:not(:last-of-type) {
-        margin-right: 30px;
-      }
+    @include max-screen(992) {
+      column-gap: 16px;
+    }
 
-      .link {
-        font-family: $futura;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.3;
-        color: $lightGrey;
-        text-decoration: underline;
+    .link {
+      font-family: $futura;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: $lightGrey;
+      text-decoration: underline;
+
+      @include max-screen(992) {
+        font-size: 14px;
       }
     }
   }
