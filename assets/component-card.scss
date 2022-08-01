@@ -1,4 +1,5 @@
 @import "_variables";
+
 .card-wrapper {
   width: 380px;
   height: auto;
@@ -36,13 +37,21 @@
   .card__content {
     padding: 20px;
     min-height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .rating-wrapper {
+
+    .jdgm-widget {
       display: block;
       min-height: 29px;
       margin-bottom: 10px;
 
-      .rating-count {
+      .jdgm-prev-badge__stars {
+        margin-right: 10px;
+      }
+
+      .jdgm-prev-badge__text {
         font-family: $futura;
         font-weight: 400;
         font-size: 18px;
@@ -50,13 +59,17 @@
         color: $midGrey;
         text-decoration: underline;
       }
+
+      .jdgm-star {
+        color: $roseMid;
+      }
     }
 
     .card__information-wrapper {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-      column-gap: 10px;
-      margin-bottom: 20px;
+      gap: 20px 10px;
 
       .information-content {
         min-height: 60px;
@@ -94,6 +107,11 @@
         text-align: end;
         margin-top: auto;
 
+        .price__sale {
+          display: flex;
+          flex-direction: column;
+        }
+
         .price-item--sale {
           font-family: $futura;
           font-weight: 500;
@@ -110,15 +128,15 @@
           color: $midGrey;
         }
       }
-    }
 
-    .quick-add {
-      margin-bottom: 0;
+      .quick-add {
+        margin-bottom: 0;
 
-      .button-icon:hover {
-        path {
-          stroke: $white;
-          transition: 0.3s;
+        .button-icon:hover {
+          path {
+            stroke: $white;
+            transition: 0.3s;
+          }
         }
       }
     }

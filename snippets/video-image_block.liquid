@@ -2,17 +2,7 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 <div class="video-section isolate section-{{ id }}-padding">
-  <div class="container">
-    {%- unless heading == blank or text == blank -%}
-      <div class="video__title-wrapper title-wrapper--no-top-margin">
-        {%- unless heading == blank -%}
-          <h2 class="title">{{ heading }}</h2>
-        {%- endunless -%}
-        {%- unless text == blank -%}
-          <p class="text">{{ text }}</p>
-        {%- endunless -%}
-      </div>
-    {%- endunless -%}
+  <div class="video-section__container container">
     <noscript>
       <div class="video-section__media"
         {% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
@@ -45,7 +35,7 @@
     </noscript>
     <deferred-media class="video-section__media deferred-media no-js-hidden gradient global-media-settings"
                     data-media-id="{{ video_url.id }}"
-      {% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | times: 100 }}%;"{% endif %}
+      {% if cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: cover_image.aspect_ratio | times: 50 }}%;"{% endif %}
     >
       <button
         id="Deferred-Poster-Modal-{{ video_url.id }}"
@@ -90,5 +80,32 @@
         {%- endif -%}
       </template>
     </deferred-media>
+    {%- unless heading == blank or text == blank -%}
+      <div class="video__title-wrapper title-wrapper--no-top-margin">
+        {%- unless heading == blank -%}
+          <h2 class="title">{{ heading }}</h2>
+        {%- endunless -%}
+        {%- unless text == blank -%}
+          <p class="text">{{ text }}</p>
+        {%- endunless -%}
+      </div>
+    {%- endunless -%}
   </div>
 </div>
+
+
+<style>
+  .video-section__container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .video-section__media {
+    width: 50%;
+  }
+
+  .video__title-wrapper {
+    width: 50%;
+  }
+</style>

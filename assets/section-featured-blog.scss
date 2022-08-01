@@ -94,8 +94,11 @@
         margin: 0 0 15px;
       }
 
-      .article-card__link {
-
+      .link-arrow {
+        height: 24px;
+        white-space: nowrap;
+        max-width: 100%;
+        overflow: hidden;
       }
     }
   }

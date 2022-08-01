@@ -12,7 +12,7 @@
   outline-offset: 0.3rem; }
 
 .video-section__media iframe {
-  background-color: greenyellow;
+  background-color: #000000;
   border: 0; }
 
 .video-section__poster, .video-section__media iframe {
@@ -22,6 +22,18 @@
 
 .video-section {
   padding: 80px 0; }
+  .video-section .video-section__content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px; }
+  .video-section .video-content-wrapper {
+    max-width: 590px;
+    width: 100%; }
+    .video-section .video-content-wrapper .deferred-media__poster-button {
+      background-color: #ffffff; }
+      .video-section .video-content-wrapper .deferred-media__poster-button .icon-play path {
+        fill: #BA3A7D; }
   .video-section .video__title-wrapper {
     max-width: 552px;
     width: 100%;
