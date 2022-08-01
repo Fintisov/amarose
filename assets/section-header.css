@@ -9,12 +9,18 @@
   @media screen and (max-width: 767px) {
     .announcement-bar {
       background: linear-gradient(90deg, #fdbcae calc(50% - 210px), #ffeeea calc(50% - 210px)); } }
+  @media screen and (max-width: 575px) {
+    .announcement-bar {
+      background: linear-gradient(90deg, #fdbcae 50px, #ffeeea 50px); } }
 
 .container__announcement-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 60px; }
+  @media screen and (max-width: 575px) {
+    .container__announcement-bar {
+      padding: 0 5px; } }
 
 .announcement-timer {
   min-width: 163px;
@@ -24,9 +30,14 @@
   background-color: #FDBCAE;
   padding-right: 50px;
   border-radius: 0 30px 30px 0; }
+  @media screen and (max-width: 767px) {
+    .announcement-timer {
+      min-width: max-content;
+      padding-right: 14px; } }
   .announcement-timer .timer__items {
     display: flex;
-    align-items: stretch; }
+    align-items: stretch;
+    column-gap: 4px; }
     .announcement-timer .timer__items .timer__item {
       display: flex;
       flex-direction: column;
@@ -42,17 +53,25 @@
       font-size: 10px;
       font-weight: 400;
       line-height: 1.5; }
-      .announcement-timer .timer__items .timer__item:not(:last-of-type) {
-        margin-right: 4px; }
+  @media screen and (max-width: 575px) {
+    .announcement-timer .timer__items .timer__item {
+      min-width: 32px;
+      min-height: 35px; } }
       .announcement-timer .timer__items .timer__item .timer__elem {
         font-family: "futura", suns-serif;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.1;
         color: #ffffff; }
+  @media screen and (max-width: 575px) {
+    .announcement-timer .timer__items .timer__item .timer__elem {
+      font-size: 16px; } }
 
 .announcement-message {
   padding: 4px 20px; }
+  @media screen and (max-width: 767px) {
+    .announcement-message {
+      padding: 12px 4px; } }
   .announcement-message p {
     font-family: "futura", suns-serif;
     font-weight: 400;
@@ -64,6 +83,12 @@
   @media screen and (max-width: 991px) {
     .announcement-message p {
       font-size: 18px; } }
+  @media screen and (max-width: 767px) {
+    .announcement-message p {
+      font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .announcement-message p {
+      font-size: 10px; } }
     .announcement-message p strong {
       color: #BA3A7D;
       font-weight: 500;
@@ -76,6 +101,9 @@
   @media screen and (max-width: 991px) {
     .announcement-message p + p {
       font-size: 14px; } }
+  @media screen and (max-width: 414px) {
+    .announcement-message p + p {
+      font-size: 10px; } }
     .announcement-message p em {
       font-weight: 400;
       font-style: normal; }
@@ -83,6 +111,11 @@
 .announcement-btn {
   display: flex;
   align-items: center; }
+  @media screen and (max-width: 575px) {
+    .announcement-btn .button {
+      padding: 8px 6px;
+      min-height: 34px;
+      font-size: 14px; } }
   .announcement-btn .close-button {
     display: flex;
     align-items: center;
@@ -94,6 +127,9 @@
     background-color: transparent;
     border: none;
     cursor: pointer; }
+  @media screen and (max-width: 767px) {
+    .announcement-btn .close-button {
+      display: none; } }
 
 .header-wrapper {
   padding: 16px 0; }
