@@ -1,9 +1,12 @@
 .collection-grid {
   display: flex;
   flex-direction: row-reverse;
-  column-gap: 20px;
+  gap: 20px;
   padding-top: 20px;
   padding-bottom: 20px; }
+  @media screen and (max-width: 1300px) {
+    .collection-grid {
+      flex-direction: column; } }
 
 .collection-grid__header {
   padding: 35px;
@@ -14,6 +17,12 @@
   background-color: #F1F3F6;
   max-width: 380px;
   width: 100%; }
+  @media screen and (max-width: 1300px) {
+    .collection-grid__header {
+      max-width: 100%;
+      background-color: transparent;
+      background-image: none !important;
+      text-align: center; } }
   .collection-grid__header .collection-grid__title {
     font-family: "futura", suns-serif;
     font-weight: 400;
@@ -33,3 +42,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px; }
+@media screen and (max-width: 1300px) {
+  .collection-grid__list .product-grid {
+    justify-content: center; } }
+  .collection-grid__list .product-grid .grid__item {
+    width: 50%; }
+    .collection-grid__list .product-grid .grid__item .card-wrapper {
+      max-width: 380px;
+      width: 100%; }

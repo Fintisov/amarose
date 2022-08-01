@@ -4,6 +4,10 @@
 .announcement-bar {
   background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 550px), rgba(255, 238, 234, 1) calc(50% - 550px));
 
+  @include max-screen(1300) {
+    background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 400px), rgba(255, 238, 234, 1) calc(50% - 400px));
+  }
+
   @include max-screen(992) {
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 300px), rgba(255, 238, 234, 1) calc(50% - 300px));
   }
@@ -11,6 +15,7 @@
   @include max-screen(768) {
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 210px), rgba(255, 238, 234, 1) calc(50% - 210px));
   }
+
 }
 
 .container__announcement-bar {
@@ -76,6 +81,10 @@
     margin: 0;
     text-align: center;
 
+    @include max-screen(992) {
+      font-size: 18px;
+    }
+
     strong {
       color: $rose;
       font-weight: 500;
@@ -87,6 +96,10 @@
       line-height: 1.28;
       font-weight: 500;
       color: $black;
+
+      @include max-screen(992) {
+        font-size: 14px;
+      }
     }
 
     em {
@@ -137,6 +150,10 @@
 .header__inline-menu {
   padding: 0 15px;
   height: max-content;
+
+  @include max-screen(992) {
+    display: none;
+  }
 
   .list-menu {
     display: flex;
@@ -362,6 +379,19 @@
   }
 }
 
+.menu-drawer-container {
+  .menu-drawer {
+    background-color: $white;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+  }
+
+  .menu-drawer__navigation-container {
+
+  }
+}
+
 // search
 .header__search {
   .search-modal__form {
@@ -452,6 +482,9 @@
         }
 
         .price__sale {
+          display: flex;
+          flex-direction: column;
+
           span {
             font-family: $futura;
             font-size: 16px;
@@ -600,8 +633,6 @@
     }
   }
 }
-
-
 
 
 .cart-drawer {

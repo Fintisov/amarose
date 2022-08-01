@@ -60,6 +60,11 @@ ul, ol {
 
 }
 
+body {
+  &.overflow-hidden-tablet {
+    overflow: hidden;
+  }
+}
 
 // ___ Typography ___
 * {
