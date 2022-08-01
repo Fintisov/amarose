@@ -1,5 +1,9 @@
 .header__icon--menu {
-  position: initial;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #5e697e;
+  z-index: 10000;
 }
 
 .js menu-drawer > details > summary::before,
@@ -71,7 +75,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .js .menu-drawer__navigation .submenu-open {
-  visibility: hidden; /* hide menus from screen readers when hidden by submenu */
+  /*visibility: hidden; /* hide menus from screen readers when hidden by submenu */
 }
 
 @media screen and (min-width: 750px) {
@@ -91,7 +95,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation-container {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 105px auto 185px;
   align-content: space-between;
   overflow-y: auto;
   height: 100%;
@@ -175,7 +179,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .js .menu-drawer__submenu {
-  position: absolute;
+ /* position: absolute;
   top: 0;
   width: 100%;
   bottom: 0;
@@ -184,7 +188,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   border-left: 0.1rem solid rgba(var(--color-foreground), 0.2);
   z-index: 1;
   transform: translateX(100%);
-  visibility: hidden;
+  visibility: hidden;*/
 }
 
 .js .menu-drawer__submenu .menu-drawer__submenu {
@@ -216,7 +220,21 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__utility-links {
   padding: 2rem;
-  background-color: rgba(var(--color-foreground), 0.03);
+  text-align: center;
+  background: linear-gradient(91.99deg, #850B65 40.4%, #BA3A7D 98.33%);
+}
+
+.menu-drawer__utility-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+}
+
+.menu-drawer__navigation-top {
+  background: forestgreen;
+  text-align: right;
+  padding: 32px;
 }
 
 .menu-drawer__account {
@@ -227,6 +245,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-left: -1.2rem;
   font-size: 1.4rem;
   color: rgb(var(--color-foreground));
+}
+
+.menu-drawer__account path {
+  stroke: white;
 }
 
 .menu-drawer__account .icon-account {

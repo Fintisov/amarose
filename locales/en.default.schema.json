@@ -1004,13 +1004,8 @@
     "faq_product": {
       "name": "FAQ Product",
       "settings": {
-        "title": {
-          "label": "Title"
-        },
-        "blocks": {
-          "name": "FAQ product item",
-          "question": "Question",
-          "answer": "Answer"
+        "header": {
+          "content": "Content is edited in metafields"
         }
       },
       "presets": {

@@ -89,26 +89,27 @@
                    aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
-              {% render 'icon-close' %}
             </span>
           </summary>
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
-                {%- if shop.customer_accounts_enabled -%}
-                  <a
-                    href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                    class="menu-drawer__account link focus-inset h5 primary-button">
-                    {% render 'icon-account' %}
-                    {%- liquid
-                      if customer
-                        echo 'customer.account_fallback' | t
-                      else
-                        echo 'customer.log_in' | t
-                      endif
-                    -%}
-                  </a>
-                {%- endif -%}
+                <div class="menu-drawer__navigation-top">
+                  {%- if shop.customer_accounts_enabled -%}
+                    <a
+                      href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                      class="menu-drawer__account link focus-inset button primary-button button--icon button-icon--sm">
+                      {% render 'icon-account' %}
+                      {%- liquid
+                        if customer
+                          echo 'customer.account_fallback' | t
+                        else
+                          echo 'customer.log_in' | t
+                        endif
+                      -%}
+                    </a>
+                  {%- endif -%}
+                </div>
 
                 <nav class="menu-drawer__navigation">
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">
@@ -125,11 +126,7 @@
                             <div id="link-{{ link.title | escape }}"
                                  class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
                               <div class="menu-drawer__inner-submenu">
-                                <button class="menu-drawer__close-button link link--text focus-inset"
-                                        aria-expanded="true">
-                                  {% render 'icon-arrow' %}
-                                  {{ link.title | escape }}
-                                </button>
+
                                 <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
@@ -154,11 +151,7 @@
                                           </summary>
                                           <div id="childlink-{{ childlink.title | escape }}"
                                                class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                            <button class="menu-drawer__close-button link link--text focus-inset"
-                                                    aria-expanded="true">
-                                              {% render 'icon-arrow' %}
-                                              {{ childlink.title | escape }}
-                                            </button>
+
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
@@ -198,7 +191,7 @@
                 {% if section.settings.button_text01 != blank and section.settings.button_text02 != blank %}
                   <div class="menu-drawer__utility-links">
                     {% if section.settings.info_title != blank %}
-                      <h3>{{ section.settings.info_title }}</h3>
+                      <h3 class="menu-drawer__utility-title">{{ section.settings.info_title }}</h3>
                     {% endif %}
 
                     {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
