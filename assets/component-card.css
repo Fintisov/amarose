@@ -39,7 +39,7 @@
   @media screen and (max-width: 767px) {
     .card-wrapper .card__content {
       padding: 10px;
-      min-height: 160px; } }
+      min-height: 165px; } }
   @media screen and (max-width: 450px) {
     .card-wrapper .card__content {
       min-height: 174px; } }
