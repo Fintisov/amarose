@@ -36,6 +36,9 @@
   @media screen and (max-width: 1300px) {
     .video-section .video-section__media {
       padding-bottom: 300px !important; } }
+  @media screen and (max-width: 575px) {
+    .video-section .video-section__media {
+      padding-bottom: 250px !important; } }
     .video-section .video-section__media .deferred-media__poster-button {
       background-color: #ffffff; }
       .video-section .video-section__media .deferred-media__poster-button .icon-play path {

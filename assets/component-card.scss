@@ -44,13 +44,13 @@
 
   .card__content {
     padding: 20px;
-    min-height: 284px;
+    min-height: 207px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     @include max-screen(991) {
-      min-height: 216px;
+      min-height: 219px;
     }
 
     @include max-screen(767) {

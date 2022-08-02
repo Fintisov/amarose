@@ -29,13 +29,13 @@
       line-height: 1; }
   .card-wrapper .card__content {
     padding: 20px;
-    min-height: 284px;
+    min-height: 207px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
   @media screen and (max-width: 991px) {
     .card-wrapper .card__content {
-      min-height: 216px; } }
+      min-height: 219px; } }
   @media screen and (max-width: 767px) {
     .card-wrapper .card__content {
       padding: 10px;

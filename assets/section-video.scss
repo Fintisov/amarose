@@ -51,6 +51,11 @@
       padding-bottom: 300px !important;
     }
 
+
+    @include max-screen(575) {
+      padding-bottom: 250px !important;
+    }
+
     .deferred-media__poster-button {
       background-color: $white;
 
