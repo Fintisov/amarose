@@ -583,6 +583,24 @@ button {
     line-height: 1.28;
   } }
 
+.field__container {
+  display: flex;
+  justify-content: space-between; }
+
+.field__container .field {
+  width: calc(50% - 10px);
+}
+
+@media screen and (max-width: 767px) {
+  .field__container .field {
+    width: calc(50% - 8px);
+  }
+
+  .field__container .field__error {
+    width: 100%;
+  }
+}
+
 .badge {
   display: inline-block;
   padding: 2px 12px;
