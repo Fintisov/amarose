@@ -147,6 +147,7 @@
           }
         }
       }
+
       .quick-add {
         margin-bottom: 0;
         width: 100%;
@@ -156,13 +157,13 @@
           height: max-content;
         }
 
-&.product-sold-out {
-  .button {
-    @include max-screen(767) {
-      font-size: 12px;
-    }
-  }
-}
+        &.product-sold-out {
+          .button {
+            @include max-screen(767) {
+              font-size: 12px;
+            }
+          }
+        }
 
         .button {
           width: 100%;
