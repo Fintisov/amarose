@@ -565,6 +565,23 @@ button {
   .field.field-search .field__button--search {
     width: 24px;
     right: 32px; }
+.field .field__error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50%;
+  color: #DE3D64;
+  font-size: 16px;
+  line-height: 1.4;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .field .field__error {
+    font-size: 14px;
+    line-height: 1.28;
+  } }
 
 .badge {
   display: inline-block;

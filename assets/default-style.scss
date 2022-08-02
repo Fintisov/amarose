@@ -816,6 +816,23 @@ button {
       right: 32px;
     }
   }
+
+  .field__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    color: $errorState;
+    font-size: 16px;
+    line-height: 1.4;
+    padding-top: 5px;
+    padding-left: 20px;
+
+    @include max-screen(767) {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+  }
 }
 
 //////////////////////////
