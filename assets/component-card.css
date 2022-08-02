@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: space-between; }
     .card-wrapper .card__content .jdgm-widget {
-      display: block;
+      display: block !important;
       min-height: 29px;
       margin-bottom: 10px; }
       .card-wrapper .card__content .jdgm-widget .jdgm-prev-badge__stars {
