@@ -66,8 +66,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
       gap: 20px 10px; }
+  @media screen and (max-width: 991px) {
+    .card-wrapper .card__content .card__information-wrapper {
+      align-items: center; } }
       .card-wrapper .card__content .card__information-wrapper .information-content {
         min-height: 60px;
         width: 220px; }
