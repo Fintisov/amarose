@@ -1,5 +1,6 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -137,6 +138,8 @@
                           media_aspect_ratio: 1,
                           lazy_load: lazy_load
                         %}
+
+                      {% comment %}
                       {%- when 'page' -%}
                         <div class="card-wrapper underline-links-hover">
                           <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
@@ -154,6 +157,7 @@
                             </div>
                           </div>
                         </div>
+                    {% endcomment %}
                     {%- endcase -%}
                   </li>
                 {%- endfor -%}
