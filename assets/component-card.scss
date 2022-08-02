@@ -101,34 +101,6 @@
           color: $midGrey;
         }
       }
-
-      .price-wrapper {
-        width: max-content;
-        text-align: end;
-        margin-top: auto;
-
-        .price__sale {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .price-item--sale {
-          font-family: $futura;
-          font-weight: 500;
-          font-size: 22px;
-          line-height: 1.5;
-          color: $purple;
-        }
-
-        .price-item--regular {
-          font-family: $futura;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 1.3;
-          color: $midGrey;
-        }
-      }
-
       .quick-add {
         margin-bottom: 0;
 
@@ -142,3 +114,6 @@
     }
   }
 }
+
+
+
