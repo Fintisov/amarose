@@ -31,7 +31,6 @@
       display: flex;
       height: 100%; }
     .blog__posts .blog__post .card__inner {
-      margin-top: auto;
       width: 100%; }
     .blog__posts .blog__post .article-card__image {
       width: 100%;
@@ -44,9 +43,15 @@
       min-height: 207px;
       padding: 20px;
       margin-top: auto; }
-      .blog__posts .blog__post .article-card__information .article-card__info {
+      .blog__posts .blog__post .article-card__information .article-car__top-wrapper {
         padding-top: 0;
         margin-bottom: 15px; }
+        .blog__posts .blog__post .article-card__information .article-car__top-wrapper .article-card__info {
+          font-family: "futura", suns-serif;
+          font-weight: 400;
+          font-size: 12px;
+          color: #2A3241;
+          padding: 0; }
       .blog__posts .blog__post .article-card__information .article-card__title-wrapper {
         line-height: 1;
         margin-bottom: 5px; }
