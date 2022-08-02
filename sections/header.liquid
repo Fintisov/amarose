@@ -89,6 +89,7 @@
                    aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
+              {% render 'icon-close' %}
             </span>
           </summary>
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
@@ -104,7 +105,7 @@
                         if customer
                           echo 'customer.account_fallback' | t
                         else
-                          echo 'customer.log_in' | t
+                          echo 'customer.sign_in' | t
                         endif
                       -%}
                     </a>
@@ -120,7 +121,6 @@
                             <summary
                               class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
-                              {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
                             </summary>
                             <div id="link-{{ link.title | escape }}"

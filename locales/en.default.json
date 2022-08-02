@@ -366,6 +366,7 @@
     "log_in": "Log in",
     "log_out": "Log out",
     "sign_up": "Sign Up",
+    "sign_in": "Sign In",
     "login_page": {
       "cancel": "Cancel",
       "create_account_text": "Don’t have an account yet? ",
