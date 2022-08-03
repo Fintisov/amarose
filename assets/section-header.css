@@ -377,8 +377,7 @@
         text-decoration: none;
         margin-bottom: 5px; }
       .predictive-search .predictive-search__results-list .predictive-search__item .predictive-search__item-content .price__sale {
-        display: flex;
-        flex-direction: column; }
+        display: flex; }
         .predictive-search .predictive-search__results-list .predictive-search__item .predictive-search__item-content .price__sale span {
           font-family: "futura", suns-serif;
           font-size: 16px;
