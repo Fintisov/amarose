@@ -2,6 +2,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 {{ 'main-search.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -87,7 +88,6 @@
         </form>
       </facet-filters-form>
     {%- endif -%}
-
     <div class="container">
       {%- if search.filters != empty -%}
         {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
@@ -111,7 +111,7 @@
           {% paginate search.results by 24 %}
             <div class="template-search__results collection" id="product-grid" data-id="{{ section.id }}">
               <div class="loading-overlay gradient"></div>
-              <ul class="product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+              <ul class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
@@ -131,34 +131,27 @@
                           lazy_load: lazy_load
                         %}
                       {%- when 'article' -%}
-                        {% render 'article-card',
-                          blog: section.settings.blog,
-                          article: feature_article,
-                          media_aspect_ratio: 1.66,
-                          show_image: true,
-                          show_date: section.settings.show_date,
-                          show_author: section.settings.show_author,
-                          show_excerpt: true %}
-
-                      {% comment %}
+                        <div class="card-wrapper">
+                          {% render 'article-card',
+                            blog: section.settings.blog,
+                            article: item,
+                            media_aspect_ratio: 1.66,
+                            show_image: true,
+                            show_date: section.settings.show_date,
+                            show_author: section.settings.show_author,
+                            show_excerpt: true %}
+                        </div>
                       {%- when 'page' -%}
-                        <div class="card-wrapper underline-links-hover">
-                          <div class="card card--card card--text ratio color-{{ settings.card_color_scheme }}" style="--ratio-percent: 100%;">
-                            <div class="card__content">
-                              <div class="card__information">
-                                <h3 class="card__heading">
-                                  <a href="{{ item.url }}" class="full-unstyled-link">
-                                    {{ item.title | truncate: 50 | escape }}
-                                  </a>
-                                </h3>
-                              </div>
-                              <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-background-1">{{ 'templates.search.page' | t }}</span>
-                              </div>
-                            </div>
+                        <div class="card-wrapper">
+                          <div class="card card--product">
+
+                            <h3 class="card__heading">
+                              <a href="{{ item.url }}" class="full-unstyled-link">
+                                {{ item.title | truncate: 50 | escape }}
+                              </a>
+                            </h3>
                           </div>
                         </div>
-                    {% endcomment %}
                     {%- endcase -%}
                   </li>
                 {%- endfor -%}
