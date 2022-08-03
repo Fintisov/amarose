@@ -21,6 +21,7 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
+  background-color: #FFBBAB;
 }
 .customer-login__background-image {
   position: absolute;
@@ -173,6 +174,53 @@
   padding-bottom: 15px;
 }
 
+.account-template {
+  display: flex;
+  justify-content: space-between;
+}
+.account-template__content {
+  width: calc(100% - 300px);
+}
+
+.account-menu {
+  width: 280px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 4px 80px rgba(227, 229, 233, 0.5));
+  border-radius: 20px;
+  overflow: hidden;
+}
+.account-menu__list-link {
+  display: flex;
+  align-items: center;
+  color: #5E697E;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 20px 30px;
+}
+.account-menu__list-link:hover, .account-menu__list-link:focus, .account-menu__list-link.active {
+  background-color: #BA3A7D;
+  color: #ffffff;
+}
+.account-menu__list-link:hover .icon.stroke--style, .account-menu__list-link:focus .icon.stroke--style, .account-menu__list-link.active .icon.stroke--style {
+  stroke: #ffffff;
+}
+.account-menu__list-link:hover .icon.fill--style, .account-menu__list-link:focus .icon.fill--style, .account-menu__list-link.active .icon.fill--style {
+  fill: #ffffff;
+}
+.account-menu__icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 24px;
+  height: 25px;
+  margin-right: 15px;
+}
+.account-menu__icon .icon.stroke--style {
+  stroke: #F08B84;
+}
+.account-menu__icon .icon.fill--style {
+  fill: #F08B84;
+}
+
 #recover,
 #recover + div {
   display: none;
@@ -197,6 +245,37 @@
 
 .addresses [aria-expanded=true] ~ div[id] {
   display: block;
+}
+
+.edit-address-box,
+.add-address-box,
+.js-form-edit .address-box,
+.js-form-edit .main-address-header,
+.js-form-add .main-address-header,
+.js-form-add .addresses-empty-text,
+.js-form-add .addresses-list,
+.remove-address-popup {
+  display: none;
+}
+
+.js-form-edit .edit-address-box,
+.js-form-add .add-address-box,
+.address-popup-open .remove-address-popup {
+  display: block;
+}
+
+.addresses-icon {
+  width: 20px;
+  height: 21px;
+}
+
+.remove-address-popup {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=customer.css.map */

@@ -81,8 +81,8 @@ class CustomerAddresses {
   _handleCancelButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(
       currentTarget
-        .closest(selectors.addressContainer)
-        .querySelector(`[${attributes.expanded}]`)
+      .closest(selectors.addressContainer)
+      .querySelector(`[${attributes.expanded}]`)
     )
   }
 

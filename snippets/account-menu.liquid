@@ -3,7 +3,6 @@
 {% endif %}
 
 {% if settings.customer_menu.size > 0 %}
-  {% assign icons_list = settings.customer_menu | split: ','%}
   {% assign page_handle = '/' | append: template.name %}
 
   {% if template.directory != blank %}
@@ -14,15 +13,35 @@
     {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}
   {% endif %}
 
-  <ul class="account-menu__list">
+  <ul class="account-menu">
     {% for link in settings.customer_menu.links -%}
       <li class="account-menu__list-item">
         <a href="{{ link.url }}"
            class="account-menu__list-link{% if page_handle == link.url %} active{% endif %}">
-          {% if icons_list[forloop.index0] != blank %}
-            <img class="account-menu__list-icon" src="{{ icons_list[forloop.index0] | file_url }}" alt="{{ icons_list[forloop.index0] }}">
-          {% endif %}
-          {{ link.title }}
+          {%- case forloop.index -%}
+            {%- when 1 -%}
+              {% if settings.customer_icon_1 != blank %}
+                <i class="account-menu__icon">{{ settings.customer_icon_1 }}</i>
+              {% endif %}
+            {%- when 2 -%}
+              {% if settings.customer_icon_2 != blank %}
+                <i class="account-menu__icon">{{ settings.customer_icon_2 }}</i>
+              {% endif %}
+            {%- when 3 -%}
+              {% if settings.customer_icon_3 != blank %}
+                <i class="account-menu__icon">{{ settings.customer_icon_3 }}</i>
+              {% endif %}
+            {%- when 4 -%}
+              {% if settings.customer_icon_4 != blank %}
+                <i class="account-menu__icon">{{ settings.customer_icon_4 }}</i>
+              {% endif %}
+            {%- when 5 -%}
+              {% if settings.customer_icon_5 != blank %}
+                <i class="account-menu__icon">{{ settings.customer_icon_5 }}</i>
+              {% endif %}
+          {%- endcase -%}
+
+          <span class="account-menu__title">{{ link.title }}</span>
         </a>
       </li>
     {%- endfor %}
