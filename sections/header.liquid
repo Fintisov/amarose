@@ -89,13 +89,16 @@
                    aria-label="{{ 'sections.header.menu' | t }}">
             <span>
               {% render 'icon-hamburger' %}
-              {% render 'icon-close' %}
             </span>
           </summary>
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
                 <div class="menu-drawer__navigation-top">
+                  <button type="button" class="menu-drawer__close">
+                    {% render 'icon-close' %}
+                  </button>
+
                   {%- if shop.customer_accounts_enabled -%}
                     <a
                       href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -481,6 +484,10 @@
                       <h2 class="account-modal__title">{{ section.settings.customer_title }}</h2>
 
                       {% assign page_handle = '/' | append: template.name %}
+
+                      {% if template.directory != blank %}
+                        {% assign page_handle = routes.account_url | append: page_handle %}
+                      {% endif %}
 
                       {% if template.suffix != blank %}
                         {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}

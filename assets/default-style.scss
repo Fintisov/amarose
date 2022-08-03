@@ -839,6 +839,23 @@ button {
   }
 }
 
+.field__container {
+  display: flex;
+  justify-content: space-between;
+
+  .field {
+    width: calc(50% - 10px);
+
+    @include max-screen(767) {
+      width: calc(50% - 8px);
+    }
+  }
+
+  .field__error {
+    width: 100%;
+  }
+}
+
 //////////////////////////
 
 .badge {

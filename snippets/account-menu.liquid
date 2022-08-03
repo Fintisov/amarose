@@ -1,0 +1,30 @@
+{% if settings.title != blank %}
+  <h2 class="visually-hidden">{{ settings.customer_title }}</h2>
+{% endif %}
+
+{% if settings.customer_menu.size > 0 %}
+  {% assign icons_list = settings.customer_menu | split: ','%}
+  {% assign page_handle = '/' | append: template.name %}
+
+  {% if template.directory != blank %}
+    {% assign page_handle = routes.account_url | append: page_handle %}
+  {% endif %}
+
+  {% if template.suffix != blank %}
+    {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}
+  {% endif %}
+
+  <ul class="account-menu__list">
+    {% for link in settings.customer_menu.links -%}
+      <li class="account-menu__list-item">
+        <a href="{{ link.url }}"
+           class="account-menu__list-link{% if page_handle == link.url %} active{% endif %}">
+          {% if icons_list[forloop.index0] != blank %}
+            <img class="account-menu__list-icon" src="{{ icons_list[forloop.index0] | file_url }}" alt="{{ icons_list[forloop.index0] }}">
+          {% endif %}
+          {{ link.title }}
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+{% endif %}
