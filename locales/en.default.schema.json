@@ -644,6 +644,52 @@
         "name": "Collection list"
       }
     },
+    "accessories": {
+      "name": "Accessories",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "header": {
+          "content": "Product card"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_vendor": {
+          "label": "Show vendor"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button"
+        },
+        "blocks": {
+          "name": "accessory",
+          "product": "accessory"
+        }
+      },
+      "presets": {
+        "name": "Accessories"
+      }
+    },
     "contact-form": {
       "name": "Contact Form",
       "presets": {
@@ -970,6 +1016,17 @@
         "name": "FAQ list"
       }
     },
+    "faq_product": {
+      "name": "FAQ Product",
+      "settings": {
+        "header": {
+          "content": "Content is edited in metafields"
+        }
+      },
+      "presets": {
+        "name": "FAQ product"
+      }
+    },
     "running_line": {
       "name": "Running line",
       "settings": {
@@ -1266,6 +1323,14 @@
           "menu": "Menu",
           "icons_list": "Icons list",
           "icons_list_info": "Like as: account-icon.svg,order-icon.png"
+        }
+      }
+    },
+    "main-404": {
+      "name": "Not Found",
+      "settings": {
+        "background_image": {
+          "label": "Background image"
         }
       }
     },
@@ -1698,7 +1763,11 @@
       }
     },
     "main-cart-items": {
-      "name": "Items"
+      "name": "Items",
+      "settings": {
+        "show_options": "Show product options",
+        "show_properties": "Show product properties"
+      }
     },
     "main-collection-banner": {
       "name": "Collection banner",
@@ -2176,6 +2245,12 @@
     "main-search": {
       "name": "Search results",
       "settings": {
+        "enable_search": {
+          "label": "Enable search"
+        },
+        "header_search": {
+          "content": "Enable search"
+        },
         "columns_desktop": {
           "label": "Number of columns on desktop"
         },

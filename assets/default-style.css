@@ -3,18 +3,41 @@
   display: none; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px; }
-  @media screen and (max-width: 992px) {
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media screen and (max-width: 1300px) {
+    .container {
+      max-width: 960px; } }
+  @media screen and (max-width: 991px) {
     .container {
       max-width: 720px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .container {
       max-width: 540px; } }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 575px) {
     .container {
+      max-width: 100%;
+      padding: 0 20px; } }
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media screen and (max-width: 1300px) {
+    .container-fluid {
+      max-width: 960px; } }
+  @media screen and (max-width: 991px) {
+    .container-fluid {
+      max-width: 720px; } }
+  @media screen and (max-width: 767px) {
+    .container-fluid {
+      max-width: 540px; } }
+  @media screen and (max-width: 575px) {
+    .container-fluid {
       max-width: 100%;
       padding: 0 20px; } }
 
@@ -22,6 +45,9 @@ ul, ol {
   padding: 0;
   list-style: none;
   margin: 0; }
+
+body.overflow-hidden-tablet {
+  overflow: hidden; }
 
 * {
   font-family: "futura", suns-serif; }
@@ -101,37 +127,47 @@ p {
 a {
   text-decoration: none; }
 
+button {
+  border: none; }
+
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
+  min-height: 48px;
   font-family: "futura", suns-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.3;
   color: #2A3241;
-  padding: 12.5px 24px;
-  border-radius: 60px; }
+  padding: 12px 24px;
+  border-radius: 60px;
+  cursor: pointer; }
   @media screen and (max-width: 767px) {
     .button {
       font-size: 16px;
-      padding: 9.5px 24px; } }
+      padding: 9px 24px;
+      min-height: 40px; } }
   .button.button--sm {
-    padding: 9.5px 32px;
-    font-size: 16px; }
+    padding: 9px 32px;
+    font-size: 16px;
+    min-height: 40px; }
   @media screen and (max-width: 767px) {
     .button.button--sm {
       font-size: 14px;
-      padding: 5px 24px; } }
+      padding: 5px 24px;
+      min-height: 28px; } }
   .button.button--lg {
-    padding: 11.5px 32px;
+    padding: 11px 32px;
     font-size: 22px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    min-height: 56px; }
   @media screen and (max-width: 767px) {
     .button.button--lg {
       font-size: 18px;
-      padding: 12px 24px; } }
+      padding: 12px 24px;
+      min-height: 48px; } }
   .button.primary-button {
     color: #ffffff;
     background-color: #BA3A7D;
@@ -215,6 +251,9 @@ a {
   .button.button--arrow:hover path {
     stroke: #ffffff;
     transition: 0.3s; }
+
+.w-100 {
+  width: 100%; }
 
 /* для элемента input c type="checkbox" */
 .custom-checkbox > input {
@@ -526,3 +565,68 @@ a {
   .field.field-search .field__button--search {
     width: 24px;
     right: 32px; }
+.field .field__error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50%;
+  color: #DE3D64;
+  font-size: 16px;
+  line-height: 1.4;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .field .field__error {
+    font-size: 14px;
+    line-height: 1.28;
+  } }
+
+.badge {
+  display: inline-block;
+  padding: 2px 12px;
+  font-family: "futura", suns-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #5E697E;
+  background-color: #ffffff;
+  border-radius: 32px;
+  cursor: default;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+  .badge.badge--grey {
+    color: #ffffff;
+    background-color: #5E697E; }
+
+.link-arrow {
+  display: flex;
+  font-family: "futura", suns-serif;
+  font-size: 16px;
+  font-weight: 500;
+  align-items: center;
+  color: #BA3A7D;
+  line-height: 1; }
+  .link-arrow svg {
+    flex: 0 0 24px; }
+    .link-arrow svg path {
+      stroke: #BA3A7D; }
+
+#insta-feed {
+  display: flex !important;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; }
+  #insta-feed h2 {
+    width: 100%;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px !important; }
+  #insta-feed .instafeed-container {
+    flex: 1 1 15%; }

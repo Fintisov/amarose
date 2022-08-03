@@ -4,8 +4,11 @@
       "type": "hero-banner",
       "settings": {
         "bg_color": "#ffded6",
+        "image": "shopify:\/\/shop_images\/Homepage_Image_Transparent.png",
         "text_alignment": "left",
+        "show_bg": false,
         "sub_heading": "On Sale",
+        "sub_heading_color": "pink",
         "heading": "Beauty Boost Cleanser",
         "description": "<p>Gently remove impurities and dirt while infusing your skin with essential nutrients.<\/p>",
         "button_text": "Learn More",
@@ -59,7 +62,8 @@
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
         "cover_image": "shopify:\/\/shop_images\/Rectangle_42.png",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": ""
+        "description": "",
+        "is_product": false
       }
     },
     "1658258250814617ed": {
@@ -87,9 +91,9 @@
         "heading": "Blog posts",
         "content": "<p>Find secrets to keeping your skin healthy. Return to the Journal for the latest on all-natural skin and beauty products and more. <\/p>",
         "blog": "journal",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false
+        "show_date": false,
+        "show_author": false,
+        "post_limit": 3
       }
     }
   },

@@ -1,11 +1,77 @@
 .card-wrapper {
-  color: inherit;
-  height: 100%;
-  position: relative;
-  text-decoration: none;
-}
-
-.card {
-  text-decoration: none;
-}
-
+  width: 380px;
+  height: auto;
+  border: 1px solid #F1F3F6;
+  border-radius: 20px;
+  overflow: hidden; }
+  .card-wrapper .card__inner {
+    position: relative; }
+    .card-wrapper .card__inner .card__media {
+      max-width: 380px;
+      width: 100%;
+      height: 334px; }
+      .card-wrapper .card__inner .card__media .media {
+        height: 100%; }
+      .card-wrapper .card__inner .card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .card-wrapper .card__inner .badge-wrapper {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      line-height: 1; }
+  .card-wrapper .card__content {
+    padding: 20px;
+    min-height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .card-wrapper .card__content .jdgm-widget {
+      display: block !important;
+      min-height: 29px;
+      margin-bottom: 10px; }
+      .card-wrapper .card__content .jdgm-widget .jdgm-prev-badge__stars {
+        margin-right: 10px; }
+      .card-wrapper .card__content .jdgm-widget .jdgm-prev-badge__text {
+        font-family: "futura", suns-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.3;
+        color: #5E697E;
+        text-decoration: underline; }
+      .card-wrapper .card__content .jdgm-widget .jdgm-star {
+        color: #F08B84; }
+    .card-wrapper .card__content .card__information-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 10px; }
+      .card-wrapper .card__content .card__information-wrapper .information-content {
+        min-height: 60px;
+        flex: 0 0 220px; }
+        .card-wrapper .card__content .card__information-wrapper .information-content .title a {
+          width: 220px;
+          font-family: "futura", suns-serif;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 1.5;
+          color: #2A3241;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .card-wrapper .card__content .card__information-wrapper .information-content .text {
+          width: 220px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-family: "futura", suns-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.5;
+          color: #5E697E; }
+      .card-wrapper .card__content .card__information-wrapper .quick-add {
+        margin-bottom: 0; }
+        .card-wrapper .card__content .card__information-wrapper .quick-add .button-icon:hover path {
+          stroke: #ffffff;
+          transition: 0.3s; }

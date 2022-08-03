@@ -1,0 +1,183 @@
+@import "_variables";
+
+.body-background {
+  position: relative;
+}
+
+.customer-login {
+  padding-top: 90px;
+  padding-bottom: 180px;
+
+  @include max-screen(767) {
+    padding-top: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__heading {
+    position: relative;
+    text-align: center;
+    margin-bottom: 22px;
+
+    @include max-screen(767) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__heading-link {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__return {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include max-screen(767) {
+      position: static;
+    }
+  }
+
+  &__return-link {
+    display: flex;
+    align-items: center;
+    color: $white;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  &__return-icon {
+    margin-left: 16px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__box {
+    max-width: 380px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 40px;
+    border-radius: 20px;
+    background-color: $white;
+    box-shadow: 0px 4px 80px rgba(227, 229, 233, 0.5);
+
+    @include max-screen(767) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__register-link {
+    font-family: $futura;
+    line-height: 1.28;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: -0.5px;
+
+    a {
+      color: $rose;
+    }
+  }
+
+  &__confirm {
+    background-color: rgba($blush, .25);
+    font-size: 14px;
+    line-height: 1.28;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+  }
+
+  .field {
+    margin-bottom: 15px;
+
+    &:not(:last-child) {
+      &.field--error {
+        margin-bottom: 42px;
+      }
+    }
+  }
+
+  #rc_login {
+    display: none;
+  }
+}
+
+.recover {
+  margin-top: -7px;
+  margin-bottom: 30px;
+  text-align: right;
+
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.extra-indent {
+  padding-bottom: 15px;
+}
+
+
+
+
+
+
+#recover,
+#recover + div {
+  display: none;
+}
+
+#recover:target {
+  display: block;
+}
+
+#recover:target + div {
+  display: block;
+}
+
+#recover:target ~ #login,
+#recover:target ~ #login + div {
+  display: none;
+}
+
+.addresses [aria-expanded='false'] ~ div[id] {
+  display: none;
+}
+
+.addresses [aria-expanded='true'] ~ div[id] {
+  display: block;
+}

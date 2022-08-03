@@ -31,7 +31,7 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
-  @media screen and (min-width: 990px) {
+  @media screen and (min-width: 992px) {
     header-drawer {
       display: none;
     }
@@ -95,20 +95,22 @@
           <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
             <div class="menu-drawer__inner-container">
               <div class="menu-drawer__navigation-container">
-                {%- if shop.customer_accounts_enabled -%}
-                  <a
-                    href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-                    class="menu-drawer__account link focus-inset h5 primary-button">
-                    {% render 'icon-account' %}
-                    {%- liquid
-                      if customer
-                        echo 'customer.account_fallback' | t
-                      else
-                        echo 'customer.log_in' | t
-                      endif
-                    -%}
-                  </a>
-                {%- endif -%}
+                <div class="menu-drawer__navigation-top">
+                  {%- if shop.customer_accounts_enabled -%}
+                    <a
+                      href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                      class="menu-drawer__account link focus-inset button primary-button button--icon button-icon--sm">
+                      {% render 'icon-account' %}
+                      {%- liquid
+                        if customer
+                          echo 'customer.account_fallback' | t
+                        else
+                          echo 'customer.sign_in' | t
+                        endif
+                      -%}
+                    </a>
+                  {%- endif -%}
+                </div>
 
                 <nav class="menu-drawer__navigation">
                   <ul class="menu-drawer__menu has-submenu list-menu" role="list">
@@ -119,17 +121,12 @@
                             <summary
                               class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
                               {{ link.title | escape }}
-                              {% render 'icon-arrow' %}
                               {% render 'icon-caret' %}
                             </summary>
                             <div id="link-{{ link.title | escape }}"
                                  class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
                               <div class="menu-drawer__inner-submenu">
-                                <button class="menu-drawer__close-button link link--text focus-inset"
-                                        aria-expanded="true">
-                                  {% render 'icon-arrow' %}
-                                  {{ link.title | escape }}
-                                </button>
+
                                 <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                   {%- for childlink in link.links -%}
                                     <li>
@@ -154,11 +151,7 @@
                                           </summary>
                                           <div id="childlink-{{ childlink.title | escape }}"
                                                class="menu-drawer__submenu has-submenu gradient motion-reduce">
-                                            <button class="menu-drawer__close-button link link--text focus-inset"
-                                                    aria-expanded="true">
-                                              {% render 'icon-arrow' %}
-                                              {{ childlink.title | escape }}
-                                            </button>
+
                                             <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                                               {%- for grandchildlink in childlink.links -%}
                                                 <li>
@@ -198,7 +191,7 @@
                 {% if section.settings.button_text01 != blank and section.settings.button_text02 != blank %}
                   <div class="menu-drawer__utility-links">
                     {% if section.settings.info_title != blank %}
-                      <h3>{{ section.settings.info_title }}</h3>
+                      <h3 class="menu-drawer__utility-title">{{ section.settings.info_title }}</h3>
                     {% endif %}
 
                     {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
@@ -354,7 +347,7 @@
                                         {{ block.settings.text }}
                                       </div>
                                       {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                        <a href="{{ block.settings.button_url }}">
+                                        <a class="link-arrow" href="{{ block.settings.button_url }}">
                                           {{ block.settings.button_text }}
                                           {% render 'icon-arrow-r' %}
                                         </a>
@@ -472,7 +465,7 @@
 
 
         <details-modal class="header-icons__elem header__account">
-          <details>
+          <details >
             <summary class="header__icon header__icon--account header__icon--summary link focus-inset modal__toggle"
                      aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
               {% render 'icon-account' %}
@@ -485,7 +478,7 @@
                 <div class="account-modal__frame">
                   <div class="search-modal__text">
                     {% if customer %}
-                      <h2>{{ section.settings.customer_title }}</h2>
+                      <h2 class="account-modal__title">{{ section.settings.customer_title }}</h2>
 
                       {% assign page_handle = '/' | append: template.name %}
 
@@ -515,12 +508,12 @@
                         </ul>
                       {% endif %}
                     {% else %}
-                      <h2>{{ "accessibility.hello" | t }}</h2>
+                      <h2 class="account-modal__title">{{ "accessibility.hello" | t }}</h2>
                       <a href="{{ routes.account_login_url }}"
-                         class="button primary-button">{{ 'customer.log_in' | t }}</a>
-                      <p>
+                         class="account-modal__button button primary-button">{{ 'customer.log_in' | t }}</a>
+                      <p class="account-modal__text-link">
                         {{ 'accessibility.new_customer' | t }}
-                        <a href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a>
+                        <a class="link" href="{{ routes.account_register_url }}">{{ 'customer.sign_up' | t }}</a>
                       </p>
                     {% endif %}
                   </div>
@@ -550,7 +543,7 @@
                                   </div>
 
                                   {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                    <a href="{{ block.settings.button_url }}">
+                                    <a class="link-arrow" href="{{ block.settings.button_url }}">
                                       {{ block.settings.button_text }}
                                       {% render 'icon-arrow-r' %}
                                     </a>
@@ -563,13 +556,15 @@
                     {% endfor %}
                   </div>
                 </div>
-                <button type="button"
+{% comment %}
+                      <button type="button"
                         class="account-modal__close-button modal__close-button link link--text focus-inset"
                         aria-label="{{ 'accessibility.close' | t }}">
                   <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
                     <use href="#icon-close"/>
                   </svg>
                 </button>
+{% endcomment %}
               </div>
             </div>
           </details>
@@ -578,15 +573,8 @@
 
       {%- endif -%}
 
-      <div class="header-icons__elem">
+      <div class="header-icons__elem header__bag">
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-          {%- liquid
-            if cart == empty
-              render 'icon-cart-empty'
-            else
-              render 'icon-cart'
-            endif
-          -%}
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
             <div class="cart-count-bubble">
@@ -596,6 +584,13 @@
               <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
             </div>
           {%- endif -%}
+          {%- liquid
+            if cart == empty
+              render 'icon-cart-empty'
+            else
+              render 'icon-cart'
+            endif
+          -%}
         </a>
       </div>
 
