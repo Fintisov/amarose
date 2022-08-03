@@ -516,6 +516,7 @@
       padding: 10px;
       background-color: $white;
       transition: 0.3s background-color;
+      cursor: pointer;
 
       &:hover {
         background-color: $blush-25;

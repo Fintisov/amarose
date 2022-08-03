@@ -53,13 +53,9 @@
 @media screen and (max-width: 1300px) {
   .collection-grid__list .product-grid {
     justify-content: center; } }
-@media screen and (max-width: 1300px) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .collection-grid__list .product-grid .grid__item {
     width: calc(50% - 10px); } }
-@media screen and (max-width: 1300px) {
-    .collection-grid__list .product-grid .grid__item .card-wrapper {
-      max-width: 380px;
-      width: 100%; } }
 @media screen and (max-width: 991px) {
   .collection-grid__list .product-grid {
     margin-bottom: 20px; } }

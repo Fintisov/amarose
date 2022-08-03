@@ -357,7 +357,8 @@
     column-gap: 15px;
     padding: 10px;
     background-color: #ffffff;
-    transition: 0.3s background-color; }
+    transition: 0.3s background-color;
+    cursor: pointer; }
     .predictive-search .predictive-search__results-list .predictive-search__item:hover {
       background-color: #FFEEEA; }
     .predictive-search .predictive-search__results-list .predictive-search__item .predictive-search__image {

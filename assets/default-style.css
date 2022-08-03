@@ -3,7 +3,7 @@
   display: none; }
 
 .container {
-  max-width: 1220px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding-left: 10px;
@@ -414,6 +414,9 @@ button {
   .select:hover {
     background-color: #FFEEEA;
     transition: 0.3s; }
+
+.icon-caret {
+  display: none; }
 
 .field {
   position: relative; }

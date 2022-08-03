@@ -67,17 +67,11 @@
 
     @include max-screen(1300) {
       justify-content: center;
+    }
 
-      .grid__item {
-        @include max-screen(991) {
-          width: calc(50% - 10px);
-        }
-
-        .card-wrapper {
-          max-width: 380px;
-          width: 100%;
-
-        }
+    .grid__item {
+      @include max-screen(991) {
+        width: calc(50% - 10px);
       }
     }
 
