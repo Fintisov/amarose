@@ -482,6 +482,10 @@
 
                       {% assign page_handle = '/' | append: template.name %}
 
+                      {% if template.directory != blank %}
+                        {% assign page_handle = routes.account_url | append: page_handle %}
+                      {% endif %}
+
                       {% if template.suffix != blank %}
                         {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}
                       {% endif %}

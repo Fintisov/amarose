@@ -384,6 +384,21 @@
         "text": "Text",
         "svg_code": "SVG code"
       }
+    },
+    "customer": {
+      "name": "Account pages",
+      "customer_menu": {
+        "header": "Customer menu",
+        "title": "Title",
+        "menu": "Menu",
+        "icons_list": "Icons list",
+        "icons_list_info": "account-icon.svg,order-icon.png"
+      },
+      "order": {
+        "header": "Previous link",
+        "prev_text": "Previous text",
+        "prev_link": "Previous link"
+      }
     }
   },
   "sections": {
@@ -1260,7 +1275,7 @@
           "label": "Logo image"
         },
         "logo_svg": {
-          "label": "labelLogo SVG code"
+          "label": "Logo SVG code"
         },
         "logo_width": {
           "unit": "px",

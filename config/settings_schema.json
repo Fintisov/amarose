@@ -1538,5 +1538,48 @@
         "label": "t:settings_schema.shipping.settings.svg_code"
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.customer.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.customer.customer_menu.header"
+      },
+      {
+        "type": "text",
+        "id": "customer_title",
+        "default": "Account menu",
+        "label": "t:settings_schema.customer.customer_menu.title"
+      },
+      {
+        "type": "link_list",
+        "id": "customer_menu",
+        "label": "t:settings_schema.customer.customer_menu.menu"
+      },
+      {
+        "type": "textarea",
+        "id": "customer_icons_list",
+        "default": "icon.svg",
+        "label": "t:settings_schema.customer.customer_menu.icons_list",
+        "info": "t:settings_schema.customer.customer_menu.icons_list_info"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.customer.order.header"
+      },
+      {
+        "type": "text",
+        "id": "order_prev_text",
+        "default": "My Orders",
+        "label": "t:settings_schema.customer.order.prev_text"
+      },
+      {
+        "type": "text",
+        "id": "order_prev_link",
+        "default": "/account?view=orders",
+        "label": "t:settings_schema.customer.order.prev_link"
+      }
+    ]
   }
 ]
