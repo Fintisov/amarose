@@ -853,6 +853,10 @@ button {
   -webkit-user-select: none;
   user-select: none;
 
+  @include max-screen(767) {
+    font-size: 14px;
+  }
+
   &.badge--grey {
     color: $white;
     background-color: $midGrey;

@@ -149,11 +149,21 @@
   align-items: center;
 
   .button {
+
     @include max-screen(767) {
-      padding: 8px 6px;
+      padding: 8px 15px;
       min-height: 34px;
       font-size: 14px;
     }
+
+    em {
+      font-style: normal;
+
+      @include max-screen(991) {
+        display: none;
+      }
+    }
+
   }
 
   .close-button {
@@ -168,7 +178,7 @@
     border: none;
     cursor: pointer;
 
-    @include max-screen(767) {
+    @include max-screen(991) {
       display: none;
     }
   }
@@ -601,8 +611,8 @@
 
 // account
 .header__account {
-  .account-modal__content {
-
+  @include max-screen(991) {
+    display: none;
   }
 
   .account-modal__frame {

@@ -595,6 +595,9 @@ button {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none; }
+  @media screen and (max-width: 767px) {
+    .badge {
+      font-size: 14px; } }
   .badge.badge--grey {
     color: #ffffff;
     background-color: #5E697E; }

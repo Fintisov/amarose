@@ -26,10 +26,32 @@
       color: $midGrey;
     }
   }
+
+  @include scrollbar();
 }
 
 .blog__posts {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+
+  @include max-screen(1300) {
+    overflow-x: auto;
+  }
+
+  .blog__post {
+    @include max-screen(1300) {
+      width: 380px;
+      flex: 1 0 auto;
+    }
+
+    @include max-screen(767) {
+      width: 60%;
+    }
+
+    @include max-screen(575) {
+      width: 50%;
+      min-width: 180px;
+    }
+  }
 }
