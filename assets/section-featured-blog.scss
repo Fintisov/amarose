@@ -5,6 +5,10 @@
   margin: 0;
   background-color: $lightGrey;
 
+  @include max-screen(767) {
+    padding: 60px 0;
+  }
+
   .blog__title-wrapper {
     text-align: center;
     margin-bottom: 30px;

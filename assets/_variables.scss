@@ -21,7 +21,7 @@
 }
 
 @mixin scrollbar($width: 10, $height: 6) {
-  scrollbar-color: $rose $purple;
+  scrollbar-color: $rose transparent;
   scrollbar-width: thin;
 
   // style for scrollbar

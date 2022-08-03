@@ -137,7 +137,8 @@
       display: none; } }
 
 .header-wrapper {
-  padding: 16px 0; }
+  padding: 16px 0;
+  box-shadow: 0px 4px 80px 0px rgba(227, 229, 233, 0.5); }
 
 .header {
   display: flex;

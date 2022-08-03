@@ -80,5 +80,34 @@
         }
       }
     }
+
+    @include max-screen(991) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .collection-grid__mobile-image-wrapper {
+    display: none;
+
+    @include max-screen(991) {
+      display: block;
+      width: 100%;
+      height: 500px;
+      background: rgba(241, 243, 246, 1);
+      border-radius: 20px;
+      overflow: hidden;
+
+      .mobile-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
+    }
+
+    @include max-screen(575) {
+      height: 400px;
+    }
   }
 }
