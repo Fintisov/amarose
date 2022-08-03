@@ -3,6 +3,7 @@
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+{{ 'main-search.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 
@@ -143,6 +144,7 @@
                       {%- when 'page' -%}
                         <div class="card-wrapper">
                           <div class="card card--product">
+
                             <h3 class="card__heading">
                               <a href="{{ item.url }}" class="full-unstyled-link">
                                 {{ item.title | truncate: 50 | escape }}
