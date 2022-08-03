@@ -25,27 +25,30 @@
 </style>
 
 {%- if article and article != empty -%}
-<div class="card article-card">
-  <div class="card__inner">
+  <div class="article-card">
 
-  {%- if article.metafields.custom.image_for_blog_page != blank -%}
-   <div class="article-card__image 1" style="background-image: url({{ article.metafields.custom.image_for_blog_page | img_url:"master" }})"></div>
-  {% elsif article.image %}
-    <div class="article-card__image 2" style="background-image: url({{ article.image.src | img_url:"master" }})"></div>
-  {%- endif -%}
+    {%- if article.metafields.custom.image_for_blog_page != blank -%}
+      <div class="article-card__image 1"
+           style="background-image: url({{ article.metafields.custom.image_for_blog_page | img_url: "master" }})"></div>
+    {% elsif article.image %}
+      <div class="article-card__image 2"
+           style="background-image: url({{ article.image.src | img_url: "master" }})"></div>
+    {%- endif -%}
 
-  <div class="article-card__information">
-    {% if article.tags[0] != blank %}
-      <p class="circle-divider badge badge--grey article-card__tag">{{ article.tags[0] }}</p>
-    {% endif %}
-    <div class="article-card__info caption-with-letter-spacing h5">
-      {%- if show_date -%}
-        <span>{{ article.published_at | time_tag: format: 'date' }}</span>
-      {%- endif -%}
-      {%- if show_author -%}
-        <span>{{ article.author }}</span>
-      {%- endif -%}
-    </div>
+    <div class="article-card__information">
+      <div class="article-car__top-wrapper">
+        {% if article.tags[0] != blank %}
+          <p class="circle-divider badge badge--grey article-card__tag">{{ article.tags[0] }}</p>
+        {% endif %}
+        <div class="article-card__info caption-with-letter-spacing h5">
+          {%- if show_date -%}
+            <span>{{ article.published_at | time_tag: format: 'date' }}</span>
+          {%- endif -%}
+          {%- if show_author -%}
+            <span>{{ article.author }}</span>
+          {%- endif -%}
+        </div>
+      </div>
 
       <h3 class="article-card__title-wrapper">
         <a class="title" href="{{ article.url }}">{{ article.title | truncate: 50 | escape }}</a>
@@ -69,5 +72,4 @@
       </a>
     </div>
   </div>
-</div>
 {%- endif -%}

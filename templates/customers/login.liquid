@@ -126,7 +126,7 @@
               </div>
 
               {%- if form.password_needed -%}
-                <div class="field {% if form.errors contains 'form' %} field--error{% endif %}">
+                <div class="field last--field {% if form.errors contains 'form' %} field--error{% endif %}">
                   <input
                     type="password"
                     value=""

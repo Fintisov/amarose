@@ -3,7 +3,7 @@
   display: none; }
 
 .container {
-  max-width: 1220px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding-left: 10px;
@@ -131,7 +131,7 @@ button {
   border: none; }
 
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: max-content;
@@ -415,6 +415,9 @@ button {
     background-color: #FFEEEA;
     transition: 0.3s; }
 
+.icon-caret {
+  display: none; }
+
 .field {
   position: relative; }
   .field .field__label {
@@ -565,23 +568,38 @@ button {
   .field.field-search .field__button--search {
     width: 24px;
     right: 32px; }
-.field .field__error {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 50%;
-  color: #DE3D64;
-  font-size: 16px;
-  line-height: 1.4;
-  padding-top: 5px;
-  padding-left: 20px;
+  .field .field__error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    color: #DE3D64;
+    font-size: 16px;
+    line-height: 1.4;
+    padding-top: 5px;
+    padding-left: 20px; }
+  @media screen and (max-width: 767px) {
+    .field .field__error {
+      font-size: 14px;
+      line-height: 1.28; } }
+
+.field__container {
+  display: flex;
+  justify-content: space-between; }
+
+.field__container .field {
+  width: calc(50% - 10px);
+}
+
+.field__container .field__error {
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
-  .field .field__error {
-    font-size: 14px;
-    line-height: 1.28;
-  } }
+  .field__container .field {
+    width: calc(50% - 8px);
+  }
+}
 
 .badge {
   display: inline-block;
@@ -598,6 +616,9 @@ button {
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none; }
+  @media screen and (max-width: 767px) {
+    .badge {
+      font-size: 14px; } }
   .badge.badge--grey {
     color: #ffffff;
     background-color: #5E697E; }
@@ -620,6 +641,9 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px; }
+  @media screen and (max-width: 767px) {
+    #insta-feed {
+      gap: 15px 10px; } }
   #insta-feed h2 {
     width: 100%;
     font-family: "futura", suns-serif;
@@ -630,3 +654,12 @@ button {
     margin-bottom: 10px !important; }
   #insta-feed .instafeed-container {
     flex: 1 1 15%; }
+  @media screen and (max-width: 1300px) {
+    #insta-feed .instafeed-container {
+      flex-basis: 20%; } }
+  @media screen and (max-width: 767px) {
+    #insta-feed .instafeed-container {
+      padding-top: 40% !important;
+      flex-basis: calc(50% - 5px); }
+      #insta-feed .instafeed-container:not(:nth-last-child(-n+4)) {
+        display: none; } }

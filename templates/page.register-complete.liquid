@@ -16,19 +16,8 @@
   </div>
 
   <div class="page-width">
-    {% if settings.return_text != blank %}
-      <div class="customer-login__return">
-        <a class="customer-login__return-link" href="{{ settings.return_link }}">
-          {{ settings.return_text }}
-          {% if settings.return_icon != blank %}
-            <i class="customer-login__return-icon">{{ settings.return_icon }}</i>
-          {% endif %}
-        </a>
-      </div>
-    {% endif %}
-
     <div class="customer-login__heading">
-      <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+      <a href="{{ routes.root_url }}" class="customer-login__heading-link link link--text focus-inset">
         {%- if settings.login_logo_svg != blank -%}
           <span class="customer-login__heading-logo logo--svg">{{ settings.login_logo_svg }}</span>
         {%- elsif settings.login_logo != blank -%}
@@ -44,24 +33,35 @@
           <span class="h2">{{ shop.name }}</span>
         {%- endif -%}
       </a>
+
+      {% if settings.return_text != blank %}
+        <div class="customer-login__return">
+          <a class="customer-login__return-link" href="{{ settings.return_link }}">
+            {{ settings.return_text }}
+            {% if settings.return_icon != blank %}
+              <i class="customer-login__return-icon">{{ settings.return_icon }}</i>
+            {% endif %}
+          </a>
+        </div>
+      {% endif %}
     </div>
 
-    <div class="customer-login__box">
+    <div class="customer-login__box register-complete--style">
       <h1 class="visually-hidden">
         {{ page.title }}
       </h1>
       {% if settings.register_complete_title != blank %}
-        <h2>
+        <h2 class="h1 customer-login__title">
           {{ settings.register_complete_title }}
         </h2>
       {% endif %}
       {% if settings.register_complete_text != blank %}
-        <p>
+        <p class="customer-login__register-confirm-message">
           {{ settings.register_complete_text }}
         </p>
       {% endif %}
       {% if settings.register_complete_link_text != blank %}
-        <a class="button secondary-button" href="{{ settings.register_complete_link_url }}">
+        <a class="customer-login__button button secondary-button" href="{{ settings.register_complete_link_url }}">
           {{ settings.register_complete_link_text }}
         </a>
       {% endif %}
