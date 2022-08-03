@@ -889,6 +889,10 @@ button {
   flex-wrap: wrap;
   gap: 20px;
 
+  @include max-screen(767) {
+    gap: 15px 10px;
+  }
+
   h2 {
     width: 100%;
     font-family: $futura;
@@ -901,7 +905,22 @@ button {
 
   .instafeed-container {
     flex: 1 1 15%;
+
+    @include max-screen(1300) {
+      flex-basis: 20%;
+    }
+
+    @include max-screen(767) {
+      &:not(:nth-last-child(-n+4)) {
+        display: none;
+      }
+
+      padding-top: 40% !important;
+      flex-basis: calc(50% - 5px);
+    }
   }
+
+
 }
 
 
