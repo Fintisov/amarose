@@ -82,7 +82,7 @@
       font-size: 18px;
       line-height: 1.5;
       @include line-text-hidden(2);
-      margin: 0 0 15px;
+      margin: 0 0 10px;
 
       @include max-screen(991) {
         @include line-text-hidden(3);

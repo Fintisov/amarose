@@ -45,7 +45,7 @@
   </div>
   {%- if search.performed -%}
     {%- if section.settings.enable_sorting and search.filters != empty -%}
-      <facet-filters-form class="facets facets-vertical-sort container small-hide no-js-hidden">
+      <facet-filters-form class="facets facets-vertical-sort container no-js-hidden">
         <form class="facets-vertical-form" id="FacetSortForm">
           <div class="facet-filters sorting caption">
             <div class="facet-filters__field">
@@ -89,13 +89,7 @@
       </facet-filters-form>
     {%- endif -%}
     <div class="container">
-      {%- if search.filters != empty -%}
-        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-          <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}" id="main-search-filters" data-id="{{ section.id }}">
-            {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: 'vertical' %}
-          </aside>
-        {%- endif -%}
-      {%- endif -%}
+
       <div class="product-grid-container" id="ProductGridContainer">
         {%- if search.results.size == 0 and search.filters != empty -%}
           <div class="template-search__results collection collection--empty" id="product-grid" data-id="{{ section.id }}">
@@ -131,7 +125,6 @@
                           lazy_load: lazy_load
                         %}
                       {%- when 'article' -%}
-                        <div class="card-wrapper">
                           {% render 'article-card',
                             blog: section.settings.blog,
                             article: item,
@@ -140,18 +133,38 @@
                             show_date: section.settings.show_date,
                             show_author: section.settings.show_author,
                             show_excerpt: true %}
-                        </div>
                       {%- when 'page' -%}
-                        <div class="card-wrapper">
-                          <div class="card card--product">
 
-                            <h3 class="card__heading">
-                              <a href="{{ item.url }}" class="full-unstyled-link">
-                                {{ item.title | truncate: 50 | escape }}
+                        <div class="card-wrapper">
+                          <div class="card card-product">
+                            {% if item.metafields.custom.image_for_search != blank %}
+                              <div class="card-product__image"
+                                   style="background-image: url({{ item.metafields.custom.image_for_search | img_url: "master" }})"></div>
+                            {% else %}
+                              {{ 'image' | placeholder_svg_tag }}
+                            {% endif %}
+                            <div class="card-product__information">
+                              <h3 class="card__heading">
+                                <a href="{{ item.url }}" class="full-unstyled-link">
+                                  {{ item.title | truncate: 50 | escape }}
+                                </a>
+                              </h3>
+                              <p class="card-product__excerpt rte-width">{{ item.content | strip_html | truncate: 50 }}</p>
+                              <a class="link-arrow" href="{{ item.url }}">
+                                {{ 'blogs.article.card_text_link' | t }}
+                                {% render 'icon-arrow-r' %}
                               </a>
-                            </h3>
+                            </div>
                           </div>
                         </div>
+
+                      <style>
+                        .card-product__image {
+                          height: 100px;
+                          background-size: cover;
+                          display: block !important;
+                        }
+                      </style>
                     {%- endcase -%}
                   </li>
                 {%- endfor -%}

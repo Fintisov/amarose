@@ -447,8 +447,9 @@
     top: 0;
   }
 
-  .menu-drawer__navigation-container {
 
+  .menu-drawer__navigation-container {
+    @include scrollbar();
   }
 }
 
