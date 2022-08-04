@@ -210,6 +210,8 @@
 .account-template {
   display: flex;
   justify-content: space-between;
+  padding-top: 90px;
+  padding-bottom: 90px;
 
   &__content {
     display: flex;
@@ -220,8 +222,6 @@
 
 .addresses {
   max-width: 1080px;
-  padding-top: 90px;
-  padding-bottom: 90px;
 }
 
 .account-menu {
