@@ -235,7 +235,12 @@
     {% assign is_only_content = true %}
   {% endif %}
 
-  <body class="gradient {% if is_only_content == true %} body-background{% endif %}">
+  {% if template.directory == 'customers'
+    and template.name == 'addresses' %}
+      {% assign is_shadow_header = true %}
+  {% endif %}
+
+  <body class="gradient {% if is_only_content == true %} body-background{% endif %} {% if is_shadow_header == true %} header-shadow{% endif %}">
     {% if is_only_content != true %}
       <a class="skip-to-content-link button visually-hidden" href="#MainContent">
         {{ "accessibility.skip_to_text" | t }}

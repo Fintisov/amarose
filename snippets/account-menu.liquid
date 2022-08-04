@@ -13,7 +13,7 @@
     {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}
   {% endif %}
 
-  <ul class="account-menu">
+  <ul class="account-menu" data-account-menu>
     {% for link in settings.customer_menu.links -%}
       <li class="account-menu__list-item">
         <a href="{{ link.url }}"
