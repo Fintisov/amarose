@@ -28,6 +28,9 @@
       margin: 0 auto; }
   @media screen and (max-width: 991px) {
     .card-banner_collection-wrapper .card_collection__media img {
+      max-height: 350px; } }
+  @media screen and (max-width: 767px) {
+    .card-banner_collection-wrapper .card_collection__media img {
       max-height: 260px; } }
   .card-banner_collection-wrapper .card_collection__content-wrapper {
     width: 50%; }
