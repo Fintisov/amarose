@@ -38,12 +38,12 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-
-  @include max-screen(1300) {
-    overflow-x: auto;
-  }
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 
   .blog__post {
+    scroll-snap-align: center;
+
     @include max-screen(1300) {
       width: 380px;
       flex: 1 0 auto;
