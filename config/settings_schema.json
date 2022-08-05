@@ -1559,10 +1559,28 @@
       },
       {
         "type": "textarea",
-        "id": "customer_icons_list",
-        "default": "icon.svg",
-        "label": "t:settings_schema.customer.customer_menu.icons_list",
-        "info": "t:settings_schema.customer.customer_menu.icons_list_info"
+        "id": "customer_icon_1",
+        "label": "t:settings_schema.customer.customer_menu.icon_1"
+      },
+      {
+        "type": "textarea",
+        "id": "customer_icon_2",
+        "label": "t:settings_schema.customer.customer_menu.icon_2"
+      },
+      {
+        "type": "textarea",
+        "id": "customer_icon_3",
+        "label": "t:settings_schema.customer.customer_menu.icon_3"
+      },
+      {
+        "type": "textarea",
+        "id": "customer_icon_4",
+        "label": "t:settings_schema.customer.customer_menu.icon_4"
+      },
+      {
+        "type": "textarea",
+        "id": "customer_icon_5",
+        "label": "t:settings_schema.customer.customer_menu.icon_5"
       },
       {
         "type": "header",
