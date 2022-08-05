@@ -2,6 +2,7 @@
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-article-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-search-page-card.css' | asset_url | stylesheet_tag }}
 {{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 {{ 'main-search.css' | asset_url | stylesheet_tag }}
 
@@ -135,28 +136,28 @@
                             show_excerpt: true %}
                       {%- when 'page' -%}
 
-                        <div class="card-wrapper">
-                          <div class="card card-product">
+
+                          <div class="search-page-card">
                             {% if item.metafields.custom.image_for_search != blank %}
-                              <div class="card-product__image"
+                              <div class="search-page__image"
                                    style="background-image: url({{ item.metafields.custom.image_for_search | img_url: "master" }})"></div>
                             {% else %}
                               {{ 'image' | placeholder_svg_tag }}
                             {% endif %}
-                            <div class="card-product__information">
-                              <h3 class="card__heading">
-                                <a href="{{ item.url }}" class="full-unstyled-link">
+                            <div class="search-page__information">
+                              <div class="search-page__top-wrapper"></div>
+                              <h3 class="search-page__title-wrapper">
+                                <a href="{{ item.url }}" class="title">
                                   {{ item.title | truncate: 50 | escape }}
                                 </a>
                               </h3>
-                              <p class="card-product__excerpt rte-width">{{ item.content | strip_html | truncate: 50 }}</p>
+                              <p class="search-page__text rte-width">{{ item.content | strip_html | truncate: 50 }}</p>
                               <a class="link-arrow" href="{{ item.url }}">
                                 {{ 'blogs.article.card_text_link' | t }}
                                 {% render 'icon-arrow-r' %}
                               </a>
                             </div>
                           </div>
-                        </div>
 
                       <style>
                         .card-product__image {

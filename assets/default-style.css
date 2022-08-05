@@ -415,9 +415,6 @@ button {
     background-color: #FFEEEA;
     transition: 0.3s; }
 
-.icon-caret {
-  display: none; }
-
 .field {
   position: relative; }
   .field .field__label {

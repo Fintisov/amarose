@@ -454,6 +454,7 @@ summary .icon-caret {
   height: 0.6rem;
   right: 1.5rem;
   top: calc(50% - 0.2rem);
+  display: block;
 }
 
 summary::-webkit-details-marker {
