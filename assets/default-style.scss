@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1220px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding-left: 10px;
@@ -188,7 +188,7 @@ button {
 }
 
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: max-content;
@@ -581,6 +581,10 @@ button {
   }
 }
 
+.icon-caret {
+  display: none;
+}
+
 .field {
   position: relative;
 
@@ -870,6 +874,10 @@ button {
   -webkit-user-select: none;
   user-select: none;
 
+  @include max-screen(767) {
+    font-size: 14px;
+  }
+
   &.badge--grey {
     color: $white;
     background-color: $midGrey;
@@ -902,6 +910,10 @@ button {
   flex-wrap: wrap;
   gap: 20px;
 
+  @include max-screen(767) {
+    gap: 15px 10px;
+  }
+
   h2 {
     width: 100%;
     font-family: $futura;
@@ -914,6 +926,22 @@ button {
 
   .instafeed-container {
     flex: 1 1 15%;
+
+    @include max-screen(1300) {
+      flex-basis: 20%;
+    }
+
+    @include max-screen(767) {
+      &:not(:nth-last-child(-n+4)) {
+        display: none;
+      }
+
+      padding-top: 40% !important;
+      flex-basis: calc(50% - 5px);
+    }
   }
+
+
 }
+
 

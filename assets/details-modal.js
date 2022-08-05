@@ -14,10 +14,13 @@ class DetailsModal extends HTMLElement {
       this.onSummaryClick.bind(this)
     );
 
-    this.querySelector('button[type="button"]').addEventListener(
-      'click',
-      this.close.bind(this)
-    );
+
+    if(this.querySelector('button[type="button"]')) {
+      this.querySelector('button[type="button"]').addEventListener(
+        'click',
+        this.close.bind(this)
+      );
+    }
 
     this.summaryToggle.setAttribute('role', 'button');
   }

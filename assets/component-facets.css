@@ -104,8 +104,8 @@
   padding-right: 1.75rem;
 }
 
-.facet-filters__sort + .icon-caret {
-  right: 0;
+.facet-filters__sort .icon-caret {
+  display: none;
 }
 
 @media screen and (forced-colors: active) {
