@@ -144,16 +144,16 @@
 
 .account-template {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding-top: 90px;
+  padding-bottom: 90px; }
   .account-template__content {
     display: flex;
     flex-direction: column;
     width: calc(100% - 300px); }
 
 .addresses {
-  max-width: 1080px;
-  padding-top: 90px;
-  padding-bottom: 90px; }
+  max-width: 1080px; }
 
 .account-menu {
   overflow: hidden;
@@ -247,3 +247,78 @@
   width: 500px;
   height: 500px;
   background-color: #fff; }
+
+.orders__none {
+  text-align: center;
+  max-width: 400px;
+  margin: 85px auto;
+  padding: 0 70px 0 0; }
+  .orders__none svg {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 16px; }
+  .orders__none p {
+    margin: 0;
+    color: #5E697E;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 0; }
+
+.table__wrap {
+  background: #fff;
+  box-shadow: 0 4px 80px rgba(227, 229, 233, 0.5);
+  border-radius: 20px;
+  margin: 27px 0;
+  max-width: 680px;
+  position: relative; }
+  .table__wrap table {
+    width: 100%;
+    color: #2A3241;
+    font-size: 16px;
+    border-collapse: collapse; }
+    .table__wrap table td {
+      padding: 11px 20px 10px;
+      border-top: 1px solid #F3F4F6; }
+      .table__wrap table td:last-child {
+        padding-right: 5px; }
+      .table__wrap table td a {
+        color: inherit; }
+    .table__wrap table th {
+      padding: 16px 19px 14px;
+      color: #5E697E;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+      letter-spacing: 0; }
+      .table__wrap table th#ColumnLink {
+        width: 17.4%; }
+      .table__wrap table th#ColumnDate {
+        width: 24%; }
+      .table__wrap table th#ColumnOrder {
+        width: 17.5%; }
+      .table__wrap table th#ColumnTotal {
+        width: 17.3%; }
+  .table__wrap .status-tag {
+    padding: 5px 15px;
+    margin: 0;
+    border-radius: 60px; }
+  .table__wrap .table-link {
+    display: inline-block;
+    vertical-align: top;
+    color: #BA3A7D;
+    text-decoration: underline;
+    font-size: 16px; }
+    .table__wrap .table-link:hover {
+      text-decoration: none; }
+
+.status-tag {
+  display: inline-block;
+  vertical-align: top;
+  background: #EAFAF5;
+  color: #30CD9C; }
+  .status-tag.in-progress {
+    color: #BA3A7D;
+    background: rgba(186, 58, 125, 0.1); }
+  .status-tag.cancelled {
+    color: #F08B84;
+    background: rgba(255, 187, 171, 0.25); }
