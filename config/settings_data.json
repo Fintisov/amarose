@@ -79,7 +79,7 @@
           "menu": "main-menu",
           "customer_title": "Welcome Back!",
           "customer_menu": "customer-menu",
-          "customer_icons_list": "icon.svg",
+          "customer_icons_list": "Icon-account.svg,Icon-bag.svg,Icon-bag.svg,Icon-address.svg,Icon-logout.svg",
           "info_title": "Have questions?",
           "button_text01": "Email",
           "button_svg01": "<svg width=\"25\" height=\"25\" viewbox=\"0 0 25 25\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M22.5 2.5L11.5 13.5\" stroke=\"#BA3A7D\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M22.5 2.5L15.5 22.5L11.5 13.5L2.5 9.5L22.5 2.5Z\" stroke=\"#BA3A7D\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
