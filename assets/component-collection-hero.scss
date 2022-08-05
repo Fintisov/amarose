@@ -1,14 +1,18 @@
+@import "variables";
+
 .collection-hero__title {
-  font-family: "futura", suns-serif;
+  font-family: $futura;
   font-weight: 400;
   font-size: 48px;
   line-height: 1.25;
-  color: #2A3241;
-  margin-bottom: 10px; }
+  color: $black;
+  margin-bottom: 10px;
+}
 
 .collection-hero__description {
-  font-family: "futura", suns-serif;
+  font-family: $futura;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
-  color: #5E697E; }
+  color: $midGrey;
+}

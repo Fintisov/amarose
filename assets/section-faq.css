@@ -1,0 +1,41 @@
+.faq {
+  background-color: #F1F3F6;
+  padding: 62px 0; }
+
+.faq__title {
+  font-family: "futura", suns-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.25;
+  color: #2A3241;
+  margin-bottom: 30px;
+  text-align: center; }
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; }
+  .faq__list .faq__list-item {
+    width: 780px;
+    border-bottom: 1px solid #B6BCC6;
+    padding-bottom: 30px; }
+
+.faq__list-item-button {
+  font-family: "futura", suns-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.25;
+  color: #2A3241;
+  width: 100%;
+  text-align: start;
+  background: transparent;
+  cursor: pointer;
+  padding: 0; }
+
+.faq__list-item-content {
+  padding-top: 20px;
+  font-family: "futura", suns-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.5; }

@@ -1,0 +1,6 @@
+.collection-card-banner-wrapper {
+  padding-top: 40px; }
+  .collection-card-banner-wrapper .card-product__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; }

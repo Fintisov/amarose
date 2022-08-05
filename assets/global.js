@@ -385,6 +385,7 @@ class MenuDrawer extends HTMLElement {
 
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
+    document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     this.closeSubmenu(detailsElement);
   }
 

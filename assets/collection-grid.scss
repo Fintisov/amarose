@@ -29,6 +29,10 @@
     text-align: center;
   }
 
+  @include max-screen(767) {
+    padding: 0;
+  }
+
   .collection-grid__title {
     font-family: $futura;
     font-weight: 400;
@@ -36,6 +40,10 @@
     line-height: 1.3;
     color: $black;
     margin-bottom: 10px;
+
+    @include max-screen(767) {
+      font-size: 30px;
+    }
   }
 
   .collection-grid__description {
@@ -44,28 +52,56 @@
     font-size: 22px;
     line-height: 1.5;
     color: $midGrey;
+
+    @include max-screen(575) {
+      font-size: 18px;
+    }
   }
 }
 
 .collection-grid__list {
   .product-grid {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 
     @include max-screen(1300) {
       justify-content: center;
+    }
 
-      .grid__item {
-        width: 50%;
-
-        .card-wrapper {
-          max-width: 380px;
-          width: 100%;
-
-        }
+    .grid__item {
+      @include max-screen(991) {
+        width: calc(50% - 10px);
       }
+    }
+
+    @include max-screen(991) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .collection-grid__mobile-image-wrapper {
+    display: none;
+
+    @include max-screen(991) {
+      display: block;
+      width: 100%;
+      height: 500px;
+      background: rgba(241, 243, 246, 1);
+      border-radius: 20px;
+      overflow: hidden;
+
+      .mobile-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
+    }
+
+    @include max-screen(575) {
+      height: 400px;
     }
   }
 }
