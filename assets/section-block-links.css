@@ -54,6 +54,14 @@
       width: 100%;
       max-height: 100%;
       object-fit: cover; }
+    .block-links__list-item .block-links__list-item-image-wrapper svg {
+      display: none; }
+    .block-links__list-item .block-links__list-item-image-wrapper.icon--style {
+      display: flex;
+      background-color: #FFBBAB; }
+      .block-links__list-item .block-links__list-item-image-wrapper.icon--style svg {
+        display: block;
+        margin: auto; }
   .block-links__list-item .block-links__list-item-content {
     padding: 12px 0; }
     .block-links__list-item .block-links__list-item-content .block-links__list-item-title {

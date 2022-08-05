@@ -10,7 +10,8 @@
   font-size: 48px;
   line-height: 1.25;
   color: #2A3241;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: center; }
   @media screen and (max-width: 767px) {
     .collection-hero__title {
       font-size: 32px; } }

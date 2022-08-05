@@ -12,11 +12,10 @@
           <div class="block-links__list-item">
             {% if block.settings.icon != blank or block.settings.image != blank %}
               <div
-                class="block-links__list-item-image-wrapper {% if block.settings.icon != blank %} icon--style{% endif %}">
-                {% comment %}                {% if block.settings.icon != blank %}
+                class="block-links__list-item-image-wrapper {% if block.settings.image == blank %} icon--style{% endif %}">
+                              {% if block.settings.icon != blank %}
                                   {{ block.settings.icon }}
                                 {% endif %}
-                {% endcomment %}
                 {% if block.settings.image != blank %}
                   <img
                     class="block-links__list-item-image"

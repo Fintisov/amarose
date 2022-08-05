@@ -52,6 +52,20 @@
       max-height: 100%;
       object-fit: cover;
     }
+
+    svg {
+      display: none;
+    }
+
+    &.icon--style {
+      display: flex;
+      background-color: $blush;
+
+      svg {
+        display: block;
+        margin: auto;
+      }
+    }
   }
 
   .block-links__list-item-content {
