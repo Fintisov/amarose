@@ -95,7 +95,8 @@
           }
         }
 
-        .card_collection__description {
+        .card_collection__description,
+        p {
           font-family: $futura;
           font-weight: 400;
           font-size: 18px;

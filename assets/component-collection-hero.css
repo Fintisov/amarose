@@ -1,3 +1,9 @@
+.collection-hero {
+  padding: 100px 0 40px; }
+  @media screen and (max-width: 767px) {
+    .collection-hero {
+      padding: 40px 0; } }
+
 .collection-hero__title {
   font-family: "futura", suns-serif;
   font-weight: 400;
@@ -5,6 +11,9 @@
   line-height: 1.25;
   color: #2A3241;
   margin-bottom: 10px; }
+  @media screen and (max-width: 767px) {
+    .collection-hero__title {
+      font-size: 32px; } }
 
 .collection-hero__description {
   font-family: "futura", suns-serif;

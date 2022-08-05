@@ -70,14 +70,14 @@
     .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information .card_collection__heading {
       margin-bottom: 10px;
       font-size: 30px; } }
-        .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information .card_collection__description {
+        .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information .card_collection__description, .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information p {
           font-family: "futura", suns-serif;
           font-weight: 400;
           font-size: 18px;
           line-height: 1.5;
           color: #2A3241; }
   @media screen and (max-width: 767px) {
-    .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information .card_collection__description {
+    .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information .card_collection__description, .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .card_collection__information p {
       font-size: 16px; } }
       .card-banner_collection-wrapper .card_collection__content-wrapper .card_collection__content .button {
         min-width: 130px; }

@@ -321,7 +321,7 @@
                       <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                     {%- endfor -%}
                   </select>
-                  {% render 'icon-caret' %}
+                  {% comment %}{% render 'icon-caret' %}{% endcomment %}
                 </div>
               </div>
 
