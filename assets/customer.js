@@ -6,6 +6,7 @@ const selectors = {
   cancelAddressButton: 'button[type="reset"]',
   deleteAddressButton: 'button[data-confirm-message]',
   addressPopupOpener: 'button[data-address-popup-opener]',
+  accountMenu: '[data-account-menu]',
 };
 
 const attributes = {
@@ -30,7 +31,8 @@ class CustomerAddresses {
       cancelButtons: container.querySelectorAll(selectors.cancelAddressButton),
       deleteButtons: container.querySelectorAll(selectors.deleteAddressButton),
       addressPopupOpeners: container.querySelectorAll(selectors.addressPopupOpener),
-      countrySelects: container.querySelectorAll(selectors.addressCountrySelect)
+      countrySelects: container.querySelectorAll(selectors.addressCountrySelect),
+      openAccountMenu: container.querySelectorAll(selectors.accountMenu)
     } : {};
   }
 
@@ -63,6 +65,9 @@ class CustomerAddresses {
     this.elements.addressPopupOpeners.forEach((element) => {
       element.addEventListener('click', this._handlePopupOpenerButtonClick);
     });
+    this.elements.openAccountMenu.forEach((element) => {
+      element.addEventListener('click', this._handleMenuOpenerButtonClick);
+    });
   }
 
   _toggleExpanded(target) {
@@ -81,8 +86,8 @@ class CustomerAddresses {
   _handleCancelButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(
       currentTarget
-        .closest(selectors.addressContainer)
-        .querySelector(`[${attributes.expanded}]`)
+      .closest(selectors.addressContainer)
+      .querySelector(`[${attributes.expanded}]`)
     )
   }
 
@@ -94,5 +99,9 @@ class CustomerAddresses {
 
   _handlePopupOpenerButtonClick = ({ currentTarget }) => {
     currentTarget.closest(selectors.addressContainer).classList.toggle('address-popup-open')
+  }
+
+  _handleMenuOpenerButtonClick = ({ currentTarget }) => {
+    currentTarget.classList.toggle('address-popup-open')
   }
 }
