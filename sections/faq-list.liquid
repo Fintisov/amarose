@@ -1,24 +1,48 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+
 <section class="faq">
-  {% if section.settings.title != blank %}
-    <h2 class="faq__title">{{ section.settings.title }}</h2>
-  {% endif %}
+  <div class="container">
+    {% if section.settings.title != blank %}
+      <h2 class="faq__title">{{ section.settings.title }}</h2>
+    {% endif %}
+    <div class="faq__list">
+      {%- for block in section.blocks -%}
+        <div class="faq__list-item">
+          {% if block.settings.question != blank %}
+            <div class="faq__list-item-header">
+              <button class="faq__list-item-button">{{ block.settings.question }}</button>
+              <div class="icon-box"></div>
+            </div>
+          {% endif %}
 
-  <div class="faq__list">
-    {%- for block in section.blocks -%}
-      <div class="faq__list-item">
-        {% if block.settings.question != blank %}
-          <div class="faq__list-item-header">
-            <button class="faq__list-item-button">{{ block.settings.question }}</button>
-          </div>
-        {% endif %}
+          {% if block.settings.answer != blank %}
+            <div class="faq__list-item-content">
+              {{ block.settings.answer }}
+            </div>
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
 
-        {% if block.settings.answer != blank %}
-          <div class="faq__list-item-content">
-            {{ block.settings.answer }}
-          </div>
-        {% endif %}
-      </div>
-    {%- endfor -%}
+{% comment %}
+   <div class="faq__list">
+      {%- for block in section.blocks -%}
+        <div class="faq__list-item">
+          {% if block.settings.question != blank %}
+            <div class="faq__list-item-header">
+              <button class="faq__list-item-button">{{ block.settings.question }}</button>
+            </div>
+          {% endif %}
+
+          {% if block.settings.answer != blank %}
+            <div class="faq__list-item-content">
+              {{ block.settings.answer }}
+            </div>
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+    {% endcomment %}
   </div>
 </section>
 
