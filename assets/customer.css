@@ -145,6 +145,7 @@
 .account-template {
   display: flex;
   justify-content: space-between;
+  max-width: 1000px;
   padding-top: 90px;
   padding-bottom: 90px; }
   .account-template__content {

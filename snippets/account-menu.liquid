@@ -22,7 +22,10 @@
       {% for link in settings.customer_menu.links -%}
         <li class="account-menu__list-item">
           <a href="{{ link.url }}"
-             class="account-menu__list-link{% if page_handle == link.url %} active{% endif %}">
+             class="account-menu__list-link
+            {% if page_handle == link.url %} active{% endif %}
+            {% if page_handle == '/account/account?view=orders' and link.url contains "?view=orders" %} active{% endif %}
+">
             {%- case forloop.index -%}
               {%- when 1 -%}
                 {% if settings.customer_icon_1 != blank %}

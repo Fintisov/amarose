@@ -1,12 +1,12 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
-<div class="orders page-width account-template">
+<div class="orders container account-template">
   {% render 'account-menu' %}
 
   <div class="account-template__content">
     <h1 class="orders__title">{{ 'customer.orders.title' | t }}</h1>
 
-    {% paginate customer.orders by 1 %}
+    {% paginate customer.orders by 10 %}
       {%- if customer.orders.size > 0 -%}
         <div class="table__wrap">
           <table role="table" class="order-history">
