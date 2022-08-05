@@ -310,6 +310,9 @@
 
 .menu-drawer-container {
   min-width: 112px; }
+  @media screen and (max-width: 991px) {
+    .menu-drawer-container {
+      min-width: 68px; } }
   .menu-drawer-container .menu-drawer {
     background-color: #ffffff;
     width: 100%;

@@ -440,6 +440,10 @@
 .menu-drawer-container {
   min-width: 112px;
 
+  @include max-screen(991) {
+    min-width: 68px;
+  }
+
   .menu-drawer {
     background-color: $white;
     width: 100%;
