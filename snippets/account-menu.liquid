@@ -1,49 +1,61 @@
-{% if settings.title != blank %}
-  <h2 class="visually-hidden">{{ settings.customer_title }}</h2>
-{% endif %}
+<script src="{{ 'account-menu.js' | asset_url }}" defer></script>
 
-{% if settings.customer_menu.size > 0 %}
-  {% assign page_handle = '/' | append: template.name %}
-
-  {% if template.directory != blank %}
-    {% assign page_handle = routes.account_url | append: page_handle %}
+<div class="account-menu__container" data-account-menu>
+  {% if settings.customer_title != blank %}
+    <h2 class="visually-hidden">{{ settings.customer_title }}</h2>
   {% endif %}
 
-  {% if template.suffix != blank %}
-    {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}
+  {% if settings.customer_menu.size > 0 %}
+    {% assign page_handle = '/' | append: template.name %}
+
+    {% if template.directory != blank %}
+      {% assign page_handle = routes.account_url | append: page_handle %}
+    {% endif %}
+
+    {% if template.suffix != blank %}
+      {% assign page_handle = page_handle | append: '?view=' | append: template.suffix %}
+    {% endif %}
+
+    <button class="visually-hidden" type="button" data-account-menu-opener>open menu</button>
+
+    <ul class="account-menu">
+      {% for link in settings.customer_menu.links -%}
+        <li class="account-menu__list-item">
+          <a href="{{ link.url }}"
+             class="account-menu__list-link{% if page_handle == link.url %} active{% endif %}">
+            {%- case forloop.index -%}
+              {%- when 1 -%}
+                {% if settings.customer_icon_1 != blank %}
+                  <i class="account-menu__icon">{{ settings.customer_icon_1 }}</i>
+                {% endif %}
+              {%- when 2 -%}
+                {% if settings.customer_icon_2 != blank %}
+                  <i class="account-menu__icon">{{ settings.customer_icon_2 }}</i>
+                {% endif %}
+              {%- when 3 -%}
+                {% if settings.customer_icon_3 != blank %}
+                  <i class="account-menu__icon">{{ settings.customer_icon_3 }}</i>
+                {% endif %}
+              {%- when 4 -%}
+                {% if settings.customer_icon_4 != blank %}
+                  <i class="account-menu__icon">{{ settings.customer_icon_4 }}</i>
+                {% endif %}
+              {%- when 5 -%}
+                {% if settings.customer_icon_5 != blank %}
+                  <i class="account-menu__icon">{{ settings.customer_icon_5 }}</i>
+                {% endif %}
+            {%- endcase -%}
+
+            <span class="account-menu__title">{{ link.title }}</span>
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
   {% endif %}
+</div>
 
-  <ul class="account-menu" data-account-menu>
-    {% for link in settings.customer_menu.links -%}
-      <li class="account-menu__list-item">
-        <a href="{{ link.url }}"
-           class="account-menu__list-link{% if page_handle == link.url %} active{% endif %}">
-          {%- case forloop.index -%}
-            {%- when 1 -%}
-              {% if settings.customer_icon_1 != blank %}
-                <i class="account-menu__icon">{{ settings.customer_icon_1 }}</i>
-              {% endif %}
-            {%- when 2 -%}
-              {% if settings.customer_icon_2 != blank %}
-                <i class="account-menu__icon">{{ settings.customer_icon_2 }}</i>
-              {% endif %}
-            {%- when 3 -%}
-              {% if settings.customer_icon_3 != blank %}
-                <i class="account-menu__icon">{{ settings.customer_icon_3 }}</i>
-              {% endif %}
-            {%- when 4 -%}
-              {% if settings.customer_icon_4 != blank %}
-                <i class="account-menu__icon">{{ settings.customer_icon_4 }}</i>
-              {% endif %}
-            {%- when 5 -%}
-              {% if settings.customer_icon_5 != blank %}
-                <i class="account-menu__icon">{{ settings.customer_icon_5 }}</i>
-              {% endif %}
-          {%- endcase -%}
-
-          <span class="account-menu__title">{{ link.title }}</span>
-        </a>
-      </li>
-    {%- endfor %}
-  </ul>
-{% endif %}
+<script>
+  window.onload = () => {
+    typeof CustomerMenu !== 'undefined' && new CustomerMenu();
+  }
+</script>
