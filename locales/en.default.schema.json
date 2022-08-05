@@ -391,8 +391,11 @@
         "header": "Customer menu",
         "title": "Title",
         "menu": "Menu",
-        "icons_list": "Icons list",
-        "icons_list_info": "account-icon.svg,order-icon.png"
+        "icon_1": "Icon svg code 1",
+        "icon_2": "Icon svg code 2",
+        "icon_3": "Icon svg code 3",
+        "icon_4": "Icon svg code 4",
+        "icon_5": "Icon svg code 5"
       },
       "order": {
         "header": "Previous link",

@@ -14,28 +14,48 @@
 <link rel="stylesheet" href="{{ 'component-pagination.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 
-{%- if paginate.parts.size > 0 -%}
-  <div class="pagination-wrapper">
-    <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
-      <ul class="pagination__list list-unstyled" role="list">
-      {%- if paginate.previous -%}
-        <li>
-          <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
-            {% render 'icon-caret' %}
-            <span aria-hidden="true">{{ 'general.pagination_link.previous' | t }}</span>
-          </a>
-        </li>
-      {%- endif -%}
+<nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+  <ul role="list">
+    {%- if paginate.previous -%}
+      <li>
+        <a class="pagination-button pagination-button__previous" href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
+          </svg>
+        </a>
+      </li>
+    {% else %}
+      <li>
+        <span class="pagination-button pagination-button__previous" aria-label="{{ 'general.pagination.previous' | t }}">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
+          </svg>
+        </span>
+      </li>
+    {%- endif -%}
 
-      {%- if paginate.next -%}
-        <li>
-          <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
-            <span aria-hidden="true">{{ 'general.pagination_link.next' | t }}</span>
-            {%- render 'icon-caret' -%}
-          </a>
-        </li>
-      {%- endif -%}
-      </ul>
-    </nav>
-  </div>
-{%- endif -%}
+    <li>
+      <span class="pagination-pages">
+        {{ 'customer.orders.paginate' | t: current_page: paginate.current_page, items: paginate.items }}
+      </span>
+    </li>
+
+    {%- if paginate.next -%}
+      <li>
+        <a class="pagination-button pagination-button__next" href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}" >
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
+          </svg>
+        </a>
+      </li>
+    {% else %}
+      <li>
+        <span class="pagination-button pagination-button__next" aria-label="{{ 'general.pagination.next' | t }}" >
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
+          </svg>
+        </span>
+      </li>
+    {%- endif -%}
+  </ul>
+</nav>

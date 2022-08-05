@@ -1,82 +1,53 @@
-.pagination-wrapper {
-  margin-top: 4rem;
+.pagination {
+  text-align: center;
 }
 
-@media screen and (min-width: 990px) {
-  .pagination-wrapper {
-    margin-top: 5rem;
-  }
-}
-
-.pagination__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.pagination__list > li {
-  flex: 1 0 4.4rem;
-  max-width: 4.4rem;
-}
-
-.pagination__list > li:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.pagination__item {
-  color: rgb(var(--color-foreground));
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 4.4rem;
-  width: 100%;
+.pagination ul {
+  display: inline-block;
+  vertical-align: top;
   padding: 0;
-  text-decoration: none;
+  margin: 0;
+  background: #fff;
+  color: #2A3241;
+  font-size: 17px;
+  filter: drop-shadow(0px 4px 80px rgba(227, 229, 233, 0.5));
+  border-radius: 30px;
 }
 
-a.pagination__item:hover::after {
-  height: 0.1rem;
+.pagination li {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.pagination__item .icon-caret {
-  height: 0.6rem;
+.pagination-button {
+  display: inline-block;
+  vertical-align: top;
+  width: 53px;
+  height: 55px;
+  background: none;
+  position: relative;
+  color: #5E697E;
+}
+.pagination-button__previous svg {
+  transform: rotate(90deg) translateX(-50%) translateY(-50%);
+  margin: 2px 0 0 -11px;
 }
 
-.pagination__item--current::after {
-  height: 0.1rem;
+.pagination-button__next svg {
+  transform: rotate(-90deg) translateX(-50%) translateY(-50%);
+  margin: -10px 0 0 4px;
 }
 
-.pagination__item--current::after,
-.pagination__item:hover::after {
-  content: '';
-  display: block;
-  width: 2rem;
+.pagination-button svg{
   position: absolute;
-  bottom: 8px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: currentColor;
+  width: 12px;
 }
 
-.pagination__item--next .icon {
-  margin-left: -0.2rem;
-  transform: rotate(90deg);
-}
-
-.pagination__item--next:hover .icon {
-  transform: rotate(90deg) scale(1.07);
-}
-
-.pagination__item--prev .icon {
-  margin-right: -0.2rem;
-  transform: rotate(-90deg);
-}
-
-.pagination__item--prev:hover .icon {
-  transform: rotate(-90deg) scale(1.07);
-}
-
-.pagination__item-arrow:hover::after {
-  display: none;
+.pagination-pages {
+  display: inline-block;
+  vertical-align: top;
+  padding: 13px 5px;
+  min-width: 105px;
 }
