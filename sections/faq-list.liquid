@@ -1,49 +1,43 @@
-{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+<style>
+  .accordion__slide.active .accordion__btn-opener:before {
+    display: none;
+  }
+
+  .accordion__text{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  }
+
+  .accordion__slide.active .accordion__text{
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+  }
+
+</style>
 
 <section class="faq">
-  <div class="container">
-    {% if section.settings.title != blank %}
-      <h2 class="faq__title">{{ section.settings.title }}</h2>
-    {% endif %}
-    <div class="faq__list">
-      {%- for block in section.blocks -%}
-        <div class="faq__list-item">
-          {% if block.settings.question != blank %}
-            <div class="faq__list-item-header">
-              <button class="faq__list-item-button">{{ block.settings.question }}</button>
-              <div class="icon-box"></div>
-            </div>
-          {% endif %}
+  {% if section.settings.title != blank %}
+    <h2 class="faq__title">{{ section.settings.title }}</h2>
+  {% endif %}
 
-          {% if block.settings.answer != blank %}
-            <div class="faq__list-item-content">
-              {{ block.settings.answer }}
-            </div>
-          {% endif %}
-        </div>
-      {%- endfor -%}
-    </div>
+  <accordion-component class="faq__list">
+    {%- for block in section.blocks -%}
+      <div class="faq__list-item accordion__slide">
+        {% if block.settings.question != blank %}
+          <div class="faq__list-item-header accordion__btn-opener">
+            <button class="faq__list-item-button">{{ block.settings.question }}</button>
+          </div>
+        {% endif %}
 
-{% comment %}
-   <div class="faq__list">
-      {%- for block in section.blocks -%}
-        <div class="faq__list-item">
-          {% if block.settings.question != blank %}
-            <div class="faq__list-item-header">
-              <button class="faq__list-item-button">{{ block.settings.question }}</button>
-            </div>
-          {% endif %}
-
-          {% if block.settings.answer != blank %}
-            <div class="faq__list-item-content">
-              {{ block.settings.answer }}
-            </div>
-          {% endif %}
-        </div>
-      {%- endfor -%}
-    </div>
-    {% endcomment %}
-  </div>
+        {% if block.settings.answer != blank %}
+          <div class="faq__list-item-content accordion__text">
+            {{ block.settings.answer }}
+          </div>
+        {% endif %}
+      </div>
+    {%- endfor -%}
+  </accordion-component>
 </section>
 
 {% schema %}
