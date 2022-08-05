@@ -362,6 +362,9 @@
   border: 1px solid #F1F3F6;
   border-radius: 20px;
   box-shadow: 0 4px 80px 0 rgba(227, 229, 233, 0.5); }
+  @media screen and (max-width: 767px) {
+    .predictive-search {
+      padding: 16px; } }
   .predictive-search .predictive-search__heading {
     padding: 0 0 20px;
     margin: 0 0 20px;
