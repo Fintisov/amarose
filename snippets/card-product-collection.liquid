@@ -23,7 +23,6 @@
       <div class="card_collection__inner" style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
         {%- if card_product.metafields.custom.collection_image_file != blank  -%}
 
-          <h1>{{ card_product.metafields.custom.collection_image_file }}</h1>
           <div class="card_collection__media">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
