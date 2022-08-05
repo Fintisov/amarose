@@ -2,7 +2,7 @@
 
 .faq {
   background-color: $lightGrey;
-  padding: 62px 0;
+  padding: 60px 0;
 }
 
 .faq__title {
@@ -13,6 +13,11 @@
   color: $black;
   margin-bottom: 30px;
   text-align: center;
+
+  @include max-screen(767) {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
 }
 
 .faq__list {
@@ -21,10 +26,71 @@
   align-items: center;
   gap: 30px;
 
+  @include max-screen(767) {
+    gap: 25px;
+  }
+
   .faq__list-item {
-    width: 780px;
-    border-bottom: 1px solid #B6BCC6;
+    max-width: 780px;
+    width: 100%;
     padding-bottom: 30px;
+    border-bottom: 1px solid;
+    border-bottom-color: #B6BCC6;
+    transition: border-bottom-color 0.3s;
+
+    @include max-screen(767) {
+      padding-bottom: 20px;
+    }
+
+    &.active {
+      border-bottom-color: $purple;
+
+      .icon-box:before {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+  }
+}
+
+
+.faq__list-item-header {
+  position: relative;
+  padding-right: 50px;
+  cursor: pointer;
+
+  .icon-box {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: $blush-25;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: transform 0.3s;
+    }
+
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(0);
+    }
   }
 }
 
@@ -39,22 +105,64 @@
   background: transparent;
   cursor: pointer;
   padding: 0;
+
+  @include max-screen(767) {
+    font-size: 27px;
+  }
 }
 
 .faq__list-item-content {
-  padding-top: 20px;
   font-family: $futura;
   font-weight: 400;
   font-size: 22px;
   line-height: 1.5;
+  padding-top: 20px;
+
+  @include max-screen(767) {
+    font-size: 18px;
+    padding-top: 15px;
+  }
 
   p {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 
+    @include max-screen(767) {
+      font-size: 18px;
+    }
   }
 
   ul {
     li {
+      font-family: $futura;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      color: $black;
+      margin-bottom: 10px;
+      padding-left: 30px;
+      position: relative;
 
+      @include max-screen(767) {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      &:before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        background-color: $blush;
+        position: absolute;
+        top: 14px;
+        left: 15px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
     }
   }
 }
