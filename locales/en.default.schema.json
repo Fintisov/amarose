@@ -1032,6 +1032,17 @@
         "name": "FAQ product"
       }
     },
+    "pdp-benefits": {
+      "name": "PDP Benefits",
+      "settings": {
+        "header": {
+          "content": "Content is edited in metafields"
+        }
+      },
+      "presets": {
+        "name": "PDP Benefits"
+      }
+    },
     "running_line": {
       "name": "Running line",
       "settings": {
