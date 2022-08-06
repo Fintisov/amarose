@@ -1,0 +1,12 @@
+{{ 'ingredient-pdp.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'ingredient-pdp.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="ingredient-pdp">
+  {% if icon != blank %}
+    <div class="ingredient-pdp__icon">{{ icon }}</div>
+  {% endif %}
+  {% if description != blank %}
+    <p class="ingredient-pdp__text">{{ description }}</p>
+  {% endif %}
+</div>

@@ -384,6 +384,21 @@
         "text": "Text",
         "svg_code": "SVG code"
       }
+    },
+    "customer": {
+      "name": "Account pages",
+      "customer_menu": {
+        "header": "Customer menu",
+        "title": "Title",
+        "menu": "Menu",
+        "icons_list": "Icons list",
+        "icons_list_info": "account-icon.svg,order-icon.png"
+      },
+      "order": {
+        "header": "Previous link",
+        "prev_text": "Previous text",
+        "prev_link": "Previous link"
+      }
     }
   },
   "sections": {
@@ -1030,6 +1045,9 @@
     "how_it_works": {
       "name": "How it works",
       "settings": {
+        "enable_metafields": {
+          "label": "Enable Metafields"
+        },
         "title": {
           "label": "Title"
         },
@@ -1066,6 +1084,36 @@
       },
       "presets": {
         "name": "How it works"
+      }
+    },
+    "how_it_works_pdp": {
+      "name": "How it works PDP",
+      "settings": {
+        "enable_metafields": {
+          "label": "Enable Metafields"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "text": {
+          "label": "Ingredient card"
+        }
+      },
+      "blocks": {
+          "ingredient": {
+            "name": "Ingredient",
+            "settings": {
+              "icon_works": {
+                "label": "Icon"
+              },
+              "text_works": {
+                "label": "Text"
+              }
+            }
+        }
+      },
+      "presets": {
+        "name": "How it works PDP"
       }
     },
     "featured-product": {
@@ -1260,7 +1308,7 @@
           "label": "Logo image"
         },
         "logo_svg": {
-          "label": "labelLogo SVG code"
+          "label": "Logo SVG code"
         },
         "logo_width": {
           "unit": "px",
