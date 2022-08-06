@@ -26,11 +26,11 @@
     {% endfor %}
   {% else %}
     {% assign q_size = product.metafields.how_it_works.works_icon_text.size | minus: 1 %}
-    {%- for icon in (0..q_size) -%}
+    {%- for i in (0..q_size) -%}
       <li class="how-it-works-pdp__list-item">
-        {% render 'how-it-works-item-pdp',
-          icon: product.metafields.how_it_works.works_icon[icon],
-          description: product.metafields.how_it_works.works_icon_text[icon]
+        {% render 'how-it work-item-pdp',
+          icon: product.metafields.how_it_works.works_icon[i],
+          description: product.metafields.how_it_works.works_icon_text[i]
         %}
       </li>
     {% endfor %}
