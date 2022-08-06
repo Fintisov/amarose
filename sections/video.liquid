@@ -10,11 +10,11 @@
 {% else %}
   {% render 'video-image_block',
     id: section.id,
-    heading: section.settings.heading,
-    text: section.settings.text,
-    video_url: section.settings.video_url,
-    description: section.settings.description,
-    cover_image: product.metafields.video_image_block.image
+    heading: product.metafields.heading_image_block.heading,
+    text: product.metafields.text_image_block.video_image_block_text,
+    video_url: product.metafields.video_block.video,
+    description: product.metafields.accentuate.video_image_description,
+    cover_image: product.metafields.image_block.image
   %}
 {% endif %}
 
@@ -56,7 +56,6 @@
       ],
       "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
       "label": "t:sections.video.settings.video_url.label",
-      "placeholder": "t:sections.video.settings.video_url.placeholder",
       "info": "t:sections.video.settings.video_url.info"
     },
     {
@@ -69,7 +68,7 @@
       "type": "checkbox",
       "id": "is_product",
       "default": false,
-      "label": "t:sections.video-image_block.settings.enable_metafields.label"
+      "label": "t:sections.video.settings.enable_metafields.label"
     }
   ],
   "presets": [

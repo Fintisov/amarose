@@ -3,6 +3,10 @@
 .video-section__media {
   position: relative;
   padding-bottom: 56.25%;
+
+  &.image--style {
+    padding-bottom: 0;
+  }
 }
 
 .video-section__media.deferred-media:after {

@@ -2,6 +2,9 @@
   position: relative;
   padding-bottom: 56.25%; }
 
+.video-section__media.image--style {
+  padding-bottom: 0; }
+
 .video-section__media.deferred-media:after {
   content: none; }
 

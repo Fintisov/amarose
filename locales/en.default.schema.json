@@ -2798,7 +2798,7 @@
         "video_url": {
           "label": "URL",
           "placeholder": "Use a YouTube or Vimeo URL",
-          "info": "Video plays in the page."
+          "info": "Use a YouTube or Vimeo URL. Video plays in the page."
         },
         "description": {
           "label": "Video alt text",
@@ -2810,6 +2810,9 @@
         },
         "full_width": {
           "label": "Make section full width"
+        },
+        "enable_metafields": {
+          "label": "Enable PDP metafields"
         }
       },
       "presets": {
