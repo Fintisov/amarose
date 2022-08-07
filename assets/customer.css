@@ -391,7 +391,21 @@
   line-height: 1.5;
   margin: 0;
   letter-spacing: 0;
-  color: #5e697e;
+  color: #5E697E;
+}
+@media screen and (max-width: 991px) {
+  .orders__none {
+    max-width: none;
+    padding: 0;
+    text-align: center;
+    margin: 65px auto;
+  }
+  .orders__none svg {
+    margin-bottom: 18px;
+  }
+  .orders__none p {
+    font-size: 18px;
+  }
 }
 
 .table__wrap {
