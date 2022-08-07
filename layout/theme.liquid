@@ -236,7 +236,8 @@
   {% endif %}
 
   {% if template.directory == 'customers'
-    and template.name == 'addresses' %}
+    and template.name == 'addresses'
+    or template.name == blank %}
       {% assign is_shadow_header = true %}
   {% endif %}
 
