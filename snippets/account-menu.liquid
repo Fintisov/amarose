@@ -1,5 +1,3 @@
-<script src="{{ 'account-menu.js' | asset_url }}" defer></script>
-
 <div class="account-menu__container" data-account-menu>
   {% if settings.customer_title != blank %}
     <h2 class="visually-hidden">{{ settings.customer_title }}</h2>
@@ -36,9 +34,3 @@
     </ul>
   {% endif %}
 </div>
-
-<script>
-  window.onload = () => {
-    typeof CustomerMenu !== 'undefined' && new CustomerMenu();
-  }
-</script>
