@@ -1,23 +1,25 @@
 {
   "sections": {
+    "1658249854f9284584": {
+      "type": "blog-filter",
+      "settings": {
+        "filter_heading": "Blog filters",
+        "link_all": "ALL"
+      }
+    },
     "165867926240d0b834": {
       "type": "hero-banner",
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/General.jpg",
         "bg_color": "#ffcebd",
         "text_alignment": "center",
+        "show_bg": false,
         "sub_heading": "ON SALE",
+        "sub_heading_color": "pink",
         "heading": "5 Things You Should Absolutely NEVER Try with Vitamin C.",
         "description": "",
         "button_text": "Read More",
         "button_url": "#"
-      }
-    },
-    "1658249854f9284584": {
-      "type": "blog-filter",
-      "settings": {
-        "filter_heading": "Blog filters",
-        "link_all": "ALL"
       }
     },
     "main": {
@@ -30,8 +32,8 @@
     }
   },
   "order": [
-    "165867926240d0b834",
     "1658249854f9284584",
+    "165867926240d0b834",
     "main"
   ]
 }
