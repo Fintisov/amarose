@@ -1,7 +1,7 @@
 @import "_variables.scss";
 
 #preview-bar-iframe {
-  //display: none;
+  display: none;
 }
 
 .container {
@@ -876,6 +876,11 @@ button {
   &.badge--grey {
     color: $white;
     background-color: $midGrey;
+  }
+
+  &.badge--pink {
+    color: $white;
+    background-color: $blush;
   }
 }
 

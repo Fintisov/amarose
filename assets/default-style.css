@@ -1,4 +1,7 @@
 @charset "UTF-8";
+#preview-bar-iframe {
+  display: none; }
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -609,6 +612,9 @@ button {
   .badge.badge--grey {
     color: #ffffff;
     background-color: #5E697E; }
+  .badge.badge--pink {
+    color: #ffffff;
+    background-color: #FFBBAB; }
 
 .link-arrow {
   display: flex;

@@ -1,0 +1,73 @@
+.ingredients {
+  background-color: #F1F3F6;
+  padding: 80px 0; }
+
+.ingredients-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; }
+
+.ingredients__header {
+  max-width: 380px;
+  width: 100%; }
+  .ingredients__header .ingredients__title {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.25;
+    color: #2A3241;
+    margin-bottom: 10px; }
+  .ingredients__header .ingredients__text {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #5E697E; }
+  .ingredients__header .button {
+    margin-top: 15px; }
+
+.ingredients-list {
+  width: 100%;
+  height: max-content; }
+
+.ingredient-card {
+  width: 210px;
+  min-height: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px; }
+  .ingredient-card .ingredient__icon {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px; }
+  .ingredient-card .ingredient__title {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 10px; }
+  .ingredient-card .ingredient__text {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #5E697E; }
+
+.ingredient-btn-next {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
+  border: 0.5px solid #EAEAEA;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  right: 0; }
+  .ingredient-btn-next svg {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%); }
+    .ingredient-btn-next svg path {
+      stroke: #2A3241; }
