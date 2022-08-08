@@ -5,8 +5,10 @@
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/General_5cd46e57-0f4a-45cb-aafb-78d01dfe802f.jpg",
         "bg_color": "#ebd4ca",
-        "text_alignment": "center",
+        "text_alignment": "left",
+        "show_bg": true,
         "sub_heading": "THE AMAROSE TOUCH",
+        "sub_heading_color": "pink",
         "heading": "Protect Your Skin \nwith Nature’s Armor",
         "description": "<p>Amarose Beauty customized a clean skincare regimen to tackle every sign of aging for your very best skin. <\/p>",
         "button_text": "",
