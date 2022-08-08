@@ -23,7 +23,7 @@
           "settings": {
           }
         },
-        "c1a852a2-7fa9-4b02-8dfe-ec9c98f7fcc1": {
+        "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2": {
           "type": "shopify:\/\/apps\/subscription-recurring-orders\/blocks\/sub_plan\/a6cb4897-b17f-41d9-9edd-72a875ee060f",
           "settings": {
           }
@@ -102,7 +102,7 @@
         "title",
         "1a873e78-5c23-429e-8565-406416cbd9e5",
         "price",
-        "c1a852a2-7fa9-4b02-8dfe-ec9c98f7fcc1",
+        "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
