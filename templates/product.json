@@ -23,6 +23,12 @@
           "settings": {
           }
         },
+        "419ad66e-ef02-47c2-85a1-301d6f333677": {
+          "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/subscription-widget\/371eed76-0b44-4869-9813-730372ea378e",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -97,6 +103,7 @@
         "title",
         "1a873e78-5c23-429e-8565-406416cbd9e5",
         "price",
+        "419ad66e-ef02-47c2-85a1-301d6f333677",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
