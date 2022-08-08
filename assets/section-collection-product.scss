@@ -1,0 +1,27 @@
+@import "variables";
+.collection-card-banner-wrapper {
+  margin-bottom: 100px;
+
+  .card-product__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .grid__item {
+      &:nth-child(even) {
+        .card-banner_collection-wrapper {
+          flex-direction: row-reverse;
+
+          @include max-screen(991) {
+            flex-direction: column;
+          }
+
+          .card_collection__content {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+

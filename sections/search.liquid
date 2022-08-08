@@ -1,8 +1,14 @@
-<section class="search">
-  {% if section.settings.title != blank %}
-    <h2 class="visually-hidden">{{ section.settings.title }}</h2>
-  {% endif %}
-  {% render 'search' %}
+{{ 'section-search.css' | asset_url | stylesheet_tag }}
+
+<section class="search faq-search">
+  <div class="container">
+    <div class="search__content">
+      {% if section.settings.title != blank %}
+        <h2 class="search__title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% render 'search' %}
+    </div>
+  </div>
 </section>
 
 {% schema %}

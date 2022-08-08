@@ -321,7 +321,7 @@
                       <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected="selected"{% endif %}>{{ option.name | escape }}</option>
                     {%- endfor -%}
                   </select>
-                  {% render 'icon-caret' %}
+                  {% comment %}{% render 'icon-caret' %}{% endcomment %}
                 </div>
               </div>
 
@@ -388,7 +388,7 @@
       </facet-filters-form>
     {%- endif -%}
   {%- endif -%}
-  {% comment %}  Drawer and mobile filter {% endcomment %}
+  {% comment %}  Drawer and mobile filter
   <menu-drawer class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}" data-breakpoint="mobile">
     <details class="mobile-facets__disclosure disclosure-has-popup">
       <summary class="mobile-facets__open-wrapper focus-offset">
@@ -605,6 +605,7 @@
       </facet-filters-form>
     </details>
   </menu-drawer>
+  {% endcomment %}
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}

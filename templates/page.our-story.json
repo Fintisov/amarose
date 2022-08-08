@@ -5,8 +5,10 @@
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/General.png",
         "bg_color": "#ebc2c0",
-        "text_alignment": "center",
+        "text_alignment": "left",
+        "show_bg": true,
         "sub_heading": "OUR STORY",
+        "sub_heading_color": "pink",
         "heading": "Inspiring Strength and Beauty",
         "description": "<p>Wrestler Mandy Rose found a solution to keeping her skin clean and healthy while traveling the world.<\/p>",
         "button_text": "",
@@ -20,7 +22,8 @@
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
         "cover_image": "shopify:\/\/shop_images\/Rectangle_42.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": ""
+        "description": "",
+        "is_product": false
       }
     },
     "165868083633467195": {

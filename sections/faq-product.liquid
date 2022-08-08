@@ -1,0 +1,46 @@
+{% if product.metafields.faq_title.faq_title != blank %}
+  <div class="faq-product__header">
+    <h2 class="faq-product__title">{{ product.metafields.faq_title.faq_title }}</h2>
+  </div>
+{% endif %}
+
+<div class="faq-product__list-questions">
+  {% assign q_size = product.metafields.faq.question.size | minus: 1 %}
+  {%- for i in (0..q_size) -%}
+    <div class="faq-product__list-questions-item" data-question-{{ block.id }}>
+      <div class="faq-product__list-item-header">
+        <button class="faq-product__list-item-button">{{ product.metafields.faq.question[i] }}</button>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+<div class="faq-product__list-answers">
+  {% assign q_size = product.metafields.faq_answer.faq_answer.size | minus: 1 %}
+  {%- for i in (0..q_size) -%}
+    <div class="faq-product__list-answers-item" data-answer-{{ block.id }}>
+      <div class="faq-product__list-item-content">
+        {{ product.metafields.faq_answer.faq_answer[i] }}
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.faq_product.name",
+  "tag": "section",
+  "class": "faq-product",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.faq_product.settings.header.content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq_product.presets.name"
+    }
+  ]
+}
+{% endschema %}

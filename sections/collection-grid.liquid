@@ -19,30 +19,32 @@
   {% endif %}
 
 
-    <div class="collection-grid__header title-wrapper title-wrapper--no-top-margin "
-         style="background-image: url({{ collection_image | img_url: 'master' }})"
-    >
-      <h2 class="collection-grid__title">
-        {% if section.settings.title != blank %}
-          {{ section.settings.title | escape }}
+  <div class="collection-grid__header title-wrapper title-wrapper--no-top-margin "
+       style="background-image: url({{ collection_image | img_url: 'master' }})"
+  >
+    <h2 class="collection-grid__title">
+      {% if section.settings.title != blank %}
+        {{ section.settings.title | escape }}
+      {% else %}
+        {{ section.settings.collection.title | escape }}
+      {% endif %}
+    </h2>
+    {%- if section.settings.description != blank or section.settings.collection.description != blank -%}
+      <div class="collection-grid__description">
+        {% if section.settings.description != blank %}
+          {{ section.settings.description | escape }}
         {% else %}
-          {{ section.settings.collection.title | escape }}
+          {{ section.settings.collection.description | escape }}
         {% endif %}
-      </h2>
-      {%- if section.settings.description != blank or section.settings.collection.description != blank -%}
-        <div class="collection-grid__description">
-          {% if section.settings.description != blank %}
-            {{ section.settings.description | escape }}
-          {% else %}
-            {{ section.settings.collection.description | escape }}
-          {% endif %}
-        </div>
-      {%- endif -%}
-    </div>
+      </div>
+    {%- endif -%}
+  </div>
 
 
   <div class="collection-grid__list">
-    <ul class="grid product-grid contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
+    <ul
+      class="grid product-grid contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %}{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}"
+      role="list" aria-label="{{ 'sections.featured_collection.slider' | t }}">
       {%- for product in section.settings.collection.products limit: 4 -%}
         <li class="grid__item">
           {% render 'card-product',
@@ -57,17 +59,19 @@
       {%- endfor -%}
     </ul>
 
-    {% if section.settings.mobile_image !=blank %}
-      {{ section.settings.mobile_image | image_url: width: 760 | image_tag:
+    <div class="collection-grid__mobile-image-wrapper">
+      {% if section.settings.mobile_image != blank %}
+        {{ section.settings.mobile_image | image_url: width: 760 | image_tag:
         loading: 'lazy',
         width: section.settings.mobile_image.width,
         height: section.settings.mobile_image.height,
-        class: 'collection-grid__mobile-image',
+        class: 'mobile-image',
         sizes: sizes,
         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
         alt: section.settings.mobile_image.alt | escape
-      }}
-    {% endif %}
+        }}
+      {% endif %}
+    </div>
   </div>
 </div>
 

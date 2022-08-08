@@ -23,6 +23,11 @@
           "settings": {
           }
         },
+        "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2": {
+          "type": "shopify:\/\/apps\/subscription-recurring-orders\/blocks\/sub_plan\/a6cb4897-b17f-41d9-9edd-72a875ee060f",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -97,6 +102,7 @@
         "title",
         "1a873e78-5c23-429e-8565-406416cbd9e5",
         "price",
+        "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -149,47 +155,56 @@
         "title": "Running line"
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "165979501095128c3c": {
+      "type": "video",
+      "settings": {
+        "heading": "Formulated to provide skin nutrition for optimal skin health.",
+        "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
+        "cover_image": "shopify:\/\/shop_images\/Rectangle_42.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "is_product": true
+      }
+    },
+    "1659809705039b724e": {
+      "type": "pdp-benefits",
+      "settings": {
+      }
+    },
+    "165981051437af0bd0": {
+      "type": "how-it-works-pdp",
       "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
+        "0691b14b-e606-4c99-b06e-1b4901b80619": {
+          "type": "ingredient",
           "settings": {
-            "heading": "{{ product.metafields.custom.heading.value }}",
-            "heading_size": "h1"
+            "icon_works": "icon",
+            "text_works": "With 70% Glycolic Acid, the cleanser supports natural cell turnover. Fades sun damage, skin discolorations, and acne scarring while removing pollutants and dead skin."
           }
         },
-        "image-with-text-1": {
-          "type": "text",
+        "b70f3897-584b-48ab-baec-7d69bdf4dc4a": {
+          "type": "ingredient",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.content | metafield_tag }}<\/p>",
-            "text_style": "body"
+            "icon_works": "icon",
+            "text_works": "Niacinamide (Vitamin B3) improves the elasticity of the skin. Rebalances uneven skin tone. Reduces discoloration."
+          }
+        },
+        "a3354c6a-1a41-4a28-8cca-22ba99fc6556": {
+          "type": "ingredient",
+          "settings": {
+            "icon_works": "icon",
+            "text_works": "Aloe Vera Gel, known for the ability to heal wounds, this ingredient absorbs quickly with no sticky residue, leaving skin silky and smooth."
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "0691b14b-e606-4c99-b06e-1b4901b80619",
+        "b70f3897-584b-48ab-baec-7d69bdf4dc4a",
+        "a3354c6a-1a41-4a28-8cca-22ba99fc6556"
       ],
       "settings": {
-        "image": "{{ product.metafields.custom.image.value }}",
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "1658933101eeff71ef": {
-      "type": "benefits",
-      "settings": {
-        "bg_image": "{{ product.metafields.custom.image_section_benefits_.value }}",
-        "content": "<p>{{ product.metafields.custom.content_section_benefits_ | metafield_tag }}<\/p>"
+        "is_product": true,
+        "title": "Stronger Together",
+        "text": "Developed to work better together, each product prepares your skin for every day protection."
       }
     },
     "1658920095a5b24ea0": {
@@ -206,6 +221,11 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "16598113958f0d0b25": {
+      "type": "faq-product",
+      "settings": {
       }
     },
     "product-recommendations": {
@@ -229,9 +249,11 @@
   "order": [
     "main",
     "16589228130b221df1",
-    "image-with-text",
-    "1658933101eeff71ef",
+    "165979501095128c3c",
+    "1659809705039b724e",
+    "165981051437af0bd0",
     "1658920095a5b24ea0",
+    "16598113958f0d0b25",
     "product-recommendations"
   ]
 }

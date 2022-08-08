@@ -4,7 +4,8 @@ const selectors = {
   addressContainer: '[data-address]',
   toggleAddressButton: 'button[aria-expanded]',
   cancelAddressButton: 'button[type="reset"]',
-  deleteAddressButton: 'button[data-confirm-message]'
+  deleteAddressButton: 'button[data-confirm-message]',
+  addressPopupOpener: 'button[data-address-popup-opener]',
 };
 
 const attributes = {
@@ -28,6 +29,7 @@ class CustomerAddresses {
       toggleButtons: document.querySelectorAll(selectors.toggleAddressButton),
       cancelButtons: container.querySelectorAll(selectors.cancelAddressButton),
       deleteButtons: container.querySelectorAll(selectors.deleteAddressButton),
+      addressPopupOpeners: container.querySelectorAll(selectors.addressPopupOpener),
       countrySelects: container.querySelectorAll(selectors.addressCountrySelect)
     } : {};
   }
@@ -58,9 +60,14 @@ class CustomerAddresses {
     this.elements.deleteButtons.forEach((element) => {
       element.addEventListener('click', this._handleDeleteButtonClick);
     });
+    this.elements.addressPopupOpeners.forEach((element) => {
+      element.addEventListener('click', this._handlePopupOpenerButtonClick);
+    });
   }
 
   _toggleExpanded(target) {
+    const targetClass = target.getAttribute('aria-controls') === 'AddAddress' ? 'js-form-add' : 'js-form-edit';
+    target.closest(selectors.customerAddresses).classList.toggle(targetClass)
     target.setAttribute(
       attributes.expanded,
       (target.getAttribute(attributes.expanded) === 'false').toString()
@@ -74,17 +81,18 @@ class CustomerAddresses {
   _handleCancelButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(
       currentTarget
-        .closest(selectors.addressContainer)
-        .querySelector(`[${attributes.expanded}]`)
+      .closest(selectors.addressContainer)
+      .querySelector(`[${attributes.expanded}]`)
     )
   }
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
-    // eslint-disable-next-line no-alert
-    if (confirm(currentTarget.getAttribute(attributes.confirmMessage))) {
-      Shopify.postLink(currentTarget.dataset.target, {
-        parameters: { _method: 'delete' },
-      });
-    }
+    Shopify.postLink(currentTarget.dataset.target, {
+      parameters: { _method: 'delete' },
+    });
+  }
+
+  _handlePopupOpenerButtonClick = ({ currentTarget }) => {
+    currentTarget.closest(selectors.addressContainer).classList.toggle('address-popup-open')
   }
 }

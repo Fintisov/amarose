@@ -384,6 +384,26 @@
         "text": "Text",
         "svg_code": "SVG code"
       }
+    },
+    "customer": {
+      "name": "Account pages",
+      "customer_menu": {
+        "header": "Customer menu",
+        "title": "Title",
+        "menu": "Menu",
+        "icon_1": "Icon svg code 1",
+        "icon_2": "Icon svg code 2",
+        "icon_3": "Icon svg code 3",
+        "icon_4": "Icon svg code 4",
+        "icon_5": "Icon svg code 5",
+        "icons_list": "Icons list",
+        "icons_list_info": "account-icon.svg,order-icon.png"
+      },
+      "order": {
+        "header": "Previous link",
+        "prev_text": "Previous text",
+        "prev_link": "Previous link"
+      }
     }
   },
   "sections": {
@@ -627,6 +647,52 @@
       },
       "presets": {
         "name": "Collection list"
+      }
+    },
+    "accessories": {
+      "name": "Accessories",
+      "settings": {
+        "title": {
+          "label": "Title"
+        },
+        "description": {
+          "label": "Description"
+        },
+        "header": {
+          "content": "Product card"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          }
+        },
+        "show_secondary_image": {
+          "label": "Show second image on hover"
+        },
+        "show_vendor": {
+          "label": "Show vendor"
+        },
+        "show_rating": {
+          "label": "Show product rating",
+          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
+        },
+        "enable_quick_buy": {
+          "label": "Enable quick add button"
+        },
+        "blocks": {
+          "name": "accessory",
+          "product": "accessory"
+        }
+      },
+      "presets": {
+        "name": "Accessories"
       }
     },
     "contact-form": {
@@ -955,6 +1021,28 @@
         "name": "FAQ list"
       }
     },
+    "faq_product": {
+      "name": "FAQ Product",
+      "settings": {
+        "header": {
+          "content": "Content is edited in metafields"
+        }
+      },
+      "presets": {
+        "name": "FAQ product"
+      }
+    },
+    "pdp-benefits": {
+      "name": "PDP Benefits",
+      "settings": {
+        "header": {
+          "content": "Content is edited in metafields"
+        }
+      },
+      "presets": {
+        "name": "PDP Benefits"
+      }
+    },
     "running_line": {
       "name": "Running line",
       "settings": {
@@ -973,6 +1061,9 @@
     "how_it_works": {
       "name": "How it works",
       "settings": {
+        "enable_metafields": {
+          "label": "Enable Metafields"
+        },
         "title": {
           "label": "Title"
         },
@@ -1009,6 +1100,39 @@
       },
       "presets": {
         "name": "How it works"
+      }
+    },
+    "how_it_works_pdp": {
+      "name": "How it works PDP",
+      "settings": {
+        "enable_metafields": {
+          "label": "Enable Metafields"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "text": {
+          "label": "Text"
+        },
+        "presets": {
+          "label": "How it works PDP"
+        }
+      },
+      "blocks": {
+          "ingredient": {
+            "name": "Item",
+            "settings": {
+              "icon_works": {
+                "label": "Icon"
+              },
+              "text_works": {
+                "label": "Text"
+              }
+            }
+        }
+      },
+      "presets": {
+        "name": "How it works PDP"
       }
     },
     "featured-product": {
@@ -1203,7 +1327,7 @@
           "label": "Logo image"
         },
         "logo_svg": {
-          "label": "labelLogo SVG code"
+          "label": "Logo SVG code"
         },
         "logo_width": {
           "unit": "px",
@@ -2688,7 +2812,7 @@
         "video_url": {
           "label": "URL",
           "placeholder": "Use a YouTube or Vimeo URL",
-          "info": "Video plays in the page."
+          "info": "Use a YouTube or Vimeo URL. Video plays in the page."
         },
         "description": {
           "label": "Video alt text",
@@ -2700,6 +2824,9 @@
         },
         "full_width": {
           "label": "Make section full width"
+        },
+        "enable_metafields": {
+          "label": "Enable PDP metafields"
         }
       },
       "presets": {

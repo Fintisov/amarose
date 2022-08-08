@@ -346,6 +346,7 @@ h6:empty {
 a:not([href]) {
   cursor: not-allowed;
 }
+/*
 
 .circle-divider::after {
   content: '\2022';
@@ -355,6 +356,7 @@ a:not([href]) {
 .circle-divider:last-of-type::after {
   display: none;
 }
+*/
 
 hr {
   border: none;
@@ -452,6 +454,7 @@ summary .icon-caret {
   height: 0.6rem;
   right: 1.5rem;
   top: calc(50% - 0.2rem);
+  display: block;
 }
 
 summary::-webkit-details-marker {

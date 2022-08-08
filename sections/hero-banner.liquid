@@ -7,7 +7,7 @@
   {%- assign bg_image = section.settings.bg_image | img_url: 'master' -%}
 {% endif %}
 
-<div class="hero-banner"
+<div class="hero-banner {% if section.settings.image == blank %}hero-banner__no-image{% endif %}"
      style="background-color: {{ section.settings.bg_color }}; {%  if hasBg %}background-image: url({{ bg_image }});{% endif %}">
   <div class="container">
     <div class="hero-banner__content-wrapper page-width-position-{{ section.settings.text_alignment }}">
