@@ -21,6 +21,8 @@
   assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
 -%}
 
+{% assign filter_type = 'horizontal' %}
+
 <div
   class="template-search{% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %} section-{{ section.id }}-padding">
   <div class="template-search__header container center">
@@ -47,8 +49,8 @@
     {%- endif -%}
   </div>
   {%- if search.performed -%}
-    {%- if section.settings.enable_sorting and search.filters != empty -%}
-      <facet-filters-form class="facets facets-vertical-sort container no-js-hidden">
+    {%- if section.settings.enable_sorting and filter_type == 'vertical' and search.filters != empty -%}
+      <facet-filters-form class="facets facets-vertical-sort container small-hide no-js-hidden">
         <form class="facets-vertical-form" id="FacetSortForm">
           <div class="facet-filters sorting caption">
             <div class="facet-filters__field">
@@ -95,7 +97,15 @@
         </form>
       </facet-filters-form>
     {%- endif -%}
+
     <div class="container">
+      {%- if search.filters != empty -%}
+        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+          <aside aria-labelledby="verticalTitle" class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}" id="main-search-filters" data-id="{{ section.id }}">
+            {% render 'facets', results: search, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, filter_type: filter_type %}
+          </aside>
+        {%- endif -%}
+      {%- endif -%}
 
       <div class="product-grid-container" id="ProductGridContainer">
         {%- if search.results.size == 0 and search.filters != empty -%}
@@ -134,13 +144,14 @@
                         %}
                       {%- when 'article' -%}
                         {% render 'article-card',
-                          blog: section.settings.blog,
                           article: item,
-                          media_aspect_ratio: 1.66,
                           show_image: true,
-                          show_date: section.settings.show_date,
-                          show_author: section.settings.show_author,
-                          show_excerpt: true %}
+                          show_date: section.settings.article_show_date,
+                          show_author: section.settings.article_show_author,
+                          show_badge: true,
+                          media_aspect_ratio: 1,
+                          lazy_load: lazy_load
+                        %}
                       {%- when 'page' -%}
 
 
@@ -195,7 +206,6 @@
           {% endpaginate %}
         {%- endif -%}
       </div>
-    </div>
   {%- endif -%}
 </div>
 
