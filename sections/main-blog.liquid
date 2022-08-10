@@ -21,6 +21,7 @@
         </div>
       {%- endfor -%}
     </div>
+
     {% for tag in article.tags %}
       {{ forloop.index }} ++++{{ tag }}
       {% if forloop.index == 1 %}

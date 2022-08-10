@@ -32,23 +32,9 @@
 .container-fluid {
   width: 100%;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  @include max-screen(1300) {
-    max-width: 960px;
-  }
-
-  @include max-screen(991) {
-    max-width: 720px;
-  }
-
-  @include max-screen(767) {
-    max-width: 540px;
-  }
+  padding: 0 10px;
 
   @include max-screen(575) {
-    max-width: 100%;
     padding: 0 20px;
   }
 }
@@ -873,7 +859,7 @@ button {
     font-size: 14px;
   }
 
-  &.badge--grey {
+  &.badge--gray {
     color: $white;
     background-color: $midGrey;
   }
