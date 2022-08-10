@@ -1,0 +1,43 @@
+@import "variables";
+
+.running-line__list {
+  &.swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+}
+
+.running-line__item {
+  font-family: $futura;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 1.3;
+  color: $blush;
+  padding-left: 25px;
+  position: relative;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  @include max-screen(767) {
+    font-size: 40px;
+  }
+
+  &.swiper-slide {
+    width: auto;
+  }
+
+  &:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $rose;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
