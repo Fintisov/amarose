@@ -73,12 +73,12 @@
     right: 0;
     transform: translate(50%, -50%);
 
-    @include max-screen(1050) {
+    @include max-screen(1300) {
       right: 10px;
     }
 
     @include max-screen(991) {
-      right: 2px;
+      right: 0;
     }
 
     @include max-screen(767) {

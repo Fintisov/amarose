@@ -54,12 +54,12 @@
     top: 50%;
     right: 0;
     transform: translate(50%, -50%); }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 1300px) {
     .ingredients-list .ingredient-btn-next {
       right: 10px; } }
   @media screen and (max-width: 991px) {
     .ingredients-list .ingredient-btn-next {
-      right: 2px; } }
+      right: 0; } }
   @media screen and (max-width: 767px) {
     .ingredients-list .ingredient-btn-next {
       display: none; } }
