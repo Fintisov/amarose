@@ -31,17 +31,3 @@ const swiperIngredientsList = new Swiper(".ingredients-list__content", {
     nextEl: '.ingredient-btn-next',
   },
 });
-
-const swiperRunningLine = new Swiper(".running-line__content", {
-  spaceBetween: 10,
-  loop: true,
-  slidesPerView: "auto",
-  speed: 2000,
-  allowTouchMove: false,
-
-  autoplay: {
-    delay: 100,
-    disableOnInteraction: false,
-  },
-})
-

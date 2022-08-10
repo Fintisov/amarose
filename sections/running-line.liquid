@@ -1,23 +1,25 @@
 {{ 'section-running-line.css' | asset_url | stylesheet_tag }}
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 <section class="running-line">
   <h2 class="visually-hidden">{{ section.settings.title }}</h2>
 
-  <div class="running-line__content swiper">
-    <div class="running-line__list-wrapper swiper-wrapper">
+  <div class="running-line__content">
+    <div class="running-line__items-wrapper">
       {% for block in section.blocks %}
-        <div class="running-line__item swiper-slide">
+        <p class="running-line__item">
           {{ block.settings.running_line_item }}
-        </div>
+        </p>
+      {% endfor %}
+    </div>
+    <div class="running-line__items-wrapper">
+      {% for block in section.blocks %}
+        <p class="running-line__item">
+          {{ block.settings.running_line_item }}
+        </p>
       {% endfor %}
     </div>
   </div>
 
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="{{ 'swiper-config.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {
