@@ -326,8 +326,9 @@
   },
   "customer": {
     "account": {
-      "title": "Account",
-      "details": "Account details",
+      "title": "My Account",
+      "text": "Here, you can edit your personal information such as your name and email address.",
+      "details": "Personal Information",
       "view_addresses": "View addresses",
       "return": "Return to Account details"
     },
