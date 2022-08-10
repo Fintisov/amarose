@@ -115,7 +115,8 @@
   background-color: #ffffff;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05);
   border: 0.5px solid #EAEAEA;
-  z-index: 1; }
+  z-index: 1;
+  cursor: pointer; }
   .ingredient-btn-next svg {
     position: absolute;
     top: 50%;
