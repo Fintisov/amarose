@@ -1,5 +1,8 @@
 .pagination {
   padding: 30px 0 100px; }
+  @media screen and (max-width: 767px) {
+    .pagination {
+      padding: 16px 0 38px; } }
 
 .pagination-list {
   display: flex;
