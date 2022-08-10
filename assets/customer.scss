@@ -221,8 +221,8 @@
   }
 
   &__text {
-    padding-top: 12px;
     margin-bottom: 30px;
+    padding-top: 12px;
   }
 
   &__details-title {
@@ -230,14 +230,14 @@
   }
 
   @include max-screen(991) {
+    position: relative;
     display: block;
     padding: 0 0 50px;
-    position: relative;
 
     &__content {
       width: auto;
-      padding-left: 26px;
       padding-right: 26px;
+      padding-left: 26px;
     }
 
     &:focus-within {
@@ -261,9 +261,9 @@
 
   &__container {
     @include max-screen(991) {
-      filter: drop-shadow(0px 4px 80px rgba(#e3e5e9, 0.5));
       position: relative;
       z-index: 1;
+      filter: drop-shadow(0px 4px 80px rgba(#e3e5e9, 0.5));
     }
   }
 
@@ -295,18 +295,18 @@
     @include max-screen(991) {
       font-size: 16px;
       line-height: 1.3;
-      padding: 12px 20px;
       margin-bottom: 30px;
+      padding: 12px 20px;
     }
   }
 
   &__opener {
+    display: none;
+    padding-right: 40px;
     background-image: url("arrow-select-rose.svg");
     background-repeat: no-repeat;
     background-position: right 18px center;
     background-size: 12px;
-    padding-right: 40px;
-    display: none;
 
     &:hover,
     &:focus {
@@ -341,13 +341,13 @@
   }
 
   @include max-screen(991) {
-    width: 100%;
-    border-radius: 0;
-    filter: none;
     position: absolute;
     top: 100%;
     left: 0;
     display: none;
+    width: 100%;
+    border-radius: 0;
+    filter: none;
   }
 }
 
@@ -447,9 +447,9 @@
 
   @include max-screen(991) {
     max-width: none;
+    margin: 65px auto;
     padding: 0;
     text-align: center;
-    margin: 65px auto;
 
     svg {
       margin-bottom: 18px;
@@ -496,8 +496,8 @@
     tr {
       @include max-screen(991) {
         margin-bottom: 20px;
-        background-color: $white;
         border-radius: 20px;
+        background-color: $white;
         box-shadow: 0 4px 80px rgba(227, 229, 233, 0.5);
       }
     }
@@ -508,15 +508,15 @@
 
       @include max-screen(991) {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         border: 0;
 
         &:not(:last-child) {
           &:before {
             display: inline-block;
-            vertical-align: middle;
             content: attr(data-label);
+            vertical-align: middle;
             color: $midGrey;
           }
         }
@@ -593,5 +593,121 @@
   &.cancelled {
     color: #f08b84;
     background: rgba(255, 187, 171, 0.25);
+  }
+}
+
+.account-template {
+  &__prev-link {
+    font-size: 16px;
+    line-height: 1.3;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 11px;
+    padding-left: 14px;
+    vertical-align: top;
+    color: $midGrey;
+
+    &:before {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      content: '';
+      transform: rotate(45deg);
+      border-width: 0 0 2px 2px;
+      border-style: solid;
+      border-color: $midGrey;
+    }
+  }
+}
+
+.order-items {
+  padding-top: 30px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__info-item {
+    width: calc(50% - 10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 80px rgba(227, 229, 233, 0.5);
+    margin-bottom: 20px;
+  }
+}
+
+.order-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #f1f3f6;
+
+  &__image-container {
+    width: 99px;
+    margin-right: 14px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__content-container {
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__price {
+    margin-bottom: 5px;
+  }
+
+  &__quantity {
+    margin-bottom: 5px;
+  }
+
+  &__quantity-text {
+    font-size: 16px;
+    margin-right: 5px;
+    color: $midGrey;
+  }
+}
+
+.order-details {
+  font-size: 18px;
+  line-height: 1.28;
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    &:last-child {
+      td {
+        padding-top: 10px;
+        border-top: 1px solid $lightGrey;
+      }
+    }
+  }
+
+  td {
+    padding: 0 0 20px;
+
+    &:first-child {
+      color: $midGrey;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
   }
 }
