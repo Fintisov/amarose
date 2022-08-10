@@ -210,7 +210,7 @@
 .account-template {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
+  max-width: 1080px;
   padding-top: 90px;
   padding-bottom: 90px;
 
@@ -218,6 +218,15 @@
     display: flex;
     flex-direction: column;
     width: calc(100% - 300px);
+  }
+
+  &__text {
+    padding-top: 12px;
+    margin-bottom: 30px;
+  }
+
+  &__details-title {
+    margin-bottom: 20px;
   }
 
   @include max-screen(991) {
