@@ -15,9 +15,9 @@
 <noscript>{{ 'component-pagination.css' | asset_url | stylesheet_tag }}</noscript>
 
 <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
-  <ul role="list">
+  <ul role="list" class="pagination-list">
     {%- if paginate.previous -%}
-      <li>
+      <li class="pagination-item">
         <a class="pagination-button pagination-button__previous" href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
@@ -25,7 +25,7 @@
         </a>
       </li>
     {% else %}
-      <li>
+      <li class="pagination-item">
         <span class="pagination-button pagination-button__previous" aria-label="{{ 'general.pagination.previous' | t }}">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
@@ -34,14 +34,14 @@
       </li>
     {%- endif -%}
 
-    <li>
+    <li class="pagination-item">
       <span class="pagination-pages">
         {{ 'customer.orders.paginate' | t: current_page: paginate.current_page, items: paginate.items }}
       </span>
     </li>
 
     {%- if paginate.next -%}
-      <li>
+      <li class="pagination-item">
         <a class="pagination-button pagination-button__next" href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}" >
           <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>
@@ -49,7 +49,7 @@
         </a>
       </li>
     {% else %}
-      <li>
+      <li class="pagination-item">
         <span class="pagination-button pagination-button__next" aria-label="{{ 'general.pagination.next' | t }}" >
           <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6" width="12">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"/>

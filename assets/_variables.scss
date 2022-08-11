@@ -20,7 +20,7 @@
   -webkit-line-clamp: $col; /* количество строк */
 }
 
-@mixin scrollbar($width: 10, $height: 6) {
+@mixin style-scrollbar($width: 10, $height: 6) {
   scrollbar-color: $rose transparent;
   scrollbar-width: thin;
 
@@ -49,6 +49,78 @@
   ::-webkit-scrollbar-button:horizontal:start:decrement,
   ::-webkit-scrollbar-button:horizontal:end:increment {
     display: none;
+  }
+}
+
+@mixin style-ol {
+  counter-reset: ol-numbers;
+
+  li {
+    position: relative;
+    padding-left: 36px;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    color: $black;
+
+    @include max-screen(767) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+
+    &:before {
+      counter-increment: ol-numbers;
+      content: counter(ol-numbers);
+      position: absolute;
+      display: block;
+      left: 12px;
+      top: 0;
+      font-family: $futura;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.25;
+      color: $blush;
+
+      @include max-screen(767) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@mixin style-ul {
+  li {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $black;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+
+    @include max-screen(767) {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    &:before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      background-color: $blush;
+      position: absolute;
+      top: 14px;
+      left: 15px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
   }
 }
 

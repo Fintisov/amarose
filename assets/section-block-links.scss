@@ -5,7 +5,7 @@
 }
 
 .block-links__content-wrapper {
-  @include scrollbar();
+  @include style-scrollbar();
 
   .block-links__list {
     display: flex;
