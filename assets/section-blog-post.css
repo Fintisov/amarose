@@ -192,5 +192,6 @@ body.article-secondary .article-header, body.article-secondary .article-content 
 .main-blog__title {
   padding-top: 80px; }
 
-.featured-blog .main-blog__title {
-  display: none; }
+@media screen and (max-width: 767px) {
+  .featured-blog .main-blog__title {
+    display: none; } }

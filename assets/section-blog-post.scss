@@ -200,7 +200,9 @@ body.article-secondary {
 }
 
 .featured-blog {
- .main-blog__title {
-   display: none;
- }
+  .main-blog__title {
+    @include max-screen(767) {
+      display: none;
+    }
+  }
 }
