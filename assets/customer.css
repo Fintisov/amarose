@@ -424,27 +424,57 @@
     border-width: 0 0 2px 2px;
     border-style: solid;
     border-color: #5E697E; }
+@media screen and (max-width: 767px) {
+  .account-template__prev-link {
+    font-size: 14px;
+    margin-bottom: 13px; } }
 
 .order-items {
   padding-top: 30px; }
+  @media screen and (max-width: 767px) {
+    .order-items {
+      padding-bottom: 20px; } }
   .order-items__title {
     margin-bottom: 20px; }
+  @media screen and (max-width: 767px) {
+    .order-items__title {
+      font-size: 22px;
+      line-height: 1.3; } }
   .order-items__info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
   .order-items__info-item {
     width: calc(50% - 10px);
+    min-height: 176px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 80px rgba(227, 229, 233, 0.5);
-    margin-bottom: 20px; }
+    box-shadow: 0 4px 80px rgba(227, 229, 233, 0.5); }
+    .order-items__info-item p {
+      color: #5E697E; }
+  @media screen and (max-width: 767px) {
+    .order-items__info-item {
+      font-size: 14px;
+      line-height: 1.3;
+      width: 100%;
+      min-height: 104px; } }
+  .order-items__info-title {
+    font-weight: 500;
+    margin-bottom: 15px; }
+  @media screen and (max-width: 767px) {
+    .order-items__info-title {
+      font-size: 16px; } }
 
 .order-item {
   display: flex;
   margin-bottom: 20px;
   padding: 20px;
   border: 1px solid #f1f3f6; }
+  @media screen and (max-width: 767px) {
+    .order-item {
+      margin-bottom: 10px;
+      padding: 10px; } }
   .order-item__image-container {
     width: 99px;
     margin-right: 14px; }
@@ -456,10 +486,21 @@
     flex-grow: 1; }
   .order-item__title {
     margin-bottom: 5px; }
+  @media screen and (max-width: 767px) {
+    .order-item__title {
+      font-size: 16px; } }
   .order-item__price {
     margin-bottom: 5px; }
+  @media screen and (max-width: 767px) {
+    .order-item__price {
+      font-size: 14px;
+      line-height: 1.3; } }
   .order-item__quantity {
     margin-bottom: 5px; }
+  @media screen and (max-width: 767px) {
+    .order-item__quantity {
+      font-size: 14px;
+      line-height: 1.3; } }
   .order-item__quantity-text {
     font-size: 16px;
     margin-right: 5px;
@@ -469,7 +510,11 @@
   font-size: 18px;
   line-height: 1.28;
   width: 100%;
+  margin-bottom: 10px;
   border-collapse: collapse; }
+  @media screen and (max-width: 767px) {
+    .order-details {
+      font-size: 16px; } }
   .order-details tr:last-child td {
     padding-top: 10px;
     border-top: 1px solid #F1F3F6; }
@@ -479,3 +524,5 @@
       color: #5E697E; }
     .order-details td:last-child {
       text-align: right; }
+    .order-details td.mark--style {
+      color: #F08B84; }

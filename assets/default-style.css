@@ -436,7 +436,7 @@ button {
     border-radius: 30px;
     background-color: #F1F3F6;
     font-family: "futura", suns-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.4;
     color: #5E697E;
@@ -488,6 +488,8 @@ button {
     .field .field__input.validate-true {
       -webkit-background-size: 14px;
       background-size: 14px; } }
+  .field.field--white .field__input {
+    background-color: #fff; }
   .field.field--no-fly {
     display: block; }
     .field.field--no-fly .field__label {
