@@ -1,2 +1,6 @@
 .cart__warnings {
   display: none; }
+
+.cart__footer {
+  width: 380px;
+  background-color: rebeccapurple; }

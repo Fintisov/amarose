@@ -3,14 +3,14 @@
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
 
-<div class="container{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
-  <div>
-
+<div class="main-cart-footer">
+  <div class="container{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
     <div class="cart__footer">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
-          <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
+          <textarea class="text-area field__input" name="note" form="cart" id="Cart-note"
+                    placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
         </cart-note>
       {%- endif -%}
 
@@ -20,7 +20,8 @@
             {%- when '@app' -%}
               {% render block %}
             {%- when 'subtotal' -%}
-              <div class="js-contents" {{ block.shopify_attributes }}>
+
+              <div class="main-card-footer__totals-wrapper js-contents" {{ block.shopify_attributes }}>
                 <div class="totals sub--totals">
                   <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
                   <p class="totals__subtotal-value">{{ cart.original_total_price | money_with_currency }}</p>
@@ -33,7 +34,7 @@
                   </div>
                 {% endif %}
 
-                <div class="totals">
+                <div class="totals total-price">
                   <h2 class="totals__subtotal">{{ 'sections.cart.total' | t }}</h2>
                   <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
                 </div>
@@ -65,14 +66,14 @@
                 </small>
               </div>
             {%- else -%}
-              <div class="cart__ctas" {{ block.shopify_attributes }}>
+              <div class="main-card-footer__btn-wrapper" {{ block.shopify_attributes }}>
                 <noscript>
-                  <button type="submit" class="cart__update-button button button--secondary" form="cart">
+                  <button type="submit" class="cart__update-button button secondary-button w-100" form="cart">
                     {{ 'sections.cart.update' | t }}
                   </button>
                 </noscript>
-
-                <button type="submit" id="checkout" class="cart__checkout-button button" name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
+                <button type="submit" id="checkout" class="button primary-button w-100"
+                        name="checkout"{% if cart == empty %} disabled{% endif %} form="cart">
                   {{ 'sections.cart.checkout' | t }}
                 </button>
               </div>
@@ -85,7 +86,8 @@
 
               <div class="field field--no-fly field-newsletter">
                 <label class="field__label--hidden" for="coupon">{{ 'sections.cart.coupon.label' | t }}</label>
-                <input class="field__input" type="text" id="coupon" name="discount" placeholder="{{ 'sections.cart.coupon.placeholder' | t }}">
+                <input class="field__input" type="text" id="coupon" name="discount"
+                       placeholder="{{ 'sections.cart.coupon.placeholder' | t }}">
               </div>
           {%- endcase -%}
         {% endfor %}
@@ -93,12 +95,11 @@
         <div id="cart-errors"></div>
       </div>
     </div>
-
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     function isIE() {
       const ua = window.navigator.userAgent;
       const msie = ua.indexOf('MSIE ');
@@ -112,7 +113,7 @@
     cartSubmitInput.setAttribute('name', 'checkout');
     cartSubmitInput.setAttribute('type', 'hidden');
     document.querySelector('#cart').appendChild(cartSubmitInput);
-    document.querySelector('#checkout').addEventListener('click', function(event) {
+    document.querySelector('#checkout').addEventListener('click', function (event) {
       document.querySelector('#cart').submit();
     });
   });
