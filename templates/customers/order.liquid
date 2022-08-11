@@ -116,6 +116,12 @@
               <td headers="RowDuties" role="cell" data-label="{{ 'customer.order.total_duties' | t }}">{{ order.total_duties | money }}</td>
             </tr>
           {%- endif -%}
+          {% if order.total_discounts > 0 %}
+            <tr role="row">
+              <td class="mark--style" role="rowheader" scope="row">{{ 'customer.order.total_discount' | t }}</td>
+              <td class="mark--style" role="cell" data-label="{{ 'customer.order.total_discount' | t }}">{{ order.total_discounts | money_with_currency }}</td>
+            </tr>
+          {% endif %}
           <tr role="row">
             <td id="RowTotal" role="rowheader" scope="row">{{ 'customer.order.total' | t }}</td>
             <td headers="RowTotal" role="cell" data-label="{{ 'customer.order.total' | t }}">{{ order.total_price | money_with_currency }}</td>
@@ -127,33 +133,22 @@
 
       <div class="order-items__info">
         <div class="order-items__info-item">
-          <h3>{{ 'customer.order.shipping_address' | t }}</h3>
-          <p>
-            <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
-            {{ order.fulfillment_status_label }}
-          </p>
+          <h3 class="order-items__info-title">{{ 'customer.order.shipping_address' | t }}</h3>
           {{ order.shipping_address | format_address }}
+          {% if order.phone != blank %}
+            <p>{{ order.phone }}</p>
+          {% endif %}
         </div>
 
         <div class="order-items__info-item">
-          <h3>{{ 'customer.order.shipping_method' | t }}</h3>
+          <h3 class="order-items__info-title">{{ 'customer.order.shipping_method' | t }}</h3>
           {%- for shipping_method in order.shipping_methods -%}
-            <div role="row">
-              <div>{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</div>
-              <div>{{ shipping_method.price | money }}</div>
-            </div>
+            <p>{{ 'customer.order.shipping' | t }} {{ shipping_method.title }}</p>
           {%- endfor -%}
-          <p>
-            <strong>{{ customer.order.shipping_method.title }}:</strong>
-          </p>
         </div>
 
         <div class="order-items__info-item">
-          <h3>{{ 'customer.order.billing_address' | t }}</h3>
-          <p>
-            <strong>{{ 'customer.order.payment_status' | t }}:</strong>
-            {{ order.financial_status_label }}
-          </p>
+          <h3 class="order-items__info-title">{{ 'customer.order.billing_address' | t }}</h3>
           {{ order.billing_address | format_address }}
         </div>
       </div>
