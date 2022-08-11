@@ -243,6 +243,7 @@
     &:focus-within {
       .account-menu {
         display: block;
+        pointer-events: auto;
       }
     }
   }
@@ -250,6 +251,36 @@
 
 .addresses {
   max-width: 1080px;
+
+  @include max-screen(991) {
+    padding-top: 40px;
+  }
+
+  .select {
+    width: 100%;
+
+    select {
+      width: inherit;
+      max-width: none;
+    }
+  }
+
+  .field {
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    text-align: right;
+
+    .button {
+      width: 100%;
+      max-width: 325px;
+    }
+  }
+}
+
+.address-title {
+  margin-bottom: 30px;
 }
 
 .account-menu {
@@ -261,6 +292,7 @@
 
   &__container {
     @include max-screen(991) {
+      margin-bottom: 40px;
       position: relative;
       z-index: 1;
       filter: drop-shadow(0px 4px 80px rgba(#e3e5e9, 0.5));
@@ -295,7 +327,6 @@
     @include max-screen(991) {
       font-size: 16px;
       line-height: 1.3;
-      margin-bottom: 30px;
       padding: 12px 20px;
     }
   }
@@ -348,6 +379,7 @@
     width: 100%;
     border-radius: 0;
     filter: none;
+    pointer-events: none;
   }
 }
 
@@ -355,6 +387,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.title-indent {
+  margin-bottom: 30px;
 }
 
 .addresses-empty-text {

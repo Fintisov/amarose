@@ -214,11 +214,38 @@
   }
   .account-template:focus-within .account-menu {
     display: block;
+    pointer-events: auto;
   }
 }
 
 .addresses {
   max-width: 1080px;
+}
+@media screen and (max-width: 991px) {
+  .addresses {
+    padding-top: 40px;
+  }
+}
+.addresses .select {
+  width: 100%;
+}
+.addresses .select select {
+  width: inherit;
+  max-width: none;
+}
+.addresses .field {
+  margin-bottom: 30px;
+}
+.addresses__button {
+  text-align: right;
+}
+.addresses__button .button {
+  width: 100%;
+  max-width: 325px;
+}
+
+.address-title {
+  margin-bottom: 30px;
 }
 
 .account-menu {
@@ -230,6 +257,7 @@
 }
 @media screen and (max-width: 991px) {
   .account-menu__container {
+    margin-bottom: 40px;
     position: relative;
     z-index: 1;
     filter: drop-shadow(0px 4px 80px rgba(227, 229, 233, 0.5));
@@ -257,7 +285,6 @@
   .account-menu__list-link, .account-menu__opener {
     font-size: 16px;
     line-height: 1.3;
-    margin-bottom: 30px;
     padding: 12px 20px;
   }
 }
@@ -305,6 +332,7 @@
     width: 100%;
     border-radius: 0;
     filter: none;
+    pointer-events: none;
   }
 }
 
@@ -312,6 +340,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.title-indent {
+  margin-bottom: 30px;
 }
 
 .addresses-empty-text {
