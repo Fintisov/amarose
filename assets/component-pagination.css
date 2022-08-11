@@ -1,53 +1,39 @@
 .pagination {
-  text-align: center;
-}
+  padding: 30px 0 100px; }
+  @media screen and (max-width: 767px) {
+    .pagination {
+      padding: 16px 0 38px; } }
 
-.pagination ul {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  background: #fff;
-  color: #2A3241;
-  font-size: 17px;
-  filter: drop-shadow(0px 4px 80px rgba(227, 229, 233, 0.5));
-  border-radius: 30px;
-}
-
-.pagination li {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.pagination-button {
-  display: inline-block;
-  vertical-align: top;
-  width: 53px;
-  height: 55px;
-  background: none;
-  position: relative;
-  color: #5E697E;
-}
-.pagination-button__previous svg {
-  transform: rotate(90deg) translateX(-50%) translateY(-50%);
-  margin: 2px 0 0 -11px;
-}
-
-.pagination-button__next svg {
-  transform: rotate(-90deg) translateX(-50%) translateY(-50%);
-  margin: -10px 0 0 4px;
-}
-
-.pagination-button svg{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-}
-
-.pagination-pages {
-  display: inline-block;
-  vertical-align: top;
-  padding: 13px 5px;
-  min-width: 105px;
-}
+.pagination-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px; }
+  .pagination-list .pagination-button {
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #FFEEEA;
+    cursor: pointer; }
+    .pagination-list .pagination-button.pagination-button__previous svg {
+      transform: translate(-50%, -50%) rotate(90deg); }
+    .pagination-list .pagination-button.pagination-button__next svg {
+      transform: translate(-50%, -50%) rotate(-90deg); }
+    .pagination-list .pagination-button svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .pagination-list .pagination-pages {
+    display: inline-block;
+    min-height: 35px;
+    padding: 6px 12px;
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #2A3241;
+    background-color: #FFEEEA;
+    border-radius: 20px; }

@@ -453,7 +453,7 @@
 
 
   .menu-drawer__navigation-container {
-    @include scrollbar();
+    @include style-scrollbar();
   }
 }
 
