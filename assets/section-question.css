@@ -36,9 +36,9 @@
     line-height: 1.3;
     color: #ffffff;
     margin-bottom: 15px; }
-    @media screen and (max-width: 991px) {
-      .question-section__content .question-section__title {
-        margin-bottom: 0; } }
+  @media screen and (max-width: 991px) {
+    .question-section__content .question-section__title {
+      margin-bottom: 0; } }
   .question-section__content p {
     max-width: 400px;
     width: max-content;
@@ -47,9 +47,9 @@
     font-size: 22px;
     line-height: 1.5;
     color: #ffffff; }
-    @media screen and (max-width: 991px) {
-      .question-section__content p {
-        display: none; } }
+  @media screen and (max-width: 991px) {
+    .question-section__content p {
+      display: none; } }
 
 .question-section__button-grout {
   display: flex;

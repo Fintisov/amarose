@@ -5,7 +5,7 @@
 }
 
 .blog-filter__link-list-wrapper {
-  @include scrollbar();
+  @include style-scrollbar();
 }
 
 .blog-filter__link-list {

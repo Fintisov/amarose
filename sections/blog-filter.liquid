@@ -8,7 +8,7 @@
   {% if blog.tags.size > 0 %}
     <div class="blog-filter__link-list-wrapper">
       <div class="blog-filter__link-list">
-        <a class="blog-filter__link{% if hasNoCurrentTag %} link-active{% endif %}"
+        <a class="blog-filter__link {% if current_tags == blank %} link-active{% endif %}"
            href="{{ blog.url }}">{{ section.settings.link_all }}</a>
         {% for tag in blog.all_tags %}
           <a class="blog-filter__link{% if current_tags.first == tag %} link-active{% endif %}"
