@@ -22,6 +22,7 @@
 
   @include max-screen(767) {
     gap: 40px 20px;
+    padding: 20px 0;
   }
 
   .blog-articles__article {
