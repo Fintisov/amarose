@@ -715,6 +715,7 @@
     },
     "featured-blog": {
       "name": "Blog posts",
+      "name_article": "Blog posts for article",
       "settings": {
         "heading": {
           "label": "Heading"
@@ -743,7 +744,8 @@
         }
       },
       "presets": {
-        "name": "Blog posts"
+        "name": "Blog posts",
+        "name_article": "Blog posts for article"
       }
     },
     "featured-collection": {

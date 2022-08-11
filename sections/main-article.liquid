@@ -39,9 +39,9 @@
             {% if forloop.index == 1 %}
               <span class="article-tag__item">{{ tag }}</span>
             {% endif %}
+          {% endfor %}
         </div>
 
-        {% endfor %}
         {%- when 'title'-%}
           <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
             <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
