@@ -417,6 +417,7 @@
       "tracking_company": "Carrier",
       "tracking_number": "Tracking number",
       "subtotal": "Subtotal",
+      "total_discount": "Discount",
       "total_duties": "Duties"
     },
     "orders": {
