@@ -1,29 +1,27 @@
 <link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-main-blog.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
 
-{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
 
-<div class="blog">
+<div class="featured-blog">
   <div class="container">
+
     {%- unless section.settings.heading == blank and section.settings.content == blank -%}
-      <div class="blog__title-wrapper text-center">
-        <h2 id="SectionHeading-{{ section.id }}" class="blog__title">{{ section.settings.heading | escape }}</h2>
-        {{ section.settings.content }}
-      </div>
+      <h2 id="SectionHeading-{{ section.id }}" class="main-blog__title">{{ section.settings.heading | escape }}</h2>
+      {{ section.settings.content }}
     {%- endunless -%}
 
     {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
       {% assign secondary_post_limit = section.settings.post_limit | plus: 1 %}
       <ul id="Slider-{{ section.id }}"
-        class="blog__posts articles-wrapper grid"
-        role="list" >
+          class="blog-articles "
+          role="list">
         {%- for feature_article in section.settings.blog.articles limit: secondary_post_limit -%}
           {% unless feature_article.handle == article.handle or forloop.index == secondary_post_limit %}
-            <li class="blog__post grid__item">
+            <li class="blog-articles__article">
               {% render 'article-card',
                 blog: section.settings.blog,
                 article: feature_article,
