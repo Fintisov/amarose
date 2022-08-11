@@ -3,13 +3,12 @@
 <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
-      {%- when 'featured_image'-%}
+      {%- when 'featured_image' -%}
         {%- if article.image -%}
-          <div class="article-template__hero-container" {{ block.shopify_attributes }}>
+          <div class="article-template__hero-banner" {{ block.shopify_attributes }}>
             <div class="article-template__hero-{{ block.settings.image_height }} media"
-              itemprop="image"
-              {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}
-            >
+                 itemprop="image"
+            {% if block.settings.image_height == 'adapt' and article.image %} style="padding-bottom: {{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"{% endif %}>
               <img
                 srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
                   {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
@@ -24,52 +23,74 @@
                 width="{{ article.image.width }}"
                 height="{{ article.image.height }}"
                 alt="{{ article.image.alt | escape }}">
-
-              <strong class="article-template__hero-title">{{ article.title | escape }}</strong>
+              <div class="article-template__title-wrapper">
+                <div class="container">
+                  <div class="article-template__title">
+                    <p>{{ article.title | escape }}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         {%- endif -%}
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="artcle-template__container">
+  <div class="article-template__container">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           <div class="page-width page-width--narrow">
             {% render block %}
           </div>
+        {%- when 'title' -%}
 
-        {%- when 'title'-%}
-          <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
-            <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
-            {%- if block.settings.blog_show_date -%}
-              <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
-            {%- endif -%}
-            {%- if block.settings.blog_show_author -%}
-              <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <header class="article-header" {{ block.shopify_attributes }}>
+            <div class="container">
+              <div class="badge badge--gray">
+                {% for tag in article.tags %}
+                  {% if forloop.index == 1 %}
+                    <span class="article-tag__item">{{ tag }}</span>
+                  {% endif %}
+                {% endfor %}
+              </div>
+
+              <h1 class="article-header__title" itemprop="headline">{{ article.title | escape }}</h1>
+              {%- if block.settings.blog_show_date -%}
+                <span class="article-header__date"
+                      itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
+              {%- endif -%}
+              {%- if block.settings.blog_show_author -%}
+                <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
                 <span itemprop="name">{{ article.author }}</span>
               </span>
-            {%- endif -%}
+              {%- endif -%}
+            </div>
           </header>
 
-        {%- when 'content'-%}
-          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
-            {{ article.content }}
+        {%- when 'content' -%}
+          <div class="article-content"
+               itemprop="articleBody"
+            {{ block.shopify_attributes }}>
+            <div class="container">
+              {{ article.content }}
+            </div>
           </div>
-
         {%- when 'share' -%}
+
           <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
                 {% render 'icon-share' %}
                 {{ block.settings.share_label | escape }}
               </button>
+
               <details id="Details-{{ block.id }}-{{ section.id }}">
                 <summary class="share-button__button">
                   {% render 'icon-share' %}
                   {{ block.settings.share_label | escape }}
                 </summary>
+
                 <div id="Article-share-{{ section.id }}" class="share-button__fallback motion-reduce">
                   <div class="field">
                     <span id="ShareMessage-{{ section.id }}" class="share-button__message hidden" role="status">
@@ -101,19 +122,23 @@
     {%- endfor -%}
   </div>
 
-  <div class="article-template__back element-margin-top center">
-    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-      <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-      {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
-    </a>
+  <div class="article-template__back">
+    <div class="container">
+      <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
+        <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+        {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
+      </a>
+    </div>
   </div>
+
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
         {%- if article.comments_count > 0 -%}
           {%- assign anchorId = '#Comments-' | append: article.id -%}
 
-          <h2 id="Comments-{{ article.id }}" tabindex="-1">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
+          <h2 id="Comments-{{ article.id }}"
+              tabindex="-1">{{ 'blogs.article.comments' | t: count: article.comments_count }}</h2>
           {% paginate article.comments by 5 %}
             <div class="article-template__comments">
               {%- if comment.status == 'pending' and comment.content -%}
@@ -129,7 +154,8 @@
                 <article id="{{ comment.id }}" class="article-template__comments-comment">
                   {{ comment.content }}
                   <footer class="right">
-                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'date' }}</span>
+                    <span class="circle-divider caption-with-letter-spacing">{{ comment.author }}</span><span
+                      class="caption-with-letter-spacing">{{ comment.created_at | time_tag: format: 'date' }}</span>
                   </footer>
                 </article>
               {%- endfor -%}
@@ -157,8 +183,8 @@
                   <a href="#CommentForm-{{ field }}" class="link">
                     {%- if form.errors.translated_fields[field] contains 'author' -%}
                       {{ 'blogs.article.name' | t }}
-                    {%- elsif form.errors.translated_fields[field] contains 'body'-%}
-                     {{ 'blogs.article.message' | t }}
+                    {%- elsif form.errors.translated_fields[field] contains 'body' -%}
+                      {{ 'blogs.article.message' | t }}
                     {%- else -%}
                       {{ form.errors.translated_fields[field] }}
                     {%- endif -%}
@@ -191,10 +217,12 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.name' | t }}"
                 >
-                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span aria-hidden="true">*</span></label>
+                <label class="field__label" for="CommentForm-author">{{ 'blogs.article.name' | t }} <span
+                    aria-hidden="true">*</span></label>
                 {%- if form.errors contains 'author' -%}
                   <small id="CommentForm-author-error">
-                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
+                    <span
+                      class="form__message">{% render 'icon-error' %}{{ 'blogs.article.name' | t }} {{ form.errors.messages['author'] }}.</span>
                   </small>
                 {%- endif -%}
               </div>
@@ -216,10 +244,12 @@
                   {% endif %}
                   placeholder="{{ 'blogs.article.email' | t }}"
                 >
-                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span aria-hidden="true">*</span></label>
+                <label class="field__label" for="CommentForm-email">{{ 'blogs.article.email' | t }} <span
+                    aria-hidden="true">*</span></label>
                 {%- if form.errors contains 'email' -%}
                   <small id="CommentForm-email-error">
-                    <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
+                    <span
+                      class="form__message">{% render 'icon-error' %}{{ 'blogs.article.email' | t }} {{ form.errors.messages['email'] }}.</span>
                   </small>
                 {%- endif -%}
               </div>
@@ -238,11 +268,13 @@
                 {% endif %}
                 placeholder="{{ 'blogs.article.message' | t }}"
               >{{ form.body }}</textarea>
-                <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span aria-hidden="true">*</span></label>
+              <label class="form__label field__label" for="CommentForm-body">{{ 'blogs.article.message' | t }} <span
+                  aria-hidden="true">*</span></label>
             </div>
             {%- if form.errors contains 'body' -%}
               <small id="CommentForm-body-error">
-                <span class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
+                <span
+                  class="form__message">{% render 'icon-error' %}{{ 'blogs.article.message' | t }} {{ form.errors.messages['body'] }}.</span>
               </small>
             {%- endif -%}
           </div>
@@ -252,7 +284,7 @@
           <input type="submit" class="button" value="{{ 'blogs.article.post' | t }}">
         {% endform %}
       </div>
-  </div>
+    </div>
   {%- endif -%}
 </article>
 
