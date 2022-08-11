@@ -249,7 +249,13 @@
     {% endif %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
+      {% if template == 'cart' %}
+        <div class="shopping-bag__container container">
+      {% endif %}
+        {{ content_for_layout }}
+      {% if template == 'cart' %}
+        </div>
+      {% endif %}
     </main>
 
     {% if is_only_content != true %}
