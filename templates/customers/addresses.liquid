@@ -23,7 +23,7 @@
         </symbol>
       </svg>
 
-      <div class="main-address-header" data-address>
+      <div class="main-address-header title-indent" data-address>
         <h1>{{ 'customer.addresses.title' | t }}</h1>
 
         <button
@@ -37,7 +37,8 @@
       </div>
 
       <div class="add-address-box" id="AddAddress">
-        <h1 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h1>
+        <h1 class="title-indent" id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h1>
+
         {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
           <div class="field">
             <div class="select">
@@ -54,13 +55,15 @@
               {{ 'customer.addresses.country' | t }}
             </label>
           </div>
-          <div class="field">
-            <input class="field__input" type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
-            <label class="field__label" for="AddressFirstNameNew">{{ 'customer.addresses.first_name' | t }}</label>
-          </div>
-          <div class="field">
-            <input class="field__input" type="text" id="AddressLastNameNew" name="address[last_name]" value="{{ form.last_name }}" autocomplete="family-name" placeholder="{{ 'customer.addresses.last_name' | t }}">
-            <label class="field__label" for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</label>
+          <div class="field__container">
+            <div class="field">
+              <input class="field__input" type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
+              <label class="field__label" for="AddressFirstNameNew">{{ 'customer.addresses.first_name' | t }}</label>
+            </div>
+            <div class="field">
+              <input class="field__input" type="text" id="AddressLastNameNew" name="address[last_name]" value="{{ form.last_name }}" autocomplete="family-name" placeholder="{{ 'customer.addresses.last_name' | t }}">
+              <label class="field__label" for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</label>
+            </div>
           </div>
           <div class="field">
             <input class="field__input" type="text" id="AddressCompanyNew" name="address[company]" value="{{ form.company }}" autocomplete="organization" placeholder="{{ 'customer.addresses.company' | t }}">
@@ -78,7 +81,7 @@
             <input class="field__input" type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}" autocomplete="address-level2" placeholder="{{ 'customer.addresses.city' | t }}">
             <label class="field__label" for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
           </div>
-          <div id="AddressProvinceContainerNew" style="display: none">
+          <div class="field" id="AddressProvinceContainerNew" style="display: none">
             <div class="select">
               <select
                 id="AddressProvinceNew"
@@ -98,7 +101,7 @@
             <input class="field__input" type="tel" id="AddressPhoneNew" name="address[phone]" value="{{ form.phone }}" autocomplete="tel" placeholder="{{ 'customer.addresses.phone' | t }}">
             <label class="field__label" for="AddressPhoneNew">{{ 'customer.addresses.phone' | t }}</label>
           </div>
-          <div>
+          <div class="addresses__button">
             <button class="button primary-button" type="submit">{{ 'customer.addresses.add' | t }}</button>
           </div>
         {%- endform -%}
