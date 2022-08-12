@@ -17,7 +17,7 @@
            href="{{ settings.order_prev_link }}">{{ settings.order_prev_text }}</a>
       {% endif %}
 
-      <h1>{{ 'customer.order.title' | t: name: order.name }}</h1>
+      <h1 class="account-template__title">{{ 'customer.order.title' | t: name: order.name }}</h1>
 
       <div class="order-items">
         <h2 class="order-items__title fw-500">{{ 'customer.order.items_title' | t }}</h2>

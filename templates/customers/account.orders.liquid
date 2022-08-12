@@ -4,7 +4,7 @@
   {% render 'account-menu' %}
 
   <div class="account-template__content">
-    <h1 class="orders__title">{{ 'customer.orders.title' | t }}</h1>
+    <h1 class="account-template__title">{{ 'customer.orders.title' | t }}</h1>
 
     {% paginate customer.orders by 10 %}
       {%- if customer.orders.size > 0 -%}

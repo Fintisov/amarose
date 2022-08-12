@@ -172,9 +172,6 @@
 
 .addresses {
   max-width: 1080px; }
-  @media screen and (max-width: 991px) {
-    .addresses {
-      padding-top: 40px; } }
   .addresses .select {
     width: 100%; }
     .addresses .select select {
@@ -263,7 +260,6 @@
 
 .main-address-header {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between; }
 
 .title-indent {
@@ -549,3 +545,39 @@
       text-align: right; }
     .order-details td.mark--style {
       color: #F08B84; }
+
+.account-template__title {
+  font-family: "futura", suns-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.25; }
+  @media screen and (max-width: 767px) {
+    .account-template__title {
+      font-size: 30px; } }
+
+.address-box .address-box__btn, .address-box button {
+  background-color: transparent;
+  cursor: pointer; }
+
+.edit-address-box .back-button {
+  font-family: "futura", suns-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5E697E;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; }
+.edit-address-box .account-template__title {
+  margin-bottom: 30px; }
+.edit-address-box__checkbox-wrapper {
+  margin-bottom: 30px; }
+@media screen and (max-width: 991px) {
+  .edit-address-box .field-row {
+    flex-direction: column; }
+    .edit-address-box .field-row .row-50 {
+      width: 100%; } }
+.edit-address-box__btn-group {
+  gap: 30px; }

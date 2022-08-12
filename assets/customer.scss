@@ -252,10 +252,6 @@
 .addresses {
   max-width: 1080px;
 
-  @include max-screen(991) {
-    padding-top: 40px;
-  }
-
   .select {
     width: 100%;
 
@@ -385,7 +381,6 @@
 
 .main-address-header {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -810,3 +805,62 @@
     }
   }
 }
+
+
+.account-template__title {
+  font-family: $futura;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.25;
+
+  @include max-screen(767) {
+    font-size: 30px;
+  }
+}
+
+.address-box {
+  .address-box__btn,
+  button {
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.edit-address-box {
+  .back-button {
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 16px;
+    color: $midGrey;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .account-template__title {
+    margin-bottom: 30px;
+  }
+
+  &__checkbox-wrapper {
+    margin-bottom: 30px;
+  }
+
+  @include max-screen(991) {
+    .field-row {
+      flex-direction: column;
+
+      .row-50 {
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn-group {
+    gap: 30px;
+  }
+}
+
+
