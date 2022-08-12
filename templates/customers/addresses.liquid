@@ -110,7 +110,7 @@
                 autocomplete="address-level1"
               >
               </select>
-              <label class="field__label" for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
+              <label class="field__label--hidden" for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
             </div>
           </div>
           <div class="field">
@@ -131,10 +131,10 @@
       </div>
 
       {% if customer.addresses.size > 0 %}
-        <ul class="addresses-list" role="list">
+        <ul class="account-cards-info-list" role="list">
           {%- for address in customer.addresses -%}
-            <li data-address>
-              <div class="address-box">
+            <li data-address class="list-item">
+              <div class="account-card-info">
                 {%- capture address_status -%}
                   {%- if address == customer.default_address -%}
                     {{ 'customer.addresses.default' | t }}
@@ -144,8 +144,10 @@
                     {% assign isDefoult = false %}
                   {%- endif -%}
                 {%- endcapture -%}
-
-                <span class="address-box__btn" aria-label="{{- address_status -}}">
+                <div class="account-card-info__header">
+                  <p class="account-card-info__person-name">{{ address.first_name }} {{ address.last_name }}</p>
+                  <div class="account-card-info__btn-wrapper">
+                  <span class="account-card-info__btn" aria-label="{{- address_status -}}">
                   <svg class="addresses-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 21">
                     {% if isDefoult %}
                       <use href="#icon-heart-active"/>
@@ -154,39 +156,48 @@
                     {% endif %}
                   </svg>
                 </span>
-                <button
-                  type="button"
-                  id="EditFormButton_{{ address.id }}"
-                  aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
-                  aria-controls="EditAddress_{{ address.id }}"
-                  aria-expanded="false"
-                  data-address-id="{{ address.id }}"
-                >
-                  <svg class="addresses-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 21">
-                    <use href="#icon-edit"/>
-                  </svg>
-                </button>
-                <button
-                  type="button"
-                  aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
-                  data-address-popup-opener
-                >
-                  <svg class="addresses-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 21">
-                    <use href="#icon-remove"/>
-                  </svg>
-                </button>
+                    <button
+                      class="account-card-info__btn"
+                      type="button"
+                      id="EditFormButton_{{ address.id }}"
+                      aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
+                      aria-controls="EditAddress_{{ address.id }}"
+                      aria-expanded="false"
+                      data-address-id="{{ address.id }}"
+                    >
+                      <svg class="addresses-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 21">
+                        <use href="#icon-edit"/>
+                      </svg>
+                    </button>
+                    <button
+                      class="account-card-info__btn"
+                      type="button"
+                      aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
+                      data-address-popup-opener
+                    >
+                      <svg class="addresses-icon" aria-hidden="true" focusable="false" viewBox="0 0 20 21">
+                        <use href="#icon-remove"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
 
-                <p class="">{{ address.first_name }} {{ address.last_name }}</p>
-                <p>{{ address.country }} {{ address.company }}</p>
-                <p>{{ address.address1 }} {{ address.address2 }}</p>
-                <p>{{ address.city }} {{ address.zip }}</p>
-                <p>{{ address.phone }}</p>
+                <div class="account-card-info__address-wrapper">
+                  <p class="account-card-info__text">{{ address.country }}</p>
+                  <p class="account-card-info__text">{{ address.company }}</p>
+                  <p class="account-card-info__text">{{ address.address1 }}</p>
+                  <p class="account-card-info__text">{{ address.address2 }}</p>
+                  <p class="account-card-info__text">{{ address.city }} {{ address.zip }}</p>
+                </div>
+
+                <p class="account-card-info__text">{{ address.phone }}</p>
               </div>
 
               <div class="remove-address-popup">
                 <div class="remove-popup__content">
 
-                  <p class="remove-popup__title"> {{ 'customer.addresses.address_popup_title' | t: street: address.address1 }}</p>
+                  <p
+                    class="remove-popup__title"> {{ 'customer.addresses.address_popup_title' | t: street: address.address1 }}</p>
                   <p class="remove-popup__text">{{ 'customer.addresses.address_popup_description' | t }}</p>
                   <div class="field-row">
                     <button

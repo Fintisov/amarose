@@ -545,6 +545,10 @@ button {
     min-width: 247px;
     max-width: max-content;
     transition: 0.3s;
+    &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px $lightGrey;
+      -webkit-text-fill-color: $midGrey;
+    }
 
     &::-ms-expand {
       display: none;

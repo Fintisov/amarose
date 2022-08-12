@@ -153,9 +153,28 @@
     flex-direction: column;
     width: calc(100% - 300px); }
   .account-template__text {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    color: #5E697E;
+    font-size: 18px;
     margin-bottom: 30px;
     padding-top: 12px; }
+  @media screen and (max-width: 767px) {
+    .account-template__text {
+      font-size: 16px; } }
+  .account-template__details p {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #5E697E;
+    margin-bottom: 5px; }
   .account-template__details-title {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #2A3241;
     margin-bottom: 20px; }
   @media screen and (max-width: 991px) {
     .account-template {
@@ -555,32 +574,76 @@
     .account-template__title {
       font-size: 30px; } }
 
-.address-box .address-box__btn, .address-box button {
-  background-color: transparent;
-  cursor: pointer; }
-
-.edit-address-box .back-button {
-  font-family: "futura", suns-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #5E697E;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
+.account-cards-info-list {
   display: flex;
-  align-items: center;
-  margin-bottom: 12px; }
-.edit-address-box .account-template__title {
-  margin-bottom: 30px; }
-.edit-address-box__checkbox-wrapper {
-  margin-bottom: 30px; }
-@media screen and (max-width: 991px) {
-  .edit-address-box .field-row {
-    flex-direction: column; }
-    .edit-address-box .field-row .row-50 {
+  flex-wrap: wrap;
+  gap: 20px; }
+  @media screen and (max-width: 767px) {
+    .account-cards-info-list {
+      flex-direction: column; } }
+  .account-cards-info-list .list-item {
+    width: calc(50% - 10px); }
+  @media screen and (max-width: 767px) {
+    .account-cards-info-list .list-item {
       width: 100%; } }
-.edit-address-box__btn-group {
-  gap: 30px; }
+
+.account-card-info {
+  box-shadow: 0px 4px 80px 0px rgba(227, 229, 233, 0.5);
+  padding: 20px;
+  border-radius: 20px; }
+  .account-card-info__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px; }
+  .account-card-info__person-name {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #2A3241; }
+  .account-card-info__address-wrapper {
+    margin-bottom: 10px; }
+  .account-card-info__text {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5; }
+    .account-card-info__text:not(:last-child) {
+      margin-bottom: 5px; }
+  .account-card-info__btn-wrapper {
+    display: flex;
+    align-items: center; }
+  .account-card-info__btn {
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    line-height: 1; }
+
+.edit-address-box {
+  padding-top: 30px; }
+  .edit-address-box .back-button {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #5E697E;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px; }
+  .edit-address-box .account-template__title {
+    margin-bottom: 30px; }
+  .edit-address-box__checkbox-wrapper {
+    margin-bottom: 30px; }
+  @media screen and (max-width: 991px) {
+    .edit-address-box .field-row {
+      flex-direction: column; }
+      .edit-address-box .field-row .row-50 {
+        width: 100%; } }
+  .edit-address-box__btn-group {
+    gap: 30px; }
 
 .remove-address-popup {
   position: absolute;
@@ -622,3 +685,6 @@
       font-size: 16px; } }
     .remove-address-popup .remove-popup__content .field-row {
       gap: 16px; }
+
+.add-address-box {
+  margin-bottom: 30px; }

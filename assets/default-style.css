@@ -391,6 +391,9 @@ button {
     min-width: 247px;
     max-width: max-content;
     transition: 0.3s; }
+    .select select:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px #F1F3F6;
+      -webkit-text-fill-color: #5E697E; }
     .select select::-ms-expand {
       display: none; }
     .select select:disabled {
