@@ -7,6 +7,10 @@
   line-height: 1.25;
   margin-bottom: 30px;
   color: $black;
+
+  @include max-screen(767) {
+    font-size: 30px;
+  }
 }
 
 .cart-items {
@@ -26,8 +30,16 @@
     padding: 20px;
     background-color: $white;
 
+    @include max-screen(767) {
+      padding: 15px;
+    }
+
     &:first-of-type {
       padding-right: 15px;
+
+      @include max-screen(767) {
+        padding: 10px;
+      }
     }
 
     &:last-of-type {
@@ -38,12 +50,21 @@
   .cart-item__media {
     img {
       display: block;
+
+      @include max-screen(767) {
+        width: 75px;
+        height: 75px;
+      }
     }
   }
 
   .cart-item__details {
     padding: 20px 0;
     width: 100%;
+
+    @include max-screen(767) {
+      padding: 15px 0;
+    }
 
     .cart-item__name {
       font-family: $futura;
@@ -53,10 +74,16 @@
       margin-bottom: 5px;
       display: inline-block;
       color: $black;
+
+      @include max-screen(767) {
+        font-size: 16px;
+      }
     }
 
     .order-price__discounted-prices {
-
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -81,6 +108,11 @@
       overflow: hidden;
       min-height: 45px;
       width: max-content;
+      margin-bottom: 10px;
+
+      @include max-screen(767) {
+        min-height: 34px;
+      }
 
 
       .quantity__button {
@@ -116,4 +148,6 @@
   dl {
     margin: 0;
   }
+
+
 }

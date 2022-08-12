@@ -1,11 +1,17 @@
 .main-cart-footer {
   padding-top: 82px; }
+  @media screen and (max-width: 991px) {
+    .main-cart-footer {
+      padding-top: 0; } }
 
 .cart__warnings {
   display: none; }
 
 .cart__footer {
   width: 380px; }
+  @media screen and (max-width: 991px) {
+    .cart__footer {
+      width: 100%; } }
 
 .cart__blocks .tax-note {
   display: block;
