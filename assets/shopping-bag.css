@@ -1,0 +1,10 @@
+.shopping-bag__wrapper {
+  padding: 42px 0;
+  background-color: #F1F3F6; }
+
+.shopping-bag__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 120px; }
+  .shopping-bag__content .cart__items-wrapper {
+    width: 100%; }

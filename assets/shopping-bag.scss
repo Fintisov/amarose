@@ -1,0 +1,16 @@
+@import "variables";
+
+.shopping-bag__wrapper {
+  padding: 42px 0;
+  background-color: $lightGrey;
+}
+
+.shopping-bag__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 120px;
+
+  .cart__items-wrapper {
+    width: 100%;
+  }
+}

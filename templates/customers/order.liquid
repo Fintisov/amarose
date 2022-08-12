@@ -20,7 +20,7 @@
       <h1>{{ 'customer.order.title' | t: name: order.name }}</h1>
 
       <div class="order-items">
-        <h2 class="order-items__title fw-600">{{ 'customer.order.items_title' | t }}</h2>
+        <h2 class="order-items__title fw-500">{{ 'customer.order.items_title' | t }}</h2>
         {%- if order.cancelled -%}
           {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
           <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
@@ -45,7 +45,7 @@
               </div>
 
               <div class="order-item__content-container">
-                <h3 class="order-item__title fw-600">{{ line_item.title | escape }}</h3>
+                <h3 class="order-item__title fw-500">{{ line_item.title | escape }}</h3>
                 <div class="order-item__price">
                   {% render 'price-order', item: line_item %}
                 </div>
@@ -62,9 +62,9 @@
       </div>
 
       <div class="order-item__summary">
-        <h2 class="order-items__title fw-600">{{ 'customer.order.order_summary_title' | t }}</h2>
+        <h2 class="order-items__title fw-500">{{ 'customer.order.order_summary_title' | t }}</h2>
 
-        <table role="table" class="order-details fw-600">
+        <table role="table" class="order-details fw-500">
           <caption class="visually-hidden">{{ 'customer.order.title' | t: name: order.name }}</caption>
           <tr role="row">
             <td id="RowSubtotal" role="rowheader" scope="row">
@@ -129,7 +129,7 @@
         </table>
       </div>
 
-      <h2 class="order-items__title fw-600">{{ 'customer.order.order_information_title' | t }}</h2>
+      <h2 class="order-items__title fw-500">{{ 'customer.order.order_information_title' | t }}</h2>
 
       <div class="order-items__info">
         <div class="order-items__info-item">

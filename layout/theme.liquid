@@ -257,6 +257,8 @@ or template.suffix == 'register-complete' %}
 
 <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 {% if template == 'cart' %}
+{{ 'shopping-bag.css' | asset_url | stylesheet_tag }}
+
   <div class="shopping-bag__wrapper">
     <div class="container">
       <div class="shopping-bag__content">
