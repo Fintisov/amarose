@@ -1,12 +1,16 @@
 .benefits {
   position: relative; }
   .benefits .benefits__image-block {
-    height: 730px; }
+    height: 750px; }
+  @media screen and (max-width: 1300px) {
+    .benefits .benefits__image-block {
+      height: auto; } }
     .benefits .benefits__image-block img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: left center; }
+      object-position: left center;
+      display: block; }
   .benefits .benefits__content-wrapper {
     position: absolute;
     top: 0;
@@ -15,18 +19,35 @@
     height: 100%;
     display: flex;
     align-items: center; }
+  @media screen and (max-width: 1300px) {
+    .benefits .benefits__content-wrapper {
+      position: static;
+      background: #f6ddd5; } }
   .benefits .benefits__content {
     width: 50%;
     margin-left: auto; }
+  @media screen and (max-width: 1300px) {
+    .benefits .benefits__content {
+      width: 100%;
+      padding: 30px 0; } }
 
 .benefits__header {
   margin-bottom: 10px; }
+  @media screen and (max-width: 1300px) {
+    .benefits__header {
+      margin-bottom: 25px; } }
+  @media screen and (max-width: 767px) {
+    .benefits__header {
+      margin-bottom: 10px; } }
   .benefits__header .benefits__title {
     font-family: "futura", suns-serif;
     font-weight: 400;
     font-size: 40px;
     line-height: 1.25;
     color: #2A3241; }
+  @media screen and (max-width: 767px) {
+    .benefits__header .benefits__title {
+      font-size: 30px; } }
   .benefits__header .benefits__subtitle {
     font-family: "futura", suns-serif;
     font-weight: 400;
@@ -36,18 +57,31 @@
 
 .benefits__text {
   margin-bottom: 20px; }
+  @media screen and (max-width: 1300px) {
+    .benefits__text {
+      margin-bottom: 30px; } }
+  @media screen and (max-width: 767px) {
+    .benefits__text {
+      margin-bottom: 20px; } }
   .benefits__text .benefits__text-block {
     font-family: "futura", suns-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 1.5;
     color: #2A3241; }
+  @media screen and (max-width: 767px) {
+    .benefits__text .benefits__text-block {
+      font-size: 18px; } }
 
 .benefits__list-icon {
   display: flex;
   flex-wrap: wrap;
   gap: 3px;
   position: relative; }
+  @media screen and (max-width: 1300pxpx) {
+    .benefits__list-icon {
+      max-width: 700px;
+      margin: 0 auto; } }
   .benefits__list-icon:before {
     content: "";
     position: absolute;
