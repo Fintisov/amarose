@@ -54,12 +54,6 @@
     top: 50%;
     right: 0;
     transform: translate(50%, -50%); }
-  @media screen and (max-width: 1300px) {
-    .ingredients-list .ingredient-btn-next {
-      right: 10px; } }
-  @media screen and (max-width: 991px) {
-    .ingredients-list .ingredient-btn-next {
-      right: 0; } }
   @media screen and (max-width: 767px) {
     .ingredients-list .ingredient-btn-next {
       display: none; } }
@@ -68,16 +62,13 @@
   width: 100%; }
 
 .ingredient-card {
-  max-width: 210px;
-  width: calc(100% - 40px);
   min-height: 330px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 20px; }
   @media screen and (max-width: 767px) {
     .ingredient-card {
-      padding: 15px;
-      width: calc(100% - 30px); } }
+      padding: 15px; } }
   .ingredient-card .ingredient__icon {
     width: 90px;
     height: 90px;

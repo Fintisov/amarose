@@ -1,41 +1,56 @@
-{{ 'how-it-works-pdp.css' | asset_url | stylesheet_tag }}
+{{ 'section-how-it-works-pdp.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
-<link rel="stylesheet" href="{{ 'how-it-works-pdp.css' | asset_url }}" media="print" onload="this.media='all'">
-
-{% if section.settings.is_product == false %}
-  {% render 'how-it-works-pdp',
-    title: section.settings.title,
-    text: section.settings.text
-  %}
-{% else %}
-  {% render 'how-it-works-pdp',
-    title: product.metafields.how_it_works.works_titel,
-    text: product.metafields.how_it_works.works_text
-  %}
-{% endif %}
-
-<ul class="how-it-works-pdp__list">
-  {% if section.settings.is_product == false %}
-    {% for block in section.blocks %}
-      <li class="how-it-works-pdp__list-item">
-        {% render 'how-it work-item-pdp',
-          icon: block.settings.icon_works,
-          description: block.settings.text_works
+<div class="product-how-it-works">
+  <div class="container">
+    <div class="product-how-it-works__content">
+      {% if section.settings.is_product == false %}
+        {% render 'how-it-works-pdp',
+          title: section.settings.title,
+          text: section.settings.text
         %}
-      </li>
-    {% endfor %}
-  {% else %}
-    {% assign q_size = product.metafields.how_it_works.works_icon_text.size | minus: 1 %}
-    {%- for i in (0..q_size) -%}
-      <li class="how-it-works-pdp__list-item">
-        {% render 'how-it work-item-pdp',
-          icon: product.metafields.how_it_works.works_icon[i],
-          description: product.metafields.how_it_works.works_icon_text[i]
+      {% else %}
+        {% render 'how-it-works-pdp',
+          title: product.metafields.how_it_works.works_titel,
+          text: product.metafields.how_it_works.works_text
         %}
-      </li>
-    {% endfor %}
-  {% endif %}
-</ul>
+      {% endif %}
+
+      <div class="how-it-works-pdp__list-wrapper">
+        <div class="how-it-works-pdp__list swiper">
+          <ul class="swiper-wrapper">
+            {% if section.settings.is_product == false %}
+              {% for block in section.blocks %}
+                <li class="how-it-works-pdp__list-item swiper-slide">
+                  {% render 'how-it work-item-pdp',
+                    icon: block.settings.icon_works,
+                    description: block.settings.text_works
+                  %}
+                </li>
+              {% endfor %}
+            {% else %}
+              {% assign q_size = product.metafields.how_it_works.works_icon_text.size | minus: 1 %}
+              {%- for i in (0..q_size) -%}
+                <li class="how-it-works-pdp__list-item swiper-slide">
+                  {% render 'how-it work-item-pdp',
+                    icon: product.metafields.how_it_works.works_icon[i],
+                    description: product.metafields.how_it_works.works_icon_text[i]
+                  %}
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+        <div class="ingredient-btn-next">
+          {% render 'icon-arrow-r' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="{{ 'swiper-config.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {
@@ -69,7 +84,6 @@
           "type": "textarea",
           "id": "icon_works",
           "label": "t:sections.how_it_works_pdp.blocks.ingredient.settings.icon_works.label"
-
         },
         {
           "type": "textarea",

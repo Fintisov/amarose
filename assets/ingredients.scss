@@ -73,14 +73,6 @@
     right: 0;
     transform: translate(50%, -50%);
 
-    @include max-screen(1300) {
-      right: 10px;
-    }
-
-    @include max-screen(991) {
-      right: 0;
-    }
-
     @include max-screen(767) {
       display: none;
     }
@@ -92,8 +84,6 @@
 }
 
 .ingredient-card {
-  max-width: 210px;
-  width: calc(100% - 40px);
   min-height: 330px;
   background-color: $white;
   padding: 20px;
@@ -101,7 +91,6 @@
 
   @include max-screen(767) {
     padding: 15px;
-    width: calc(100% - 30px);
   }
 
   .ingredient__icon {
