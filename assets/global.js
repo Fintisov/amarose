@@ -14,21 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".announcement-bar").style.display = "none";
   });
 
-  //
-  // function watchedCartCount() {
-  //   const shoppingCount = document.querySelector(".cart-count-bubble");
-  //
-  //   let observer = new ResizeObserver(mutationRecords => {
-  //     console.log(mutationRecords);
-  //     console.log(131)
-  //   })
-  //
-  //   observer.observe(shoppingCount)
-  //
-  //   console.log(123)
-  // }
-  // watchedCartCount();
-
 })
 
 function getFocusableElements(container) {
