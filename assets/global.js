@@ -14,6 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".announcement-bar").style.display = "none";
   });
 
+  const counterProduct = document.querySelector(".header-icons__elem");
+
+  function watchCounterProduct() {
+    const observer = new MutationObserver(mutationRecords => {
+      console.log(mutationRecords)
+    })
+
+    observer.observe(counterProduct, {
+      childList: true,
+      subtree: true,
+      characterData : true,
+      characterDataOldValue : true,
+      attributeOldValue  : true,
+    });
+  }
+
+  watchCounterProduct();
 })
 
 function getFocusableElements(container) {
