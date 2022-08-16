@@ -93,6 +93,7 @@
   padding: 32px;
   border-radius: 20px;
   min-height: 296px;
+  cursor: pointer;
 
   @include max-screen(767) {
     padding: 16px;

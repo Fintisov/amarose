@@ -67,7 +67,8 @@
   background-color: #ffffff;
   padding: 32px;
   border-radius: 20px;
-  min-height: 296px; }
+  min-height: 296px;
+  cursor: pointer; }
   @media screen and (max-width: 767px) {
     .how-it-works-item-pdp {
       padding: 16px;
