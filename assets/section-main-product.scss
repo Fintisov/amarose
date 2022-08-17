@@ -225,6 +225,7 @@ fieldset.product-form__input .form__label {
 .product-form__input input[type='radio']:checked + label {
   color: $white;
   background-color: $rose;
+  border: 1px solid $rose;
 }
 
 @media screen and (forced-colors: active) {
@@ -239,7 +240,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio']:disabled + label {
   border-color: $rose;
-  color: $rose;
+  color: $white;
   text-decoration: line-through;
 }
 
@@ -1316,7 +1317,25 @@ a.product__text {
     }
   }
 
-  .product-form__input {
+  .product-info {
+    margin-bottom: 20px;
+
+    .product-info__line {
+      padding: 5px 0;
+      display: flex;
+      gap: 10px;
+      font-family: $futura;
+      font-weight: 18;
+      line-height: 1.5;
+      color: $rose;
+      &:not(:last-of-type) {
+        margin-bottom: 5px;
+      }
+
+      svg {
+        flex: 0 0 auto;
+      }
+    }
 
   }
 }

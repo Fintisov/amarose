@@ -161,7 +161,8 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio']:checked + label {
   color: #ffffff;
-  background-color: #BA3A7D; }
+  background-color: #BA3A7D;
+  border: 1px solid #BA3A7D; }
 
 @media screen and (forced-colors: active) {
   .product-form__input input[type=radio]:checked + label {
@@ -171,7 +172,7 @@ fieldset.product-form__input .form__label {
 
 .product-form__input input[type='radio']:disabled + label {
   border-color: #BA3A7D;
-  color: #BA3A7D;
+  color: #ffffff;
   text-decoration: line-through; }
 
 .product-form__input input[type='radio']:focus-visible + label {
@@ -900,3 +901,17 @@ a.product__text {
     padding: 0 4px;
     font-family: "futura", suns-serif;
     color: #2A3241; }
+.main-product__info-wrapper .product-info {
+  margin-bottom: 20px; }
+  .main-product__info-wrapper .product-info .product-info__line {
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+    font-family: "futura", suns-serif;
+    font-weight: 18;
+    line-height: 1.5;
+    color: #BA3A7D; }
+    .main-product__info-wrapper .product-info .product-info__line:not(:last-of-type) {
+      margin-bottom: 5px; }
+    .main-product__info-wrapper .product-info .product-info__line svg {
+      flex: 0 0 auto; }
