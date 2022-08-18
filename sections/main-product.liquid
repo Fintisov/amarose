@@ -1,4 +1,4 @@
-<section id="MainProduct-{{ section.id }}" class="container section-{{ section.id }}-padding"
+<section id="MainProduct-{{ section.id }}" class="container main-product-container section-{{ section.id }}-padding"
          data-section="{{ section.id }}">
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
@@ -35,9 +35,8 @@
           media="print" onload="this.media='all'">
   {%- endif -%}
 
-  <div
-    class="main-product__wrapper product--{{ section.settings.gallery_layout }} ">
-    <div class="product__media-wrapper">
+  <div class="main-product-header product--{{ section.settings.gallery_layout }} ">
+    <div class="main-product-header__media-wrapper">
       {% render 'tag-new' %}
       <media-gallery id="MediaGallery-{{ section.id }}" role="region"
                      {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %}
@@ -216,8 +215,7 @@
         {%- endif -%}
       </media-gallery>
     </div>
-    <div
-      class="main-product__info-wrapper">
+    <div class="main-product-header__info-wrapper">
       <div id="ProductInfo-{{ section.id }}"
            class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -331,7 +329,7 @@
           {%- when 'variant_picker' -%}
           {%- unless product.has_only_default_variant -%}
           {%- if block.settings.picker_type == 'button' -%}
-            <variant-radios class="no-js-hidden" data-section="{{ section.id }}"
+            <variant-radios class="choice-type-product no-js-hidden" data-section="{{ section.id }}"
                             data-url="{{ product.url }}" {{ block.shopify_attributes }}>
               {%- for option in product.options_with_values -%}
                 <fieldset class="js product-form__input">
@@ -412,11 +410,9 @@
               </div>
             </noscript>
           {%- when 'buy_buttons' -%}
-            <div {{ block.shopify_attributes }}>
-
-              <div class="product-form--wrapper">
-                <div
-                  class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+            <div class="product-form__wrapper" {{ block.shopify_attributes }}>
+              <div class="product-form__btn-group">
+                <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
                   <label class="form__label visually-hidden" for="Quantity-{{ section.id }}">
                     {{ 'products.product.quantity.label' | t }}
                   </label>
@@ -443,7 +439,7 @@
                   </quantity-input>
                 </div>
 
-                <product-form class="product-form">
+                <product-form class="product-form__btn">
                   <div class="product-form__error-message-wrapper" role="alert" hidden>
                     <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error"
                          viewBox="0 0 13 13">
@@ -466,7 +462,7 @@
                       <button
                         type="submit"
                         name="add"
-                        class="product-form__submit button primary-button button-icon"
+                        class="product-form__submit button primary-button button-icon w-100"
                         {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                       >
                         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
