@@ -44,3 +44,6 @@
   @media screen and (max-width: 1300px) {
     .product-card-list .product-card__wrapper {
       width: calc(45% - 10px); } }
+
+.product-recommendations__button-wrap {
+  text-align: center; }
