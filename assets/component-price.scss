@@ -46,3 +46,35 @@
     font-size: 14px;
   }
 }
+
+.order-price {
+  &__final-price {
+    margin-right: 10px;
+    color: #2A3241;
+
+    @include max-screen(767) {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+  }
+
+  &__old-price {
+    margin-right: 10px;
+    color: $midGrey;
+
+    @include max-screen(767) {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  }
+
+  &__discount {
+    margin-right: 10px;
+    color: $rose;
+
+    @include max-screen(767) {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  }
+}

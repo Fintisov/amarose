@@ -4,32 +4,20 @@
   {% render 'account-menu' %}
 
   <div class="account-template__content">
-    <div class="main-address-header" data-address>
-      <h1>{{ 'customer.account.title' | t }}</h1>
+    <h1 class="account-template__title">{{ 'customer.account.title' | t }}</h1>{% render 'subscription-account' %}
+    <p class="account-template__text">
+      {{ 'customer.account.text' | t }}
+    </p>
+
+    <div class="account-template__details">
+      <h2 class="account-template__details-title">{{ 'customer.account.details' | t }}</h2>
+
+      <p>{{ customer.email }}</p>
+      {% if customer.default_address != blank %}
+        {{ customer.default_address | format_address }}
+      {% else %}
+        <p>{{ 'customer.addresses.empty_addresses' | t }}</p>
+      {% endif %}
     </div>
-    {% render 'subscription-account' %}
-
-    <div>
-      <h2>{{ 'customer.orders.title' | t }}</h2>
-
-
-    </div>
-
-    <div>
-      <h2>{{ 'customer.account.details' | t }}</h2>
-
-      {{ customer.default_address | format_address }}
-
-      <a href="{{ routes.account_addresses_url }}">
-        {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-      </a>
-<!-- Begin ReCharge code -->
-<p id="rc_link_container">
-    <a href="/tools/recurring/login">Manage Subscriptions</a>
-</p>
-<!-- End ReCharge code -->
-
-    </div>
-
   </div>
 </div>

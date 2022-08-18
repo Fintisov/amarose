@@ -1,12 +1,24 @@
+{{ 'section-running-line.css' | asset_url | stylesheet_tag }}
 <section class="running-line">
   <h2 class="visually-hidden">{{ section.settings.title }}</h2>
-  <ul class="running-line__list">
-    {% for block in section.blocks %}
-      <li class="running-line__list-item">
-        {{ block.settings.running_line_item }}
-      </li>
-    {% endfor %}
-  </ul>
+
+  <div class="running-line__content">
+    <div class="running-line__items-wrapper">
+      {% for block in section.blocks %}
+        <p class="running-line__item">
+          {{ block.settings.running_line_item }}
+        </p>
+      {% endfor %}
+    </div>
+    <div class="running-line__items-wrapper">
+      {% for block in section.blocks %}
+        <p class="running-line__item">
+          {{ block.settings.running_line_item }}
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+
 </section>
 
 {% schema %}

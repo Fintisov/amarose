@@ -26,7 +26,8 @@
         <li class="account-menu__list-item">
           <a href="{{ link.url }}"
              class="account-menu__list-link
-            {% if page_handle == link.url or order.customer_url contains link.url  %} active{% endif %}">
+            {% if page_handle == link.url or order.customer_url != blank and link.url contains 'order' %} active{% endif %}">
+
             {% render 'account-menu-item', forloop_index: forloop.index, link_title: link.title %}
           </a>
         </li>
