@@ -34,11 +34,6 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -104,7 +99,6 @@
         "price",
         "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description",
         "collapsible-row-0",
@@ -116,7 +110,7 @@
       "settings": {
         "enable_sticky_info": true,
         "gallery_layout": "stacked",
-        "media_size": "large",
+        "media_size": "small",
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -155,8 +149,43 @@
         "title": "Running line"
       }
     },
+    "1660807363d42faf82": {
+      "type": "images-two-with-text",
+      "blocks": {
+        "1660807363f9270cbd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "1660807363f9270cbd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "1660807363f9270cbd-0",
+        "1660807363f9270cbd-1"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.image_for_before_.value }}",
+        "image2": "{{ product.metafields.custom.image_for_after_.value }}",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "show_badge": true,
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "165979501095128c3c": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Formulated to provide skin nutrition for optimal skin health.",
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
@@ -249,6 +278,7 @@
   "order": [
     "main",
     "16589228130b221df1",
+    "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
     "165981051437af0bd0",
