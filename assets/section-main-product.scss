@@ -1132,14 +1132,28 @@ a.product__text {
   display: flex;
   gap: 60px;
 
+  @include max-screen(991) {
+    padding: 0 0 60px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .main-product-header__media-wrapper {
     position: relative;
     width: calc(50% - 30px);
+    @include max-screen(991) {
+      width: 100%;
+    }
 
     .badge {
       position: absolute;
       top: 15px;
       right: 40px;
+
+      @include max-screen(991) {
+        top: 20px;
+        right: 20px;
+      }
     }
 
     .product__media-list {
@@ -1159,6 +1173,10 @@ a.product__text {
 
   .main-product-header__info-wrapper {
     width: calc(50% - 30px);
+
+    @include max-screen(991) {
+      width: 100%;
+    }
 
     .product__title-wrapper {
       margin-bottom: 20px;
