@@ -1178,6 +1178,21 @@ a.product__text {
       width: 100%;
     }
 
+    .product__back-link {
+      display: none;
+
+      @include max-screen(991) {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: $midGrey;
+        @include underline-text;
+      }
+    }
+
     .product__title-wrapper {
       margin-bottom: 20px;
     }
@@ -1194,33 +1209,18 @@ a.product__text {
       }
     }
 
-    .spr-starrating {
-      justify-content: start !important;
+    .jdgm-prev-badge {
       margin-bottom: 20px;
-      font-family: $futura;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 1.25;
-      color: $purple;
 
-      .spr-stars {
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-
-        svg {
-          width: 20px !important;
-          height: 20px !important;
-
-          path {
-            fill: $roseMid;
-          }
+      .jdgm-star {
+        &:before {
+          font-size: 20px;
         }
       }
     }
 
     .price {
-      margin-bottom: 24px;
+      margin: 0;
 
       @include max-screen(767px) {
         font-size: 20px;
@@ -1275,6 +1275,10 @@ a.product__text {
           line-height: 1;
         }
       }
+    }
+
+    .sub-plan-group-box {
+      margin-bottom: 0 !important;
     }
 
     .product-form__wrapper {
@@ -1347,6 +1351,81 @@ a.product__text {
         }
       }
     }
+
+    .ingredient__opener-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: $futura;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.25;
+      color: $midGrey;
+      margin-bottom: 20px;
+
+      .link-text {
+        @include underline-text;
+        display: inline-block;
+      }
+    }
+
+    .product__description {
+      font-family: $futura;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      color: $black;
+      margin-bottom: 30px;
+
+      .description-modal-wrap {
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.25;
+        @include underline-text;
+        color: $purple;
+      }
+    }
+
+    .ingredient-list {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .ingredient-list__item {
+        min-width: 94px;
+        min-height: 94px;
+        padding: 8px;
+        background-color: $blush-25;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        .ingredient-list__icon {
+          display: block;
+          width: 32px;
+          height: 32px;
+
+          svg {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .ingredient-list__text {
+          width: 78px;
+          text-align: center;
+          font-family: $futura;
+          font-size: 16px;
+          line-height: 1.25;
+          font-weight: 400;
+          color: $black;
+        }
+      }
+    }
   }
+
 }
 
