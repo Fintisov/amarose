@@ -1,6 +1,6 @@
 {{ 'section-faq-product.css' | asset_url | stylesheet_tag }}
 
-<div class="faq-product">
+<div class="section-faq-product">
   <div class="container">
     <div class="faq-product__content tabs--section">
       {% if product.metafields.faq_title.faq_title != blank %}
@@ -14,11 +14,18 @@
         {%- for i in (0..q_size) -%}
           <div class="faq-product__list-item accordion__slide">
             <div class="faq-product__list-item-header accordion__btn-opener">
-              <button class="faq-product__list-item-button">{{ product.metafields.faq.question[i] }}</button>
+              <button class="faq-product__list-item-button">
+                <div class="link-icon">
+                  {% render 'icon-arrow-r' %}
+                </div>
+                {{ product.metafields.faq.question[i] }}
+              </button>
             </div>
 
             <div class="faq-product__list-item-content accordion__text">
-              {{ product.metafields.faq_answer.faq_answer[i] }}
+              <div class="accordion-content-wrapper">
+                {{ product.metafields.faq_answer.faq_answer[i] }}
+              </div>
             </div>
           </div>
         {%- endfor -%}
@@ -33,7 +40,7 @@
                  data-question-{{ block.id }}>
               <a href="#{{ product.metafields.faq.question[i] | handleize }}" class="tabs-list__link">
                 <div class="link-icon">
-                {% render 'icon-arrow-r' %}
+                  {% render 'icon-arrow-r' %}
                 </div>
                 {{ product.metafields.faq.question[i] }}
               </a>

@@ -1,7 +1,11 @@
 @import "variables";
 
-.faq-product {
+.section-faq-product {
   padding: 40px 0;
+
+  @include max-screen(991) {
+    padding: 45px 0;
+  }
 }
 
 .faq-product__content {
@@ -11,6 +15,12 @@
   align-items: flex-start;
   min-height: 572px;
   position: relative;
+
+  @include max-screen(991) {
+    flex-direction: column;
+    min-height: auto;
+    padding-left: 0;
+  }
 
   &:before {
     content: "";
@@ -22,6 +32,16 @@
     border-radius: 50%;
     z-index: -1;
     background-color: $lightGrey;
+
+    @include max-screen(991) {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include max-screen(767) {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   .faq-product__title {
@@ -30,6 +50,10 @@
     font-size: 36px;
     line-height: 1.5;
     color: $black;
+
+    @include max-screen(767) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -39,13 +63,85 @@
   flex: 0 0 auto;
   display: flex;
   align-items: center;
+
+  @include max-screen(991) {
+    min-height: auto;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
 }
 
 .faq-product__questions-accordion {
   display: none;
 
   @include max-screen(991) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .faq-product__list-item {
+    &.active {
+      .faq-product__list-item-button {
+        color: $black;
+
+        .link-icon {
+          background-color: $blush-25;
+
+          path {
+            stroke: $rose;
+          }
+        }
+      }
+    }
+  }
+
+  .faq-product__list-item-header {
+    display: inline-block;
+
+    .faq-product__list-item-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      gap: 10px;
+      font-family: $futura;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.25;
+      color: $midGrey;
+      background-color: transparent;
+      cursor: pointer;
+      text-align: start;
+
+      .link-icon {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        margin-bottom: auto;
+
+        path {
+          stroke: $blush;
+        }
+      }
+    }
+  }
+
+  .faq-product__list-item-content {
+    .accordion-content-wrapper {
+      margin-top: 10px;
+      padding: 30px;
+      background-color: $blush-25;
+      font-family: $futura;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+    }
   }
 }
 
