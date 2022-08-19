@@ -19,62 +19,103 @@
 
 
   <div class="container">
+    {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
 
-    <div class="contact-page__header">
-      {%- if section.settings.heading != blank -%}
-        <h2 class="title title-wrapper--no-top-margin">{{ section.settings.heading | escape }}</h2>
-      {%- else -%}
-        <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+      {%- if form.posted_successfully? -%}
+        <div class="contact-page__success-wrap">
+          <h2 class="form-status form-status-list form__message" tabindex="-1">{{ section.settings.form_success_heading }}</h2>
+          {{ section.settings.form_success_text }}
+          <a href="/collections/all" class="button outline-button button--lg">{{ 'contact.form/back_shopping' | t }}</a>
+
+          <h3>{{ section.settings.form_success_subheading }}</h3>
+          <div class="contact-btn__wrapper">
+            {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
+              <a href="#" class="contact-btn">
+                {% if section.settings.button_svg01 != blank %}
+                  <div class="icon-box">
+                    {{ section.settings.button_svg01 }}
+                  </div>
+                {% endif %}
+
+                {{ section.settings.button_text01 }}
+                <div class="icon-box--arrow">
+                  {% render 'icon-arrow-r' %}
+                </div>
+              </a>
+            {% endif %}
+
+            {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
+              <a href="#" class="contact-btn">
+                {% if section.settings.button_svg02 != blank %}
+                  <div class="icon-box">
+                    {{ section.settings.button_svg02 }}
+                  </div>
+                {% endif %}
+
+                {{ section.settings.button_text02 }}
+
+                <div class="icon-box--arrow">
+                  {% render 'icon-arrow-r' %}
+                </div>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+            </a>
+          </li>
+        </ul>
       {%- endif -%}
 
-      {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
-        <a href="#" class="contact-btn">
-          {% if section.settings.button_svg01 != blank %}
-            <div class="icon-box">
-              {{ section.settings.button_svg01 }}
-            </div>
+
+      <div class="contact-page__holder">
+        <div class="contact-page__header">
+          {%- if section.settings.heading != blank -%}
+            <h2 class="title title-wrapper--no-top-margin">{{ section.settings.heading | escape }}</h2>
+          {%- else -%}
+            <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+          {%- endif -%}
+
+          {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
+            <a href="#" class="contact-btn">
+              {% if section.settings.button_svg01 != blank %}
+                <div class="icon-box">
+                  {{ section.settings.button_svg01 }}
+                </div>
+              {% endif %}
+
+              {{ section.settings.button_text01 }}
+              <div class="icon-box--arrow">
+                {% render 'icon-arrow-r' %}
+              </div>
+            </a>
           {% endif %}
 
-          {{ section.settings.button_text01 }}
-          <div class="icon-box--arrow">
-            {% render 'icon-arrow-r' %}
-          </div>
-        </a>
-      {% endif %}
+          {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
+            <a href="#" class="contact-btn">
+              {% if section.settings.button_svg02 != blank %}
+                <div class="icon-box">
+                  {{ section.settings.button_svg02 }}
+                </div>
+              {% endif %}
 
-      {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
-        <a href="#" class="contact-btn">
-          {% if section.settings.button_svg02 != blank %}
-            <div class="icon-box">
-              {{ section.settings.button_svg02 }}
-            </div>
+              {{ section.settings.button_text02 }}
+
+              <div class="icon-box--arrow">
+                {% render 'icon-arrow-r' %}
+              </div>
+            </a>
           {% endif %}
+        </div>
 
-          {{ section.settings.button_text02 }}
-
-          <div class="icon-box--arrow">
-            {% render 'icon-arrow-r' %}
-          </div>
-        </a>
-      {% endif %}
-    </div>
-
-    <div class="contact-page__form">
-      {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
-        {%- if form.posted_successfully? -%}
-          <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h2>
-        {%- elsif form.errors -%}
-          <div class="form__message">
-            <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>{% render 'icon-error' %} {{ 'templates.contact.form.error_heading' | t }}</h2>
-          </div>
-          <ul class="form-status-list caption-large" role="list">
-            <li>
-              <a href="#ContactForm-email" class="link">
-                {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
-              </a>
-            </li>
-          </ul>
-        {%- endif -%}
+        <div class="contact-page__form">
         <div class="form-wrapper">
           {% if section.settings.form_heading != blank %}
             <h2 class="contact-page__form-title">{{ section.settings.form_heading }}</h2>
@@ -139,8 +180,10 @@
             </button>
           </div>
         </div>
-      {%- endform -%}
+
     </div>
+      </div>
+    {%- endform -%}
   </div>
 </div>
 
@@ -212,6 +255,25 @@
       "type": "richtext",
       "id": "form_text",
       "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Form success information"
+    },
+    {
+      "type": "text",
+      "id": "form_success_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "form_success_text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "form_success_subheading",
+      "label": "Subheading"
     }
   ],
   "presets": [

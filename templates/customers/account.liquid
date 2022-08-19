@@ -4,7 +4,10 @@
   {% render 'account-menu' %}
 
   <div class="account-template__content">
-    <h1 class="account-template__title">{{ 'customer.account.title' | t }}</h1>{% render 'subscription-account' %}
+    <h1 class="account-template__title">{{ 'customer.account.title' | t }}</h1>
+    {% comment %}
+    {% render 'subscription-account' %}
+    {% endcomment %}
     <p class="account-template__text">
       {{ 'customer.account.text' | t }}
     </p>
