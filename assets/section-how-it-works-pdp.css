@@ -68,7 +68,10 @@
   padding: 32px;
   border-radius: 20px;
   min-height: 296px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.3s; }
+  .how-it-works-item-pdp:hover {
+    box-shadow: 0px 4px 80px 0px rgba(255, 202, 219, 0.4); }
   @media screen and (max-width: 767px) {
     .how-it-works-item-pdp {
       padding: 16px;
