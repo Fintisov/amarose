@@ -276,13 +276,19 @@ button {
     }
   }
 
-  &.disabled-button {
+  &.disabled-button,
+  &[disabled] {
     color: $midGrey;
     background-color: $lightGrey;
     cursor: default;
 
     &:hover {
       color: $midGrey;
+      background-color: $lightGrey;
+    }
+
+    path {
+      fill: $midGrey;
     }
   }
 
@@ -1193,6 +1199,51 @@ button {
 
   .spr-pagination {
 
+    .spr-pagination-page {
+      a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: $blush-25;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $futura;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+      }
+
+      &.is-active {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $futura;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+        cursor: default;
+        background-color: $blush;
+      }
+    }
+
+    .spr-pagination-next,
+    .spr-pagination-prev {
+      display: none;
+      /*
+      a {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: $blush-25;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
+      }*/
+    }
   }
 }
 

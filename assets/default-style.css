@@ -192,12 +192,15 @@ button {
       color: #ffffff;
       background-color: #850B65;
       transition: 0.3s; }
-  .button.disabled-button {
+  .button.disabled-button, .button[disabled] {
     color: #5E697E;
     background-color: #F1F3F6;
     cursor: default; }
-    .button.disabled-button:hover {
-      color: #5E697E; }
+    .button.disabled-button:hover, .button[disabled]:hover {
+      color: #5E697E;
+      background-color: #F1F3F6; }
+    .button.disabled-button path, .button[disabled] path {
+      fill: #5E697E; }
   .button.button-icon {
     padding: 7.5px 32px;
     font-size: 22px;
@@ -843,3 +846,40 @@ button {
     font-size: 16px; }
     #shopify-product-reviews .spr-form-message.spr-form-message-error {
       background-color: #DE3D64; }
+  #shopify-product-reviews .spr-pagination .spr-pagination-page a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FFEEEA;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #2A3241; }
+  #shopify-product-reviews .spr-pagination .spr-pagination-page.is-active {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #2A3241;
+    cursor: default;
+    background-color: #FFBBAB; }
+  #shopify-product-reviews .spr-pagination .spr-pagination-next, #shopify-product-reviews .spr-pagination .spr-pagination-prev {
+    display: none;
+    /*
+      a {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: $blush-25;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
+      }*/ }
