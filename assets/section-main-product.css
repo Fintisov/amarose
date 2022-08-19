@@ -840,6 +840,15 @@ a.product__text {
       margin-bottom: 20px; }
       .main-product-header .main-product-header__info-wrapper .jdgm-prev-badge .jdgm-star:before {
         font-size: 20px; }
+      .main-product-header .main-product-header__info-wrapper .jdgm-prev-badge .jdgm-prev-badge__text {
+        font-family: "futura", suns-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.25;
+        color: #850B65;
+        text-decoration-line: underline;
+        text-underline-offset: 4px;
+        margin-left: 10px; }
     .main-product-header .main-product-header__info-wrapper .price {
       margin: 0; }
   @media screen and (max-width: 767pxpx) {
@@ -945,6 +954,7 @@ a.product__text {
       color: #2A3241;
       margin-bottom: 30px; }
       .main-product-header .main-product-header__info-wrapper .product__description .description-modal-wrap {
+        width: max-content;
         font-family: "futura", suns-serif;
         font-weight: 400;
         font-size: 18px;
@@ -952,6 +962,8 @@ a.product__text {
         text-decoration-line: underline;
         text-underline-offset: 4px;
         color: #850B65; }
+        .main-product-header .main-product-header__info-wrapper .product__description .description-modal-wrap .product__description-opener-link {
+          width: max-content; }
     .main-product-header .main-product-header__info-wrapper .ingredient-list {
       display: flex;
       align-items: center;
