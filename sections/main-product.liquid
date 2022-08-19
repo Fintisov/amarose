@@ -284,22 +284,20 @@
                      aria-label="View Ingredients">
                   <div class="modal-overlay"></div>
                   <div
-                    class="ingredient-modal__content"
+                    class="description-modal__content"
                     tabindex="-1">
 
                     <button type="button"
                             class="account-modal__close-button modal__close-button link link--text focus-inset"
                             aria-label="{{ 'accessibility.close' | t }}">
-                      <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                        <use href="#icon-close"/>
-                      </svg>
+                        {% render 'icon-close' %}
                     </button>
 
                     {% if product.metafields.ingredient.image != blank %}
                       <div
                         class="description-modal__content-image {% if product.metafields.ingredient.image_for_mobile != blank %}has-mobile-image{% endif %}">
                         <img src="{{ product.metafields.ingredient.image }}"
-                             alt="{{ product.metafields.ingredient.title }}">
+                             alt="{{ product.metafields.ingredient.title }}" class="description-modal__desktop-image">
                         <img src="{{ product.metafields.ingredient.image_for_mobile }}"
                              alt="{{ product.metafields.ingredient.title }}" class="description-modal__mobile-image">
                       </div>
@@ -338,16 +336,15 @@
                         <button type="button"
                                 class="account-modal__close-button modal__close-button link link--text focus-inset"
                                 aria-label="{{ 'accessibility.close' | t }}">
-                          <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                            <use href="#icon-close"/>
-                          </svg>
+                          {% render 'icon-close' %}
                         </button>
 
                         {% if product.metafields.description.image != blank %}
                           <div
                             class="description-modal__content-image {% if product.metafields.description.image_for_modile != blank %}has-mobile-image{% endif %}">
                             <img src="{{ product.metafields.description.image }}"
-                                 alt="{{ product.metafields.description.title }}">
+                                 alt="{{ product.metafields.description.title }}"
+                                 class="description-modal__desktop-image">
                             <img src="{{ product.metafields.description.image_for_modile }}"
                                  alt="{{ product.metafields.description.title }}"
                                  class="description-modal__mobile-image">

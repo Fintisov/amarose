@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .product--no-media {
   max-width: 57rem;
   margin: 0 auto; }
@@ -9,24 +10,6 @@
   padding-left: 0;
   padding-bottom: 0; }
 
-@media screen and (min-width: 750px) {
-  .product--thumbnail .product__media-gallery, .product--thumbnail_slider .product__media-gallery, .product--stacked .product__info-container--sticky {
-    display: block;
-    position: sticky;
-    top: 3rem;
-    z-index: 2; }
-
-  .product--thumbnail .thumbnail-list {
-    padding-right: var(--media-shadow-horizontal-offset); }
-
-  .product__info-wrapper {
-    padding-left: 5rem; }
-
-  .product__info-wrapper--extra-padding {
-    padding-left: 8rem; }
-
-  .product__media-container .slider-buttons {
-    display: none; } }
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 65%;
@@ -230,15 +213,6 @@ a.product__text {
 .product .price--sold-out .price__badge-sale {
   display: none; }
 
-@media screen and (min-width: 750px) {
-  .product__info-container {
-    max-width: 60rem; }
-
-  .product__info-container .price--on-sale .price-item--regular {
-    font-size: 1.6rem; }
-
-  .product__info-container > *:first-child {
-    margin-top: 0; } }
 .product__description-title {
   font-weight: 600; }
 
@@ -280,9 +254,6 @@ a.product__text {
 .product--no-media fieldset.product-form__input {
   flex-wrap: wrap;
   margin: 0 auto 1.2rem auto; }
-
-.product-form__buttons {
-  max-width: 44rem; }
 
 .product--no-media .product__info-container > modal-opener {
   display: block;
@@ -992,4 +963,97 @@ a.product__text {
           font-size: 16px;
           line-height: 1.25;
           font-weight: 400;
+          color: #2A3241; }
+  .main-product-header .modal__content {
+    position: fixed;
+    z-index: 10;
+    background-color: #F1F3F6;
+    transition: 0.3s; }
+    .main-product-header .modal__content .description-modal__content {
+      position: relative;
+      display: flex;
+      width: 737px;
+      height: 640px;
+      background-color: #fff;
+      scrollbar-color: #BA3A7D transparent;
+      scrollbar-width: thin;
+      /* ползунок скроллбара */
+      /* Стрелки */ }
+      .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar {
+        width: 10px;
+        /* ширина для вертикального скролла */
+        height: 6px;
+        /* высота для горизонтального скролла */
+        background-color: transparent; }
+      .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-thumb {
+        background-color: #BA3A7D;
+        border-radius: 20px; }
+      .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-thumb:hover {
+        background-color: #850B65; }
+      .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-button:vertical:start:decrement, .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-button:vertical:end:increment, .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-button:vertical:end:increment, .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-button:horizontal:start:decrement, .main-product-header .modal__content .description-modal__content ::-webkit-scrollbar-button:horizontal:end:increment {
+        display: none; }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content {
+      flex-direction: column;
+      height: 100vh; } }
+      .main-product-header .modal__content .description-modal__content .account-modal__close-button {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer; }
+        .main-product-header .modal__content .description-modal__content .account-modal__close-button svg {
+          width: 24px;
+          height: 24px; }
+          .main-product-header .modal__content .description-modal__content .account-modal__close-button svg path {
+            stroke: #5E697E; }
+      .main-product-header .modal__content .description-modal__content .description-modal__content-image {
+        width: 342px;
+        flex: 1 0 auto; }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content .description-modal__content-image {
+      width: 100%;
+      height: 150px;
+      flex: 0 1 auto; } }
+        .main-product-header .modal__content .description-modal__content .description-modal__content-image img {
+          display: block;
+          object-fit: cover;
+          width: 100%;
+          height: 100%; }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content .description-modal__content-image img {
+      object-position: right; } }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content .description-modal__content-image .description-modal__desktop-image {
+      display: none; } }
+        .main-product-header .modal__content .description-modal__content .description-modal__content-image .description-modal__mobile-image {
+          display: none; }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content .description-modal__content-image .description-modal__mobile-image {
+      display: block; } }
+      .main-product-header .modal__content .description-modal__content .description-modal__content-text {
+        margin: 96px 32px 64px 32px;
+        overflow: auto; }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content .description-modal__content-text {
+      margin: 32px; } }
+        .main-product-header .modal__content .description-modal__content .description-modal__content-text h2 {
+          font-family: "futura", suns-serif;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 1.25;
+          margin-bottom: 24px; }
+  @media screen and (max-width: 767px) {
+    .main-product-header .modal__content .description-modal__content .description-modal__content-text h2 {
+      font-size: 27px;
+      margin-bottom: 16px; } }
+        .main-product-header .modal__content .description-modal__content .description-modal__content-text p {
+          font-family: "futura", suns-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 1.5;
           color: #2A3241; }
