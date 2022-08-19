@@ -548,11 +548,25 @@
           {%- endcase -%}
         {%- endfor -%}
 
+        {% assign q_size = product.metafields.Ingredients.ingredients_icon.size | minus: 1 %}
+          <div class="ingredient-list">
+          {%- for i in (0..q_size) -%}
+            <div class="ingredient-list__item">
+              {% if product.metafields.Ingredients.ingredients_icon[i] != blank %}
+                <span class="ingredient-list__icon">
+                  {{ product.metafields.Ingredients.ingredients_icon[i] }}
+                </span>
+              {% endif %}
+              {{ product.metafields.Ingredients.ingredients_text[i] }}
+            </div>
+          {%- endfor -%}
 
+        </div>
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
         </a>
+
       </div>
     </div>
   </div>
