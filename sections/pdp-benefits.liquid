@@ -1,7 +1,7 @@
 {{ 'section-benefits.css' | asset_url | stylesheet_tag }}
 
 
-<section class="benefits">
+<section class="benefits" id="benefits-section">
   <div class="benefits__image-block">
     <img
       srcset="{{ product.metafields.benefits.benefits_banner | image_url }} {{ product.metafields.benefits.benefits_banner.width }}w"

@@ -218,6 +218,10 @@
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
+            <a href="/collections/all" class="product__back-link">
+              Return to shop
+            </a>
+
             <div class="product__title-wrapper" {{ block.shopify_attributes }}>
               <h1 class="product__title">{{ product.title | escape }}</h1>
             </div>
@@ -236,9 +240,91 @@
               {%- endform -%}
             </div>
           {%- when 'description' -%}
+            {% if product.metafields.description.text != blank %}
+            <details-modal class="ingredient-modal-wrap">
+              <details>
+                <summary class="ingredient__opener-link link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="View Ingredients">
+                  View Ingredients
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.6181 1.00432C20.8341 -0.0835614 17.9449 -0.295726 15.4825 0.4073C13.3643 1.01183 11.5686 2.44617 10.5557 4.34247C9.59798 6.13575 9.44073 8.11744 10.1353 9.64338C10.5667 10.5911 11.281 11.37 12.1448 11.9042C12.1368 12.1047 12.1322 12.3101 12.1322 12.5219V17.191C11.8401 16.7228 11.5031 16.2751 11.133 15.8566C11.4709 14.9808 11.5209 14.0083 11.2508 13.0865C10.9203 11.9586 10.1944 11.07 9.15174 10.5167C7.75372 9.77491 5.82042 9.68906 4.10605 10.2928C1.36917 11.2567 0.14411 13.1196 0.0933251 13.1984C-0.0128407 13.3632 -0.0295959 13.5728 0.0490646 13.7532C0.127651 13.9337 0.290532 14.0597 0.480251 14.0867C1.69626 14.2598 2.33267 15.0583 3.06952 15.9827C3.92233 17.0527 4.88895 18.2654 6.87362 18.5114C7.03361 18.5312 7.19331 18.541 7.35219 18.541C8.53743 18.541 9.67063 17.9969 10.4536 17.0321C10.4861 16.9919 10.5162 16.9503 10.5472 16.9092C11.2473 17.766 11.7852 18.7405 12.0467 19.7231C12.0648 19.7912 12.0946 19.8524 12.1324 19.9065V23.4251C12.1324 23.7427 12.3813 24 12.6884 24C12.9956 24 13.2445 23.7427 13.2445 23.4251V12.5221C13.2445 12.4888 13.245 12.4564 13.2452 12.4235C13.772 12.6017 14.3278 12.697 14.8909 12.697C15.0411 12.697 15.1921 12.6902 15.3429 12.6763C17.4532 12.483 19.2338 10.942 20.1061 8.55419C20.1822 8.34555 20.2568 8.12051 20.3341 7.86611C20.426 7.56319 20.263 7.24058 19.97 7.14553C19.677 7.05049 19.3649 7.21911 19.273 7.52196C19.2022 7.7552 19.1344 7.96001 19.0657 8.14803C18.3479 10.1129 16.9196 11.3776 15.2448 11.5311C14.5835 11.5918 13.9153 11.4731 13.3055 11.2142C13.6741 7.40736 15.5973 6.32853 15.695 6.27618C15.9677 6.1346 16.0793 5.79191 15.9441 5.50838C15.8084 5.22363 15.4753 5.10628 15.1996 5.24685C15.0901 5.30265 12.8263 6.50566 12.26 10.5842C11.7856 10.1976 11.3953 9.71121 11.1417 9.15389C10.5985 7.9607 10.7435 6.36977 11.5293 4.89825C12.3984 3.27114 13.9472 2.03824 15.7786 1.51557C17.7421 0.955189 20.0194 1.04119 22.2814 1.74828C21.5068 2.45215 20.8942 3.2342 20.4543 4.08271C20.3092 4.36248 20.411 4.71092 20.6817 4.86093C20.7653 4.90722 20.8552 4.92922 20.9438 4.92922C21.1422 4.92922 21.3342 4.81923 21.4344 4.62584C21.9381 3.65439 22.7161 2.77538 23.7469 2.01325C23.9432 1.87682 24.0381 1.63353 23.9858 1.4075C23.9173 1.11155 23.6347 1.00999 23.6181 1.00432ZM7.00596 17.3699C5.46374 17.1788 4.71761 16.2426 3.92775 15.2516C3.31455 14.4822 2.63648 13.6314 1.56081 13.1955C2.09691 12.6513 3.04446 11.8813 4.46465 11.3812C5.90345 10.8744 7.50491 10.9353 8.64397 11.5395C9.42308 11.953 9.94212 12.5856 10.1866 13.4199C10.3354 13.9278 10.3494 14.4577 10.24 14.9628C9.07901 13.9349 7.71642 13.1989 6.37949 12.9746C6.07597 12.924 5.79076 13.1365 5.74154 13.4499C5.69231 13.7633 5.89819 14.0585 6.20134 14.1094C7.4281 14.3153 8.70595 15.0539 9.76731 16.0671C9.71526 16.1442 9.66084 16.2201 9.60153 16.2931C8.94623 17.1007 7.99993 17.4932 7.00596 17.3699Z" fill="#FFBBAB"/>
+                  </svg>
+                </summary>
+
+                <div class="ingredient-modal modal__content gradient" role="dialog" aria-modal="true"
+                     aria-label="View Ingredients">
+                  <div class="modal-overlay"></div>
+                  <div
+                    class="ingredient-modal__content"
+                    tabindex="-1">
+
+                    <button type="button" class="account-modal__close-button modal__close-button link link--text focus-inset"
+                            aria-label="{{ 'accessibility.close' | t }}">
+                      <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                        <use href="#icon-close"/>
+                      </svg>
+                    </button>
+
+                    {% if product.metafields.ingredient.image != blank %}
+                      <div class="description-modal__content-image {% if product.metafields.ingredient.image_for_mobile != blank %}has-mobile-image{% endif %}">
+                        <img src="{{ product.metafields.ingredient.image }}" alt="{{ product.metafields.ingredient.title }}">
+                        <img src="{{ product.metafields.ingredient.image_for_mobile }}" alt="{{ product.metafields.ingredient.title }}" class="description-modal__mobile-image">
+                      </div>
+                    {% endif %}
+                    <div class="description-modal__content-text">
+                      {% if product.metafields.ingredient.title != blank %}
+                        <h2>{{ product.metafields.ingredient.title }}</h2>
+                      {% endif %}
+                      {{ product.metafields.ingredient.text }}
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </details-modal>
+            {% endif %}
+
           {%- if product.description != blank -%}
             <div class="product__description rte quick-add-hidden">
               {{ product.description }}
+
+              {% if product.metafields.description.text != blank %}
+                <details-modal class="description-modal-wrap">
+                  <details>
+                    <summary class="product__description-opener-link link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="product description">
+                        {{ 'products.product.read_more' | t }}
+                    </summary>
+
+                    <div class="description-modal modal__content gradient" role="dialog" aria-modal="true"
+                         aria-label="product description">
+                      <div class="modal-overlay"></div>
+                      <div
+                        class="description-modal__content"
+                        tabindex="-1">
+
+                        <button type="button" class="account-modal__close-button modal__close-button link link--text focus-inset"
+                                aria-label="{{ 'accessibility.close' | t }}">
+                          <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                            <use href="#icon-close"/>
+                          </svg>
+                        </button>
+
+                        {% if product.metafields.description.image != blank %}
+                          <div class="description-modal__content-image {% if product.metafields.description.image_for_modile != blank %}has-mobile-image{% endif %}">
+                            <img src="{{ product.metafields.description.image }}" alt="{{ product.metafields.description.title }}">
+                            <img src="{{ product.metafields.description.image_for_modile }}" alt="{{ product.metafields.description.title }}" class="description-modal__mobile-image">
+                          </div>
+                        {% endif %}
+                        <div class="description-modal__content-text">
+                          {% if product.metafields.description.title != blank %}
+                            <h2>{{ product.metafields.description.title }}</h2>
+                          {% endif %}
+                          {{ product.metafields.description.text }}
+                        </div>
+                      </div>
+                    </div>
+                  </details>
+                </details-modal>
+              {% endif %}
+
             </div>
           {%- endif -%}
             {%- when 'custom_liquid' -%}
@@ -519,32 +605,7 @@
             </div>
 
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
-          {%- when 'rating' -%}
-          {%- if product.metafields.reviews.rating.value != blank -%}
-            {% liquid
-              assign rating_decimal = 0
-              assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
-              if decimal >= 0.3 and decimal <= 0.7
-                assign rating_decimal = 0.5
-              elsif decimal > 0.7
-                assign rating_decimal = 1
-              endif
-            %}
-            <div class="rating" role="img"
-                 aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}">
-              <span aria-hidden="true" class="rating-star color-icon-{{ settings.accent_icons }}"
-                    style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"></span>
-            </div>
-            <p class="rating-text caption">
-              <span
-                aria-hidden="true">{{ product.metafields.reviews.rating.value }} / {{ product.metafields.reviews.rating.value.scale_max }}</span>
-            </p>
-            <p class="rating-count caption">
-              <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
-              <span
-                class="visually-hidden">{{ product.metafields.reviews.rating_count }} {{ "accessibility.total_reviews" | t }}</span>
-            </p>
-          {%- endif -%}
+
           {%- endcase -%}
         {%- endfor -%}
 
@@ -562,10 +623,7 @@
           {%- endfor -%}
 
         </div>
-        <a href="{{ product.url }}" class="link product__view-details animate-arrow">
-          {{ 'products.product.view_full_details' | t }}
-          {% render 'icon-arrow' %}
-        </a>
+
 
       </div>
     </div>
@@ -1056,17 +1114,6 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
-        }
-      ]
-    },
-    {
-      "type": "rating",
-      "name": "t:sections.main-product.blocks.rating.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
         }
       ]
     }
