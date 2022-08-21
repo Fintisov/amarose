@@ -1165,3 +1165,13 @@ input[type='checkbox'] {
   -moz-appearance: textfield;
 }
 
+.shopify-policy__container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.shopify-policy__body h2,
+.shopify-policy__body h3 {
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
