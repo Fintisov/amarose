@@ -1,8 +1,26 @@
-<div class="{% if section.settings.include_margins %}{% endif %}">
+{% if template == 'product' and product.metafields.accentuate.show_reviews == 'true' %}
+  {% assign hide_on_product = true  %}
+{% endif %}
+
+<div class="{% if section.settings.include_margins %}{% endif %} {% if hide_on_product %}product-hide-reviews{% endif %}">
   {%- for block in section.blocks -%}
     {% render block %}
   {%- endfor -%}
 </div>
+
+<style>
+  .product-hide-reviews #judgeme_product_reviews {
+    display: none !important;
+  }
+  #judgeme_product_reviews {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+</style>
 
 {% schema %}
 {
