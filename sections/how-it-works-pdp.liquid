@@ -1,3 +1,12 @@
+{% if template == 'product' %}
+  {% assign show_on_product = product.metafields.how_it_works.works_icon_text.size | minus: 1 %}
+{% else%}
+  {% assign show_on_not_product = section.blocks.size %}
+{% endif %}
+
+
+{% if show_on_not_product > 0 or show_on_product > 0 %}
+
 {{ 'section-how-it-works-pdp.css' | asset_url | stylesheet_tag }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 
@@ -51,6 +60,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="{{ 'swiper-config.js' | asset_url }}" defer="defer"></script>
+
+{% endif %}
 
 {% schema %}
 {

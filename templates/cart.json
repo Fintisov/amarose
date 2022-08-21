@@ -3,8 +3,6 @@
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "cart-footer": {
@@ -34,5 +32,3 @@
     "cart-footer"
   ]
 }
-
-

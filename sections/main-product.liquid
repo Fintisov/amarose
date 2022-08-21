@@ -37,7 +37,7 @@
 
   <div class="main-product-header product--{{ section.settings.gallery_layout }} ">
     <div class="main-product-header__media-wrapper">
-      {% render 'tag-new' %}
+      {% render 'tag-new', tag_class:'badge--gray' %}
       <media-gallery id="MediaGallery-{{ section.id }}" role="region"
                      {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %}
                      aria-label="{{ 'products.product.media.gallery_viewer' | t }}"

@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setFooterDate()
 
-  document.querySelector(".announcement-bar .close-button").addEventListener("click", () => {
+  if(document.querySelector('.announcement-bar')) {
 
-    document.querySelector(".announcement-bar").style.display = "none";
-  });
+    document.querySelector(".announcement-bar .close-button").addEventListener("click", () => {
+      document.querySelector(".announcement-bar").style.display = "none";
+    });
+  }
 
   const counterProduct = document.querySelector(".header-icons__elem");
 
@@ -30,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  watchCounterProduct();
+  if(counterProduct) {
+    watchCounterProduct();
+  }
 })
 
 function getFocusableElements(container) {
