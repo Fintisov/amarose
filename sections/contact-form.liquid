@@ -29,36 +29,17 @@
 
           <h3 class="contact-page__success-subtitle">{{ section.settings.form_success_subheading }}</h3>
           <div class="contact-btn__wrapper">
-            {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
-              <a href="#" class="contact-btn">
-                {% if section.settings.button_svg01 != blank %}
-                  <div class="icon-box">
-                    {{ section.settings.button_svg01 }}
-                  </div>
-                {% endif %}
+            {% render 'contact-btn',
+              url: section.settings.button_url01,
+              text: section.settings.button_text01,
+              svg: section.settings.button_svg01
+            %}
 
-                {{ section.settings.button_text01 }}
-                <div class="icon-box--arrow">
-                  {% render 'icon-arrow-r' %}
-                </div>
-              </a>
-            {% endif %}
-
-            {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
-              <a href="#" class="contact-btn">
-                {% if section.settings.button_svg02 != blank %}
-                  <div class="icon-box">
-                    {{ section.settings.button_svg02 }}
-                  </div>
-                {% endif %}
-
-                {{ section.settings.button_text02 }}
-
-                <div class="icon-box--arrow">
-                  {% render 'icon-arrow-r' %}
-                </div>
-              </a>
-            {% endif %}
+            {% render 'contact-btn',
+              url: section.settings.button_url02,
+              text: section.settings.button_text02,
+              svg: section.settings.button_svg02
+            %}
           </div>
         </div>
       {%- elsif form.errors -%}
@@ -83,36 +64,17 @@
             <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
           {%- endif -%}
 
-          {% if section.settings.button_url01 != blank and section.settings.button_text01 != blank %}
-            <a href="#" class="contact-btn">
-              {% if section.settings.button_svg01 != blank %}
-                <div class="icon-box">
-                  {{ section.settings.button_svg01 }}
-                </div>
-              {% endif %}
+          {% render 'contact-btn',
+            url: section.settings.button_url01,
+            text: section.settings.button_text01,
+            svg: section.settings.button_svg01
+          %}
 
-              {{ section.settings.button_text01 }}
-              <div class="icon-box--arrow">
-                {% render 'icon-arrow-r' %}
-              </div>
-            </a>
-          {% endif %}
-
-          {% if section.settings.button_url02 != blank and section.settings.button_text02 != blank %}
-            <a href="#" class="contact-btn">
-              {% if section.settings.button_svg02 != blank %}
-                <div class="icon-box">
-                  {{ section.settings.button_svg02 }}
-                </div>
-              {% endif %}
-
-              {{ section.settings.button_text02 }}
-
-              <div class="icon-box--arrow">
-                {% render 'icon-arrow-r' %}
-              </div>
-            </a>
-          {% endif %}
+          {% render 'contact-btn',
+            url: section.settings.button_url02,
+            text: section.settings.button_text02,
+            svg: section.settings.button_svg02
+          %}
         </div>
 
         <div class="contact-page__form">
@@ -123,7 +85,13 @@
             {{ section.settings.form_text }}
 
             <div class="field">
-              <input class="field__input" autocomplete="name" type="text" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="{{ 'templates.contact.form.name' | t }}">
+              <input class="field__input"
+                     autocomplete="name"
+                     type="text"
+                     id="ContactForm-name"
+                     name="contact[{{ 'templates.contact.form.name' | t }}]"
+                     value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                     placeholder="{{ 'templates.contact.form.name' | t }}">
               <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
             </div>
             <div class="field field--with-error">
@@ -134,6 +102,7 @@
                   class="field__input"
                   name="contact[email]"
                   spellcheck="false"
+                  data-verification
                   autocapitalize="off"
                   value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
                   aria-required="true"
