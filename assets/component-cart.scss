@@ -45,3 +45,10 @@
     padding: 15px 0;
   }
 }
+
+.main-card-footer__totals-wrapper + .field--no-fly svg {
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    pointer-events: none;
+}
