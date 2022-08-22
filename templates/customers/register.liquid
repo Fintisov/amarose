@@ -108,6 +108,7 @@
             autocapitalize="off"
             autocomplete="email"
             aria-required="true"
+            data-verification
             placeholder="{{ 'customer.register.email' | t }}"
             class="field__input {% if form.errors contains 'email' %} validate-error{% endif %}"
             {% if form.errors contains 'email' %}
@@ -153,7 +154,7 @@
               aria-invalid="true"
               aria-describedby="RegisterForm-password-error"
             {% endif %}
-            placeholder="{{ 'customer.register.password' | t }}"
+            placeholder="{{ 'customer.register.confirm_password' | t }}"
             class="field__input {% if form.errors contains 'password' %} validate-error{% endif %}"
           >
           <label for="RegisterForm-confirm_password" class="field__label">
@@ -164,7 +165,8 @@
             {{ 'customer.login_page.error' | t }}
           </span>
         </div>
-        <button type="submit" class="customer-login__button button primary-button button--sm">
+        <span id="wrong_pass_alert"></span>
+        <button type="submit" class="customer-login__button button primary-button button--sm" id="customer-register__button">
           {{ 'customer.register.submit' | t }}
         </button>
         <a href="{{ routes.account_url }}" class="customer-login__button button secondary-button button--sm">
