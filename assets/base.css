@@ -1175,3 +1175,8 @@ input[type='checkbox'] {
   margin-bottom: 15px;
   margin-top: 20px;
 }
+
+.card__content .jdgm-prev-badge[data-average-rating='0.00'] {
+  display: block !important;
+}
+
