@@ -8,18 +8,8 @@
           "settings": {
           }
         },
-        "d1a59682-9f1b-4185-a9f1-1a6fe6fa37a2": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        },
         "price": {
           "type": "price",
-          "settings": {
-          }
-        },
-        "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2": {
-          "type": "shopify:\/\/apps\/rebill-lab-subscriptions\/blocks\/sub_plan\/a6cb4897-b17f-41d9-9edd-72a875ee060f",
           "settings": {
           }
         },
@@ -40,13 +30,17 @@
           "type": "description",
           "settings": {
           }
+        },
+        "judgeme_preview_badge_product_page_8391f34e": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "title",
-        "d1a59682-9f1b-4185-a9f1-1a6fe6fa37a2",
         "price",
-        "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2",
+        "judgeme_preview_badge_product_page_8391f34e",
         "variant_picker",
         "buy_buttons",
         "description"
@@ -150,16 +144,6 @@
     },
     "1658920095a5b24ea0": {
       "type": "apps",
-      "blocks": {
-        "334672c3-f913-4929-9fed-dff78f5140c0": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "334672c3-f913-4929-9fed-dff78f5140c0"
-      ],
       "settings": {
         "include_margins": true
       }
@@ -185,10 +169,27 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "judgeme_section_review_widget_2133": {
+      "type": "apps",
+      "blocks": {
+        "judgeme_review_widget_793db13e": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_793db13e"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
+    "judgeme_section_review_widget_2133",
     "16589228130b221df1",
     "1660807363d42faf82",
     "165979501095128c3c",
