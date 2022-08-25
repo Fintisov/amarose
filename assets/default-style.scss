@@ -32,23 +32,9 @@
 .container-fluid {
   width: 100%;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  @include max-screen(1300) {
-    max-width: 960px;
-  }
-
-  @include max-screen(991) {
-    max-width: 720px;
-  }
-
-  @include max-screen(767) {
-    max-width: 540px;
-  }
+  padding: 0 10px;
 
   @include max-screen(575) {
-    max-width: 100%;
     padding: 0 20px;
   }
 }
@@ -190,8 +176,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: max-content;
   min-height: 48px;
+  height: max-content;
   font-family: $futura;
   font-size: 18px;
   font-weight: 500;
@@ -290,13 +276,19 @@ button {
     }
   }
 
-  &.disabled-button {
+  &.disabled-button,
+  &[disabled] {
     color: $midGrey;
     background-color: $lightGrey;
     cursor: default;
 
     &:hover {
       color: $midGrey;
+      background-color: $lightGrey;
+    }
+
+    path {
+      fill: $midGrey;
     }
   }
 
@@ -559,6 +551,11 @@ button {
     max-width: max-content;
     transition: 0.3s;
 
+    &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px $lightGrey;
+      -webkit-text-fill-color: $midGrey;
+    }
+
     &::-ms-expand {
       display: none;
     }
@@ -618,11 +615,16 @@ button {
     border-radius: 30px;
     background-color: $lightGrey;
     font-family: $futura;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.4;
     color: $midGrey;
     transition: background-color 0.3s, border 0.3s;
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px $lightGrey;
+      -webkit-text-fill-color: $midGrey;
+    }
 
     &::placeholder {
       opacity: 0;
@@ -694,6 +696,12 @@ button {
         -webkit-background-size: 14px;
         background-size: 14px;
       }
+    }
+  }
+
+  &.field--white {
+    .field__input {
+      background-color: #fff;
     }
   }
 
@@ -834,6 +842,17 @@ button {
   }
 }
 
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 30px;
+
+  .row-50 {
+    width: calc(50% - 15px);
+  }
+}
+
 .field__container {
   display: flex;
   justify-content: space-between;
@@ -873,9 +892,14 @@ button {
     font-size: 14px;
   }
 
-  &.badge--grey {
+  &.badge--gray {
     color: $white;
     background-color: $midGrey;
+  }
+
+  &.badge--pink {
+    color: $white;
+    background-color: $blush;
   }
 }
 
@@ -935,8 +959,291 @@ button {
       flex-basis: calc(50% - 5px);
     }
   }
-
-
 }
 
+#shopify-product-reviews {
+  margin: 0 !important;
+  padding: 80px 0;
+
+  .spr-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    @include max-screen(1300) {
+      max-width: 960px;
+    }
+
+    @include max-screen(991) {
+      max-width: 720px;
+    }
+
+    @include max-screen(767) {
+      max-width: 540px;
+    }
+
+    @include max-screen(575) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    border: none;
+  }
+
+  .spr-header-title {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .spr-summary-caption {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    color: $black;
+  }
+
+  .spr-summary-actions-newreview {
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 22px;
+    color: $rose;
+    @include underline-text;
+  }
+
+  .spr-form-title {
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 22px;
+    color: $black;
+    margin-bottom: 15px;
+  }
+
+  .spr-form-review-rating {
+    height: 30px;
+
+    .spr-starrating .spr-icon:before {
+      font-size: 30px;
+    }
+  }
+
+  .spr-summary {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    color: $black;
+  }
+
+  input:not(.spr-button),
+  textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid $lightGrey;
+    border-radius: 30px;
+    background-color: $lightGrey;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $midGrey;
+    transition: background-color 0.3s, border 0.3s;
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px $lightGrey;
+      -webkit-text-fill-color: $midGrey;
+    }
+
+    &::placeholder {
+      opacity: 1;
+    }
+
+    @include max-screen(767) {
+      height: 40px;
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    &:focus {
+      border-radius: 30px;
+    }
+
+    &:hover {
+      background-color: $blush-25;
+    }
+
+    &:focus {
+      border: 1px solid $roseMid;
+      background-color: $lightGrey;
+
+      ~ .field__label {
+        top: 12px;
+        font-size: 10px;
+      }
+    }
+
+    &:disabled:hover {
+      background-color: $lightGrey;
+      cursor: not-allowed;
+    }
+  }
+
+  label {
+    @include hidden-elem;
+  }
+
+  textarea {
+    padding: 20px;
+    min-height: 250px;
+  }
+
+  .spr-form-review-body {
+    @include style-scrollbar();
+    border-radius: 30px;
+    overflow: hidden;
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .spr-starrating,
+  .spr-starratings {
+    display: block;
+    margin-bottom: 10px;
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+
+    .spr-icon {
+      margin-right: 5px;
+      color: $roseMid;
+      opacity: 1;
+
+      &:before {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .spr-starratings {
+    .spr-icon {
+      margin-right: 0;
+
+      &:before {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .spr-button {
+    border: none;
+    color: $white;
+    background-color: $rose;
+    transition: 0.3s;
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+      transition: 0.3s;
+    }
+  }
+
+  .spr-review-header-title {
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 22px;
+    color: $black;
+  }
+
+  .spr-review-header-byline, strong {
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 12px;
+    color: $midGrey;
+  }
+
+  .spr-review-content-body {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 18px;
+    color: $black;
+  }
+
+  .spr-review-reportreview {
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 12px;
+    @include underline-text;
+    color: $rose;
+  }
+
+  .spr-form-message {
+    border-radius: 30px;
+    text-align: center;
+    font-family: $futura;
+    font-weight: 500;
+    color: $white;
+    font-size: 16px;
+
+    &.spr-form-message-error {
+      background-color: $errorState;
+    }
+  }
+
+  .spr-pagination {
+
+    .spr-pagination-page {
+      a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: $blush-25;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $futura;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+      }
+
+      &.is-active {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $futura;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+        cursor: default;
+        background-color: $blush;
+      }
+    }
+
+    .spr-pagination-next,
+    .spr-pagination-prev {
+      display: none;
+      /*
+      a {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: $blush-25;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
+      }*/
+    }
+  }
+}
 

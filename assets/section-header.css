@@ -485,8 +485,7 @@
     bottom: 0;
     left: 0;
     padding: 4px;
-    min-width: 24px;
-    width: max-content;
+    width: 24px;
     height: 24px;
     text-align: center;
     background-color: #850B65;
@@ -494,10 +493,12 @@
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;
-    line-height: 1; }
-    .header__bag .header__icon .cart-count-bubble span {
-      position: relative;
-      left: 1px; }
+    line-height: 1.25; }
+    .header__bag .header__icon .cart-count-bubble.cart-count-bubble--big {
+      width: 32px;
+      height: 32px; }
+    .header__bag .header__icon .cart-count-bubble.cart-count-bubble--small-text {
+      font-size: 12px; }
 
 .cart-drawer .drawer__inner {
   background-color: #ffffff;

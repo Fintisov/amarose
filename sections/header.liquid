@@ -248,123 +248,124 @@
           {%- for link in section.settings.menu.links -%}
             <li class="list-menu__elem">
               {%- if link.links != blank -%}
-                  <div id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
-                    <summary class="header__menu-item list-menu__item link focus-inset">
-                      <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
-                    </summary>
+                <div id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                  <summary class="header__menu-item list-menu__item link focus-inset">
+                    <span {%- if link.child_active %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span>
+                  </summary>
 
-                    {%- assign hasInnerBlock = false -%}
+                  {%- assign hasInnerBlock = false -%}
+                  {%- for block in section.blocks -%}
+                    {% if block.settings.title == link.title %}
+                      {%- assign hasInnerBlock = true -%}
+                    {% endif %}
+                  {% endfor %}
+
+                  <div id="MegaMenu-Content-{{ forloop.index }}"
+                       class="mega-menu__content gradient motion-reduce global-settings-popup {% if hasInnerBlock %}mega-menu__has-block{% endif %}"
+                       tabindex="-1">
+                    <ul
+                      class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                      role="list">
+                      {%- for childlink in link.links -%}
+                        <li class="mega-menu__elem">
+                          {% if childlink.title contains '--label' %}
+                            <span class="mega-menu__link mega-menu__link-not-link">
+                                {{ childlink.title | escape | remove: "--label" }}
+                              </span>
+                          {% else %}
+                            <a href="{{ childlink.url }}"
+                               class="mega-menu__link mega-menu__link--level-2 link
+                               {% if childlink.title == 'Shop All' or childlink.title == 'See All' %}mega-menu__link--color{% endif %}
+                               {% if childlink.current %} mega-menu__link--active{% endif %}"
+                            {% if childlink.current %} aria-current="page"{% endif %}>
+                              {{ childlink.title | escape }}
+                              {% if childlink.title == 'Shop All' or childlink.title == 'See All' %}
+                                {% render 'icon-arrow-r' %}
+                              {% endif %}
+                            </a>
+                          {% endif %}
+
+
+                          {%- if childlink.links != blank -%}
+                            <ul class="list-unstyled" role="list">
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a href="{{ grandchildlink.url }}"
+                                     class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+
                     {%- for block in section.blocks -%}
                       {% if block.settings.title == link.title %}
-                        {%- assign hasInnerBlock = true -%}
+                        {%- case block.type -%}
+                          {%- when 'two-boxes' -%}
+                            <div class="menu-boxes">
+                              {% if block.settings.link01 != blank and block.settings.image01 != blank %}
+                                <a href="{{ block.settings.link01 }}"
+                                   class="menu-box menu-box__text-{{ block.settings.text_alignment01 }}"
+                                   style="background-image: url({{ block.settings.image01 | img_url: 'master' }})">
+                                  <span class="menu-box__title">{{ block.settings.text01 }}</span>
+                                  {% if block.settings.text_link01 != blank %}
+                                    <span class="menu-box__link-title">{{ block.settings.text_link01 }}</span>
+                                  {% endif %}
+                                </a>
+                              {% endif %}
+
+                              {% if block.settings.link02 != blank and block.settings.image02 != blank %}
+                                <a href="{{ block.settings.link02 }}"
+                                   class="menu-box menu-box__text-{{ block.settings.text_alignment02 }}"
+                                   style="background-image: url({{ block.settings.image02 | img_url: 'master' }})">
+                                  <span class="menu-box__title">{{ block.settings.text02 }}</span>
+                                  {% if block.settings.text_link02 != blank %}
+                                    <span class="menu-box__link-title">{{ block.settings.text_link02 }}</span>
+                                  {% endif %}
+                                </a>
+                              {% endif %}
+                            </div>
+                          {%- when 'one-box' -%}
+                            {% if block.settings.text != blank and block.settings.image != blank %}
+                              <div class="menu-one-box">
+                                {% if block.settings.image != blank %}
+                                  {{ block.settings.image | image_url: width: 452 | image_tag:
+                                  loading: 'lazy',
+                                  width: block.settings.image.width,
+                                  height: block.settings.image.height,
+                                  class: 'menu-one-box__image',
+                                  sizes: sizes,
+                                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+                                  alt: block.settings.image.alt | escape
+                                  }}
+                                  <div class="menu-one-box__holder">
+                                    <div class="menu-one-box__text-wrapper">
+                                      {% if block.settings.top_text != blank %}
+                                        <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
+                                      {% endif %}
+
+                                      {{ block.settings.text }}
+                                    </div>
+                                    {% if block.settings.button_url != blank and block.settings.button_text != blank %}
+                                      <a class="link-arrow" href="{{ block.settings.button_url }}">
+                                        {{ block.settings.button_text }}
+                                        {% render 'icon-arrow-r' %}
+                                      </a>
+                                    {% endif %}
+                                  </div>
+                                {% endif %}
+                              </div>
+                            {% endif %}
+                        {%- endcase -%}
                       {% endif %}
                     {% endfor %}
 
-                    <div id="MegaMenu-Content-{{ forloop.index }}"
-                         class="mega-menu__content gradient motion-reduce global-settings-popup {% if hasInnerBlock %}mega-menu__has-block{% endif %}" tabindex="-1">
-                      <ul
-                        class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                        role="list">
-                        {%- for childlink in link.links -%}
-                          <li class="mega-menu__elem">
-                            {% if childlink.title contains '--label' %}
-                              <span class="mega-menu__link mega-menu__link-not-link">
-                                {{ childlink.title | escape | remove: "--label" }}
-                              </span>
-                            {% else %}
-                              <a href="{{ childlink.url }}"
-                                 class="mega-menu__link mega-menu__link--level-2 link
-                               {% if childlink.title == 'Shop All' or childlink.title == 'See All' %}mega-menu__link--color{% endif %}
-                               {% if childlink.current %} mega-menu__link--active{% endif %}"
-                              {% if childlink.current %} aria-current="page"{% endif %}>
-                                {{ childlink.title | escape }}
-                                {% if childlink.title == 'Shop All' or childlink.title == 'See All' %}
-                                  {% render 'icon-arrow-r' %}
-                                {% endif %}
-                              </a>
-                            {% endif %}
-
-
-                            {%- if childlink.links != blank -%}
-                              <ul class="list-unstyled" role="list">
-                                {%- for grandchildlink in childlink.links -%}
-                                  <li>
-                                    <a href="{{ grandchildlink.url }}"
-                                       class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
-                                      {{ grandchildlink.title | escape }}
-                                    </a>
-                                  </li>
-                                {%- endfor -%}
-                              </ul>
-                            {%- endif -%}
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-
-                      {%- for block in section.blocks -%}
-                        {% if block.settings.title == link.title %}
-                          {%- case block.type -%}
-                            {%- when 'two-boxes' -%}
-                              <div class="menu-boxes">
-                                {% if block.settings.link01 != blank and block.settings.image01 != blank %}
-                                  <a href="{{ block.settings.link01 }}"
-                                     class="menu-box menu-box__text-{{ block.settings.text_alignment01 }}"
-                                     style="background-image: url({{ block.settings.image01 | img_url: 'master' }})">
-                                    <span class="menu-box__title">{{ block.settings.text01 }}</span>
-                                    {% if block.settings.text_link01 != blank %}
-                                      <span class="menu-box__link-title">{{ block.settings.text_link01 }}</span>
-                                    {% endif %}
-                                  </a>
-                                {% endif %}
-
-                                {% if block.settings.link02 != blank and block.settings.image02 != blank %}
-                                  <a href="{{ block.settings.link02 }}"
-                                     class="menu-box menu-box__text-{{ block.settings.text_alignment02 }}"
-                                     style="background-image: url({{ block.settings.image02 | img_url: 'master' }})">
-                                    <span class="menu-box__title">{{ block.settings.text02 }}</span>
-                                    {% if block.settings.text_link02 != blank %}
-                                      <span class="menu-box__link-title">{{ block.settings.text_link02 }}</span>
-                                    {% endif %}
-                                  </a>
-                                {% endif %}
-                              </div>
-                            {%- when 'one-box' -%}
-                              {% if block.settings.text != blank and block.settings.image != blank %}
-                                <div class="menu-one-box">
-                                  {% if block.settings.image != blank %}
-                                    {{ block.settings.image | image_url: width: 452 | image_tag:
-                                    loading: 'lazy',
-                                    width: block.settings.image.width,
-                                    height: block.settings.image.height,
-                                    class: 'menu-one-box__image',
-                                    sizes: sizes,
-                                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-                                    alt: block.settings.image.alt | escape
-                                    }}
-                                    <div class="menu-one-box__holder">
-                                      <div class="menu-one-box__text-wrapper">
-                                        {% if block.settings.top_text != blank %}
-                                          <span class="menu-one-box__top-title">{{ block.settings.top_text }}</span>
-                                        {% endif %}
-
-                                        {{ block.settings.text }}
-                                      </div>
-                                      {% if block.settings.button_url != blank and block.settings.button_text != blank %}
-                                        <a class="link-arrow" href="{{ block.settings.button_url }}">
-                                          {{ block.settings.button_text }}
-                                          {% render 'icon-arrow-r' %}
-                                        </a>
-                                      {% endif %}
-                                    </div>
-                                  {% endif %}
-                                </div>
-                              {% endif %}
-                          {%- endcase -%}
-                        {% endif %}
-                      {% endfor %}
-
-                    </div>
                   </div>
+                </div>
               {%- else -%}
                 <a href="{{ link.url }}"
                    class="header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
@@ -468,7 +469,7 @@
 
 
         <details-modal class="header-icons__elem header__account">
-          <details >
+          <details>
             <summary class="header__icon header__icon--account header__icon--summary link focus-inset modal__toggle"
                      aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
               {% render 'icon-account' %}
@@ -559,15 +560,15 @@
                     {% endfor %}
                   </div>
                 </div>
-{% comment %}
-                      <button type="button"
-                        class="account-modal__close-button modal__close-button link link--text focus-inset"
-                        aria-label="{{ 'accessibility.close' | t }}">
-                  <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                    <use href="#icon-close"/>
-                  </svg>
-                </button>
-{% endcomment %}
+                {% comment %}
+                                      <button type="button"
+                                        class="account-modal__close-button modal__close-button link link--text focus-inset"
+                                        aria-label="{{ 'accessibility.close' | t }}">
+                                  <svg class="icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-close"/>
+                                  </svg>
+                                </button>
+                {% endcomment %}
               </div>
             </div>
           </details>
@@ -580,7 +581,7 @@
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
           {%- if cart != empty -%}
-            <div class="cart-count-bubble">
+            <div data-proportion-h="1" class="cart-count-bubble {% if cart.item_count > 9 %}cart-count-bubble--big{% endif %} {% if cart.item_count > 99 %}cart-count-bubble--small-text{% endif %}">
               {%- if cart.item_count < 100 -%}
                 <span aria-hidden="true">{{ cart.item_count }}</span>
               {%- endif -%}

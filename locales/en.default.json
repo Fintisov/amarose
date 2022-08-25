@@ -157,6 +157,7 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "new_tag": "New",
+      "read_more": "Read More",
       "vendor": "Vendor",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",
@@ -224,10 +225,11 @@
         "name": "Name",
         "email": "Email",
         "phone": "Phone number",
-        "comment": "Comment",
-        "send": "Send",
+        "comment": "Message",
+        "send": "Submit",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "error_heading": "Please adjust the following:"
+        "error_heading": "Please adjust the following:",
+        "back_shopping": "Go Back To Shopping"
       }
     },
     "404": {
@@ -326,8 +328,9 @@
   },
   "customer": {
     "account": {
-      "title": "Account",
-      "details": "Account details",
+      "title": "My Account",
+      "text": "Here, you can see your personal information such as your name and email address.",
+      "details": "Personal Information",
       "view_addresses": "View addresses",
       "return": "Return to Account details"
     },
@@ -365,7 +368,6 @@
       "delete": "Delete",
       "delete_confirm": "Are you sure you wish to delete this address?",
       "empty_addresses": "There are no addresses yet.",
-
       "address_popup_title": "Are you sure you want to delete the {{ street }} address?",
       "address_popup_description": "This action cannot be undone.",
       "address_popup_discard": "Discard",
@@ -416,6 +418,7 @@
       "tracking_company": "Carrier",
       "tracking_number": "Tracking number",
       "subtotal": "Subtotal",
+      "total_discount": "Discount",
       "total_duties": "Duties"
     },
     "orders": {

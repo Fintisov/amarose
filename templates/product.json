@@ -8,14 +8,9 @@
           "settings": {
           }
         },
-        "1a873e78-5c23-429e-8565-406416cbd9e5": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
+        "d1a59682-9f1b-4185-a9f1-1a6fe6fa37a2": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
           }
         },
         "price": {
@@ -24,19 +19,15 @@
           }
         },
         "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2": {
-          "type": "shopify:\/\/apps\/subscription-recurring-orders\/blocks\/sub_plan\/a6cb4897-b17f-41d9-9edd-72a875ee060f",
+          "type": "shopify:\/\/apps\/rebill-lab-subscriptions\/blocks\/sub_plan\/a6cb4897-b17f-41d9-9edd-72a875ee060f",
           "settings": {
           }
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button"
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {
           }
         },
         "buy_buttons": {
@@ -49,79 +40,23 @@
           "type": "description",
           "settings": {
           }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "disabled": true,
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
         "title",
-        "1a873e78-5c23-429e-8565-406416cbd9e5",
+        "d1a59682-9f1b-4185-a9f1-1a6fe6fa37a2",
         "price",
         "6f2e1d5a-053c-4a78-a6d7-3f49dc1494c2",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
         "gallery_layout": "stacked",
-        "media_size": "large",
         "mobile_thumbnails": "show",
         "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "enable_video_looping": false
       }
     },
     "16589228130b221df1": {
@@ -155,8 +90,14 @@
         "title": "Running line"
       }
     },
+    "1660807363d42faf82": {
+      "type": "images-two-with-text",
+      "settings": {
+      }
+    },
     "165979501095128c3c": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Formulated to provide skin nutrition for optimal skin health.",
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
@@ -210,14 +151,14 @@
     "1658920095a5b24ea0": {
       "type": "apps",
       "blocks": {
-        "75dde1ad-cf27-4851-b9ae-cbe27b51c61d": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+        "334672c3-f913-4929-9fed-dff78f5140c0": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
       },
       "block_order": [
-        "75dde1ad-cf27-4851-b9ae-cbe27b51c61d"
+        "334672c3-f913-4929-9fed-dff78f5140c0"
       ],
       "settings": {
         "include_margins": true
@@ -233,7 +174,7 @@
       "settings": {
         "heading": "You Might Also Like",
         "heading_size": "h2",
-        "products_to_show": 4,
+        "products_to_show": 5,
         "columns_desktop": 4,
         "color_scheme": "background-1",
         "image_ratio": "square",
@@ -249,6 +190,7 @@
   "order": [
     "main",
     "16589228130b221df1",
+    "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
     "165981051437af0bd0",

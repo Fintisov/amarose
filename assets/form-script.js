@@ -30,5 +30,44 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+
+  if(document.getElementById('RegisterForm-confirm_password')) {
+    document.getElementById('RegisterForm-confirm_password').addEventListener('input', (event) => {
+      validate_password();
+    });
+  }
+
+
+  function validate_password() {
+    const pass_input = document.getElementById('RegisterForm-password');
+    const pass_input_value = pass_input.value;
+    const confirm_pass_input = document.getElementById('RegisterForm-confirm_password');
+    const confirm_pass_input_value = confirm_pass_input.value;
+    const pass_alert = document.getElementById('wrong_pass_alert');
+    const button = document.getElementById('customer-register__button');
+
+    if (pass_input_value != confirm_pass_input_value) {
+      pass_alert.style.color = 'red';
+      pass_alert.innerHTML = 'Use same password';
+      button.disabled = true;
+      button.style.opacity = (0.4);
+      pass_input.classList.remove('validate-true');
+      confirm_pass_input.classList.remove('validate-true');
+      pass_input.classList.add('validate-error');
+      confirm_pass_input.classList.add('validate-error');
+    } else {
+      pass_alert.style.color = 'green';
+      pass_alert.innerHTML = 'Password Matched';
+      button.disabled = false;
+      button.style.opacity = (1);
+      pass_input.classList.remove('validate-error');
+      confirm_pass_input.classList.remove('validate-error');
+      pass_input.classList.add('validate-true');
+      confirm_pass_input.classList.add('validate-true');
+    }
+  }
+
+
+
   validateEmail()
 })

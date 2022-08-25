@@ -1,44 +1,57 @@
-<section class="benefits">
-  <div class="benefits__header">
-    <h2 class="benefits__title">{{ product.metafields.benefits.benefits_header }}</h2>
-    <h2 class="benefits__subtitle">{{ product.metafields.benefits.benefits_subheader }}</h2>
-  </div>
+{{ 'section-benefits.css' | asset_url | stylesheet_tag }}
 
-  <div class="benefits__text">
-    <p class="benefits__text-block">{{ product.metafields.benefits.benefits_text }}</p>
-  </div>
+{% if product.metafields.benefits.benefits_banner != blank and product.metafields.benefits.benefits_header != blank %}
+<section class="benefits" id="benefits-section">
+  {% if product.metafields.benefits.benefits_banner != blank %}
+    <div class="benefits__image-block">
+      <img
+        srcset="{{ product.metafields.benefits.benefits_banner | image_url }} {{ product.metafields.benefits.benefits_banner.width }}w"
+        src="{{ product.metafields.benefits.benefits_banner | image_url: width: 1920 }}"
+        alt="{{ product.metafields.benefits.benefits_banner.alt | escape }}"
+        loading="lazy"
+        width="{{ product.metafields.benefits.benefits_banner.width }}"
+        height="{{ product.metafields.benefits.benefits_banner.height }}"
+      >
+    </div>
+  {% endif %}
 
-  <div class="benefits__list-icon">
-    {% assign q_size = product.metafields.benefits.benefits_icon.size | minus: 1 %}
-      {%- for icon in (0..q_size) -%}
-        <div class="benefits__list-icon-item" data-icon-{{ block.id }}>
-          <div class="benefits__list-icon-content">
-            {{ product.metafields.benefits.benefits_icon[icon] }}
-            {{ product.metafields.benefits.benefits_icon_text[icon] }}
-          </div>
+  <div class="benefits__content-wrapper">
+    <div class="container">
+      <div class="benefits__content">
+
+        <div class="benefits__header">
+          {% if product.metafields.benefits.benefits_header != blank %}
+            <h2 class="benefits__title">{{ product.metafields.benefits.benefits_header }}</h2>
+          {% endif %}
+          {% if product.metafields.benefits.benefits_subheader != blank %}
+            <h2 class="benefits__subtitle">{{ product.metafields.benefits.benefits_subheader }}</h2>
+          {% endif %}
         </div>
-      {%- endfor -%}
-  </div>
-  <div class="benefits__image-block">
-    <img
-      srcset="{%- if product.metafields.benefits.benefits_banner.width >= 550 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 550 }} 550w,{%- endif -%}
-        {%- if product.metafields.benefits.benefits_banner.width >= 720 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 720 }} 720w,{%- endif -%}
-        {%- if product.metafields.benefits.benefits_banner.width >= 990 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 990 }} 990w,{%- endif -%}
-        {%- if product.metafields.benefits.benefits_banner.width >= 1100 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 1100 }} 1100w,{%- endif -%}
-        {%- if product.metafields.benefits.benefits_banner.width >= 1500 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 1500 }} 1500w,{%- endif -%}
-        {%- if product.metafields.benefits.benefits_banner.width >= 2200 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 2200 }} 2200w,{%- endif -%}
-        {%- if product.metafields.benefits.benefits_banner.width >= 3000 -%}{{ product.metafields.benefits.benefits_banner | image_url: width: 3000 }} 3000w,{%- endif -%}
-        {{ product.metafields.benefits.benefits_banner | image_url }} {{ product.metafields.benefits.benefits_banner.width }}w"
-      src="{{ product.metafields.benefits.benefits_banner | image_url: width: 1500 }}"
-      sizes="(min-width: {{ settings.page_width }}px) {% if section.blocks.size == 1 %}calc({{ settings.page_width }}px - 100px){% else %}{{ settings.page_width | minus: 100 | times: 0.67 | round }}px{% endif %}, (min-width: 750px){% if section.blocks.size == 1 %} calc(100vw - 100px){% else %} 500px{% endif %}, calc(100vw - 30px)"
-      alt="{{ product.metafields.benefits.benefits_banner.alt | escape }}"
-      loading="lazy"
-      width="{{ product.metafields.benefits.benefits_banner.width }}"
-      height="{{ product.metafields.benefits.benefits_banner.height }}"
-    >
-  </div>
 
+        {% if product.metafields.benefits.benefits_text != blank %}
+          <div class="benefits__text">
+            <p class="benefits__text-block">{{ product.metafields.benefits.benefits_text }}</p>
+          </div>
+        {% endif %}
+
+        {% assign q_size = product.metafields.benefits.benefits_icon.size | minus: 1 %}
+        {% if q_size > 0 %}
+          <div class="benefits__list-icon">
+            {%- for icon in (0..q_size) -%}
+              <div class="benefits__list-icon-item" data-icon-{{ block.id }}>
+                <div class="benefits__list-icon-content">
+                  {{ product.metafields.benefits.benefits_icon[icon] }}
+                  {{ product.metafields.benefits.benefits_icon_text[icon] }}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </section>
+{% endif %}
 
 {% schema %}
 {

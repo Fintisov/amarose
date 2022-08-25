@@ -22,20 +22,9 @@
 .container-fluid {
   width: 100%;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px; }
-  @media screen and (max-width: 1300px) {
-    .container-fluid {
-      max-width: 960px; } }
-  @media screen and (max-width: 991px) {
-    .container-fluid {
-      max-width: 720px; } }
-  @media screen and (max-width: 767px) {
-    .container-fluid {
-      max-width: 540px; } }
+  padding: 0 10px; }
   @media screen and (max-width: 575px) {
     .container-fluid {
-      max-width: 100%;
       padding: 0 20px; } }
 
 ul, ol {
@@ -131,8 +120,8 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: max-content;
   min-height: 48px;
+  height: max-content;
   font-family: "futura", suns-serif;
   font-size: 18px;
   font-weight: 500;
@@ -203,12 +192,15 @@ button {
       color: #ffffff;
       background-color: #850B65;
       transition: 0.3s; }
-  .button.disabled-button {
+  .button.disabled-button, .button[disabled] {
     color: #5E697E;
     background-color: #F1F3F6;
     cursor: default; }
-    .button.disabled-button:hover {
-      color: #5E697E; }
+    .button.disabled-button:hover, .button[disabled]:hover {
+      color: #5E697E;
+      background-color: #F1F3F6; }
+    .button.disabled-button path, .button[disabled] path {
+      fill: #5E697E; }
   .button.button-icon {
     padding: 7.5px 32px;
     font-size: 22px;
@@ -401,6 +393,9 @@ button {
     min-width: 247px;
     max-width: max-content;
     transition: 0.3s; }
+    .select select:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px #F1F3F6;
+      -webkit-text-fill-color: #5E697E; }
     .select select::-ms-expand {
       display: none; }
     .select select:disabled {
@@ -444,11 +439,14 @@ button {
     border-radius: 30px;
     background-color: #F1F3F6;
     font-family: "futura", suns-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.4;
     color: #5E697E;
     transition: background-color 0.3s, border 0.3s; }
+    .field .field__input:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px #F1F3F6;
+      -webkit-text-fill-color: #5E697E; }
     .field .field__input::placeholder {
       opacity: 0; }
   @media screen and (max-width: 767px) {
@@ -496,6 +494,8 @@ button {
     .field .field__input.validate-true {
       -webkit-background-size: 14px;
       background-size: 14px; } }
+  .field.field--white .field__input {
+    background-color: #fff; }
   .field.field--no-fly {
     display: block; }
     .field.field--no-fly .field__label {
@@ -577,6 +577,14 @@ button {
       font-size: 14px;
       line-height: 1.28; } }
 
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 30px; }
+  .field-row .row-50 {
+    width: calc(50% - 15px); }
+
 .field__container {
   display: flex;
   justify-content: space-between; }
@@ -606,9 +614,12 @@ button {
   @media screen and (max-width: 767px) {
     .badge {
       font-size: 14px; } }
-  .badge.badge--grey {
+  .badge.badge--gray {
     color: #ffffff;
     background-color: #5E697E; }
+  .badge.badge--pink {
+    color: #ffffff;
+    background-color: #FFBBAB; }
 
 .link-arrow {
   display: flex;
@@ -650,3 +661,225 @@ button {
       flex-basis: calc(50% - 5px); }
       #insta-feed .instafeed-container:not(:nth-last-child(-n+4)) {
         display: none; } }
+
+#shopify-product-reviews {
+  margin: 0 !important;
+  padding: 80px 0; }
+  #shopify-product-reviews .spr-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: none; }
+  @media screen and (max-width: 1300px) {
+    #shopify-product-reviews .spr-container {
+      max-width: 960px; } }
+  @media screen and (max-width: 991px) {
+    #shopify-product-reviews .spr-container {
+      max-width: 720px; } }
+  @media screen and (max-width: 767px) {
+    #shopify-product-reviews .spr-container {
+      max-width: 540px; } }
+  @media screen and (max-width: 575px) {
+    #shopify-product-reviews .spr-container {
+      max-width: 100%;
+      padding: 0 20px; } }
+  #shopify-product-reviews .spr-header-title {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.25;
+    margin-bottom: 10px; }
+  #shopify-product-reviews .spr-summary-caption {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2A3241; }
+  #shopify-product-reviews .spr-summary-actions-newreview {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #BA3A7D;
+    text-decoration-line: underline;
+    text-underline-offset: 4px; }
+  #shopify-product-reviews .spr-form-title {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #2A3241;
+    margin-bottom: 15px; }
+  #shopify-product-reviews .spr-form-review-rating {
+    height: 30px; }
+    #shopify-product-reviews .spr-form-review-rating .spr-starrating .spr-icon:before {
+      font-size: 30px; }
+  #shopify-product-reviews .spr-summary {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2A3241; }
+  #shopify-product-reviews input:not(.spr-button), #shopify-product-reviews textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #F1F3F6;
+    border-radius: 30px;
+    background-color: #F1F3F6;
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #5E697E;
+    transition: background-color 0.3s, border 0.3s; }
+    #shopify-product-reviews input:not(.spr-button):-webkit-autofill, #shopify-product-reviews textarea:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px #F1F3F6;
+      -webkit-text-fill-color: #5E697E; }
+    #shopify-product-reviews input:not(.spr-button)::placeholder, #shopify-product-reviews textarea::placeholder {
+      opacity: 1; }
+  @media screen and (max-width: 767px) {
+    #shopify-product-reviews input:not(.spr-button), #shopify-product-reviews textarea {
+      height: 40px;
+      font-size: 16px;
+      padding: 15px; } }
+    #shopify-product-reviews input:not(.spr-button):focus, #shopify-product-reviews textarea:focus {
+      border-radius: 30px; }
+    #shopify-product-reviews input:not(.spr-button):hover, #shopify-product-reviews textarea:hover {
+      background-color: #FFEEEA; }
+    #shopify-product-reviews input:not(.spr-button):focus, #shopify-product-reviews textarea:focus {
+      border: 1px solid #F08B84;
+      background-color: #F1F3F6; }
+      #shopify-product-reviews input:not(.spr-button):focus ~ .field__label, #shopify-product-reviews textarea:focus ~ .field__label {
+        top: 12px;
+        font-size: 10px; }
+    #shopify-product-reviews input:not(.spr-button):disabled:hover, #shopify-product-reviews textarea:disabled:hover {
+      background-color: #F1F3F6;
+      cursor: not-allowed; }
+  #shopify-product-reviews label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    border: 0; }
+  #shopify-product-reviews textarea {
+    padding: 20px;
+    min-height: 250px; }
+  #shopify-product-reviews .spr-form-review-body {
+    scrollbar-color: #BA3A7D transparent;
+    scrollbar-width: thin;
+    /* ползунок скроллбара */
+    /* Стрелки */
+    border-radius: 30px;
+    overflow: hidden; }
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar {
+      width: 10px;
+      /* ширина для вертикального скролла */
+      height: 6px;
+      /* высота для горизонтального скролла */
+      background-color: transparent; }
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-thumb {
+      background-color: #BA3A7D;
+      border-radius: 20px; }
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-thumb:hover {
+      background-color: #850B65; }
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:start:decrement, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:end:increment, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:end:increment, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:horizontal:start:decrement, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:horizontal:end:increment {
+      display: none; }
+    #shopify-product-reviews .spr-form-review-body textarea {
+      resize: none; }
+  #shopify-product-reviews .spr-starrating, #shopify-product-reviews .spr-starratings {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25; }
+    #shopify-product-reviews .spr-starrating .spr-icon, #shopify-product-reviews .spr-starratings .spr-icon {
+      margin-right: 5px;
+      color: #F08B84;
+      opacity: 1; }
+      #shopify-product-reviews .spr-starrating .spr-icon:before, #shopify-product-reviews .spr-starratings .spr-icon:before {
+        font-size: 25px; }
+  #shopify-product-reviews .spr-starratings .spr-icon {
+    margin-right: 0; }
+    #shopify-product-reviews .spr-starratings .spr-icon:before {
+      font-size: 20px; }
+  #shopify-product-reviews .spr-button {
+    border: none;
+    color: #ffffff;
+    background-color: #BA3A7D;
+    transition: 0.3s; }
+    #shopify-product-reviews .spr-button:hover {
+      color: #ffffff;
+      background-color: #850B65;
+      transition: 0.3s; }
+  #shopify-product-reviews .spr-review-header-title {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #2A3241; }
+  #shopify-product-reviews .spr-review-header-byline, #shopify-product-reviews strong {
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #5E697E; }
+  #shopify-product-reviews .spr-review-content-body {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #2A3241; }
+  #shopify-product-reviews .spr-review-reportreview {
+    font-family: "futura", suns-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+    color: #BA3A7D; }
+  #shopify-product-reviews .spr-form-message {
+    border-radius: 30px;
+    text-align: center;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px; }
+    #shopify-product-reviews .spr-form-message.spr-form-message-error {
+      background-color: #DE3D64; }
+  #shopify-product-reviews .spr-pagination .spr-pagination-page a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FFEEEA;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #2A3241; }
+  #shopify-product-reviews .spr-pagination .spr-pagination-page.is-active {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "futura", suns-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #2A3241;
+    cursor: default;
+    background-color: #FFBBAB; }
+  #shopify-product-reviews .spr-pagination .spr-pagination-next, #shopify-product-reviews .spr-pagination .spr-pagination-prev {
+    display: none;
+    /*
+      a {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: $blush-25;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
+      }*/ }

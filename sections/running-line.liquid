@@ -1,13 +1,31 @@
-<section class="running-line">
-  <h2 class="visually-hidden">{{ section.settings.title }}</h2>
-  <ul class="running-line__list">
-    {% for block in section.blocks %}
-      <li class="running-line__list-item">
-        {{ block.settings.running_line_item }}
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+{% if template == 'product' and product.metafields.accentuate.show_running_line == 'true' %}
+  {% assign show_on_product = true  %}
+{% endif %}
+
+{% if show_on_product %}
+  {{ 'section-running-line.css' | asset_url | stylesheet_tag }}
+  <section class="running-line">
+    <h2 class="visually-hidden">{{ section.settings.title }}</h2>
+
+    <div class="running-line__content">
+      <div class="running-line__items-wrapper">
+        {% for block in section.blocks %}
+          <p class="running-line__item">
+            {{ block.settings.running_line_item }}
+          </p>
+        {% endfor %}
+      </div>
+      <div class="running-line__items-wrapper">
+        {% for block in section.blocks %}
+          <p class="running-line__item">
+            {{ block.settings.running_line_item }}
+          </p>
+        {% endfor %}
+      </div>
+    </div>
+
+  </section>
+{% endif %}
 
 {% schema %}
 {

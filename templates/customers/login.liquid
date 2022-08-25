@@ -63,6 +63,7 @@
                 autocorrect="off"
                 autocapitalize="off"
                 autocomplete="email"
+                     data-verification
                 placeholder="{{ 'customer.login_page.email' | t }}"
                 class="field__input {% if form.errors contains 'form' %} validate-error{% endif %}"
                 {% if form.errors %}
@@ -84,6 +85,10 @@
           <button type="submit" class="customer-login__button button primary-button button--sm">
             {{ 'customer.login_page.submit' | t }}
           </button>
+
+          <p class="customer-login__register-link">
+            <a href="#login">{{ 'customer.login_page.cancel' | t }}</a>
+          </p>
         {%- endform -%}
       </div>
 
@@ -110,6 +115,7 @@
                   autocomplete="email"
                   autocorrect="off"
                   autocapitalize="off"
+                  data-verification
                   placeholder="{{ 'customer.login_page.email' | t }}"
                   class="field__input {% if form.errors contains 'form' %} validate-error{% endif %}"
                   {% if form.errors contains 'form' %}

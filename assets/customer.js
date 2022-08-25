@@ -93,6 +93,7 @@ class CustomerAddresses {
   }
 
   _handlePopupOpenerButtonClick = ({ currentTarget }) => {
-    currentTarget.closest(selectors.addressContainer).classList.toggle('address-popup-open')
+    currentTarget.closest(selectors.addressContainer).classList.toggle('address-popup-open');
+    document.querySelector("body").classList.toggle('overflow-hidden')
   }
 }

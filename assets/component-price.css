@@ -36,3 +36,25 @@
   @media screen and (max-width: 767px) {
     .price__sale + .price__regular {
       font-size: 14px; } }
+
+.order-price__final-price {
+  margin-right: 10px;
+  color: #2A3241; }
+@media screen and (max-width: 767px) {
+  .order-price__final-price {
+    font-size: 14px;
+    margin-right: 5px; } }
+.order-price__old-price {
+  margin-right: 10px;
+  color: #5E697E; }
+@media screen and (max-width: 767px) {
+  .order-price__old-price {
+    font-size: 16px;
+    margin-right: 5px; } }
+.order-price__discount {
+  margin-right: 10px;
+  color: #BA3A7D; }
+@media screen and (max-width: 767px) {
+  .order-price__discount {
+    font-size: 16px;
+    margin-right: 5px; } }

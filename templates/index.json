@@ -7,12 +7,12 @@
         "image": "shopify:\/\/shop_images\/Homepage_Image_Transparent.png",
         "text_alignment": "left",
         "show_bg": false,
-        "sub_heading": "On Sale",
-        "sub_heading_color": "pink",
+        "sub_heading": "ON SALE",
+        "sub_heading_color": "white",
         "heading": "Beauty Boost Cleanser",
         "description": "<p>Gently remove impurities and dirt while infusing your skin with essential nutrients.<\/p>",
         "button_text": "Learn More",
-        "button_url": "#"
+        "button_url": "shopify:\/\/products\/beauty-boost-cleanser"
       }
     },
     "1658046660491a8b79": {

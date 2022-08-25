@@ -30,8 +30,8 @@
       "settings": {
       }
     },
-    "1658336571433277fd": {
-      "type": "featured-blog",
+    "1660208759ee3bbb0b": {
+      "type": "featured-blog-article",
       "settings": {
         "heading": "You Might Also Like",
         "content": "",
@@ -44,6 +44,6 @@
   },
   "order": [
     "main",
-    "1658336571433277fd"
+    "1660208759ee3bbb0b"
   ]
 }
