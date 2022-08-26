@@ -1270,3 +1270,27 @@ input[type='checkbox'] {
 .jdgm-rev-widg__header .jdgm-row-readmore {
   display: none !important;
 }
+
+
+.jdgm-form input[type="text"],
+.jdgm-form input[type="email"],
+.jdgm-form input[type="url"],
+.jdgm-form textarea {
+  min-height: 48px;
+  padding: 20px 40px 5px 20px;
+  margin: 0;
+  border: 1px solid #F1F3F6 !important;
+  border-radius: 30px !important;
+  background-color: #f1f3f6;
+  font-family: futura,suns-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #5e697e;
+}
+
+.jdgm-form textarea {
+  max-height: 150px;
+  min-width: 100%;
+  max-width: 100%;
+}
