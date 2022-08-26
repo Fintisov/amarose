@@ -1196,6 +1196,9 @@ input[type='checkbox'] {
   box-shadow: none !important;
   overflow: hidden;
   padding: 0;
+  background-image: url('https://cdn.shopify.com/s/files/1/0654/7442/9168/files/q.png?v=1661505410');
+  background-position: 100% 0;
+  background-repeat: no-repeat;
 }
 
 .jdgm-rev-carousel .jdgm-rev__header {
