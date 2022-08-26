@@ -1121,16 +1121,16 @@
         }
       },
       "blocks": {
-          "ingredient": {
-            "name": "Item",
-            "settings": {
-              "icon_works": {
-                "label": "Icon"
-              },
-              "text_works": {
-                "label": "Text"
-              }
+        "ingredient": {
+          "name": "Item",
+          "settings": {
+            "icon_works": {
+              "label": "Icon"
+            },
+            "text_works": {
+              "label": "Text"
             }
+          }
         }
       },
       "presets": {

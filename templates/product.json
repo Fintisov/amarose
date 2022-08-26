@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "judgeme_preview_badge_product_page_8391f34e": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -30,17 +35,12 @@
           "type": "description",
           "settings": {
           }
-        },
-        "judgeme_preview_badge_product_page_8391f34e": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "title",
-        "price",
         "judgeme_preview_badge_product_page_8391f34e",
+        "price",
         "variant_picker",
         "buy_buttons",
         "description"
@@ -95,7 +95,6 @@
       "settings": {
         "heading": "Formulated to provide skin nutrition for optimal skin health.",
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
-        "cover_image": "shopify:\/\/shop_images\/Rectangle_42.jpg",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "is_product": true
@@ -142,8 +141,18 @@
         "text": "Developed to work better together, each product prepares your skin for every day protection."
       }
     },
-    "1658920095a5b24ea0": {
+    "judgeme_section_review_widget_2133": {
       "type": "apps",
+      "blocks": {
+        "judgeme_review_widget_793db13e": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "judgeme_review_widget_793db13e"
+      ],
       "settings": {
         "include_margins": true
       }
@@ -169,33 +178,16 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "judgeme_section_review_widget_2133": {
-      "type": "apps",
-      "blocks": {
-        "judgeme_review_widget_793db13e": {
-          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "judgeme_review_widget_793db13e"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "judgeme_section_review_widget_2133",
     "16589228130b221df1",
     "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
     "165981051437af0bd0",
-    "1658920095a5b24ea0",
+    "judgeme_section_review_widget_2133",
     "16598113958f0d0b25",
     "product-recommendations"
   ]
