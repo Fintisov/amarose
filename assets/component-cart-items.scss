@@ -137,11 +137,48 @@
 
   .button-delete-card {
     display: inline-block;
+    position: relative;
 
     svg {
       width: 24px;
       height: 24px;
       stroke: $midGrey;
+    }
+
+    &__tooltip {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 26px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 21px;
+      background: #2A3241;
+      border-radius: 3px;
+      padding:0 5px;
+
+      &:before {
+        position: absolute;
+        top: 5px;
+        right: -5px;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent #2A3241;
+      }
+    }
+
+    &:hover {
+      .button-delete-card__tooltip {
+        display: block;
+      }
+
+      svg {
+        border-radius: 50%;
+        background: #ffeeea;
+      }
     }
   }
 
