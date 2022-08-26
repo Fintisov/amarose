@@ -1595,7 +1595,7 @@
       {
         "type": "text",
         "id": "order_prev_link",
-        "default": "/account?view=orders",
+        "default": "\/account?view=orders",
         "label": "t:settings_schema.customer.order.prev_link"
       }
     ]

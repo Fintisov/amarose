@@ -3,7 +3,7 @@
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
-        "bg_image": "shopify:\/\/shop_images\/General.png",
+        "bg_image": "shopify:\/\/shop_images\/20.webp",
         "bg_color": "#ebc2c0",
         "text_alignment": "left",
         "show_bg": true,
@@ -20,7 +20,7 @@
       "settings": {
         "heading": "Powerful Nutrition For Stronger, Healthier Skin",
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
-        "cover_image": "shopify:\/\/shop_images\/Rectangle_42.jpg",
+        "cover_image": "shopify:\/\/shop_images\/14.webp",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "is_product": false
