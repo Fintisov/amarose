@@ -242,7 +242,7 @@
               {%- endform -%}
             </div>
           {%- when 'description' -%}
-          {% if product.metafields.description.text != blank %}
+          {% if product.metafields.ingredient.text != blank and product.metafields.ingredient.image != blank %}
             <details-modal class="ingredient-modal-wrap">
               <details>
                 <summary class="ingredient__opener-link link focus-inset modal__toggle" aria-haspopup="dialog"
