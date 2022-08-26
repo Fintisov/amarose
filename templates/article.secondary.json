@@ -36,7 +36,7 @@
         "heading": "You Might Also Like",
         "content": "",
         "blog": "journal",
-        "show_date": true,
+        "show_date": false,
         "show_author": false,
         "post_limit": 6
       }
