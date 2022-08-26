@@ -12,6 +12,14 @@
     width: 100%;
   }
 
+  .price__sale+.price__regular {
+    padding-top: 0;
+  }
+
+  .price__regular {
+    padding-top: 29px;
+  }
+
   .card__inner {
     position: relative;
 
@@ -30,6 +38,8 @@
 
       .media {
         height: 100%;
+        background: #f5f7f9;
+
       }
 
       img {
