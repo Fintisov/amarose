@@ -5,8 +5,8 @@
   {% if product.metafields.benefits.benefits_banner != blank %}
     <div class="benefits__image-block">
       <img
-        srcset="{{ product.metafields.benefits.benefits_banner | image_url }} {{ product.metafields.benefits.benefits_banner.width }}w"
-        src="{{ product.metafields.benefits.benefits_banner | image_url: width: 1920 }}"
+        srcset="{{ product.metafields.benefits.benefits_banner }} {{ product.metafields.benefits.benefits_banner.width }}w"
+        src="{{ product.metafields.benefits.benefits_banner }}"
         alt="{{ product.metafields.benefits.benefits_banner.alt | escape }}"
         loading="lazy"
         width="{{ product.metafields.benefits.benefits_banner.width }}"
