@@ -25,7 +25,7 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "show_date": true,
+        "show_date": false,
         "show_author": false,
         "post_limit": 6
       }
