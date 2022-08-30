@@ -873,13 +873,13 @@ button {
     background-color: #FFBBAB; }
   #shopify-product-reviews .spr-pagination .spr-pagination-next, #shopify-product-reviews .spr-pagination .spr-pagination-prev {
     display: none;
-    /*
-      a {
-        padding: 6px 12px;
-        border-radius: 20px;
-        background-color: $blush-25;
-        font-family: $futura;
-        font-weight: 400;
-        font-size: 16px;
-        color: $black;
+    /*
+      a {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: $blush-25;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
       }*/ }

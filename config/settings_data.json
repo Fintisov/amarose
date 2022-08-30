@@ -50,12 +50,12 @@
               "title": "Shop",
               "text01": "Buy One, Get One! Moisturizer",
               "text_link01": "Shop Now",
-              "link01": "#",
+              "link01": "shopify:\/\/pages\/the-amarose-touch",
               "image01": "shopify:\/\/shop_images\/15.webp",
               "text_alignment01": "top",
               "text02": "10% OFF Boosting Moisturizer SHOP NOW",
               "text_link02": "",
-              "link02": "#",
+              "link02": "shopify:\/\/blogs\/journal\/5-things-you-should-absolutely-never-try-with-vitamin-c",
               "image02": "shopify:\/\/shop_images\/16.webp",
               "text_alignment02": "center"
             }
@@ -68,7 +68,7 @@
               "top_text": "HOT OFF THE PRESS",
               "text": "<p>5 Things You Should Absolutely NEVER Try with Vitamin C.<\/p>",
               "button_text": "Click Here",
-              "button_url": "#"
+              "button_url": "shopify:\/\/blogs\/journal\/5-things-you-should-absolutely-never-try-with-vitamin-c"
             }
           },
           "73c1e128-07c3-470f-b005-12b316a6d58f": {
@@ -79,7 +79,7 @@
               "top_text": "",
               "text": "<p>Find out what makes our products special.<\/p>",
               "button_text": "The Amarose Touch",
-              "button_url": "#"
+              "button_url": "shopify:\/\/pages\/the-amarose-touch"
             }
           }
         },
