@@ -11,14 +11,17 @@
 
 .email-signup-banner__box .email-signup-banner__heading {
   margin-bottom: 0;
+  color: #fff;
 }
 
 .email-signup-banner__box > * + .newsletter__subheading {
   margin-top: 2rem;
+  color: #fff;
 }
 
 .email-signup-banner__box .newsletter__subheading p {
   margin: 0;
+  color: #fff;
 }
 
 .email-signup-banner-background {
