@@ -11,7 +11,7 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "background_image": "shopify:\/\/shop_images\/Contact-min.png",
+        "background_image": "shopify:\/\/shop_images\/Contact-min.webp",
         "heading": "Questions, suggestions? We’re here to help.",
         "button_text01": "Email",
         "button_svg01": "<svg width=\"49\" height=\"49\" viewbox=\"0 0 49 49\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<circle cx=\"24.5\" cy=\"24.5\" r=\"24.5\" fill=\"#FFBBAB\" fill-opacity=\"0.25\"><\/circle>\n<rect x=\"14\" y=\"17.5\" width=\"20\" height=\"15\" rx=\"2\" stroke=\"#F08B84\" stroke-width=\"1.5\"><\/rect>\n<path d=\"M14 21.25L23.1056 25.8028C23.6686 26.0843 24.3314 26.0843 24.8944 25.8028L34 21.25\" stroke=\"#F08B84\" stroke-width=\"1.5\"><\/path>\n<\/svg>",
