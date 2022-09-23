@@ -75,6 +75,7 @@
     },
     "165804645803b40e7b": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Blog posts",
         "content": "<p>Find secrets to keeping your skin healthy. Return to the Journal for the latest on all-natural skin and beauty products and more. <\/p>",
