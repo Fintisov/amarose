@@ -35,9 +35,9 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "timer": "2022, 09, 01",
-          "content": "<p>Memorial Offer: <strong>55% Off Everything<\/strong> <\/p><p><em>Hurry Up! Use Code:<\/em>MEMORIAL5<\/p>",
-          "button_text": "Shop<em> Now<\/em>",
+          "timer": "",
+          "content": "",
+          "button_text": "",
           "button_url": "#"
         }
       },
