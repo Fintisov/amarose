@@ -50,15 +50,13 @@
             "type": "two-boxes",
             "settings": {
               "title": "Shop",
-              "text01": "Buy One, Get One! Moisturizer",
+              "text01": "",
               "text_link01": "Shop Now",
               "link01": "shopify:\/\/pages\/the-amarose-touch",
-              "image01": "shopify:\/\/shop_images\/15.webp",
               "text_alignment01": "top",
               "text02": "10% OFF Boosting Moisturizer SHOP NOW",
               "text_link02": "",
               "link02": "shopify:\/\/blogs\/journal\/5-things-you-should-absolutely-never-try-with-vitamin-c",
-              "image02": "shopify:\/\/shop_images\/16.webp",
               "text_alignment02": "center"
             }
           },
