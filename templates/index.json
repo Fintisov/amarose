@@ -7,10 +7,10 @@
         "bg_color": "#ffded6",
         "text_alignment": "left",
         "show_bg": false,
-        "sub_heading": "ON SALE",
+        "sub_heading": "",
         "sub_heading_color": "white",
-        "heading": "Beauty Boost Cleanser",
-        "description": "<p>Gently remove impurities and dirt while infusing your skin with essential nutrients.<\/p>",
+        "heading": "Make Your Skin Happy",
+        "description": "<p>Essential Enriched Skincare<\/p>",
         "button_text": "Learn More",
         "button_url": "shopify:\/\/products\/beauty-boost-cleanser"
       }
