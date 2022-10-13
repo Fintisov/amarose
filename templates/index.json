@@ -3,8 +3,8 @@
     "165781071790c254de": {
       "type": "hero-banner",
       "settings": {
+        "bg_image": "shopify:\/\/shop_images\/Amarose_Hero_Oct_14e76537-9f09-4325-b292-a7f7b1641589.png",
         "bg_color": "#ffded6",
-        "image": "shopify:\/\/shop_images\/1_Homepage_Image_Transparent.webp",
         "text_alignment": "left",
         "show_bg": false,
         "sub_heading": "ON SALE",
@@ -58,6 +58,7 @@
     },
     "16582582924f93d67a": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Formulated to provide skin nutrition for optimal skin health.",
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
@@ -75,6 +76,7 @@
     },
     "165804645803b40e7b": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Blog posts",
         "content": "<p>Find secrets to keeping your skin healthy. Return to the Journal for the latest on all-natural skin and beauty products and more. <\/p>",
