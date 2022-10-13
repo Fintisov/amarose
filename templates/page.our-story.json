@@ -4,7 +4,7 @@
       "type": "hero-banner",
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/8739.jpg",
-        "bg_image_mobile": "shopify:\/\/shop_images\/AboutDesktop.png",
+        "bg_image_mobile": "shopify:\/\/shop_images\/Register-min.webp",
         "bg_color": "#ebc2c0",
         "text_alignment": "left",
         "show_bg": true,
