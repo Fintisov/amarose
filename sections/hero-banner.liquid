@@ -48,11 +48,13 @@
 </div>
 
 {% if section.settings.bg_image_mobile != blank %}
-  @media only screen and (max-width: 767px) {
-  .hero-banner {
-    background-image: url({{ section.settings.bg_image_mobile }}) !important;
-  }
-  }
+  <style>
+    @media only screen and (max-width: 767px) {
+      .hero-banner {
+        background-image: url({{ section.settings.bg_image_mobile }}) !important;
+      }
+    }
+  </style>
 {% endif %}
 
 {% schema %}
