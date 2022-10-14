@@ -178,6 +178,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "13057770590969753118": {
+        "type": "shopify:\/\/apps\/feedstory-instagram-feed-app\/blocks\/app-embed\/4169bff3-1d6b-44ad-9377-2ebc3d31f01c",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   }
