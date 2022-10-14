@@ -89,14 +89,6 @@
     "1665697376713d32bb": {
       "type": "apps",
       "blocks": {
-        "5232aacb-3db9-4b16-a8f1-0234fb2d0446": {
-          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "heading_size": 20,
-            "feed_width": 100,
-            "html_area": ""
-          }
-        },
         "0e619692-4ed8-46e2-b186-7f98289442dc": {
           "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "disabled": true,
@@ -108,16 +100,82 @@
         }
       },
       "block_order": [
-        "5232aacb-3db9-4b16-a8f1-0234fb2d0446",
         "0e619692-4ed8-46e2-b186-7f98289442dc"
       ],
       "settings": {
         "include_margins": true
       }
     },
+    "e249d1ad-930e-4faf-afd6-5ac59de66a67": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459153015042__e249d1ad-930e-4faf-afd6-5ac59de66a67-166577881420e6d885-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Connect with us<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16459153015042__e249d1ad-930e-4faf-afd6-5ac59de66a67-166577881420e6d885-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "instastory-786": {
       "type": "instagram_feed_story",
       "settings": {
+      }
+    },
+    "ac51904f-d396-4a97-8422-99f974d39f50": {
+      "type": "image-link-list",
+      "disabled": true,
+      "settings": {
+        "title": "Block links"
+      }
+    },
+    "d45160f6-8a95-47a8-bb13-ae4cc73649fe": {
+      "type": "hero-banner",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#fff",
+        "text_alignment": "center",
+        "show_bg": false,
+        "sub_heading": "",
+        "sub_heading_color": "pink",
+        "heading": "",
+        "description": "",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a": {
+      "type": "rich-text",
+      "blocks": {
+        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>      <br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -129,6 +187,10 @@
     "1658258250814617ed",
     "165804645803b40e7b",
     "1665697376713d32bb",
-    "instastory-786"
+    "e249d1ad-930e-4faf-afd6-5ac59de66a67",
+    "instastory-786",
+    "ac51904f-d396-4a97-8422-99f974d39f50",
+    "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a"
   ]
 }
