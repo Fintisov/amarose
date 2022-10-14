@@ -1,9 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
 <style>
-    .announcement-bar { display: none; }
+  .announcement-bar {
+    display: none;
+  }
 </style>
-  <head>
+<head>
   <script src='{{ 'subscription-plan-selector-js.js' | asset_url }}' defer='defer'></script>
   <script id='sealoop_product' type='application/json'>
               {{ product | json }}
@@ -21,21 +23,24 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '682311619591433');
   fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=682311619591433&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  
-    
+
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=682311619591433&ev=PageView&noscript=1"
+    /></noscript>
+  <!-- End Meta Pixel Code -->
+
+
   </script>
   <script id='sealoop_product_selected_or_first_variant' type='application/json'>
               {{ product.selected_or_first_available_variant.id | json }}
 
 
+
   </script>
   <script id='sealoop_money_format' type='application/json'>
             {{ shop.money_format | json }}
+
 
 
   </script>
@@ -340,24 +345,26 @@ or template.suffix == 'register-complete' %}
 <script src="{{ 'tabs.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'burger-menu.js' | asset_url }}" defer="defer"></script>
 
-<script>
-  function initFreshChat() {
-    window.fcWidget.init({
-      token: "d4ec65b0-6378-47e4-90b3-c241d5eeb7d4",
-      host: "https://wchat.eu.freshchat.com",
-    });
-  }
+{% comment %}
+  <script>
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "d4ec65b0-6378-47e4-90b3-c241d5eeb7d4",
+        host: "https://wchat.eu.freshchat.com",
+      });
+    }
 
-  function initialize(i, t) {
-    var e;
-    i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t, e.async = !0, e.src = "https://wchat.eu.freshchat.com/js/widget.js", e.onload = initFreshChat, i.head.appendChild(e))
-  }
+    function initialize(i, t) {
+      var e;
+      i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t, e.async = !0, e.src = "https://wchat.eu.freshchat.com/js/widget.js", e.onload = initFreshChat, i.head.appendChild(e))
+    }
 
-  function initiateCall() {
-    initialize(document, "freshchat-js-sdk")
-  }
+    function initiateCall() {
+      initialize(document, "freshchat-js-sdk")
+    }
 
-  window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
-</script>
+    window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
+  </script>
+{% endcomment %}
 </body>
 </html>
