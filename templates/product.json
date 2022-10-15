@@ -35,6 +35,12 @@
           "type": "description",
           "settings": {
           }
+        },
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -43,7 +49,8 @@
         "price",
         "variant_picker",
         "buy_buttons",
-        "description"
+        "description",
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe"
       ],
       "settings": {
         "enable_sticky_info": true,
