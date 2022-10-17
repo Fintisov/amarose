@@ -91,7 +91,6 @@
       "blocks": {
         "0e619692-4ed8-46e2-b186-7f98289442dc": {
           "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "disabled": true,
           "settings": {
             "heading_size": 20,
             "feed_width": 100,
@@ -145,7 +144,7 @@
       "type": "hero-banner",
       "disabled": true,
       "settings": {
-        "bg_color": "#fff",
+        "bg_color": "#ffffff",
         "text_alignment": "center",
         "show_bg": false,
         "sub_heading": "",
