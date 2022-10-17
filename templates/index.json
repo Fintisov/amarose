@@ -105,30 +105,6 @@
         "include_margins": true
       }
     },
-    "e249d1ad-930e-4faf-afd6-5ac59de66a67": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16459153015042__e249d1ad-930e-4faf-afd6-5ac59de66a67-166577881420e6d885-0": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "<p>Follow Us <a href=\"https:\/\/www.instagram.com\/amarosebeauty\/#\">@amarosebeauty<\/a><\/p>",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--16459153015042__e249d1ad-930e-4faf-afd6-5ac59de66a67-166577881420e6d885-0"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
-    },
     "ac51904f-d396-4a97-8422-99f974d39f50": {
       "type": "image-link-list",
       "disabled": true,
@@ -169,7 +145,7 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 28,
+        "padding_top": 32,
         "padding_bottom": 28
       }
     }
@@ -182,7 +158,6 @@
     "1658258250814617ed",
     "165804645803b40e7b",
     "1665697376713d32bb",
-    "e249d1ad-930e-4faf-afd6-5ac59de66a67",
     "ac51904f-d396-4a97-8422-99f974d39f50",
     "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
     "1aa7fb41-3693-4666-b24f-efd371d01c6a"
