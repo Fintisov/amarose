@@ -142,6 +142,12 @@
         "padding_top": 32,
         "padding_bottom": 28
       }
+    },
+    "16660287198182da64": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -153,6 +159,7 @@
     "1665697376713d32bb",
     "ac51904f-d396-4a97-8422-99f974d39f50",
     "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
-    "1aa7fb41-3693-4666-b24f-efd371d01c6a"
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a",
+    "16660287198182da64"
   ]
 }
