@@ -1,5 +1,20 @@
 {
   "sections": {
+    "17951ce6-455c-4fae-8d34-5337dd4454c4": {
+      "type": "hero-banner",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffcebd",
+        "text_alignment": "center",
+        "show_bg": false,
+        "sub_heading": "",
+        "sub_heading_color": "pink",
+        "heading": "",
+        "description": "",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
     "1658249854f9284584": {
       "type": "blog-filter",
       "settings": {
@@ -9,16 +24,17 @@
     },
     "165867926240d0b834": {
       "type": "hero-banner",
+      "disabled": true,
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/General-min.webp",
         "bg_color": "#ffcebd",
         "text_alignment": "left",
         "show_bg": true,
-        "sub_heading": "ON SALE",
+        "sub_heading": "",
         "sub_heading_color": "pink",
-        "heading": "5 Things You Should Absolutely NEVER Try with Vitamin C.",
+        "heading": "",
         "description": "",
-        "button_text": "Read More",
+        "button_text": "",
         "button_url": "#"
       }
     },
@@ -29,11 +45,20 @@
         "show_author": false,
         "post_limit": 6
       }
+    },
+    "f81d77e0-ec1e-4f1f-a57d-2d2fadc9bbcb": {
+      "type": "blog-filter",
+      "settings": {
+        "filter_heading": "Blog filters",
+        "link_all": "ALL"
+      }
     }
   },
   "order": [
+    "17951ce6-455c-4fae-8d34-5337dd4454c4",
     "1658249854f9284584",
     "165867926240d0b834",
-    "main"
+    "main",
+    "f81d77e0-ec1e-4f1f-a57d-2d2fadc9bbcb"
   ]
 }
