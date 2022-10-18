@@ -1,5 +1,35 @@
 {
   "sections": {
+    "ac53c266-77ad-4860-aea6-e25350c8164a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459152392450__ac53c266-77ad-4860-aea6-e25350c8164a-1666113819e1d8523b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Have Questions?<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152392450__ac53c266-77ad-4860-aea6-e25350c8164a-1666113819e1d8523b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Click on some of the most frequently asked questions below to see if we have your answer.<br\/><\/p><p><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152392450__ac53c266-77ad-4860-aea6-e25350c8164a-1666113819e1d8523b-0",
+        "template--16459152392450__ac53c266-77ad-4860-aea6-e25350c8164a-1666113819e1d8523b-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "16582372027824d037": {
       "type": "faq-list",
       "blocks": {
@@ -47,7 +77,7 @@
         "f762ab19-fd7a-423e-9e78-dea4a52e2adb"
       ],
       "settings": {
-        "title": "Frequently Asked Questions"
+        "title": ""
       }
     },
     "main": {
@@ -60,10 +90,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "VIEW OUR PRODUCTS",
+            "button_link": "shopify:\/\/collections\/shop-all",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0",
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1",
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
+    "ac53c266-77ad-4860-aea6-e25350c8164a",
     "16582372027824d037",
-    "main"
+    "main",
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1"
   ]
 }
