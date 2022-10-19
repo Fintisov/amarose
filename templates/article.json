@@ -29,21 +29,9 @@
       ],
       "settings": {
       }
-    },
-    "166020860066d80f35": {
-      "type": "featured-blog-article",
-      "settings": {
-        "heading": "You Might Also Like",
-        "content": "",
-        "blog": "journal",
-        "show_date": true,
-        "show_author": false,
-        "post_limit": 6
-      }
     }
   },
   "order": [
-    "main",
-    "166020860066d80f35"
+    "main"
   ]
 }
