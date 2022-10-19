@@ -50,7 +50,7 @@
         "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to Amarose. We believe in the power of plants and the natural active ingredients they provide. By combining the best of scientific research with the highest quality active ingredients found in nature, we can assure that every molecule and oil that the plants provide, can be utilized in its purest and strongest form.<br\/><br\/><\/p><p><\/p><p>Our promise.<br\/><br\/>Naturally uncompromising. Consistently effective. This is our promise and our commitment, not only to your skin but also to all ingredients we use. Our beliefs and standards are reflected both in the quality of our products and in the way we source and process our<\/p>"
+            "text": "<p><strong>Welcome to Amarose. <\/strong>We believe in the power of plants and the natural active ingredients they provide. By combining the best of scientific research with the highest quality active ingredients found in nature, we can assure that every molecule and oil that the plants provide, can be utilized in its purest and strongest form.<\/p>"
           }
         },
         "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-2": {
@@ -84,6 +84,76 @@
       "type": "images-two-with-text",
       "settings": {
       }
+    },
+    "74dd029a-3a85-4abe-b91d-08ac603a5ad3": {
+      "type": "benefits",
+      "blocks": {
+        "48b8b3ce-2a9c-49eb-b08d-090c567da3dc": {
+          "type": "box",
+          "settings": {
+            "svg_code": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "48b8b3ce-2a9c-49eb-b08d-090c567da3dc"
+      ],
+      "settings": {
+        "content": "",
+        "content_html": ""
+      }
+    },
+    "689f2142-6eb8-4c47-b752-b249242161c3": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--16459152654594__689f2142-6eb8-4c47-b752-b249242161c3-1666219705e08cc11a-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screen_Shot_2022-10-19_at_6.52.23_PM.png",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16459152654594__689f2142-6eb8-4c47-b752-b249242161c3-1666219705e08cc11a-2": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152654594__689f2142-6eb8-4c47-b752-b249242161c3-1666219705e08cc11a-0",
+        "template--16459152654594__689f2142-6eb8-4c47-b752-b249242161c3-1666219705e08cc11a-2"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 1,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ab04e3bf-6349-49e7-8fb7-a90645479e37": {
+      "type": "benefits",
+      "settings": {
+        "content": "",
+        "content_html": ""
+      }
     }
   },
   "order": [
@@ -91,6 +161,9 @@
     "1658680767c6abc35b",
     "165868083633467195",
     "e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6",
-    "303b25e3-24dd-4ec2-b880-ad3f93e92528"
+    "303b25e3-24dd-4ec2-b880-ad3f93e92528",
+    "74dd029a-3a85-4abe-b91d-08ac603a5ad3",
+    "689f2142-6eb8-4c47-b752-b249242161c3",
+    "ab04e3bf-6349-49e7-8fb7-a90645479e37"
   ]
 }
