@@ -29,17 +29,62 @@
     },
     "165868083633467195": {
       "type": "ingredients",
+      "disabled": true,
       "settings": {
         "title": "Vitamin and Nutrient Infused Clean Beauty",
         "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
         "button_text": "Shop Now",
         "button_url": "#"
       }
+    },
+    "e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Welcome to Amarose. We believe in the power of plants and the natural active ingredients they provide. By combining the best of scientific research with the highest quality active ingredients found in nature, we can assure that every molecule and oil that the plants provide, can be utilized in its purest and strongest form.<br\/><br\/><\/p><p><\/p><p>Our promise.<br\/><br\/>Naturally uncompromising. Consistently effective. This is our promise and our commitment, not only to your skin but also to all ingredients we use. Our beliefs and standards are reflected both in the quality of our products and in the way we source and process our<\/p>"
+          }
+        },
+        "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-0",
+        "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-1",
+        "template--16459152654594__e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6-166620091114056626-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "hero-banner",
     "1658680767c6abc35b",
-    "165868083633467195"
+    "165868083633467195",
+    "e1efc1c2-c4e6-4fe4-8548-b9dd4de7f2a6"
   ]
 }
