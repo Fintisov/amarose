@@ -77,7 +77,7 @@
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "303b25e3-24dd-4ec2-b880-ad3f93e92528": {
@@ -111,8 +111,8 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2022-10-19_at_6.52.23_PM.png",
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -132,19 +132,19 @@
         "template--16459152654594__689f2142-6eb8-4c47-b752-b249242161c3-1666219705e08cc11a-2"
       ],
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 1,
         "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "Button label",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -153,6 +153,48 @@
       "settings": {
         "content": "",
         "content_html": ""
+      }
+    },
+    "58e6154e-03cf-4058-aaeb-02173bc29043": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459152654594__58e6154e-03cf-4058-aaeb-02173bc29043-1666220183332d54fd-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152654594__58e6154e-03cf-4058-aaeb-02173bc29043-1666220183332d54fd-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Our promise.<br\/><\/strong><br\/>Naturally uncompromising. Consistently effective. This is our promise and our commitment, not only to your skin but also to all ingredients we use. Our beliefs and standards are reflected both in the quality of our products and in the way we source and process our<\/p>"
+          }
+        },
+        "template--16459152654594__58e6154e-03cf-4058-aaeb-02173bc29043-1666220183332d54fd-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152654594__58e6154e-03cf-4058-aaeb-02173bc29043-1666220183332d54fd-0",
+        "template--16459152654594__58e6154e-03cf-4058-aaeb-02173bc29043-1666220183332d54fd-1",
+        "template--16459152654594__58e6154e-03cf-4058-aaeb-02173bc29043-1666220183332d54fd-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 52
       }
     }
   },
@@ -164,6 +206,7 @@
     "303b25e3-24dd-4ec2-b880-ad3f93e92528",
     "74dd029a-3a85-4abe-b91d-08ac603a5ad3",
     "689f2142-6eb8-4c47-b752-b249242161c3",
-    "ab04e3bf-6349-49e7-8fb7-a90645479e37"
+    "ab04e3bf-6349-49e7-8fb7-a90645479e37",
+    "58e6154e-03cf-4058-aaeb-02173bc29043"
   ]
 }
