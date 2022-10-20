@@ -110,7 +110,6 @@
     },
     "1e6bedb1-4c15-40ba-b12f-b0bc6463de07": {
       "type": "image-banner",
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_12_d933d59f-f946-42a4-917f-8d27efd38b3d.png",
         "image_overlay_opacity": 0,
