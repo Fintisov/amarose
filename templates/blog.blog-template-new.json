@@ -23,6 +23,7 @@
     },
     "1658249854f9284584": {
       "type": "blog-filter",
+      "disabled": true,
       "settings": {
         "filter_heading": "Blog filters",
         "link_all": "ALL"
@@ -46,24 +47,22 @@
     },
     "main": {
       "type": "main-blog",
+      "disabled": true,
       "settings": {
         "show_date": false,
         "show_author": false,
         "post_limit": 6
       }
     },
-    "f81d77e0-ec1e-4f1f-a57d-2d2fadc9bbcb": {
-      "type": "blog-filter",
+    "4824ef6d-da8a-464a-9d10-fff5af001480": {
+      "type": "featured-blog-article",
       "settings": {
-        "filter_heading": "Blog filters",
-        "link_all": "ALL"
-      }
-    },
-    "02668e40-f04c-4f35-9c83-a42e49c76eb0": {
-      "type": "blog-filter",
-      "settings": {
-        "filter_heading": "Blog filters",
-        "link_all": "ALL"
+        "heading": "",
+        "content": "",
+        "blog": "blog",
+        "show_date": false,
+        "show_author": false,
+        "post_limit": 6
       }
     }
   },
@@ -73,7 +72,6 @@
     "1658249854f9284584",
     "165867926240d0b834",
     "main",
-    "f81d77e0-ec1e-4f1f-a57d-2d2fadc9bbcb",
-    "02668e40-f04c-4f35-9c83-a42e49c76eb0"
+    "4824ef6d-da8a-464a-9d10-fff5af001480"
   ]
 }

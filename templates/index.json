@@ -68,12 +68,6 @@
         "is_product": false
       }
     },
-    "1658258250814617ed": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
     "165804645803b40e7b": {
       "type": "featured-blog",
       "disabled": true,
@@ -89,28 +83,68 @@
     "1665697376713d32bb": {
       "type": "apps",
       "blocks": {
-        "5232aacb-3db9-4b16-a8f1-0234fb2d0446": {
-          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "settings": {
-            "heading_size": 20,
-            "feed_width": 100,
-            "html_area": ""
-          }
-        },
         "0e619692-4ed8-46e2-b186-7f98289442dc": {
           "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-          "disabled": true,
           "settings": {
-            "heading_size": 20,
+            "heading_size": 22,
             "feed_width": 100,
             "html_area": ""
           }
         }
       },
       "block_order": [
-        "5232aacb-3db9-4b16-a8f1-0234fb2d0446",
         "0e619692-4ed8-46e2-b186-7f98289442dc"
       ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "ac51904f-d396-4a97-8422-99f974d39f50": {
+      "type": "image-link-list",
+      "disabled": true,
+      "settings": {
+        "title": "Block links"
+      }
+    },
+    "d45160f6-8a95-47a8-bb13-ae4cc73649fe": {
+      "type": "hero-banner",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_alignment": "center",
+        "show_bg": false,
+        "sub_heading": "",
+        "sub_heading_color": "pink",
+        "heading": "",
+        "description": "",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a": {
+      "type": "rich-text",
+      "blocks": {
+        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>      <br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 28
+      }
+    },
+    "16660287198182da64": {
+      "type": "apps",
       "settings": {
         "include_margins": true
       }
@@ -121,8 +155,11 @@
     "1658046660491a8b79",
     "1658051938fe853300",
     "16582582924f93d67a",
-    "1658258250814617ed",
     "165804645803b40e7b",
-    "1665697376713d32bb"
+    "1665697376713d32bb",
+    "ac51904f-d396-4a97-8422-99f974d39f50",
+    "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a",
+    "16660287198182da64"
   ]
 }
