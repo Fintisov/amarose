@@ -38,6 +38,7 @@
         },
         "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe": {
           "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
