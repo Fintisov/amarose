@@ -105,7 +105,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__navigation-container {
   display: grid;
   grid-template-rows: 105px auto 185px;
-  align-content: space-between;
+  align-content: normal;
   overflow-y: auto;
   height: 100%;
 }
@@ -134,7 +134,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin: 0;
 }
 .menu-drawer__inner-submenu {
-  margin: -9px 0 3px;
+  margin: 14px 0;
 }
 
 .menu-drawer__navigation .menu-drawer__inner-submenu li {
@@ -175,12 +175,12 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer summary.menu-drawer__menu-item {
   padding:10px 20px 11px;
   color: #5E697E;
+  font-weight: 500;
   font-size: 21px;
-  font-weight: 400;
 }
 
 .menu-drawer summary.menu-drawer__menu-item:hover {
-  font-weight: 500;
+  /*font-weight: 500;*/
 }
 
 .menu-drawer summary.menu-drawer__menu-item .icon-caret{
@@ -233,6 +233,12 @@ details[open].menu-opening > .menu-drawer__submenu {
   transform: translateY(-50%);
 }
 
+.menu-drawer__navigation .menu-drawer__menu-item  {
+  font-size: 21px;
+  display: block;
+  padding: 10px 0 16px;
+}
+
 .js .menu-drawer__submenu {
  /* position: absolute;
   top: 0;
@@ -274,6 +280,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__utility-links {
+  margin-top: auto;
   padding: 31px 20px 20px;
   text-align: center;
   background: linear-gradient(91.99deg, #850B65 40.4%, #BA3A7D 98.33%);
