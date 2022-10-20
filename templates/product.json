@@ -60,59 +60,6 @@
         "enable_video_looping": false
       }
     },
-    "57755157-44e9-4a54-806e-40f93fe93c28": {
-      "type": "slideshow",
-      "disabled": true,
-      "blocks": {
-        "template--16459152883970__57755157-44e9-4a54-806e-40f93fe93c28-166628000474de4ec2-0": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--16459152883970__57755157-44e9-4a54-806e-40f93fe93c28-166628000474de4ec2-1": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--16459152883970__57755157-44e9-4a54-806e-40f93fe93c28-166628000474de4ec2-0",
-        "template--16459152883970__57755157-44e9-4a54-806e-40f93fe93c28-166628000474de4ec2-1"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
-    },
     "ce241671-8655-46d6-9cce-de518119113e": {
       "type": "image-banner",
       "disabled": true,
@@ -120,6 +67,23 @@
         "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_13.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "1e6bedb1-4c15-40ba-b12f-b0bc6463de07": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_12_d933d59f-f946-42a4-917f-8d27efd38b3d.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
         "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -259,8 +223,8 @@
   },
   "order": [
     "main",
-    "57755157-44e9-4a54-806e-40f93fe93c28",
     "ce241671-8655-46d6-9cce-de518119113e",
+    "1e6bedb1-4c15-40ba-b12f-b0bc6463de07",
     "16589228130b221df1",
     "1660807363d42faf82",
     "165979501095128c3c",
