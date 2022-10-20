@@ -175,42 +175,6 @@
       "settings": {
       }
     },
-    "165981051437af0bd0": {
-      "type": "how-it-works-pdp",
-      "blocks": {
-        "0691b14b-e606-4c99-b06e-1b4901b80619": {
-          "type": "ingredient",
-          "settings": {
-            "icon_works": "icon",
-            "text_works": "With 70% Glycolic Acid, the cleanser supports natural cell turnover. Fades sun damage, skin discolorations, and acne scarring while removing pollutants and dead skin."
-          }
-        },
-        "b70f3897-584b-48ab-baec-7d69bdf4dc4a": {
-          "type": "ingredient",
-          "settings": {
-            "icon_works": "icon",
-            "text_works": "Niacinamide (Vitamin B3) improves the elasticity of the skin. Rebalances uneven skin tone. Reduces discoloration."
-          }
-        },
-        "a3354c6a-1a41-4a28-8cca-22ba99fc6556": {
-          "type": "ingredient",
-          "settings": {
-            "icon_works": "icon",
-            "text_works": "Aloe Vera Gel, known for the ability to heal wounds, this ingredient absorbs quickly with no sticky residue, leaving skin silky and smooth."
-          }
-        }
-      },
-      "block_order": [
-        "0691b14b-e606-4c99-b06e-1b4901b80619",
-        "b70f3897-584b-48ab-baec-7d69bdf4dc4a",
-        "a3354c6a-1a41-4a28-8cca-22ba99fc6556"
-      ],
-      "settings": {
-        "is_product": true,
-        "title": "Stronger Together",
-        "text": "Developed to work better together, each product prepares your skin for every day protection."
-      }
-    },
     "c36273ce-8b82-43cd-ae42-3422524f6d6b": {
       "type": "rich-text",
       "disabled": true,
@@ -381,7 +345,6 @@
     "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
-    "165981051437af0bd0",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "judgeme_section_review_widget_2133",
