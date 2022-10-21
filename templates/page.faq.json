@@ -165,6 +165,13 @@
             "question": "﻿How can I find out more information about a product?",
             "answer": "Product details can be found on the product page but if you have more questions, please free to email us at support@amarose.com"
           }
+        },
+        "9e0b8db9-5228-447b-9606-25d088e2646c": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Do I have to set up an account to place an order?",
+            "answer": "No. You do not have to have an account to place an order."
+          }
         }
       },
       "block_order": [
@@ -186,7 +193,8 @@
         "19fb75e7-d7f5-4ba4-86ac-e656d37a28fb",
         "68f5e3b4-b577-4b38-b04e-9c5717768ba7",
         "9d4886e9-3a68-4887-b81a-0842bba6a9ed",
-        "277d2012-a4fa-4a47-886c-7e9b72f2b214"
+        "277d2012-a4fa-4a47-886c-7e9b72f2b214",
+        "9e0b8db9-5228-447b-9606-25d088e2646c"
       ],
       "settings": {
         "title": ""
