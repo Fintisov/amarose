@@ -179,6 +179,13 @@
             "question": "﻿How do I create an account?",
             "answer": "You can create an account by visiting https:\/\/amarose.com\/pages\/create-account"
           }
+        },
+        "620091bb-b97a-43bc-87f0-f9293fb96e6c": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿How do I subscribe or cancel my email subscription?",
+            "answer": "You can easily subscribe to emails by visiting https:\/\/amarose.com\/ located at the footer. If you want to cancel\/unsubscribe, you can click unsubscribe by locating the \"Unsubscribe\" link within the email subscription."
+          }
         }
       },
       "block_order": [
@@ -202,7 +209,8 @@
         "9d4886e9-3a68-4887-b81a-0842bba6a9ed",
         "277d2012-a4fa-4a47-886c-7e9b72f2b214",
         "9e0b8db9-5228-447b-9606-25d088e2646c",
-        "e874bf91-2e56-4276-9e67-c2c997a73261"
+        "e874bf91-2e56-4276-9e67-c2c997a73261",
+        "620091bb-b97a-43bc-87f0-f9293fb96e6c"
       ],
       "settings": {
         "title": ""
