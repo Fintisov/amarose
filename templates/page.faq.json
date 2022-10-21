@@ -172,6 +172,13 @@
             "question": "﻿Do I have to set up an account to place an order?",
             "answer": "No. You do not have to have an account to place an order."
           }
+        },
+        "e874bf91-2e56-4276-9e67-c2c997a73261": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿How do I create an account?",
+            "answer": "You can create an account by visiting https:\/\/amarose.com\/pages\/create-account"
+          }
         }
       },
       "block_order": [
@@ -194,7 +201,8 @@
         "68f5e3b4-b577-4b38-b04e-9c5717768ba7",
         "9d4886e9-3a68-4887-b81a-0842bba6a9ed",
         "277d2012-a4fa-4a47-886c-7e9b72f2b214",
-        "9e0b8db9-5228-447b-9606-25d088e2646c"
+        "9e0b8db9-5228-447b-9606-25d088e2646c",
+        "e874bf91-2e56-4276-9e67-c2c997a73261"
       ],
       "settings": {
         "title": ""
