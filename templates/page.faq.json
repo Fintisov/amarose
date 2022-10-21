@@ -95,6 +95,13 @@
             "question": "﻿Can I cancel my order?",
             "answer": "Yes, you may, as long as the order has not been shipped."
           }
+        },
+        "c1eb2d38-da67-465b-9e99-2f5445ced142": {
+          "type": "block_link",
+          "settings": {
+            "question": "C﻿an I return my order?",
+            "answer": "Yes, should you not be 100% satisfied, we will gladly exchange or refund your purchase within 30-days."
+          }
         }
       },
       "block_order": [
@@ -106,7 +113,8 @@
         "e0ab3653-6e2a-4331-a90c-4f32c505dd98",
         "3ddccc28-89e0-4a59-a4f1-9c57414e85a6",
         "f9cfef6e-f273-490b-be13-bd2eb12b63be",
-        "78c435cc-14f2-47d5-92b6-e64c1c99de89"
+        "78c435cc-14f2-47d5-92b6-e64c1c99de89",
+        "c1eb2d38-da67-465b-9e99-2f5445ced142"
       ],
       "settings": {
         "title": ""
