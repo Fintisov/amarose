@@ -221,6 +221,13 @@
             "question": "﻿Do you test products on animals?",
             "answer": "We do not test products on animals. All of our products are cruelty free."
           }
+        },
+        "cbaf3b14-f8ee-4d6d-b50b-593a1912db63": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Are your products safe?",
+            "answer": "Yes, all products are manufactured in a GMP facility and ingredients are FDA Approved."
+          }
         }
       },
       "block_order": [
@@ -250,7 +257,8 @@
         "f3f34aa0-5f0a-40ad-b2e8-1d699fa88d4a",
         "92522a48-4b46-419e-8c66-c2da46a26a74",
         "75b23ba7-873c-4fbd-943d-9efcb691d072",
-        "2c19cfe7-3f6c-4ed7-a8e8-4e058da0b83d"
+        "2c19cfe7-3f6c-4ed7-a8e8-4e058da0b83d",
+        "cbaf3b14-f8ee-4d6d-b50b-593a1912db63"
       ],
       "settings": {
         "title": ""
