@@ -144,6 +144,13 @@
             "question": "﻿I recieved incorrect item\/s, what should I do?",
             "answer": "Please contact support@amarose.com as soon as possible so that we can take care of this for you. Please provide us with your order number along with a photo of the incorrect item you received."
           }
+        },
+        "68f5e3b4-b577-4b38-b04e-9c5717768ba7": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿My package is stuck and trucking shows no movement, what do I do?",
+            "answer": "For domestic orders, package can only be considered lost if there has been no movement for 10 business days from the day it was shipped. Please send an email to support@amarose.com if your shipment shows no movement from the carrier's tracking information."
+          }
         }
       },
       "block_order": [
@@ -162,7 +169,8 @@
         "309f2e32-270e-48c3-a1ea-05c575e42e45",
         "0b4920e3-b054-4e76-9c4d-0cfc6b2b784d",
         "95cec638-45c3-4f03-b54b-f3538ee3b0d9",
-        "19fb75e7-d7f5-4ba4-86ac-e656d37a28fb"
+        "19fb75e7-d7f5-4ba4-86ac-e656d37a28fb",
+        "68f5e3b4-b577-4b38-b04e-9c5717768ba7"
       ],
       "settings": {
         "title": ""
