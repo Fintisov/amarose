@@ -80,6 +80,47 @@
         "post_limit": 3
       }
     },
+    "d53119d0-26a7-4dd3-a4c6-06dfc9712246": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Check out our most popular blog posts.",
+        "content": "",
+        "blog": "blog",
+        "show_date": true,
+        "show_author": false,
+        "post_limit": 3
+      }
+    },
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a": {
+      "type": "rich-text",
+      "blocks": {
+        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>      <br\/><\/p>"
+          }
+        },
+        "e3cccce6-d8bc-488c-a5e4-688a689fcd07": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Connect with us @Amarosebeauty<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c",
+        "e3cccce6-d8bc-488c-a5e4-688a689fcd07"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 28
+      }
+    },
     "1665697376713d32bb": {
       "type": "apps",
       "blocks": {
@@ -121,28 +162,6 @@
         "button_url": ""
       }
     },
-    "1aa7fb41-3693-4666-b24f-efd371d01c6a": {
-      "type": "rich-text",
-      "blocks": {
-        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c": {
-          "type": "text",
-          "settings": {
-            "text": "<p>      <br\/><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "5387f5bb-037e-4dfa-87a0-76cd1f41ed0c"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 32,
-        "padding_bottom": 28
-      }
-    },
     "16660287198182da64": {
       "type": "apps",
       "settings": {
@@ -156,10 +175,11 @@
     "1658051938fe853300",
     "16582582924f93d67a",
     "165804645803b40e7b",
+    "d53119d0-26a7-4dd3-a4c6-06dfc9712246",
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a",
     "1665697376713d32bb",
     "ac51904f-d396-4a97-8422-99f974d39f50",
     "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
-    "1aa7fb41-3693-4666-b24f-efd371d01c6a",
     "16660287198182da64"
   ]
 }
