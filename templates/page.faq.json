@@ -67,6 +67,13 @@
             "question": "Do you ship to P.O.\/APO\/FPO?",
             "answer": "<p>Currently, the only country we ship to outside of the United States of America is Canada. We will be shipping into other countries effective September 1st, 2019.<\/p>"
           }
+        },
+        "e0ab3653-6e2a-4331-a90c-4f32c505dd98": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Countries we ship to",
+            "answer": "USA, Canada"
+          }
         }
       },
       "block_order": [
@@ -74,7 +81,8 @@
         "3cadcfa9-961a-4458-8e23-fafa2aca6571",
         "466d6b09-c758-47f9-b6a3-ed85f0191300",
         "af96d5b2-9fb3-4899-896b-7c85f29088a9",
-        "f762ab19-fd7a-423e-9e78-dea4a52e2adb"
+        "f762ab19-fd7a-423e-9e78-dea4a52e2adb",
+        "e0ab3653-6e2a-4331-a90c-4f32c505dd98"
       ],
       "settings": {
         "title": ""
@@ -132,12 +140,19 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "a9e14616-0152-41fb-817c-148b1946c065": {
+      "type": "faq-list",
+      "settings": {
+        "title": "Frequently Asked Questions"
+      }
     }
   },
   "order": [
     "ac53c266-77ad-4860-aea6-e25350c8164a",
     "16582372027824d037",
     "main",
-    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1"
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1",
+    "a9e14616-0152-41fb-817c-148b1946c065"
   ]
 }
