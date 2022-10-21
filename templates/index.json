@@ -80,6 +80,29 @@
         "post_limit": 3
       }
     },
+    "4869e333-84dc-4f56-ba52-8ab0a6b9b4d0": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459153015042__4869e333-84dc-4f56-ba52-8ab0a6b9b4d0-1666382404d6373446-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Check out our most popular blog posts.<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16459153015042__4869e333-84dc-4f56-ba52-8ab0a6b9b4d0-1666382404d6373446-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "d53119d0-26a7-4dd3-a4c6-06dfc9712246": {
       "type": "featured-blog",
       "settings": {
@@ -191,6 +214,7 @@
     "1658051938fe853300",
     "16582582924f93d67a",
     "165804645803b40e7b",
+    "4869e333-84dc-4f56-ba52-8ab0a6b9b4d0",
     "d53119d0-26a7-4dd3-a4c6-06dfc9712246",
     "1aa7fb41-3693-4666-b24f-efd371d01c6a",
     "1665697376713d32bb",
