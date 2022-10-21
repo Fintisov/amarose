@@ -123,6 +123,13 @@
             "question": "﻿Why was I charged twice?",
             "answer": "You will only be charged for what you purchased, if you see duplicate charges, please give it a few days and it should fall off and the issue should be rectified automatically. However if it still remains and you are positive you only placed one order, please send us an email to support@amarose.com with a screenshot of the duplicate charge for further assistance."
           }
+        },
+        "0b4920e3-b054-4e76-9c4d-0cfc6b2b784d": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿What forms of payment do you accept?",
+            "answer": "We accept online payments through Visa, Mastercard and American Express"
+          }
         }
       },
       "block_order": [
@@ -138,7 +145,8 @@
         "c1eb2d38-da67-465b-9e99-2f5445ced142",
         "bf7124dc-da4b-4147-a1e6-3de1569c4334",
         "5ec8b67a-ae6c-4d92-ba63-506aba201d82",
-        "309f2e32-270e-48c3-a1ea-05c575e42e45"
+        "309f2e32-270e-48c3-a1ea-05c575e42e45",
+        "0b4920e3-b054-4e76-9c4d-0cfc6b2b784d"
       ],
       "settings": {
         "title": ""
