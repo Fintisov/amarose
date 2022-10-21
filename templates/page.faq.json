@@ -100,7 +100,7 @@
           "type": "block_link",
           "settings": {
             "question": "C﻿an I return my order?",
-            "answer": "Yes, should you not be 100% satisfied, we will gladly exchange or refund your purchase within 30-days."
+            "answer": "Yes, should you not be 100% satisfied, we will gladly exchange or refund your purchase within 30-days.\nIn the unlikely event that a product arrived damage, the customer must contact customer service within 48 hours of receipt. Customer must include photos of the issue and a screenshot of your order confirmation email."
           }
         }
       },
