@@ -193,6 +193,13 @@
             "question": "﻿I forgot my password, what do I do?",
             "answer": "To reset your password, go to https:\/\/amarose.com\/account\/login and click on “Forgot your password?” above the sign-in button. You will then be prompted to enter your E-mail address you used to create your account. Once you submit, you will receive an E-mail notification with a link to reset your password. Once you’ve done this, you can log in with your new password as normal on this page: https:\/\/amarose.com\/account\/login"
           }
+        },
+        "f3f34aa0-5f0a-40ad-b2e8-1d699fa88d4a": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Where are your products manufactured?",
+            "answer": "Our formulas are made in the USA, with globally sourced ingredients."
+          }
         }
       },
       "block_order": [
@@ -218,7 +225,8 @@
         "9e0b8db9-5228-447b-9606-25d088e2646c",
         "e874bf91-2e56-4276-9e67-c2c997a73261",
         "620091bb-b97a-43bc-87f0-f9293fb96e6c",
-        "2a9bbd83-7eec-4b3f-a724-4236b68dc633"
+        "2a9bbd83-7eec-4b3f-a724-4236b68dc633",
+        "f3f34aa0-5f0a-40ad-b2e8-1d699fa88d4a"
       ],
       "settings": {
         "title": ""
