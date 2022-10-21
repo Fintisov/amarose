@@ -214,6 +214,13 @@
             "question": "﻿Do your products contain soy?",
             "answer": "No."
           }
+        },
+        "2c19cfe7-3f6c-4ed7-a8e8-4e058da0b83d": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Do you test products on animals?",
+            "answer": "We do not test products on animals. All of our products are cruelty free."
+          }
         }
       },
       "block_order": [
@@ -242,7 +249,8 @@
         "2a9bbd83-7eec-4b3f-a724-4236b68dc633",
         "f3f34aa0-5f0a-40ad-b2e8-1d699fa88d4a",
         "92522a48-4b46-419e-8c66-c2da46a26a74",
-        "75b23ba7-873c-4fbd-943d-9efcb691d072"
+        "75b23ba7-873c-4fbd-943d-9efcb691d072",
+        "2c19cfe7-3f6c-4ed7-a8e8-4e058da0b83d"
       ],
       "settings": {
         "title": ""
