@@ -116,6 +116,13 @@
             "question": "﻿How can I check the status of my order?",
             "answer": "Please log in to your account to check the status of your order. If you do not have an account, please refer to your shipping confirmation email to track your order. Or you can check your order status at: https:\/\/amarose.com\/pages\/order-lookup"
           }
+        },
+        "309f2e32-270e-48c3-a1ea-05c575e42e45": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Why was I charged twice?",
+            "answer": "You will only be charged for what you purchased, if you see duplicate charges, please give it a few days and it should fall off and the issue should be rectified automatically. However if it still remains and you are positive you only placed one order, please send us an email to support@amarose.com with a screenshot of the duplicate charge for further assistance."
+          }
         }
       },
       "block_order": [
@@ -130,7 +137,8 @@
         "78c435cc-14f2-47d5-92b6-e64c1c99de89",
         "c1eb2d38-da67-465b-9e99-2f5445ced142",
         "bf7124dc-da4b-4147-a1e6-3de1569c4334",
-        "5ec8b67a-ae6c-4d92-ba63-506aba201d82"
+        "5ec8b67a-ae6c-4d92-ba63-506aba201d82",
+        "309f2e32-270e-48c3-a1ea-05c575e42e45"
       ],
       "settings": {
         "title": ""
