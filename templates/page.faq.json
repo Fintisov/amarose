@@ -151,6 +151,13 @@
             "question": "﻿My package is stuck and trucking shows no movement, what do I do?",
             "answer": "For domestic orders, package can only be considered lost if there has been no movement for 10 business days from the day it was shipped. Please send an email to support@amarose.com if your shipment shows no movement from the carrier's tracking information."
           }
+        },
+        "9d4886e9-3a68-4887-b81a-0842bba6a9ed": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿I put the wrong address on my order, please help!",
+            "answer": "Please be careful when entering your shipping address, Limitless will not be responsible for orders sent to the incorrect delivery address provided by the customer."
+          }
         }
       },
       "block_order": [
@@ -170,7 +177,8 @@
         "0b4920e3-b054-4e76-9c4d-0cfc6b2b784d",
         "95cec638-45c3-4f03-b54b-f3538ee3b0d9",
         "19fb75e7-d7f5-4ba4-86ac-e656d37a28fb",
-        "68f5e3b4-b577-4b38-b04e-9c5717768ba7"
+        "68f5e3b4-b577-4b38-b04e-9c5717768ba7",
+        "9d4886e9-3a68-4887-b81a-0842bba6a9ed"
       ],
       "settings": {
         "title": ""
