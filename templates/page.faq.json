@@ -74,6 +74,13 @@
             "question": "﻿Countries we ship to",
             "answer": "USA, Canada"
           }
+        },
+        "3ddccc28-89e0-4a59-a4f1-9c57414e85a6": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Can I only purchase products through the website?",
+            "answer": "Yes, our products can only be obtained via our Official Online Store https:\/\/amarose.com\/"
+          }
         }
       },
       "block_order": [
@@ -82,7 +89,8 @@
         "466d6b09-c758-47f9-b6a3-ed85f0191300",
         "af96d5b2-9fb3-4899-896b-7c85f29088a9",
         "f762ab19-fd7a-423e-9e78-dea4a52e2adb",
-        "e0ab3653-6e2a-4331-a90c-4f32c505dd98"
+        "e0ab3653-6e2a-4331-a90c-4f32c505dd98",
+        "3ddccc28-89e0-4a59-a4f1-9c57414e85a6"
       ],
       "settings": {
         "title": ""
