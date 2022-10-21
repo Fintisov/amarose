@@ -111,7 +111,7 @@
         "color_scheme": "background-1",
         "full_width": true,
         "padding_top": 32,
-        "padding_bottom": 28
+        "padding_bottom": 8
       }
     },
     "1665697376713d32bb": {
@@ -160,6 +160,29 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "8e34c91e-be3d-4268-ad00-61390bbfd5d1": {
+      "type": "rich-text",
+      "blocks": {
+        "cb9d027e-d050-4426-ba74-6be2dc366683": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "cb9d027e-d050-4426-ba74-6be2dc366683"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
@@ -173,6 +196,7 @@
     "1665697376713d32bb",
     "ac51904f-d396-4a97-8422-99f974d39f50",
     "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
-    "16660287198182da64"
+    "16660287198182da64",
+    "8e34c91e-be3d-4268-ad00-61390bbfd5d1"
   ]
 }
