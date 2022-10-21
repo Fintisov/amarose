@@ -59,19 +59,7 @@
       {%- endfor -%}
     </ul>
 
-    <div class="collection-grid__mobile-image-wrapper">
-      {% if section.settings.mobile_image != blank %}
-        {{ section.settings.mobile_image | image_url: width: 760 | image_tag:
-        loading: 'lazy',
-        width: section.settings.mobile_image.width,
-        height: section.settings.mobile_image.height,
-        class: 'mobile-image',
-        sizes: sizes,
-        widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
-        alt: section.settings.mobile_image.alt | escape
-        }}
-      {% endif %}
-    </div>
+
   </div>
 </div>
 
