@@ -41,7 +41,7 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 1.5;
-    color: #5E697E; }
+    color: #121212; }
   @media screen and (max-width: 575px) {
     .collection-grid__header .collection-grid__description {
       font-size: 18px; } }
