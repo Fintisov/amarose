@@ -109,6 +109,13 @@
             "question": "﻿Can I exchange my product?",
             "answer": "Yes, within 30-days of receipt as long as the product has not been consumed (for consumables)."
           }
+        },
+        "5ec8b67a-ae6c-4d92-ba63-506aba201d82": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿How can I check the status of my order?",
+            "answer": "Please log in to your account to check the status of your order. If you do not have an account, please refer to your shipping confirmation email to track your order. Or you can check your order status at: https:\/\/amarose.com\/pages\/order-lookup"
+          }
         }
       },
       "block_order": [
@@ -122,7 +129,8 @@
         "f9cfef6e-f273-490b-be13-bd2eb12b63be",
         "78c435cc-14f2-47d5-92b6-e64c1c99de89",
         "c1eb2d38-da67-465b-9e99-2f5445ced142",
-        "bf7124dc-da4b-4147-a1e6-3de1569c4334"
+        "bf7124dc-da4b-4147-a1e6-3de1569c4334",
+        "5ec8b67a-ae6c-4d92-ba63-506aba201d82"
       ],
       "settings": {
         "title": ""
