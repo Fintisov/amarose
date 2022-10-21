@@ -158,6 +158,13 @@
             "question": "﻿I put the wrong address on my order, please help!",
             "answer": "Please be careful when entering your shipping address, Limitless will not be responsible for orders sent to the incorrect delivery address provided by the customer."
           }
+        },
+        "277d2012-a4fa-4a47-886c-7e9b72f2b214": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿How can I find out more information about a product?",
+            "answer": "Product details can be found on the product page but if you have more questions, please free to email us at support@amarose.com"
+          }
         }
       },
       "block_order": [
@@ -178,7 +185,8 @@
         "95cec638-45c3-4f03-b54b-f3538ee3b0d9",
         "19fb75e7-d7f5-4ba4-86ac-e656d37a28fb",
         "68f5e3b4-b577-4b38-b04e-9c5717768ba7",
-        "9d4886e9-3a68-4887-b81a-0842bba6a9ed"
+        "9d4886e9-3a68-4887-b81a-0842bba6a9ed",
+        "277d2012-a4fa-4a47-886c-7e9b72f2b214"
       ],
       "settings": {
         "title": ""
