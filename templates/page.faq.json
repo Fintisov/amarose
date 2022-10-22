@@ -13,7 +13,7 @@
         "template--16459152392450__ac53c266-77ad-4860-aea6-e25350c8164a-1666113819e1d8523b-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Click on some of the most frequently asked questions below to see if we have your answer.<br\/><\/p><p><br\/><\/p>"
+            "text": "<p>Click on some of the most frequently asked questions below to see if we have your answer.<\/p>"
           }
         }
       },
@@ -323,8 +323,8 @@
         "content_alignment": "center",
         "color_scheme": "background-1",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "padding_top": 4,
+        "padding_bottom": 40
       }
     }
   },
