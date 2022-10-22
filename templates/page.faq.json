@@ -33,13 +33,6 @@
     "16582372027824d037": {
       "type": "faq-list",
       "blocks": {
-        "2e61d71d-001f-424e-9a01-df6ba15fd131": {
-          "type": "block_link",
-          "settings": {
-            "question": "Do you ship internationally?",
-            "answer": "<p>Currently, the only country we ship to outside of the United States of America is Canada. We will be shipping into other countries effective September 1st, 2019.<\/p>"
-          }
-        },
         "3cadcfa9-961a-4458-8e23-fafa2aca6571": {
           "type": "block_link",
           "settings": {
@@ -228,10 +221,16 @@
             "question": "﻿Are your products safe?",
             "answer": "Yes, all products are manufactured in a GMP facility and ingredients are FDA Approved."
           }
+        },
+        "2e61d71d-001f-424e-9a01-df6ba15fd131": {
+          "type": "block_link",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Currently, the only country we ship to outside of the United States of America is Canada. We will be shipping into other countries effective September 1st, 2019.<\/p>"
+          }
         }
       },
       "block_order": [
-        "2e61d71d-001f-424e-9a01-df6ba15fd131",
         "3cadcfa9-961a-4458-8e23-fafa2aca6571",
         "466d6b09-c758-47f9-b6a3-ed85f0191300",
         "af96d5b2-9fb3-4899-896b-7c85f29088a9",
@@ -258,7 +257,8 @@
         "92522a48-4b46-419e-8c66-c2da46a26a74",
         "75b23ba7-873c-4fbd-943d-9efcb691d072",
         "2c19cfe7-3f6c-4ed7-a8e8-4e058da0b83d",
-        "cbaf3b14-f8ee-4d6d-b50b-593a1912db63"
+        "cbaf3b14-f8ee-4d6d-b50b-593a1912db63",
+        "2e61d71d-001f-424e-9a01-df6ba15fd131"
       ],
       "settings": {
         "title": ""
@@ -319,6 +319,18 @@
     },
     "a9e14616-0152-41fb-817c-148b1946c065": {
       "type": "faq-list",
+      "blocks": {
+        "aa367d37-138e-49aa-8555-389919e8fcff": {
+          "type": "block_link",
+          "settings": {
+            "question": "How Much Is Shipping?",
+            "answer": "Test"
+          }
+        }
+      },
+      "block_order": [
+        "aa367d37-138e-49aa-8555-389919e8fcff"
+      ],
       "settings": {
         "title": "Questions about shipping"
       }
