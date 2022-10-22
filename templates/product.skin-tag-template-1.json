@@ -301,6 +301,11 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "3be9189d-2571-4ccc-a38c-cf28bdbaf1d3": {
+      "type": "faq-product",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -314,6 +319,7 @@
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "judgeme_section_review_widget_2133",
-    "product-recommendations"
+    "product-recommendations",
+    "3be9189d-2571-4ccc-a38c-cf28bdbaf1d3"
   ]
 }
