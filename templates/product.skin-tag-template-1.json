@@ -285,11 +285,6 @@
         "include_margins": true
       }
     },
-    "16598113958f0d0b25": {
-      "type": "faq-product",
-      "settings": {
-      }
-    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -319,7 +314,6 @@
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "judgeme_section_review_widget_2133",
-    "16598113958f0d0b25",
     "product-recommendations"
   ]
 }
