@@ -271,7 +271,6 @@
     },
     "72c55269-1eb1-4a36-8607-5540267ddaf2": {
       "type": "rich-text",
-      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -289,6 +288,32 @@
         "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
         "button_text": "",
         "button_url": ""
+      }
+    },
+    "6afdef44-1da4-4b94-b9ff-071eebd887ab": {
+      "type": "faq-list",
+      "blocks": {
+        "07d20826-0ff4-458d-bd35-9fab88066015": {
+          "type": "block_link",
+          "settings": {
+            "question": "I have oily skin, will Amarose Skin Tag Remover serum cause any irritations or itching?",
+            "answer": "Amarose Skin Tag Remover is suitable for all skin types and will not cause any irritations or itching."
+          }
+        },
+        "32eca3b5-761f-4165-9f64-22a001ce041d": {
+          "type": "block_link",
+          "settings": {
+            "question": "",
+            "answer": ""
+          }
+        }
+      },
+      "block_order": [
+        "07d20826-0ff4-458d-bd35-9fab88066015",
+        "32eca3b5-761f-4165-9f64-22a001ce041d"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions"
       }
     },
     "judgeme_section_review_widget_2133": {
@@ -342,6 +367,7 @@
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "72c55269-1eb1-4a36-8607-5540267ddaf2",
     "e2c5df6b-073d-4717-b0db-cb9324023a39",
+    "6afdef44-1da4-4b94-b9ff-071eebd887ab",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
     "3be9189d-2571-4ccc-a38c-cf28bdbaf1d3"
