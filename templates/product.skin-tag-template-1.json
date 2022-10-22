@@ -269,13 +269,23 @@
         "padding_bottom": 36
       }
     },
+    "72c55269-1eb1-4a36-8607-5540267ddaf2": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "e2c5df6b-073d-4717-b0db-cb9324023a39": {
       "type": "ingredients",
-      "disabled": true,
       "settings": {
         "title": "Top Quality Ingredients. Top Results.",
         "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
-        "button_text": "Shop Now",
+        "button_text": "",
         "button_url": ""
       }
     },
@@ -328,6 +338,7 @@
     "1659809705039b724e",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
+    "72c55269-1eb1-4a36-8607-5540267ddaf2",
     "e2c5df6b-073d-4717-b0db-cb9324023a39",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
