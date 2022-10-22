@@ -275,6 +275,56 @@
         "padding_bottom": 36
       }
     },
+    "a9e14616-0152-41fb-817c-148b1946c065": {
+      "type": "faq-list",
+      "blocks": {
+        "aa367d37-138e-49aa-8555-389919e8fcff": {
+          "type": "block_link",
+          "settings": {
+            "question": "How much is shipping?",
+            "answer": "<p>Shipping &amp; Handling Charges are as follows:<\/p>\n<ul>\n<li>Free for domestic, all states within the USA.<\/li>\n<li>$14.95 flat fee for Canada.<\/li>\n<\/ul>"
+          }
+        },
+        "d7d83e99-8459-41de-8336-247ebe146800": {
+          "type": "block_link",
+          "settings": {
+            "question": "How long before I can receive my order?",
+            "answer": "<p>Currently, the only country we ship to outside of the United States of America is Canada. We will be shipping into other countries effective September 1st, 2019.<\/p>"
+          }
+        },
+        "2a4215de-1387-498b-acd5-bd4f00adf0f7": {
+          "type": "block_link",
+          "settings": {
+            "question": "What carrier do you use?",
+            "answer": "<p>Currently, the only country we ship to outside of the United States of America is Canada. We will be shipping into other countries effective September 1st, 2019.<\/p>"
+          }
+        },
+        "0c443c1d-aa0c-4602-b5b2-6b7e4e7f8670": {
+          "type": "block_link",
+          "settings": {
+            "question": "Do you ship to P.O.\/APO\/FPO?",
+            "answer": "<p>Currently, the only country we ship to outside of the United States of America is Canada. We will be shipping into other countries effective September 1st, 2019.<\/p>"
+          }
+        },
+        "6d93261b-6029-42ce-a923-c8436e6c9b38": {
+          "type": "block_link",
+          "settings": {
+            "question": "﻿Countries we ship to",
+            "answer": "USA, Canada"
+          }
+        }
+      },
+      "block_order": [
+        "aa367d37-138e-49aa-8555-389919e8fcff",
+        "d7d83e99-8459-41de-8336-247ebe146800",
+        "2a4215de-1387-498b-acd5-bd4f00adf0f7",
+        "0c443c1d-aa0c-4602-b5b2-6b7e4e7f8670",
+        "6d93261b-6029-42ce-a923-c8436e6c9b38"
+      ],
+      "settings": {
+        "title": "Questions about shipping"
+      }
+    },
     "3f3230a9-efc7-4e06-9941-bbd0bddc37f1": {
       "type": "rich-text",
       "blocks": {
@@ -316,31 +366,13 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "a9e14616-0152-41fb-817c-148b1946c065": {
-      "type": "faq-list",
-      "blocks": {
-        "aa367d37-138e-49aa-8555-389919e8fcff": {
-          "type": "block_link",
-          "settings": {
-            "question": "How much is shipping?",
-            "answer": "<p>Shipping &amp; Handling Charges are as follows:<\/p>\n<ul>\n<li>Free for domestic, all states within the USA.<\/li>\n<li>$14.95 flat fee for Canada.<\/li>\n<\/ul>"
-          }
-        }
-      },
-      "block_order": [
-        "aa367d37-138e-49aa-8555-389919e8fcff"
-      ],
-      "settings": {
-        "title": "Questions about shipping"
-      }
     }
   },
   "order": [
     "ac53c266-77ad-4860-aea6-e25350c8164a",
     "16582372027824d037",
     "main",
-    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1",
-    "a9e14616-0152-41fb-817c-148b1946c065"
+    "a9e14616-0152-41fb-817c-148b1946c065",
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1"
   ]
 }
