@@ -271,6 +271,7 @@
     },
     "72c55269-1eb1-4a36-8607-5540267ddaf2": {
       "type": "rich-text",
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -282,6 +283,7 @@
     },
     "e2c5df6b-073d-4717-b0db-cb9324023a39": {
       "type": "ingredients",
+      "disabled": true,
       "settings": {
         "title": "Top Quality Ingredients. Top Results.",
         "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
