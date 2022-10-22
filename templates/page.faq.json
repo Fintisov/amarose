@@ -323,8 +323,8 @@
         "aa367d37-138e-49aa-8555-389919e8fcff": {
           "type": "block_link",
           "settings": {
-            "question": "How Much Is Shipping?",
-            "answer": "Test"
+            "question": "How much is shipping?",
+            "answer": "<p>Shipping &amp; Handling Charges are as follows:<\/p>\n<ul>\n<li>Free for domestic, all states within the USA.<\/li>\n<li>$14.95 flat fee for Canada.<\/li>\n<\/ul>"
           }
         }
       },
