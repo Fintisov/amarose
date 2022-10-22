@@ -288,17 +288,17 @@
     "3f3230a9-efc7-4e06-9941-bbd0bddc37f1": {
       "type": "rich-text",
       "blocks": {
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
         "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1": {
           "type": "text",
           "settings": {
             "text": ""
+          }
+        },
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2"
           }
         },
         "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2": {
@@ -314,8 +314,8 @@
         }
       },
       "block_order": [
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0",
         "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1",
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0",
         "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2"
       ],
       "settings": {
