@@ -269,6 +269,16 @@
         "padding_bottom": 36
       }
     },
+    "e2c5df6b-073d-4717-b0db-cb9324023a39": {
+      "type": "ingredients",
+      "disabled": true,
+      "settings": {
+        "title": "Top Quality Ingredients. Top Results.",
+        "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
+        "button_text": "Shop Now",
+        "button_url": ""
+      }
+    },
     "judgeme_section_review_widget_2133": {
       "type": "apps",
       "blocks": {
@@ -306,15 +316,6 @@
       "type": "faq-product",
       "settings": {
       }
-    },
-    "e2c5df6b-073d-4717-b0db-cb9324023a39": {
-      "type": "ingredients",
-      "settings": {
-        "title": "Top Quality Ingredients. Top Results.",
-        "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
-        "button_text": "Shop Now",
-        "button_url": ""
-      }
     }
   },
   "order": [
@@ -327,9 +328,9 @@
     "1659809705039b724e",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
+    "e2c5df6b-073d-4717-b0db-cb9324023a39",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
-    "3be9189d-2571-4ccc-a38c-cf28bdbaf1d3",
-    "e2c5df6b-073d-4717-b0db-cb9324023a39"
+    "3be9189d-2571-4ccc-a38c-cf28bdbaf1d3"
   ]
 }
