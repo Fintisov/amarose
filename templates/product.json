@@ -108,22 +108,6 @@
         "padding_bottom": 4
       }
     },
-    "1e6bedb1-4c15-40ba-b12f-b0bc6463de07": {
-      "type": "image-banner",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_12_d933d59f-f946-42a4-917f-8d27efd38b3d.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "16589228130b221df1": {
       "type": "running-line",
       "blocks": {
@@ -378,7 +362,6 @@
     "main",
     "ce241671-8655-46d6-9cce-de518119113e",
     "f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8",
-    "1e6bedb1-4c15-40ba-b12f-b0bc6463de07",
     "16589228130b221df1",
     "1660807363d42faf82",
     "165979501095128c3c",
