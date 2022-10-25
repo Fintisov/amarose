@@ -61,6 +61,48 @@
         "enable_video_looping": false
       }
     },
+    "c36273ce-8b82-43cd-ae42-3422524f6d6b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Clean Skin Without Surgery!<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Amarose Skin Tag Remover is changing the way people heal and remove moles and skin tags. Join thousands of others who are already enjoying beautiful and blemish free skin today!<\/p>"
+          }
+        },
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0",
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1",
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "ce241671-8655-46d6-9cce-de518119113e": {
       "type": "image-banner",
       "settings": {
@@ -147,49 +189,6 @@
       "settings": {
       }
     },
-    "c36273ce-8b82-43cd-ae42-3422524f6d6b": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Real People. Real Results.<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Millions of men and women worldwide are raving about Amarose Skin Tag Remover and its positive effects on moles and skin tags. Read below the success stories of our customers and see for yourself.<\/p>"
-          }
-        },
-        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0",
-        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1",
-        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582": {
       "type": "multicolumn",
       "disabled": true,
@@ -272,6 +271,17 @@
     "72c55269-1eb1-4a36-8607-5540267ddaf2": {
       "type": "rich-text",
       "disabled": true,
+      "blocks": {
+        "461b725f-dcfd-42a1-970a-58982f00691b": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Clean Skin Without Surgery!<\/strong><\/p><p><br\/>Amarose Skin Tag Remover is changing the way people heal and remove moles and skin tags. Join thousands of others who are already enjoying beautiful and blemish free skin today!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "461b725f-dcfd-42a1-970a-58982f00691b"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -332,13 +342,13 @@
   },
   "order": [
     "main",
+    "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "ce241671-8655-46d6-9cce-de518119113e",
     "1e6bedb1-4c15-40ba-b12f-b0bc6463de07",
     "16589228130b221df1",
     "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
-    "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "72c55269-1eb1-4a36-8607-5540267ddaf2",
     "e2c5df6b-073d-4717-b0db-cb9324023a39",
