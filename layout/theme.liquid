@@ -365,5 +365,7 @@ or template.suffix == 'register-complete' %}
     window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
   </script>
 {% endcomment %}
+{% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
+{% assign oneclickupsellapp = true %}
 </body>
 </html>
