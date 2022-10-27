@@ -1,7 +1,7 @@
 # amarose-dev
 
 
-shopify login --store store.myshopify.com
+shopify login --store  https://amaroseofficial.myshopify.com/admin
 
 откроется браузер нужно будет залогинится, далее в терминале выбрать под каким из партнерских аккаунтов заходим.
 
