@@ -32,6 +32,7 @@
     },
     "a9e14616-0152-41fb-817c-148b1946c065": {
       "type": "faq-list",
+      "disabled": true,
       "blocks": {
         "aa367d37-138e-49aa-8555-389919e8fcff": {
           "type": "block_link",
@@ -90,6 +91,7 @@
     },
     "16582372027824d037": {
       "type": "faq-list",
+      "disabled": true,
       "blocks": {
         "3ddccc28-89e0-4a59-a4f1-9c57414e85a6": {
           "type": "block_link",
