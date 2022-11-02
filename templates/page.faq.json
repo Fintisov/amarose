@@ -326,6 +326,56 @@
         "padding_top": 4,
         "padding_bottom": 40
       }
+    },
+    "85c9a1fd-250c-40db-b91c-abaadf2e8df5": {
+      "type": "faq-list",
+      "blocks": {
+        "d6ae7796-abe4-494c-8721-3bd87c5ebea8": {
+          "type": "block_link",
+          "settings": {
+            "question": "I have oily skin, will Amarose Skin Tag Remover serum cause any irritationon my skin?",
+            "answer": "Amarose Skin Tag Remover is suitable for all skin types and will not cause any irritations or itching."
+          }
+        },
+        "f3c8920c-6039-49ea-874f-d10cd2a97e5b": {
+          "type": "block_link",
+          "settings": {
+            "question": "What are the Amarose Skin Tag Remover ingredients?",
+            "answer": "Amarose Skin Tag Remover is a powerful natural blend of sanguinaria Canadensis\nand zincum muriaticum."
+          }
+        },
+        "c4a35789-4775-4a53-bc85-a2f9f6efb53c": {
+          "type": "block_link",
+          "settings": {
+            "question": "Can I use Amarose Skin Tag Remover for eliminating big warts?",
+            "answer": "Yes, Amarose Skin Tag Remover drops can remove big skin warts anywhere on\nyour body without any pain."
+          }
+        },
+        "5f79e8e0-8349-414b-891d-066ef09529a1": {
+          "type": "block_link",
+          "settings": {
+            "question": "Is Amarose Skin Tag Remover skincare oil entirely natural?",
+            "answer": "Amarose Skin Tag Remover skincare serum is an entirely natural serum that does\nnot have any harmful substance in it."
+          }
+        },
+        "a089eb19-7f70-41e4-9aaf-7253d07e41ec": {
+          "type": "block_link",
+          "settings": {
+            "question": "Can I buy Amarose Skin Tag Remover skincare drops from any retailstores?",
+            "answer": "Amarose Skin Tag Remove oil is only available on its official website and isn't sold\nin any retail stores."
+          }
+        }
+      },
+      "block_order": [
+        "d6ae7796-abe4-494c-8721-3bd87c5ebea8",
+        "f3c8920c-6039-49ea-874f-d10cd2a97e5b",
+        "c4a35789-4775-4a53-bc85-a2f9f6efb53c",
+        "5f79e8e0-8349-414b-891d-066ef09529a1",
+        "a089eb19-7f70-41e4-9aaf-7253d07e41ec"
+      ],
+      "settings": {
+        "title": "Questions about Skin Tag Remover"
+      }
     }
   },
   "order": [
@@ -333,6 +383,7 @@
     "a9e14616-0152-41fb-817c-148b1946c065",
     "16582372027824d037",
     "main",
-    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1"
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1",
+    "85c9a1fd-250c-40db-b91c-abaadf2e8df5"
   ]
 }
