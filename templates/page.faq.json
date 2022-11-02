@@ -285,48 +285,6 @@
         "padding_bottom": 36
       }
     },
-    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1": {
-      "type": "rich-text",
-      "blocks": {
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h2"
-          }
-        },
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "VIEW OUR PRODUCTS",
-            "button_link": "shopify:\/\/collections\/shop-all",
-            "button_style_secondary": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1",
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0",
-        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 4,
-        "padding_bottom": 40
-      }
-    },
     "85c9a1fd-250c-40db-b91c-abaadf2e8df5": {
       "type": "faq-list",
       "blocks": {
@@ -376,6 +334,48 @@
       "settings": {
         "title": "Questions about Skin Tag Remover"
       }
+    },
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h2"
+          }
+        },
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "VIEW OUR PRODUCTS",
+            "button_link": "shopify:\/\/collections\/shop-all",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-1",
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-0",
+        "template--16459152392450__3f3230a9-efc7-4e06-9941-bbd0bddc37f1-166611389932728330-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -383,7 +383,7 @@
     "a9e14616-0152-41fb-817c-148b1946c065",
     "16582372027824d037",
     "main",
-    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1",
-    "85c9a1fd-250c-40db-b91c-abaadf2e8df5"
+    "85c9a1fd-250c-40db-b91c-abaadf2e8df5",
+    "3f3230a9-efc7-4e06-9941-bbd0bddc37f1"
   ]
 }
