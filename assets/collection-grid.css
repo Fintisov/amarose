@@ -79,7 +79,7 @@
   .collection-grid__list .collection-grid__mobile-image-wrapper {
     height: 400px; } }
 .collection-grid__header{
-      background-color: none;
+      background-color: transparent;
   background-position: center -9px;
 
 }
