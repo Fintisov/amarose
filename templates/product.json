@@ -1,5 +1,10 @@
 {
   "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -356,9 +361,15 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
     }
   },
   "order": [
+    "zp-product-header-content",
     "main",
     "ce241671-8655-46d6-9cce-de518119113e",
     "f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8",
@@ -371,6 +382,7 @@
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "judgeme_section_review_widget_2133",
     "16598113958f0d0b25",
-    "product-recommendations"
+    "product-recommendations",
+    "zp-product-footer-content"
   ]
 }

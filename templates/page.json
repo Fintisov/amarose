@@ -1,1 +1,66 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "dcec69a0-e93c-4d80-8c54-c7301ca639c4": {
+      "type": "faq-list",
+      "blocks": {
+        "adc4d05e-e80e-4060-834e-82b57615d773": {
+          "type": "block_link",
+          "settings": {
+            "question": "I have oily skin, will Amarose Skin Tag Remover serum cause any irritationon my skin?",
+            "answer": "Amarose Skin Tag Remover is suitable for all skin types and will not cause any\nirritations or itching."
+          }
+        },
+        "293f8f66-d9e1-4dd5-872b-0046050a6ec4": {
+          "type": "block_link",
+          "settings": {
+            "question": "What are the Amarose Skin Tag Remover ingredients?",
+            "answer": "Amarose Skin Tag Remover is a powerful natural blend of sanguinaria Canadensis\nand zincum muriaticum."
+          }
+        },
+        "8cf20667-0c86-4fd3-a5bb-bdcb9785fed7": {
+          "type": "block_link",
+          "settings": {
+            "question": "Can I use Amarose Skin Tag Remover for eliminating big warts?",
+            "answer": "Yes, Amarose Skin Tag Remover drops can remove big skin warts anywhere on\nyour body without any pain."
+          }
+        },
+        "bc054821-ddee-40b6-a225-36623fb5c8e4": {
+          "type": "block_link",
+          "settings": {
+            "question": "Is Amarose Skin Tag Remover skincare oil entirely natural?",
+            "answer": "Amarose Skin Tag Remover skincare serum is an entirely natural serum that does\nnot have any harmful substance in it."
+          }
+        },
+        "f36d7cf5-4c4a-4105-871b-5cdafd143105": {
+          "type": "block_link",
+          "settings": {
+            "question": "Can I buy Amarose Skin Tag Remover skincare drops from any retailstores?",
+            "answer": "Amarose Skin Tag Remove oil is only available on its official website and isn't sold\nin any retail stores."
+          }
+        }
+      },
+      "block_order": [
+        "adc4d05e-e80e-4060-834e-82b57615d773",
+        "293f8f66-d9e1-4dd5-872b-0046050a6ec4",
+        "8cf20667-0c86-4fd3-a5bb-bdcb9785fed7",
+        "bc054821-ddee-40b6-a225-36623fb5c8e4",
+        "f36d7cf5-4c4a-4105-871b-5cdafd143105"
+      ],
+      "settings": {
+        "title": "Frequently Asked Questions:"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "dcec69a0-e93c-4d80-8c54-c7301ca639c4"
+  ]
+}

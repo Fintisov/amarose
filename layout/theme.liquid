@@ -15,32 +15,18 @@
         chat='true'>
 </script>
 
-<head>
+<head><script>
+/* >> TriplePixel :: start*/
+~function(W,H,A,L,E,_){function O(T,R){void 0===R&&(R=!1),H=new XMLHttpRequest,H.open("GET","//triplewhale-pixel.web.app/triplepx.txt?"+~(Date.now()/9e7),!0),H.send(null),H.onreadystatechange=function(){4===H.readyState&&200===H.status?setTimeout(function(){return eval(H.responseText)},50):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(T-1))}}if(L=window,!L[H+"sn"]){L[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),W.includes("⇈")&&A.setItem(H+"Stg",1+(0|A.getItem(H+"Stg")||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}A.getItem('"!nC`')||(A=L,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return W=L(),(E._q=E._q||[]).push([W,t,e]),E._headless=!0,W},E.ch=W,O(5)))}}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+</script>
+
   <script src='{{ 'subscription-plan-selector-js.js' | asset_url }}' defer='defer'></script>
   <script id='sealoop_product' type='application/json'>
               {{ product | json }}
 
 
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '682311619591433');
-  fbq('track', 'PageView');
 
-
-
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=682311619591433&ev=PageView&noscript=1"
-    /></noscript>
-  <!-- End Meta Pixel Code -->
 
   <meta name="facebook-domain-verification" content="ela8hvmtvf5u9dwon2celb4qkqye60"/>
   </script>
@@ -89,7 +75,7 @@
 
   <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'form-script.js' | asset_url }}" defer="defer"></script>
-  {{ content_for_header }}
+  {%- render 'header-scripts.zipifypages', renderctx: 'thm' -%}{{ content_for_header }}
 
   {%- liquid
     assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
@@ -381,5 +367,5 @@ or template.suffix == 'register-complete' %}
     window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
   </script>
 {% endcomment %}
-</body>
+{%- render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp -%}</body>
 </html>
