@@ -78,3 +78,8 @@
 @media screen and (max-width: 575px) {
   .collection-grid__list .collection-grid__mobile-image-wrapper {
     height: 400px; } }
+.collection-grid__header{
+      background-color: none;
+  background-position: center -9px;
+
+}
