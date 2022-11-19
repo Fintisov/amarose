@@ -112,15 +112,17 @@
   p {
     font-family: $futura;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     color: $black;
     margin: 0;
     text-align: center;
 
+    /*
     @include max-screen(991) {
       font-size: 18px;
     }
+    */
 
     @include max-screen(767) {
       font-size: 14px;

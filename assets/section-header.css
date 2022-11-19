@@ -109,16 +109,16 @@
 .announcement-message p {
   font-family: "futura", suns-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   color: #2A3241;
   margin: 0;
   text-align: center;
-}
-@media screen and (max-width: 991px) {
-  .announcement-message p {
+  /*
+  @include max-screen(991) {
     font-size: 18px;
   }
+  */
 }
 @media screen and (max-width: 767px) {
   .announcement-message p {
