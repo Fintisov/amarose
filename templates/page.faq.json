@@ -345,6 +345,13 @@
             "question": "Can the Skin Tag Remover be used while breastfeeding?",
             "answer": "Most skincare products are safe as they are not readily absorbed into the bloodstream, making them safe for breastfeeding, Amarose products are all safe and tested. Please consult with your care provider for a definite answer."
           }
+        },
+        "5cf3f258-e716-4471-915f-6b8104c6dcc3": {
+          "type": "block_link",
+          "settings": {
+            "question": "Will skin tags and moles reappear if I stop using the Skin Tag Remover?",
+            "answer": "Once your skin tags and moles are removed the chances of them coming back become very unlikely."
+          }
         }
       },
       "block_order": [
@@ -353,7 +360,8 @@
         "c4a35789-4775-4a53-bc85-a2f9f6efb53c",
         "5f79e8e0-8349-414b-891d-066ef09529a1",
         "a089eb19-7f70-41e4-9aaf-7253d07e41ec",
-        "044061e0-d4a7-4ee7-89b8-69893fbbcf2f"
+        "044061e0-d4a7-4ee7-89b8-69893fbbcf2f",
+        "5cf3f258-e716-4471-915f-6b8104c6dcc3"
       ],
       "settings": {
         "title": "Questions about Skin Tag Remover"
