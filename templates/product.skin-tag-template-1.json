@@ -114,7 +114,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/screen-shot-2022-11-07-at-1-37-33-pm.webp",
         "image_overlay_opacity": 0,
-        "image_height": "small",
+        "image_height": "large",
         "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
