@@ -352,6 +352,13 @@
             "question": "Will skin tags and moles reappear if I stop using the Skin Tag Remover?",
             "answer": "Once your skin tags and moles are removed the chances of them coming back become very unlikely."
           }
+        },
+        "076b0de0-87bf-4945-bae3-9bced17fa551": {
+          "type": "block_link",
+          "settings": {
+            "question": "Is there a chance of an allergic reactions to the serum?",
+            "answer": "Check our ingredients list and consult with your care provider on any ingredients that may cause reactions with your skin and body."
+          }
         }
       },
       "block_order": [
@@ -361,7 +368,8 @@
         "5f79e8e0-8349-414b-891d-066ef09529a1",
         "a089eb19-7f70-41e4-9aaf-7253d07e41ec",
         "044061e0-d4a7-4ee7-89b8-69893fbbcf2f",
-        "5cf3f258-e716-4471-915f-6b8104c6dcc3"
+        "5cf3f258-e716-4471-915f-6b8104c6dcc3",
+        "076b0de0-87bf-4945-bae3-9bced17fa551"
       ],
       "settings": {
         "title": "Questions about Skin Tag Remover"
