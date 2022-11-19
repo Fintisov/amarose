@@ -195,6 +195,11 @@
       "settings": {
       }
     },
+    "dc4fe9b2-ef37-454e-a164-ae6a138dc6e7": {
+      "type": "faq-product",
+      "settings": {
+      }
+    },
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582": {
       "type": "multicolumn",
       "disabled": true,
@@ -344,11 +349,6 @@
       "type": "product-footer-content-zipifypages",
       "settings": {
       }
-    },
-    "dc4fe9b2-ef37-454e-a164-ae6a138dc6e7": {
-      "type": "faq-product",
-      "settings": {
-      }
     }
   },
   "order": [
@@ -361,12 +361,12 @@
     "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
+    "dc4fe9b2-ef37-454e-a164-ae6a138dc6e7",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "72c55269-1eb1-4a36-8607-5540267ddaf2",
     "e2c5df6b-073d-4717-b0db-cb9324023a39",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
-    "zp-product-footer-content",
-    "dc4fe9b2-ef37-454e-a164-ae6a138dc6e7"
+    "zp-product-footer-content"
   ]
 }
