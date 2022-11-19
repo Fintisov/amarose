@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 60px;
+  min-height: 38px;
 }
 @media screen and (max-width: 575px) {
   .container__announcement-bar {
