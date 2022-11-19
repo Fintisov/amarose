@@ -359,6 +359,13 @@
             "question": "Is there a chance of an allergic reactions to the serum?",
             "answer": "Check our ingredients list and consult with your care provider on any ingredients that may cause reactions with your skin and body."
           }
+        },
+        "6f157284-2e37-4e6a-8057-40753f028fc9": {
+          "type": "block_link",
+          "settings": {
+            "question": "How long will it take for the Serum to work?",
+            "answer": "Amarose skintag remover can work as quickly as 8 hours after applying, every skin tag is unique and different."
+          }
         }
       },
       "block_order": [
@@ -369,7 +376,8 @@
         "a089eb19-7f70-41e4-9aaf-7253d07e41ec",
         "044061e0-d4a7-4ee7-89b8-69893fbbcf2f",
         "5cf3f258-e716-4471-915f-6b8104c6dcc3",
-        "076b0de0-87bf-4945-bae3-9bced17fa551"
+        "076b0de0-87bf-4945-bae3-9bced17fa551",
+        "6f157284-2e37-4e6a-8057-40753f028fc9"
       ],
       "settings": {
         "title": "Questions about Skin Tag Remover"
