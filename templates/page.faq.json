@@ -255,8 +255,8 @@
         "0cb1e6ee-5041-43d2-9f56-599e530c383f": {
           "type": "block_link",
           "settings": {
-            "question": "",
-            "answer": ""
+            "question": "How to become an Amarose affiliate?",
+            "answer": "Signup to become an affiliate on ambassador Page available in the footer menu."
           }
         }
       },
@@ -338,6 +338,13 @@
             "question": "Can I buy Amarose Skin Tag Remover skincare drops from any retailstores?",
             "answer": "Amarose Skin Tag Remove oil is only available on its official website and isn't sold\nin any retail stores."
           }
+        },
+        "044061e0-d4a7-4ee7-89b8-69893fbbcf2f": {
+          "type": "block_link",
+          "settings": {
+            "question": "Can the Skin Tag Remover be used while breastfeeding?",
+            "answer": "Most skincare products are safe as they are not readily absorbed into the bloodstream, making them safe for breastfeeding, Amarose products are all safe and tested. Please consult with your care provider for a definite answer."
+          }
         }
       },
       "block_order": [
@@ -345,7 +352,8 @@
         "f3c8920c-6039-49ea-874f-d10cd2a97e5b",
         "c4a35789-4775-4a53-bc85-a2f9f6efb53c",
         "5f79e8e0-8349-414b-891d-066ef09529a1",
-        "a089eb19-7f70-41e4-9aaf-7253d07e41ec"
+        "a089eb19-7f70-41e4-9aaf-7253d07e41ec",
+        "044061e0-d4a7-4ee7-89b8-69893fbbcf2f"
       ],
       "settings": {
         "title": "Questions about Skin Tag Remover"
