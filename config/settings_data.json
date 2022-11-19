@@ -51,7 +51,7 @@
         "type": "announcement-bar",
         "settings": {
           "timer": "",
-          "content": "<p><strong>FREE SHIPPING WITH ORDERS $100+<\/strong><\/p>",
+          "content": "<p>FREE SHIPPING WITH ORDERS $100+<\/p>",
           "button_text": "",
           "button_url": "#"
         }
