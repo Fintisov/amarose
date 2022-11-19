@@ -51,7 +51,7 @@
         "type": "announcement-bar",
         "settings": {
           "timer": "",
-          "content": "<p>Buy One, Get One FREE - No Code Required!<\/p>",
+          "content": "<p><strong>Buy One, Get One FREE - No Code Required!<\/strong><\/p>",
           "button_text": "",
           "button_url": "#"
         }
