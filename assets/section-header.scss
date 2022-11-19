@@ -2,6 +2,9 @@
 // ========= announcement-bar =========
 
 .announcement-bar {
+  background: rgba(255, 238, 234, 1);
+
+  /*
   background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 550px), rgba(255, 238, 234, 1) calc(50% - 550px));
 
   @include max-screen(1300) {
@@ -19,6 +22,8 @@
   @include max-screen(575) {
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) 50px, rgba(255, 238, 234, 1) 50px);
   }
+
+  */
 
 }
 
@@ -147,6 +152,25 @@
 .announcement-btn {
   display: flex;
   align-items: center;
+  margin-left: auto;
+
+  .button {
+
+    @include max-screen(767) {
+      padding: 8px 15px;
+      min-height: 34px;
+      font-size: 14px;
+    }
+
+    em {
+      font-style: normal;
+
+      @include max-screen(991) {
+        display: none;
+      }
+    }
+
+  }
 
   .button {
 
