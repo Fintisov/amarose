@@ -95,7 +95,15 @@
 }
 
 .announcement-message {
+  text-align: center;
+  width: 100%;
+  margin-left: 48px;
   padding: 4px 20px;
+
+  @include max-screen(991) {
+    margin-left: 0;
+  }
+
 
   @include max-screen(767) {
     padding: 12px 4px;
