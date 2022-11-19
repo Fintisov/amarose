@@ -112,9 +112,9 @@
     "ce241671-8655-46d6-9cce-de518119113e": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/screen-shot-2022-11-07-at-1-37-33-pm.webp",
+        "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_28_.pngnew.png",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "small",
         "adapt_height_first_image": true,
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -123,6 +123,48 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
+      }
+    },
+    "d2d8ffcc-e532-4538-b909-83ed3cb41e28": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-0",
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-1",
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "1e6bedb1-4c15-40ba-b12f-b0bc6463de07": {
@@ -356,6 +398,7 @@
     "main",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "ce241671-8655-46d6-9cce-de518119113e",
+    "d2d8ffcc-e532-4538-b909-83ed3cb41e28",
     "1e6bedb1-4c15-40ba-b12f-b0bc6463de07",
     "16589228130b221df1",
     "1660807363d42faf82",
