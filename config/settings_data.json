@@ -50,8 +50,8 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "settings": {
-          "timer": "",
-          "content": "<p>FREE SHIPPING WITH ORDERS $100+<\/p>",
+          "timer": "4 days",
+          "content": "<p>30% OFF SITE WIDE BLACK FRIDAY SPECIAL<\/p>",
           "button_text": "",
           "button_url": "#"
         }
