@@ -51,7 +51,7 @@
         "type": "announcement-bar",
         "settings": {
           "timer": "",
-          "content": "<p>30% OFF SITE WIDE BLACK FRIDAY SPECIAL<\/p>",
+          "content": "<p><strong>30% OFF SITE WIDE BLACK FRIDAY SPECIAL<\/strong><\/p>",
           "button_text": "",
           "button_url": "#"
         }
