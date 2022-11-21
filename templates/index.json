@@ -10,7 +10,7 @@
         "show_bg": false,
         "sub_heading": "",
         "sub_heading_color": "gray",
-        "heading": "<span style=\"font-size:20px;color:black\">BLACK FRIDAY SALE<br><\/span>\n<span style=\"font-size:100px;color:black;line-height:90%\">30% OFF SITE WIDE<\/span>",
+        "heading": "<span style=\"font-size:20px;color:black\"> BLACK FRIDAY SALE<br><\/span>\n<span style=\"font-size:100px;color:black;line-height:90%\"> 30% OFF SITE WIDE<\/span>",
         "description": "<p>USE CODE: BF30<\/p>",
         "button_text": "SHOP NOW",
         "button_url": "shopify:\/\/collections\/shop-all"
