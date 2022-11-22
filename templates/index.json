@@ -4,14 +4,14 @@
       "type": "hero-banner",
       "settings": {
         "bg_image": "shopify:\/\/shop_images\/General.png",
-        "bg_image_mobile": "shopify:\/\/shop_images\/Amarose_Hero_Oct_Mobile.png",
+        "bg_image_mobile": "shopify:\/\/shop_images\/mobilebg_7b856da2-e96f-4c7e-ad45-f5687cb540f6.png",
         "bg_color": "#ffded6",
         "text_alignment": "left",
         "show_bg": false,
         "sub_heading": "",
         "sub_heading_color": "gray",
-        "heading": "Enrich Your beauty",
-        "description": "<p>Highest quality ingredients, formulated to provide your skin with the purest powers of nature<\/p>",
+        "heading": "<span style=\"font-size:20px;color:black;padding-left:5px;\"> BLACK FRIDAY SALE<br><\/span>\n<span style=\"font-size:100px;color:black;line-height:90%;\">30% OFF<\/span>\n<span style=\"font-size:40px;color:black;line-height:90%;\"><br>SITE WIDE<\/span>",
+        "description": "",
         "button_text": "SHOP NOW",
         "button_url": "shopify:\/\/collections\/shop-all"
       }
