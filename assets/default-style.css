@@ -38,7 +38,12 @@ body.overflow-hidden-tablet {
 * {
   font-family: "futura", suns-serif; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "futura", suns-serif;
   color: #2A3241;
   font-weight: 400;
@@ -51,9 +56,9 @@ h1 {
       font-size: 34px; } }
   h1.lg {
     font-size: 48px; }
-  @media screen and (max-width: 767px) {
-    h1.lg {
-      font-size: 32px; } }
+    @media screen and (max-width: 767px) {
+      h1.lg {
+        font-size: 32px; } }
 
 h2 {
   font-size: 40px; }
@@ -82,17 +87,17 @@ p {
   margin: 0; }
   @media screen and (max-width: 767px) {
     p {
-      font-size: 16px; } }
+      font-size: 18px; } }
   p.lg {
     font-size: 22px; }
-  @media screen and (max-width: 767px) {
-    p.lg {
-      font-size: 18px; } }
+    @media screen and (max-width: 767px) {
+      p.lg {
+        font-size: 18px; } }
   p.sm {
     font-size: 16px; }
-  @media screen and (max-width: 767px) {
-    p.sm {
-      font-size: 14px; } }
+    @media screen and (max-width: 767px) {
+      p.sm {
+        font-size: 14px; } }
   p.underline {
     text-decoration-line: underline;
     text-underline-offset: 4px; }
@@ -139,21 +144,21 @@ button {
     padding: 9px 32px;
     font-size: 16px;
     min-height: 40px; }
-  @media screen and (max-width: 767px) {
-    .button.button--sm {
-      font-size: 14px;
-      padding: 5px 24px;
-      min-height: 28px; } }
+    @media screen and (max-width: 767px) {
+      .button.button--sm {
+        font-size: 14px;
+        padding: 5px 24px;
+        min-height: 28px; } }
   .button.button--lg {
     padding: 11px 32px;
     font-size: 22px;
     line-height: 1.5;
     min-height: 56px; }
-  @media screen and (max-width: 767px) {
-    .button.button--lg {
-      font-size: 18px;
-      padding: 12px 24px;
-      min-height: 48px; } }
+    @media screen and (max-width: 767px) {
+      .button.button--lg {
+        font-size: 18px;
+        padding: 12px 24px;
+        min-height: 48px; } }
   .button.primary-button {
     color: #ffffff;
     background-color: #BA3A7D;
@@ -175,19 +180,19 @@ button {
     border: 1px solid #850B65;
     padding: 11.5px 23px;
     transition: 0.3s; }
-  @media screen and (max-width: 767px) {
-    .button.outline-button {
-      padding: 8.5px 23px; } }
+    @media screen and (max-width: 767px) {
+      .button.outline-button {
+        padding: 8.5px 23px; } }
     .button.outline-button.button--sm {
       padding: 8.5px 31px; }
-  @media screen and (max-width: 767px) {
-    .button.outline-button.button--sm {
-      padding: 4px 23px; } }
+      @media screen and (max-width: 767px) {
+        .button.outline-button.button--sm {
+          padding: 4px 23px; } }
     .button.outline-button.button--lg {
       padding: 10.5px 31px; }
-  @media screen and (max-width: 767px) {
-    .button.outline-button.button--lg {
-      padding: 11.5px 23px; } }
+      @media screen and (max-width: 767px) {
+        .button.outline-button.button--lg {
+          padding: 11.5px 23px; } }
     .button.outline-button:hover {
       color: #ffffff;
       background-color: #850B65;
@@ -205,35 +210,35 @@ button {
     padding: 7.5px 32px;
     font-size: 22px;
     line-height: 1.5; }
-  @media screen and (max-width: 767px) {
-    .button.button-icon {
-      padding: 9px 30px;
-      font-size: 18px;
-      line-height: 1.8; } }
+    @media screen and (max-width: 767px) {
+      .button.button-icon {
+        padding: 9px 30px;
+        font-size: 18px;
+        line-height: 1.8; } }
     .button.button-icon svg {
       margin-right: 10px;
       width: 24px;
       height: 24px; }
-  @media screen and (max-width: 767px) {
-    .button.button-icon svg {
-      width: 14px;
-      height: 14px; } }
+      @media screen and (max-width: 767px) {
+        .button.button-icon svg {
+          width: 14px;
+          height: 14px; } }
   .button.button-icon--sm {
     padding: 8px 24px;
     font-size: 16px;
     line-height: 1.28; }
-  @media screen and (max-width: 767px) {
-    .button.button-icon--sm {
-      padding: 5px 30px 6px;
-      font-size: 14px; } }
+    @media screen and (max-width: 767px) {
+      .button.button-icon--sm {
+        padding: 5px 30px 6px;
+        font-size: 14px; } }
     .button.button-icon--sm svg {
       margin-right: 10px;
       width: 24px;
       height: 24px; }
-  @media screen and (max-width: 767px) {
-    .button.button-icon--sm svg {
-      width: 14px;
-      height: 14px; } }
+      @media screen and (max-width: 767px) {
+        .button.button-icon--sm svg {
+          width: 14px;
+          height: 14px; } }
   .button.button--arrow path {
     stroke: #2A3241;
     transition: 0.3s; }
@@ -417,9 +422,9 @@ button {
     color: #5E697E;
     top: 50%;
     transform: translateY(-50%); }
-  @media screen and (max-width: 767px) {
-    .field .field__label {
-      font-size: 14px; } }
+    @media screen and (max-width: 767px) {
+      .field .field__label {
+        font-size: 14px; } }
   .field .field__label--hidden {
     position: absolute;
     width: 1px;
@@ -449,11 +454,11 @@ button {
       -webkit-text-fill-color: #5E697E; }
     .field .field__input::placeholder {
       opacity: 0; }
-  @media screen and (max-width: 767px) {
-    .field .field__input {
-      height: 40px;
-      font-size: 16px;
-      padding: 16px 34px 1px 20px; } }
+    @media screen and (max-width: 767px) {
+      .field .field__input {
+        height: 40px;
+        font-size: 16px;
+        padding: 16px 34px 1px 20px; } }
     .field .field__input:focus {
       border-radius: 30px; }
       .field .field__input:focus ~ .field__label {
@@ -479,10 +484,10 @@ button {
       background-repeat: no-repeat;
       background-position: right 20px center;
       transition: background-image 0.3s, border 0.3s; }
-  @media screen and (max-width: 767px) {
-    .field .field__input.validate-error {
-      -webkit-background-size: 14px;
-      background-size: 14px; } }
+      @media screen and (max-width: 767px) {
+        .field .field__input.validate-error {
+          -webkit-background-size: 14px;
+          background-size: 14px; } }
     .field .field__input.validate-true {
       border: 1px solid #30CD9C;
       background-image: url("checked-green.svg");
@@ -490,10 +495,10 @@ button {
       background-repeat: no-repeat;
       background-position: right 20px center;
       transition: background-image 0.3s, border 0.3s; }
-  @media screen and (max-width: 767px) {
-    .field .field__input.validate-true {
-      -webkit-background-size: 14px;
-      background-size: 14px; } }
+      @media screen and (max-width: 767px) {
+        .field .field__input.validate-true {
+          -webkit-background-size: 14px;
+          background-size: 14px; } }
   .field.field--white .field__input {
     background-color: #fff; }
   .field.field--no-fly {
@@ -572,10 +577,10 @@ button {
     line-height: 1.4;
     padding-top: 5px;
     padding-left: 20px; }
-  @media screen and (max-width: 767px) {
-    .field .field__error {
-      font-size: 14px;
-      line-height: 1.28; } }
+    @media screen and (max-width: 767px) {
+      .field .field__error {
+        font-size: 14px;
+        line-height: 1.28; } }
 
 .field-row {
   display: flex;
@@ -590,9 +595,9 @@ button {
   justify-content: space-between; }
   .field__container .field {
     width: calc(50% - 10px); }
-  @media screen and (max-width: 767px) {
-    .field__container .field {
-      width: calc(50% - 8px); } }
+    @media screen and (max-width: 767px) {
+      .field__container .field {
+        width: calc(50% - 8px); } }
   .field__container .field__error {
     width: 100%; }
 
@@ -634,34 +639,44 @@ button {
     .link-arrow svg path {
       stroke: #BA3A7D; }
 
+/*
 #insta-feed {
   display: flex !important;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px; }
-  @media screen and (max-width: 767px) {
-    #insta-feed {
-      gap: 15px 10px; } }
-  #insta-feed h2 {
+  gap: 20px;
+
+  @include max-screen(767) {
+    gap: 15px 10px;
+  }
+
+  h2 {
     width: 100%;
-    font-family: "futura", suns-serif;
+    font-family: $futura;
     font-weight: 500;
     font-size: 40px;
     line-height: 1.5;
     text-align: center;
-    margin-bottom: 10px !important; }
-  #insta-feed .instafeed-container {
-    flex: 1 1 15%; }
-  @media screen and (max-width: 1300px) {
-    #insta-feed .instafeed-container {
-      flex-basis: 20%; } }
-  @media screen and (max-width: 767px) {
-    #insta-feed .instafeed-container {
-      padding-top: 40% !important;
-      flex-basis: calc(50% - 5px); }
-      #insta-feed .instafeed-container:not(:nth-last-child(-n+4)) {
-        display: none; } }
+    margin-bottom: 10px !important;
+  }
 
+  .instafeed-container {
+    flex: 1 1 15%;
+
+    @include max-screen(1300) {
+      flex-basis: 20%;
+    }
+
+    @include max-screen(767) {
+      &:not(:nth-last-child(-n+4)) {
+        display: none;
+      }
+
+      padding-top: 40% !important;
+      flex-basis: calc(50% - 5px);
+    }
+  }
+}*/
 #shopify-product-reviews {
   margin: 0 !important;
   padding: 80px 0; }
@@ -671,19 +686,19 @@ button {
     margin: 0 auto;
     padding: 0 10px;
     border: none; }
-  @media screen and (max-width: 1300px) {
-    #shopify-product-reviews .spr-container {
-      max-width: 960px; } }
-  @media screen and (max-width: 991px) {
-    #shopify-product-reviews .spr-container {
-      max-width: 720px; } }
-  @media screen and (max-width: 767px) {
-    #shopify-product-reviews .spr-container {
-      max-width: 540px; } }
-  @media screen and (max-width: 575px) {
-    #shopify-product-reviews .spr-container {
-      max-width: 100%;
-      padding: 0 20px; } }
+    @media screen and (max-width: 1300px) {
+      #shopify-product-reviews .spr-container {
+        max-width: 960px; } }
+    @media screen and (max-width: 991px) {
+      #shopify-product-reviews .spr-container {
+        max-width: 720px; } }
+    @media screen and (max-width: 767px) {
+      #shopify-product-reviews .spr-container {
+        max-width: 540px; } }
+    @media screen and (max-width: 575px) {
+      #shopify-product-reviews .spr-container {
+        max-width: 100%;
+        padding: 0 20px; } }
   #shopify-product-reviews .spr-header-title {
     font-family: "futura", suns-serif;
     font-weight: 400;
@@ -717,7 +732,8 @@ button {
     font-weight: 400;
     font-size: 18px;
     color: #2A3241; }
-  #shopify-product-reviews input:not(.spr-button), #shopify-product-reviews textarea {
+  #shopify-product-reviews input:not(.spr-button),
+  #shopify-product-reviews textarea {
     display: block;
     width: 100%;
     min-height: 48px;
@@ -732,27 +748,35 @@ button {
     line-height: 1.4;
     color: #5E697E;
     transition: background-color 0.3s, border 0.3s; }
-    #shopify-product-reviews input:not(.spr-button):-webkit-autofill, #shopify-product-reviews textarea:-webkit-autofill {
+    #shopify-product-reviews input:not(.spr-button):-webkit-autofill,
+    #shopify-product-reviews textarea:-webkit-autofill {
       -webkit-box-shadow: inset 0 0 0 50px #F1F3F6;
       -webkit-text-fill-color: #5E697E; }
-    #shopify-product-reviews input:not(.spr-button)::placeholder, #shopify-product-reviews textarea::placeholder {
+    #shopify-product-reviews input:not(.spr-button)::placeholder,
+    #shopify-product-reviews textarea::placeholder {
       opacity: 1; }
-  @media screen and (max-width: 767px) {
-    #shopify-product-reviews input:not(.spr-button), #shopify-product-reviews textarea {
-      height: 40px;
-      font-size: 16px;
-      padding: 15px; } }
-    #shopify-product-reviews input:not(.spr-button):focus, #shopify-product-reviews textarea:focus {
+    @media screen and (max-width: 767px) {
+      #shopify-product-reviews input:not(.spr-button),
+      #shopify-product-reviews textarea {
+        height: 40px;
+        font-size: 16px;
+        padding: 15px; } }
+    #shopify-product-reviews input:not(.spr-button):focus,
+    #shopify-product-reviews textarea:focus {
       border-radius: 30px; }
-    #shopify-product-reviews input:not(.spr-button):hover, #shopify-product-reviews textarea:hover {
+    #shopify-product-reviews input:not(.spr-button):hover,
+    #shopify-product-reviews textarea:hover {
       background-color: #FFEEEA; }
-    #shopify-product-reviews input:not(.spr-button):focus, #shopify-product-reviews textarea:focus {
+    #shopify-product-reviews input:not(.spr-button):focus,
+    #shopify-product-reviews textarea:focus {
       border: 1px solid #F08B84;
       background-color: #F1F3F6; }
-      #shopify-product-reviews input:not(.spr-button):focus ~ .field__label, #shopify-product-reviews textarea:focus ~ .field__label {
+      #shopify-product-reviews input:not(.spr-button):focus ~ .field__label,
+      #shopify-product-reviews textarea:focus ~ .field__label {
         top: 12px;
         font-size: 10px; }
-    #shopify-product-reviews input:not(.spr-button):disabled:hover, #shopify-product-reviews textarea:disabled:hover {
+    #shopify-product-reviews input:not(.spr-button):disabled:hover,
+    #shopify-product-reviews textarea:disabled:hover {
       background-color: #F1F3F6;
       cursor: not-allowed; }
   #shopify-product-reviews label {
@@ -785,22 +809,29 @@ button {
       border-radius: 20px; }
     #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-thumb:hover {
       background-color: #850B65; }
-    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:start:decrement, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:end:increment, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:end:increment, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:horizontal:start:decrement, #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:horizontal:end:increment {
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:start:decrement,
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:end:increment,
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:vertical:end:increment,
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:horizontal:start:decrement,
+    #shopify-product-reviews .spr-form-review-body ::-webkit-scrollbar-button:horizontal:end:increment {
       display: none; }
     #shopify-product-reviews .spr-form-review-body textarea {
       resize: none; }
-  #shopify-product-reviews .spr-starrating, #shopify-product-reviews .spr-starratings {
+  #shopify-product-reviews .spr-starrating,
+  #shopify-product-reviews .spr-starratings {
     display: block;
     margin-bottom: 10px;
     font-family: "futura", suns-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.25; }
-    #shopify-product-reviews .spr-starrating .spr-icon, #shopify-product-reviews .spr-starratings .spr-icon {
+    #shopify-product-reviews .spr-starrating .spr-icon,
+    #shopify-product-reviews .spr-starratings .spr-icon {
       margin-right: 5px;
       color: #F08B84;
       opacity: 1; }
-      #shopify-product-reviews .spr-starrating .spr-icon:before, #shopify-product-reviews .spr-starratings .spr-icon:before {
+      #shopify-product-reviews .spr-starrating .spr-icon:before,
+      #shopify-product-reviews .spr-starratings .spr-icon:before {
         font-size: 25px; }
   #shopify-product-reviews .spr-starratings .spr-icon {
     margin-right: 0; }
@@ -871,15 +902,16 @@ button {
     color: #2A3241;
     cursor: default;
     background-color: #FFBBAB; }
-  #shopify-product-reviews .spr-pagination .spr-pagination-next, #shopify-product-reviews .spr-pagination .spr-pagination-prev {
+  #shopify-product-reviews .spr-pagination .spr-pagination-next,
+  #shopify-product-reviews .spr-pagination .spr-pagination-prev {
     display: none;
-    /*
-      a {
-        padding: 6px 12px;
-        border-radius: 20px;
-        background-color: $blush-25;
-        font-family: $futura;
-        font-weight: 400;
-        font-size: 16px;
-        color: $black;
+    /*
+      a {
+        padding: 6px 12px;
+        border-radius: 20px;
+        background-color: $blush-25;
+        font-family: $futura;
+        font-weight: 400;
+        font-size: 16px;
+        color: $black;
       }*/ }

@@ -1,5 +1,10 @@
 {
   "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -8,7 +13,7 @@
           "settings": {
           }
         },
-        "judgeme_preview_badge_product_page_8391f34e": {
+        "1262beec-474b-434b-9761-994b21a45d40": {
           "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
@@ -35,22 +40,77 @@
           "type": "description",
           "settings": {
           }
+        },
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
         "title",
-        "judgeme_preview_badge_product_page_8391f34e",
+        "1262beec-474b-434b-9761-994b21a45d40",
         "price",
         "variant_picker",
         "buy_buttons",
-        "description"
+        "description",
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false
+      }
+    },
+    "ce241671-8655-46d6-9cce-de518119113e": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_13.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--16459152883970__f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8-166628554328193810-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152883970__f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8-166628554328193810-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152883970__f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8-166628554328193810-0",
+        "template--16459152883970__f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8-166628554328193810-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 4
       }
     },
     "16589228130b221df1": {
@@ -102,6 +162,7 @@
     },
     "1659809705039b724e": {
       "type": "pdp-benefits",
+      "disabled": true,
       "settings": {
       }
     },
@@ -141,25 +202,147 @@
         "text": "Developed to work better together, each product prepares your skin for every day protection."
       }
     },
+    "c36273ce-8b82-43cd-ae42-3422524f6d6b": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Real People. Real Results.<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Millions of men and women worldwide are raving about Amarose Skin Tag Remover and its positive effects on moles and skin tags. Read below the success stories of our customers and see for yourself.<\/p>"
+          }
+        },
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0",
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1",
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "2da1e4c6-fe51-4db4-95ad-7b550b5a3582": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_3_162e2c8f-58f0-4fd9-a3c3-3a9fba55e638.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_9.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "3a7c4c65-c103-43a0-b565-0c3288e74d47": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_6.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9e214e22-41f5-4cac-8ac9-f8d6d006ebd7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_7.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-0",
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-1",
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-2",
+        "3a7c4c65-c103-43a0-b565-0c3288e74d47",
+        "9e214e22-41f5-4cac-8ac9-f8d6d006ebd7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16598113958f0d0b25": {
+      "type": "faq-product",
+      "settings": {
+      }
+    },
     "judgeme_section_review_widget_2133": {
       "type": "apps",
       "blocks": {
-        "judgeme_review_widget_793db13e": {
+        "0040a7f4-b1c8-4807-a68c-91759bf1962c": {
           "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
           }
         }
       },
       "block_order": [
-        "judgeme_review_widget_793db13e"
+        "0040a7f4-b1c8-4807-a68c-91759bf1962c"
       ],
       "settings": {
         "include_margins": true
-      }
-    },
-    "16598113958f0d0b25": {
-      "type": "faq-product",
-      "settings": {
       }
     },
     "product-recommendations": {
@@ -178,18 +361,28 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
     }
   },
   "order": [
+    "zp-product-header-content",
     "main",
+    "ce241671-8655-46d6-9cce-de518119113e",
+    "f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8",
     "16589228130b221df1",
     "1660807363d42faf82",
     "165979501095128c3c",
     "1659809705039b724e",
     "165981051437af0bd0",
-    "judgeme_section_review_widget_2133",
+    "c36273ce-8b82-43cd-ae42-3422524f6d6b",
+    "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
     "16598113958f0d0b25",
-    "product-recommendations"
+    "judgeme_section_review_widget_2133",
+    "product-recommendations",
+    "zp-product-footer-content"
   ]
 }
-

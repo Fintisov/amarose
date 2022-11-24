@@ -3,16 +3,17 @@
     "165781071790c254de": {
       "type": "hero-banner",
       "settings": {
+        "bg_image": "shopify:\/\/shop_images\/WhatsApp_Image_2022-11-23_at_1.00.49_PM.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/mobilebg_7b856da2-e96f-4c7e-ad45-f5687cb540f6.png",
         "bg_color": "#ffded6",
-        "image": "shopify:\/\/shop_images\/1_Homepage_Image_Transparent.webp",
         "text_alignment": "left",
         "show_bg": false,
-        "sub_heading": "ON SALE",
-        "sub_heading_color": "white",
-        "heading": "Beauty Boost Cleanser",
-        "description": "<p>Gently remove impurities and dirt while infusing your skin with essential nutrients.<\/p>",
-        "button_text": "Learn More",
-        "button_url": "shopify:\/\/products\/beauty-boost-cleanser"
+        "sub_heading": "",
+        "sub_heading_color": "gray",
+        "heading": "<span style=\"font-size:31px;color:black;padding-left:5px;\"> BLACK FRIDAY SALE<br><\/span>\n<span style=\"font-size:100px;color:black;line-height:90%;\">30% OFF<\/span>\n<span style=\"font-size:40px;color:black;line-height:90%;\"><br>SITE WIDE<\/span>\n<span style=\"font-size:25px;color:black;line-height:90%;\"><br><span style=\"font-weight:200\">USE CODE:<\/span>BF30<\/span>",
+        "description": "",
+        "button_text": "SHOP NOW",
+        "button_url": "shopify:\/\/collections\/shop-all"
       }
     },
     "1658046660491a8b79": {
@@ -20,8 +21,8 @@
       "settings": {
         "title": "Clean & Fresh Collection",
         "description": "The Amarose collection works best when used routinely and together. First detoxify then moisturize. Skin looks and feels soft, silky, and seriously smooth.",
-        "image": "shopify:\/\/shop_images\/12.webp",
-        "mobile_image": "shopify:\/\/shop_images\/13.webp",
+        "image": "shopify:\/\/shop_images\/Card_Desk.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "collection": "frontpage",
         "image_ratio": "adapt",
         "show_secondary_image": false,
@@ -58,6 +59,7 @@
     },
     "16582582924f93d67a": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "Formulated to provide skin nutrition for optimal skin health.",
         "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
@@ -67,14 +69,9 @@
         "is_product": false
       }
     },
-    "1658258250814617ed": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
-    },
     "165804645803b40e7b": {
       "type": "featured-blog",
+      "disabled": true,
       "settings": {
         "heading": "Blog posts",
         "content": "<p>Find secrets to keeping your skin healthy. Return to the Journal for the latest on all-natural skin and beauty products and more. <\/p>",
@@ -83,6 +80,140 @@
         "show_author": false,
         "post_limit": 3
       }
+    },
+    "d53119d0-26a7-4dd3-a4c6-06dfc9712246": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "Check out our most popular blog posts.",
+        "content": "",
+        "blog": "blog",
+        "show_date": false,
+        "show_author": false,
+        "post_limit": 3
+      }
+    },
+    "ac51904f-d396-4a97-8422-99f974d39f50": {
+      "type": "image-link-list",
+      "disabled": true,
+      "settings": {
+        "title": "Block links"
+      }
+    },
+    "d45160f6-8a95-47a8-bb13-ae4cc73649fe": {
+      "type": "hero-banner",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_alignment": "center",
+        "show_bg": false,
+        "sub_heading": "",
+        "sub_heading_color": "pink",
+        "heading": "",
+        "description": "",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
+    "16660287198182da64": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "9121ac8b-8215-4d7d-8a12-0db2eb1fc9ce": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Check out our most popular blog posts.",
+        "content": "",
+        "blog": "blog",
+        "show_date": false,
+        "show_author": false,
+        "post_limit": 3
+      }
+    },
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a": {
+      "type": "rich-text",
+      "blocks": {
+        "e3cccce6-d8bc-488c-a5e4-688a689fcd07": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Connect with us @Amarosebeauty<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "e3cccce6-d8bc-488c-a5e4-688a689fcd07"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 8
+      }
+    },
+    "1665697376713d32bb": {
+      "type": "apps",
+      "blocks": {
+        "0e619692-4ed8-46e2-b186-7f98289442dc": {
+          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "heading_size": 22,
+            "feed_width": 100,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "0e619692-4ed8-46e2-b186-7f98289442dc"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "8e34c91e-be3d-4268-ad00-61390bbfd5d1": {
+      "type": "rich-text",
+      "blocks": {
+        "cb9d027e-d050-4426-ba74-6be2dc366683": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "cb9d027e-d050-4426-ba74-6be2dc366683"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 60
+      }
+    },
+    "80450daf-ac8d-4561-be57-b48146628efb": {
+      "type": "running-line",
+      "blocks": {
+        "c2870c9c-b81c-48ab-be55-163a5917fd37": {
+          "type": "featured_collection",
+          "settings": {
+            "running_line_item": "NO ARTIFICIAL COLORS"
+          }
+        }
+      },
+      "block_order": [
+        "c2870c9c-b81c-48ab-be55-163a5917fd37"
+      ],
+      "settings": {
+        "title": "Running line"
+      }
     }
   },
   "order": [
@@ -90,7 +221,15 @@
     "1658046660491a8b79",
     "1658051938fe853300",
     "16582582924f93d67a",
-    "1658258250814617ed",
-    "165804645803b40e7b"
+    "165804645803b40e7b",
+    "d53119d0-26a7-4dd3-a4c6-06dfc9712246",
+    "ac51904f-d396-4a97-8422-99f974d39f50",
+    "d45160f6-8a95-47a8-bb13-ae4cc73649fe",
+    "16660287198182da64",
+    "9121ac8b-8215-4d7d-8a12-0db2eb1fc9ce",
+    "1aa7fb41-3693-4666-b24f-efd371d01c6a",
+    "1665697376713d32bb",
+    "8e34c91e-be3d-4268-ad00-61390bbfd5d1",
+    "80450daf-ac8d-4561-be57-b48146628efb"
   ]
 }

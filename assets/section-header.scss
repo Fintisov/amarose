@@ -2,6 +2,9 @@
 // ========= announcement-bar =========
 
 .announcement-bar {
+  background: rgba(255, 238, 234, 1);
+
+  /*
   background: linear-gradient(90deg, rgba(253, 188, 174, 1) calc(50% - 550px), rgba(255, 238, 234, 1) calc(50% - 550px));
 
   @include max-screen(1300) {
@@ -20,13 +23,16 @@
     background: linear-gradient(90deg, rgba(253, 188, 174, 1) 50px, rgba(255, 238, 234, 1) 50px);
   }
 
+  */
+
 }
 
 .container__announcement-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 60px;
+  //min-height: 60px;
+  min-height: 38px;
 
   @include max-screen(575) {
     padding: 0 5px;
@@ -90,7 +96,15 @@
 }
 
 .announcement-message {
+  text-align: center;
+  width: 100%;
+  margin-left: 48px;
   padding: 4px 20px;
+
+  @include max-screen(991) {
+    margin-left: 0;
+  }
+
 
   @include max-screen(767) {
     padding: 12px 4px;
@@ -99,15 +113,17 @@
   p {
     font-family: $futura;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     color: $black;
     margin: 0;
     text-align: center;
 
+    /*
     @include max-screen(991) {
       font-size: 18px;
     }
+    */
 
     @include max-screen(767) {
       font-size: 14px;
@@ -147,6 +163,25 @@
 .announcement-btn {
   display: flex;
   align-items: center;
+  margin-left: auto;
+
+  .button {
+
+    @include max-screen(767) {
+      padding: 8px 15px;
+      min-height: 34px;
+      font-size: 14px;
+    }
+
+    em {
+      font-style: normal;
+
+      @include max-screen(991) {
+        display: none;
+      }
+    }
+
+  }
 
   .button {
 

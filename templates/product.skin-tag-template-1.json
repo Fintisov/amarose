@@ -1,0 +1,415 @@
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "1262beec-474b-434b-9761-994b21a45d40": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe": {
+          "type": "shopify:\/\/apps\/yotpo-product-photo-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "1262beec-474b-434b-9761-994b21a45d40",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "description",
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
+    "c36273ce-8b82-43cd-ae42-3422524f6d6b": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p><strong>Clean Skin Without Surgery!<\/strong><\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Amarose Skin Tag Remover is changing the way people heal and remove moles and skin tags. Join thousands of others who are already enjoying beautiful and blemish free skin today!<\/p>"
+          }
+        },
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-0",
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-1",
+        "template--16459152883970__c36273ce-8b82-43cd-ae42-3422524f6d6b-16662841696103db0b-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ce241671-8655-46d6-9cce-de518119113e": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_28_.pngnew.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "d2d8ffcc-e532-4538-b909-83ed3cb41e28": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-0",
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-1",
+        "template--16602285048066__d2d8ffcc-e532-4538-b909-83ed3cb41e28-16688664927f31ecac-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 12
+      }
+    },
+    "1e6bedb1-4c15-40ba-b12f-b0bc6463de07": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_12_d933d59f-f946-42a4-917f-8d27efd38b3d.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "16589228130b221df1": {
+      "type": "running-line",
+      "blocks": {
+        "386c512f-aa3b-48c5-bf13-77cbfb37254b": {
+          "type": "featured_collection",
+          "settings": {
+            "running_line_item": "NO ARTIFICIAL COLORS"
+          }
+        },
+        "37a47093-de39-42af-96f0-711449d09a36": {
+          "type": "featured_collection",
+          "settings": {
+            "running_line_item": "NO ARTIFICIAL COLORS"
+          }
+        },
+        "285c19a1-16b1-4178-a741-a91618703f3d": {
+          "type": "featured_collection",
+          "settings": {
+            "running_line_item": "NO ARTIFICIAL COLORS"
+          }
+        }
+      },
+      "block_order": [
+        "386c512f-aa3b-48c5-bf13-77cbfb37254b",
+        "37a47093-de39-42af-96f0-711449d09a36",
+        "285c19a1-16b1-4178-a741-a91618703f3d"
+      ],
+      "settings": {
+        "title": "Running line"
+      }
+    },
+    "1660807363d42faf82": {
+      "type": "images-two-with-text",
+      "settings": {
+      }
+    },
+    "165979501095128c3c": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "Formulated to provide skin nutrition for optimal skin health.",
+        "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "is_product": true
+      }
+    },
+    "1659809705039b724e": {
+      "type": "pdp-benefits",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "dc4fe9b2-ef37-454e-a164-ae6a138dc6e7": {
+      "type": "faq-product",
+      "settings": {
+      }
+    },
+    "2da1e4c6-fe51-4db4-95ad-7b550b5a3582": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_3_162e2c8f-58f0-4fd9-a3c3-3a9fba55e638.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_1.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_9.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "3a7c4c65-c103-43a0-b565-0c3288e74d47": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_6.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9e214e22-41f5-4cac-8ac9-f8d6d006ebd7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theamarose.com_offer_skintagremover_us-v4__uid_dcd2fbcb-7c93-44f3-92a6-952f1acfcdf9_7.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-0",
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-1",
+        "template--16459152883970__2da1e4c6-fe51-4db4-95ad-7b550b5a3582-16662808265da75088-2",
+        "3a7c4c65-c103-43a0-b565-0c3288e74d47",
+        "9e214e22-41f5-4cac-8ac9-f8d6d006ebd7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "72c55269-1eb1-4a36-8607-5540267ddaf2": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "461b725f-dcfd-42a1-970a-58982f00691b": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Clean Skin Without Surgery!<\/strong><\/p><p><br\/>Amarose Skin Tag Remover is changing the way people heal and remove moles and skin tags. Join thousands of others who are already enjoying beautiful and blemish free skin today!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "461b725f-dcfd-42a1-970a-58982f00691b"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "e2c5df6b-073d-4717-b0db-cb9324023a39": {
+      "type": "ingredients",
+      "disabled": true,
+      "settings": {
+        "title": "Top Quality Ingredients. Top Results.",
+        "description": "All our products are formulated with high-quality ingredients, combined to bring maximum nourishment.",
+        "button_text": "",
+        "button_url": ""
+      }
+    },
+    "judgeme_section_review_widget_2133": {
+      "type": "apps",
+      "blocks": {
+        "0040a7f4-b1c8-4807-a68c-91759bf1962c": {
+          "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "0040a7f4-b1c8-4807-a68c-91759bf1962c"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You Might Also Like",
+        "heading_size": "h2",
+        "products_to_show": 5,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "main",
+    "c36273ce-8b82-43cd-ae42-3422524f6d6b",
+    "ce241671-8655-46d6-9cce-de518119113e",
+    "d2d8ffcc-e532-4538-b909-83ed3cb41e28",
+    "1e6bedb1-4c15-40ba-b12f-b0bc6463de07",
+    "16589228130b221df1",
+    "1660807363d42faf82",
+    "165979501095128c3c",
+    "1659809705039b724e",
+    "dc4fe9b2-ef37-454e-a164-ae6a138dc6e7",
+    "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
+    "72c55269-1eb1-4a36-8607-5540267ddaf2",
+    "e2c5df6b-073d-4717-b0db-cb9324023a39",
+    "judgeme_section_review_widget_2133",
+    "product-recommendations",
+    "zp-product-footer-content"
+  ]
+}
