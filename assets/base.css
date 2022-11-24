@@ -1294,3 +1294,53 @@ input[type='checkbox'] {
   min-width: 100%;
   max-width: 100%;
 }
+
+
+.before-after-section {
+  padding: 50px 0 30px;
+}
+
+.before-after-section h2{
+  font-size: 40px;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+.before-after-section p{
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: futura,suns-serif;
+  margin: 0 0 26px;
+}
+
+.before-after__images {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.before-after__images img{
+  width: calc(33.333% - 20px);
+  height: auto;
+  margin: 0 10px 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .before-after-section {
+    padding: 20px 0 0;
+  }
+
+  .before-after-section h2{
+    font-size: 30px;
+    margin: 0 0 20px;
+  }
+
+  .before-after__images {
+    margin: 0 -5px;
+  }
+
+  .before-after__images img{
+    width: calc(33.333% - 10px);
+    margin: 0 5px 10px;
+  }
+}
