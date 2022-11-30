@@ -23,7 +23,13 @@
   <script id='sealoop_product' type='application/json'>
               {{ product | json }}
 
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNL4X7N');</script>
+<!-- End Google Tag Manager -->
 
 
   <meta name="facebook-domain-verification" content="ela8hvmtvf5u9dwon2celb4qkqye60"/>
@@ -281,6 +287,12 @@ or template.suffix == 'register-complete' %}
   {% section 'header' %}
 {% endif %}
 
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNL4X7N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
 <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 {% if template == 'cart' %}
 {{ 'shopping-bag.css' | asset_url | stylesheet_tag }}
