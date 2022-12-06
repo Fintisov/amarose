@@ -19,10 +19,6 @@
 /* << TriplePixel :: end*/
 </script>
 
-  <script src='{{ 'subscription-plan-selector-js.js' | asset_url }}' defer='defer'></script>
-  <script id='sealoop_product' type='application/json'>
-              {{ product | json }}
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,6 +26,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WNL4X7N');</script>
 <!-- End Google Tag Manager -->
+
+  <script src='{{ 'subscription-plan-selector-js.js' | asset_url }}' defer='defer'></script>
+  <script id='sealoop_product' type='application/json'>
+              {{ product | json }}
+
+
 
 
   <meta name="facebook-domain-verification" content="ela8hvmtvf5u9dwon2celb4qkqye60"/>
