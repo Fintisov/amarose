@@ -27,7 +27,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WNL4X7N');</script>
 <!-- End Google Tag Manager -->
 
-{% render 'analyzify-product-datalayer' %}
 
   <script src='{{ 'subscription-plan-selector-js.js' | asset_url }}' defer='defer'></script>
   <script id='sealoop_product' type='application/json'>
@@ -74,6 +73,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
     {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
   </title>
+
+  {% render 'analyzify-product-datalayer' %}
 
   {% if page_description %}
     <meta name="description" content="{{ page_description | escape }}">
