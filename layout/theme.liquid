@@ -82,6 +82,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   {% render 'meta-tags' %}
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="{{ 'swiper-config.js' | asset_url }}" defer="defer"></script>
+
+
+
   <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'form-script.js' | asset_url }}" defer="defer"></script>
   {%- render 'header-scripts.zipifypages', renderctx: 'thm' -%}{{ content_for_header }}
@@ -297,7 +304,7 @@ or template.suffix == 'register-complete' %}
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNL4X7N"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  
+
 <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 {% if template == 'cart' %}
 {{ 'shopping-bag.css' | asset_url | stylesheet_tag }}

@@ -93,8 +93,10 @@
 .announcement-message {
   text-align: center;
   width: 100%;
+  min-width: 0;
   margin-left: 48px;
   padding: 4px 20px;
+  overflow: hidden;
 }
 @media screen and (max-width: 991px) {
   .announcement-message {

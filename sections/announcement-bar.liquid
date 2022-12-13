@@ -25,13 +25,22 @@
       </div>
     {% endif %}
 
+
+
     {% if section.settings.content != blank %}
       <div class="announcement-message">
+        <div class="swiper-wrapper">
+
           {% for block in section.blocks %}
+            <div class="swiper-slide">
               {{ block.settings.text }}
+            </div>
           {% endfor %}
+
+        </div>
       </div>
     {% endif %}
+
 
     <div class="announcement-btn ">
       {% if section.settings.button_url != blank %}
@@ -41,7 +50,6 @@
         {% render 'icon-close' %}
       </button>
     </div>
-
   </div>
 </div>
 
