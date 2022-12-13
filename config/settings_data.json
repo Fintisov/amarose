@@ -53,18 +53,25 @@
           "aec08000-edd6-41a8-95ad-ae6375f2e079": {
             "type": "message",
             "settings": {
-              "text": "<p><strong>ENJOY UP TO 15% OFF SITEWIDE NO CODE NEEDED<\/strong><\/p>"
+              "text": "<p><strong>Enjoy Up To 15% Off Sitewide! No code Needed<\/strong><\/p>"
+            }
+          },
+          "46c775f7-6807-48df-a06d-1788de651e20": {
+            "type": "message",
+            "settings": {
+              "text": "<p>Shop Our New Holiday Bundles<\/p>"
             }
           },
           "9dffed01-e39d-43fe-90e6-0f19c51c32e3": {
             "type": "message",
             "settings": {
-              "text": "<p><strong>FREE SHIPPING WITH ORDERS $55+<\/strong><\/p>"
+              "text": "<p><strong>Order Before 12\/18 To Recieve Before Christmas<\/strong><\/p>"
             }
           }
         },
         "block_order": [
           "aec08000-edd6-41a8-95ad-ae6375f2e079",
+          "46c775f7-6807-48df-a06d-1788de651e20",
           "9dffed01-e39d-43fe-90e6-0f19c51c32e3"
         ],
         "settings": {
