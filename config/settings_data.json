@@ -4,7 +4,7 @@
     "colors_background_2": "#F3F3F3",
     "variant_pills_border_thickness": 5,
     "card_style": "card",
-    "social_twitter_link": "https:\/\/twitter.com\/amarose",
+    "social_twitter_link": "https:\/\/twitter.com\/amarosebeauty",
     "social_facebook_link": "https:\/\/www.facebook.com\/profile.php?id=100069685142543",
     "social_instagram_link": "https:\/\/www.instagram.com\/amarose",
     "social_tiktok_link": "https:\/\/www.tiktok.com\/@amarosebeautyy",
@@ -49,6 +49,24 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "9dffed01-e39d-43fe-90e6-0f19c51c32e3": {
+            "type": "message",
+            "settings": {
+              "text": "<p><strong>HOLIDAY SALE | ENJOY 15% OFF SITEWIDE<\/strong><\/p>"
+            }
+          },
+          "aec08000-edd6-41a8-95ad-ae6375f2e079": {
+            "type": "message",
+            "settings": {
+              "text": "<p><strong>Gifting Beauty<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "9dffed01-e39d-43fe-90e6-0f19c51c32e3",
+          "aec08000-edd6-41a8-95ad-ae6375f2e079"
+        ],
         "settings": {
           "timer": "",
           "content": "<p><strong>HOLIDAY SALE | ENJOY 15% OFF SITEWIDE<\/strong><\/p>",
