@@ -50,22 +50,22 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "aec08000-edd6-41a8-95ad-ae6375f2e079": {
+            "type": "message",
+            "settings": {
+              "text": "<p><strong>HOLIDAY SALE | ENJOY 15% OFF SITEWIDE<\/strong><\/p>"
+            }
+          },
           "9dffed01-e39d-43fe-90e6-0f19c51c32e3": {
             "type": "message",
             "settings": {
               "text": "<p>FREE SHIPPING WITH ORDERS $100+<\/p>"
             }
-          },
-          "aec08000-edd6-41a8-95ad-ae6375f2e079": {
-            "type": "message",
-            "settings": {
-              "text": "<p>Gifting Beauty<\/p>"
-            }
           }
         },
         "block_order": [
-          "9dffed01-e39d-43fe-90e6-0f19c51c32e3",
-          "aec08000-edd6-41a8-95ad-ae6375f2e079"
+          "aec08000-edd6-41a8-95ad-ae6375f2e079",
+          "9dffed01-e39d-43fe-90e6-0f19c51c32e3"
         ],
         "settings": {
           "timer": "",
