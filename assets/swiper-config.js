@@ -65,11 +65,12 @@ try {
   const announcementMessage = new Swiper(".announcement-message", {
     loop: true,
     slidesPerView: 1,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
+
 
     autoplay: {
       delay: 3000,
+      pauseOnMouseEnter: true,
+      disableOnInteraction: false,
     },
   });
 
