@@ -374,6 +374,15 @@
       "type": "product-footer-content-zipifypages",
       "settings": {
       }
+    },
+    "f51a7ae0-949f-49e4-8841-f51db96d3318": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"text\/javascript\"> \nvar _learnq = _learnq || []; \nvar classname = document.getElementsByClassName(\"product-form__submit\"); \nvar addToCart = function() { \n_learnq.push(['track', 'Added to Cart', item]); \n}; for (var i = 0; i < classname.length; i++) { \nclassname[i].addEventListener('click', addToCart, false); \n} \n<\/script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
@@ -391,6 +400,7 @@
     "16598113958f0d0b25",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
-    "zp-product-footer-content"
+    "zp-product-footer-content",
+    "f51a7ae0-949f-49e4-8841-f51db96d3318"
   ]
 }
