@@ -61,18 +61,11 @@
             "settings": {
               "text": "<p><strong>Free Shipping on Orders $55+<\/strong><\/p>"
             }
-          },
-          "9dffed01-e39d-43fe-90e6-0f19c51c32e3": {
-            "type": "message",
-            "settings": {
-              "text": "<p><strong>Order Before 12\/18 To Receive Before Christmas<\/strong><\/p>"
-            }
           }
         },
         "block_order": [
           "aec08000-edd6-41a8-95ad-ae6375f2e079",
-          "46c775f7-6807-48df-a06d-1788de651e20",
-          "9dffed01-e39d-43fe-90e6-0f19c51c32e3"
+          "46c775f7-6807-48df-a06d-1788de651e20"
         ],
         "settings": {
           "timer": "",
