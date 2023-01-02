@@ -54,6 +54,7 @@
         "blocks": {
           "aec08000-edd6-41a8-95ad-ae6375f2e079": {
             "type": "message",
+            "disabled": true,
             "settings": {
               "text": "<p><strong>Enjoy 15% Off Sitewide! No code Needed<\/strong><\/p>"
             }
