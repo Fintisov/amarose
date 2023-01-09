@@ -1,13 +1,25 @@
 @import "variables";
+
 .collection-card-banner-wrapper {
-  margin-bottom: 100px;
+  padding: 100px 0;
 
   .card-product__list {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
 
-    .grid__item {
+    @include max-screen(1300) {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .card-wrapper {
+      @include max-screen(991) {
+        max-width: calc(50% - 10px);
+      }
+    }
+
+    /*   .grid__item {
       &:nth-child(even) {
         .card-banner_collection-wrapper {
           flex-direction: row-reverse;
@@ -22,6 +34,7 @@
         }
       }
     }
+    */
   }
 }
 

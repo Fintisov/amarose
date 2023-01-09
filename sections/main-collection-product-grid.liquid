@@ -89,32 +89,38 @@
             </div>
           </div>
         {%- else -%}
+
+
+
           <div class="collection-card-banner-wrapper">
             <div class="collection{% if section.settings.filter_type != 'vertical' %} container{% endif %}">
               <div class="loading-overlay gradient"></div>
 
-              <ul class="card-product__list">
+              <div class="card-product__list">
                 {%- for product in collection.products -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
-                  <li class="grid__item">
-                    {% render 'card-product-collection',
-                      card_product: product,
-                      lazy_load: lazy_load,
-                      section_id: section.id
-
-                    %}
-                  </li>
+                  {% render 'card-product',
+                    card_product: product,
+                    lazy_load: lazy_load,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: false,
+                    show_rating: true,
+                    show_quick_add: false,
+                    section_id: section.id
+                  %}
                 {%- endfor -%}
-              </ul>
+              </div>
 
               {%- if paginate.pages > 1 -%}
                 {% render 'pagination', paginate: paginate, anchor: '' %}
               {%- endif -%}
             </div>
           </div>
+
+
         {%- endif -%}
       {%- endpaginate -%}
     </div>

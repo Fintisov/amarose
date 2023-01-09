@@ -818,45 +818,45 @@ button {
 .link-arrow svg path {
   stroke: #BA3A7D;
 }
+
 /*
 #insta-feed {
   display: flex !important;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-}
-@media screen and (max-width: 767px) {
-  #insta-feed {
+
+  @include max-screen(767) {
     gap: 15px 10px;
   }
-}
-#insta-feed h2 {
-  width: 100%;
-  font-family: "futura", suns-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.5;
-  text-align: center;
-  margin-bottom: 10px !important;
-}
-#insta-feed .instafeed-container {
-  flex: 1 1 15%;
-}
-@media screen and (max-width: 1300px) {
-  #insta-feed .instafeed-container {
-    flex-basis: 20%;
+
+  h2 {
+    width: 100%;
+    font-family: $futura;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px !important;
   }
-}
-@media screen and (max-width: 767px) {
-  #insta-feed .instafeed-container {
-    padding-top: 40% !important;
-    flex-basis: calc(50% - 5px);
+
+  .instafeed-container {
+    flex: 1 1 15%;
+
+    @include max-screen(1300) {
+      flex-basis: 20%;
+    }
+
+    @include max-screen(767) {
+      &:not(:nth-last-child(-n+4)) {
+        display: none;
+      }
+
+      padding-top: 40% !important;
+      flex-basis: calc(50% - 5px);
+    }
   }
-  #insta-feed .instafeed-container:not(:nth-last-child(-n+4)) {
-    display: none;
-  }
-}
-*/
+}*/
 #shopify-product-reviews {
   margin: 0 !important;
   padding: 80px 0;
