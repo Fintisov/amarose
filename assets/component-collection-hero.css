@@ -1,9 +1,15 @@
 .collection-hero {
-  padding: 100px 0 40px;
+  min-height: 447px;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media screen and (max-width: 767px) {
   .collection-hero {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 }
 
@@ -12,9 +18,8 @@
   font-weight: 400;
   font-size: 48px;
   line-height: 1.25;
-  color: #2A3241;
+  color: #ffffff;
   margin-bottom: 10px;
-  text-align: center;
 }
 @media screen and (max-width: 767px) {
   .collection-hero__title {
@@ -28,6 +33,14 @@
   font-size: 16px;
   line-height: 1.25;
   color: #5E697E;
+}
+
+.collection-hero__image-container {
+  max-width: 100%;
+}
+.collection-hero__image-container img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=component-collection-hero.css.map */
