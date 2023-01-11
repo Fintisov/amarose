@@ -174,7 +174,7 @@
   }
 }
 .card-wrapper .card__content .card__information-wrapper .quick-add {
-  margin-bottom: 0;
+  margin: 0;
   width: 100%;
   line-height: 1;
 }
@@ -192,12 +192,6 @@
 @media screen and (max-width: 991px) {
   .card-wrapper .card__content .card__information-wrapper .quick-add .button {
     padding: 0;
-  }
-  .card-wrapper .card__content .card__information-wrapper .quick-add .button span {
-    display: none;
-  }
-  .card-wrapper .card__content .card__information-wrapper .quick-add .button svg {
-    margin-right: 0;
   }
 }
 @media screen and (max-width: 767px) {

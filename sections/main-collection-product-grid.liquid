@@ -79,7 +79,8 @@
     <div class="product-grid-container" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if collection.products.size == 0 -%}
-          <div class="collection collection--empty container" id="product-grid" data-id="{{ section.id }}">
+          <div class="collection collection--empty container container--xl" id="product-grid"
+               data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
               <h2 class="title title--primary">
@@ -93,7 +94,8 @@
 
 
           <div class="collection-card-banner-wrapper">
-            <div class="collection{% if section.settings.filter_type != 'vertical' %} container{% endif %}">
+            <div
+              class="collection{% if section.settings.filter_type != 'vertical' %} container container--xl {% endif %}">
               <div class="loading-overlay gradient"></div>
 
               <div class="card-product__list">
