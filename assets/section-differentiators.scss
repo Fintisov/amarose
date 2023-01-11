@@ -1,8 +1,8 @@
 @import "_variables.scss";
 
 .differentiators {
-  padding: 80px 0;
-  background-color: $blush-25;
+  padding: 100px 0;
+  background-color: #FBFBFB;
 
   @include max-screen(991) {
     padding: 60px 0;
@@ -11,13 +11,10 @@
 
 .differentiators__content-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-
-  @include max-screen(1300) {
-    flex-direction: column;
-  }
+  gap: 60px;
 }
 
 .differentiators__content {
@@ -27,9 +24,9 @@
 
   .differentiators__title {
     font-family: $futura;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 1.3;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1.25;
     color: $black;
     margin-bottom: 10px;
 
@@ -40,92 +37,80 @@
 
   .differentiators__text {
     display: inline-block;
-    max-width: 480px;
-    width: 100%;
     font-family: $futura;
     font-weight: 400;
     font-size: 22px;
     line-height: 1.5;
     color: $black;
-    margin-bottom: 10px;
-
-    @include max-screen(1300) {
-      max-width: 700px;
-    }
-
-
-    @include max-screen(767) {
-      font-size: 18px;
-    }
   }
 }
 
 .differentiators__list {
-  max-width: 580px;
-  width: 100%;
+  max-width: 990px;
+  width: auto;
+  margin: 0 auto;
+
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
+  gap: 50px 130px;
 
   @include max-screen(1300) {
-    flex-direction: column;
-    max-width: 100%;
+    gap: 50px 113px;
   }
 
+  @include max-screen(991) {
+    max-width: 430px;
+    justify-content: space-between;
+    gap: 50px;
+  }
 }
 
 .differentiators__list-item {
-  padding: 40px 34px;
+  width: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  background-color: $white;
-  border-radius: 20px;
-  width: 280px;
-  min-height: 284px;
+  gap: 10px;
 
-  @include max-screen(1300) {
+  @include max-screen(414) {
     width: 100%;
-    min-height: 192px;
-    padding: 25px;
   }
 
   .differentiators__list-item-icon {
-    width: 100px;
-    height: 100px;
+    width: 76px;
+    height: 76px;
     border-radius: 50%;
-    background-color: $blush-25;
+    background-color: $roseMid;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @include max-screen(991) {
+      background-color: $lightGrey;
+    }
+
     svg {
-      max-width: 60px;
-      max-height: 60px;
+      max-width: 46px;
+      max-height: 46px;
+
+      path {
+        fill: #ffffff;
+        stroke: #ffffff;
+
+        @include max-screen(991) {
+          fill: $roseMid;
+          stroke: $roseMid;
+        }
+      }
     }
   }
 
   .differentiators__list-item-title {
-    margin-top: auto;
-    width: 210px;
-    height: 66px;
-    overflow: hidden;
     font-family: $futura;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 1.5;
     color: $black;
     text-align: center;
-
-    @include max-screen(1300) {
-      width: max-content;
-      height: auto;
-    }
-
-    @include max-screen(767) {
-      font-size: 18px;
-    }
   }
 }

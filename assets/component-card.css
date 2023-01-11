@@ -208,8 +208,12 @@
     border-radius: 5px;
   }
 }
-.card-wrapper .card__content .card__information-wrapper .quick-add .button-icon:hover path {
+.card-wrapper .card__content .card__information-wrapper .quick-add .button-icon path {
   stroke: #ffffff;
+  transition: 0.3s;
+}
+.card-wrapper .card__content .card__information-wrapper .quick-add .button-icon:hover path {
+  stroke: #2A3241;
   transition: 0.3s;
 }
 

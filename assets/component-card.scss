@@ -219,10 +219,16 @@
           }
         }
 
-        .button-icon:hover {
+        .button-icon {
           path {
             stroke: $white;
             transition: 0.3s;
+          }
+          &:hover {
+            path {
+              stroke: $black;
+              transition: 0.3s;
+            }
           }
         }
       }
