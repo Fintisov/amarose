@@ -494,6 +494,7 @@
   right: 66px;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .predictive-search {
