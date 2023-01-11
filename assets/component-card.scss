@@ -12,12 +12,16 @@
     width: 100%;
   }
 
-  .price__sale+.price__regular {
+  .price {
+    min-height: 57px;
+  }
+
+  .price__sale + .price__regular {
     padding-top: 0;
   }
 
   .price__regular {
-    padding-top: 29px;
+    padding-top: 24px;
   }
 
   .card__inner {
@@ -94,9 +98,14 @@
         line-height: 1.3;
         color: $midGrey;
         text-decoration: underline;
+        text-transform: capitalize;
 
         @include max-screen(767) {
           font-size: 14px;
+        }
+
+        @include max-screen(575) {
+          display: block;
         }
       }
 
@@ -113,6 +122,10 @@
 
       @include max-screen(991) {
         align-items: center;
+      }
+
+      @include max-screen(575) {
+        gap: 14px 10px;
       }
 
       .information-content {
@@ -169,27 +182,23 @@
       .quick-add {
         margin-bottom: 0;
         width: 100%;
-
-        @include max-screen(991) {
-          width: max-content;
-          height: max-content;
-        }
-
-        &.product-sold-out {
-          .button {
-            @include max-screen(767) {
-              font-size: 12px;
-            }
-          }
-        }
+        line-height: 1;
 
         .button {
           width: 100%;
+          border-radius: 10px;
+
+          &.secondary-button {
+            background-color: $roseMid;
+            color: $white;
+
+            &:hover {
+              color: $black;
+            }
+          }
 
           @include max-screen(991) {
             padding: 0;
-            width: 60px;
-            height: 60px;
 
             span {
               display: none;
@@ -201,8 +210,12 @@
           }
 
           @include max-screen(767) {
-            width: 40px;
-            height: 40px;
+            height: max-content;
+            min-height: 24px;
+
+            font-size: 10px;
+
+            border-radius: 5px;
           }
         }
 
