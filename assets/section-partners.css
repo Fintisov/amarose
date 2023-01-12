@@ -1,0 +1,43 @@
+.index .partners {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 991px) {
+  .index .partners {
+    margin-bottom: 20px;
+  }
+}
+
+.partners {
+  padding: 40px 0;
+}
+@media screen and (max-width: 767px) {
+  .partners {
+    display: none;
+  }
+}
+.partners .partners__title {
+  margin-bottom: 20px;
+  font-family: "futura", suns-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000000;
+}
+.partners .partners__logo-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px 40px;
+}
+.partners .partners__logo-wrapper img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/*# sourceMappingURL=section-partners.css.map */
