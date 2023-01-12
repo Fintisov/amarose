@@ -7,26 +7,26 @@
     @include max-screen(991) {
       margin-bottom: 20px;
     }
+
+    @include max-screen(767) {
+      padding: 20px 0;
+    }
   }
 }
 
 .partners {
   padding: 40px 0;
 
-  @include max-screen(767) {
-    display: none;
+  .partners__title {
+    margin-bottom: 20px;
+
+    font-family: $futura;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000000;
   }
-
- .partners__title {
-   margin-bottom: 20px;
-
-   font-family: $futura;
-   font-weight: 400;
-   font-size: 14px;
-   line-height: 1.5;
-   text-align: center;
-   color: #000000;
- }
 
   .partners__logo-wrapper {
     display: flex;
@@ -34,6 +34,10 @@
     justify-content: center;
     align-items: center;
     gap: 50px 40px;
+    @include max-screen(575) {
+      gap: 30px 40px;
+    }
+
 
     img {
       display: block;
@@ -42,6 +46,11 @@
       height: 50px;
       object-fit: contain;
       object-position: center;
+
+      @include max-screen(767) {
+        width: calc(50% - 20px);
+      }
+
     }
   }
 }
