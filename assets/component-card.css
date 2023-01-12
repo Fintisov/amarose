@@ -202,6 +202,9 @@
     border-radius: 5px;
   }
 }
+.card-wrapper .card__content .card__information-wrapper .quick-add .button-icon svg {
+  display: none;
+}
 .card-wrapper .card__content .card__information-wrapper .quick-add .button-icon path {
   stroke: #ffffff;
   transition: 0.3s;

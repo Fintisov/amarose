@@ -114,7 +114,7 @@
   },
   "products": {
     "product": {
-      "add_to_cart": "Add to Bag",
+      "add_to_cart": "ADD TO CART",
       "add_to_cart_link": "View",
       "choose_options": "Choose options",
       "choose_product_options": "Choose options for {{ product_name }}",

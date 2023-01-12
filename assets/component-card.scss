@@ -212,10 +212,15 @@
         }
 
         .button-icon {
+          svg {
+            display: none;
+          }
+
           path {
             stroke: $white;
             transition: 0.3s;
           }
+
           &:hover {
             path {
               stroke: $black;
