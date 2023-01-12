@@ -322,7 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 {% if is_only_content != true %}
-  {% section 'question-section' %}
+  {% comment %}{% section 'question-section' %}{% endcomment %}
   {% section 'footer' %}
 {% endif %}
 
@@ -394,12 +394,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% assign oneclickupsellapp = true %}
 </body>
 </html>
-<script type="text/javascript"> 
-var _learnq = _learnq || []; 
-var classname = document.getElementsByClassName("product-form__submit"); 
-var addToCart = function() { 
-_learnq.push(['track', 'Added to Cart', item]); 
-}; for (var i = 0; i < classname.length; i++) { 
-classname[i].addEventListener('click', addToCart, false); 
-} 
+<script type="text/javascript">
+var _learnq = _learnq || [];
+var classname = document.getElementsByClassName("product-form__submit");
+var addToCart = function() {
+_learnq.push(['track', 'Added to Cart', item]);
+}; for (var i = 0; i < classname.length; i++) {
+classname[i].addEventListener('click', addToCart, false);
+}
 </script>
