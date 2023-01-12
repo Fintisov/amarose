@@ -64,11 +64,11 @@
     "1658046660491a8b79": {
       "type": "collection-grid",
       "settings": {
-        "title": "Clean & Fresh Collection",
+        "title": "Shop Amarose",
         "description": "The Amarose collection works best when used routinely and together. First detoxify then moisturize. Skin looks and feels soft, silky, and seriously smooth.",
         "image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Card_Desk.jpg",
-        "collection": "frontpage",
+        "collection": "shop-all",
         "image_ratio": "adapt",
         "show_secondary_image": false,
         "show_rating": true,
