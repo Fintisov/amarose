@@ -35,7 +35,7 @@
     align-items: center;
     gap: 50px 40px;
     @include max-screen(575) {
-      gap: 30px 40px;
+      gap: 20px 30px;
     }
 
 
@@ -48,7 +48,7 @@
       object-position: center;
 
       @include max-screen(767) {
-        width: calc(50% - 20px);
+        width: calc(33.33% - 20px);
       }
 
     }
