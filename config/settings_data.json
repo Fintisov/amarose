@@ -169,7 +169,7 @@
         ],
         "settings": {
           "newsletter_enable": true,
-          "newsletter_heading": "<p><strong>SIGN UP FOR OUR NEWSLETTER<\/strong><\/p><p>Get the latest updates on launches, sales and everything Amarose!<\/p>",
+          "newsletter_heading": "<p>Sign Up for Exclusive Giveaways for Promotions & Beauty Tips.<\/p>",
           "show_social": true,
           "copyright": "<p>Amarose Inc. All Rights Reserved.<\/p>",
           "bottom_menu": "footer"
