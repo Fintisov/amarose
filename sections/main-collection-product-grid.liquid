@@ -110,7 +110,7 @@
                     media_aspect_ratio: section.settings.image_ratio,
                     show_secondary_image: false,
                     show_rating: true,
-                    show_quick_add: false,
+                    show_quick_add: true,
                     section_id: section.id
                   %}
                 {%- endfor -%}
@@ -129,7 +129,7 @@
   </div>
 </div>
 
-
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
