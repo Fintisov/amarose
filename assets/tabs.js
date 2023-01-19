@@ -34,7 +34,7 @@ class TabsComponent {
       myContentPanel[i].classList.remove(this.options.activeClass);
     }
 
-    let anchorReference = event.target;
+    let anchorReference = event.target.closest("[href]")
     let activePanelId = anchorReference.getAttribute('href');
     let activePanel = document.querySelector(activePanelId);
 

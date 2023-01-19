@@ -79,8 +79,10 @@
 .announcement-message {
   text-align: center;
   width: 100%;
+  min-width: 0;
   margin-left: 48px;
-  padding: 4px 20px; }
+  padding: 4px 20px;
+  overflow: hidden; }
   @media screen and (max-width: 991px) {
     .announcement-message {
       margin-left: 0; } }
@@ -402,7 +404,8 @@
   top: 0;
   right: 66px;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: transparent; }
 
 .predictive-search {
   max-height: max-content !important;

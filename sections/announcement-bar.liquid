@@ -25,13 +25,24 @@
       </div>
     {% endif %}
 
+
+
     {% if section.settings.content != blank %}
       <div class="announcement-message">
-        {{ section.settings.content }}
+        <div class="swiper-wrapper">
+
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              {{ block.settings.text }}
+            </div>
+          {% endfor %}
+
+        </div>
       </div>
     {% endif %}
 
-    <div class="announcement-btn">
+
+    <div class="announcement-btn ">
       {% if section.settings.button_url != blank %}
         <a href="{{ section.settings.button_url }}" class="button primary-button">{{ section.settings.button_text }}</a>
       {% endif %}
@@ -39,7 +50,6 @@
         {% render 'icon-close' %}
       </button>
     </div>
-
   </div>
 </div>
 
@@ -70,6 +80,19 @@
       "type": "url",
       "id": "button_url",
       "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "announcement-message",
+      "type": "message",
+      "settings": [
+        {
+          "id": "text",
+          "type": "richtext",
+          "label": "Message"
+        }
+      ]
     }
   ]
 }

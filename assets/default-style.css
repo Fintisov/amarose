@@ -5,6 +5,11 @@
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px; }
+  .container.container--xl {
+    max-width: 1600px; }
+    @media screen and (max-width: 1700px) {
+      .container.container--xl {
+        max-width: 1200px; } }
   @media screen and (max-width: 1300px) {
     .container {
       max-width: 960px; } }

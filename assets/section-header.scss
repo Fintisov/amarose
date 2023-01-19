@@ -98,8 +98,10 @@
 .announcement-message {
   text-align: center;
   width: 100%;
+  min-width: 0;
   margin-left: 48px;
   padding: 4px 20px;
+  overflow: hidden;
 
   @include max-screen(991) {
     margin-left: 0;
@@ -518,6 +520,7 @@
     right: 66px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
   }
 }
 

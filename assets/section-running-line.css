@@ -1,8 +1,9 @@
 @keyframes running-line {
-   0% {
+  0% {
     transform: translateX(0); }
-   100% {
+  100% {
     transform: translateX(-100%); } }
+
 .running-line__content {
   display: flex;
   overflow: hidden; }

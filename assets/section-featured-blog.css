@@ -37,25 +37,28 @@
     border-radius: 20px; }
   .blog ::-webkit-scrollbar-thumb:hover {
     background-color: #850B65; }
-  .blog ::-webkit-scrollbar-button:vertical:start:decrement, .blog ::-webkit-scrollbar-button:vertical:end:increment, .blog ::-webkit-scrollbar-button:vertical:end:increment, .blog ::-webkit-scrollbar-button:horizontal:start:decrement, .blog ::-webkit-scrollbar-button:horizontal:end:increment {
+  .blog ::-webkit-scrollbar-button:vertical:start:decrement,
+  .blog ::-webkit-scrollbar-button:vertical:end:increment,
+  .blog ::-webkit-scrollbar-button:vertical:end:increment,
+  .blog ::-webkit-scrollbar-button:horizontal:start:decrement,
+  .blog ::-webkit-scrollbar-button:horizontal:end:increment {
     display: none; }
 
 .blog__posts {
   display: flex;
-  justify-content: center;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory; }
   .blog__posts .blog__post {
     scroll-snap-align: center; }
-  @media screen and (max-width: 1300px) {
-    .blog__posts .blog__post {
-      width: 380px;
-      flex: 1 0 auto; } }
-  @media screen and (max-width: 767px) {
-    .blog__posts .blog__post {
-      width: 60%; } }
-  @media screen and (max-width: 575px) {
-    .blog__posts .blog__post {
-      width: 50%;
-      min-width: 180px; } }
+    @media screen and (max-width: 1300px) {
+      .blog__posts .blog__post {
+        width: 380px;
+        flex: 1 0 auto; } }
+    @media screen and (max-width: 767px) {
+      .blog__posts .blog__post {
+        width: 60%; } }
+    @media screen and (max-width: 575px) {
+      .blog__posts .blog__post {
+        width: 50%;
+        min-width: 180px; } }

@@ -1,10 +1,17 @@
 @import "variables";
 
 .collection-hero {
-  padding: 100px 0 40px;
+  min-height: 447px;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @include max-screen(767) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 }
 
@@ -13,9 +20,8 @@
   font-weight: 400;
   font-size: 48px;
   line-height: 1.25;
-  color: $black;
+  color: $white;
   margin-bottom: 10px;
-  text-align: center;
 
   @include max-screen(767) {
     font-size: 32px;
@@ -28,4 +34,13 @@
   font-size: 16px;
   line-height: 1.25;
   color: $midGrey;
+}
+
+.collection-hero__image-container {
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 }

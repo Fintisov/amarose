@@ -27,21 +27,21 @@
     line-height: 1.25;
     color: #2A3241;
     margin-bottom: 10px; }
-  @media screen and (max-width: 991px) {
-    .ingredients__header .ingredients__title {
-      margin-bottom: 16px; } }
-  @media screen and (max-width: 767px) {
-    .ingredients__header .ingredients__title {
-      font-size: 30px; } }
+    @media screen and (max-width: 991px) {
+      .ingredients__header .ingredients__title {
+        margin-bottom: 16px; } }
+    @media screen and (max-width: 767px) {
+      .ingredients__header .ingredients__title {
+        font-size: 30px; } }
   .ingredients__header .ingredients__text {
     font-family: "futura", suns-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 1.5;
     color: #5E697E; }
-  @media screen and (max-width: 767px) {
-    .ingredients__header .ingredients__text {
-      font-size: 18px; } }
+    @media screen and (max-width: 767px) {
+      .ingredients__header .ingredients__text {
+        font-size: 18px; } }
   .ingredients__header .button {
     margin-top: 15px; }
 
@@ -54,9 +54,9 @@
     top: 50%;
     right: 0;
     transform: translate(50%, -50%); }
-  @media screen and (max-width: 767px) {
-    .ingredients-list .ingredient-btn-next {
-      display: none; } }
+    @media screen and (max-width: 767px) {
+      .ingredients-list .ingredient-btn-next {
+        display: none; } }
 
 .ingredients-list__content {
   width: 100%; }
@@ -76,28 +76,28 @@
     .ingredient-card .ingredient__icon svg {
       width: 100%;
       height: 100%; }
-  @media screen and (max-width: 767px) {
-    .ingredient-card .ingredient__icon {
-      width: 70px;
-      height: 70px; } }
+    @media screen and (max-width: 767px) {
+      .ingredient-card .ingredient__icon {
+        width: 70px;
+        height: 70px; } }
   .ingredient-card .ingredient__title {
     font-family: "futura", suns-serif;
     font-weight: 500;
     font-size: 22px;
     line-height: 1.25;
     margin-bottom: 10px; }
-  @media screen and (max-width: 767px) {
-    .ingredient-card .ingredient__title {
-      font-size: 18px; } }
+    @media screen and (max-width: 767px) {
+      .ingredient-card .ingredient__title {
+        font-size: 18px; } }
   .ingredient-card .ingredient__text {
     font-family: "futura", suns-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     color: #5E697E; }
-  @media screen and (max-width: 767px) {
-    .ingredient-card .ingredient__text {
-      font-size: 16px; } }
+    @media screen and (max-width: 767px) {
+      .ingredient-card .ingredient__text {
+        font-size: 16px; } }
 
 .ingredient-btn-next {
   width: 52px;

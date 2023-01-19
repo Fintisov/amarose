@@ -19,6 +19,15 @@
 /* << TriplePixel :: end*/
 </script>
 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNL4X7N');</script>
+<!-- End Google Tag Manager -->
+
+
   <script src='{{ 'subscription-plan-selector-js.js' | asset_url }}' defer='defer'></script>
   <script id='sealoop_product' type='application/json'>
               {{ product | json }}
@@ -65,11 +74,20 @@
     {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
   </title>
 
+  {% render 'analyzify-product-datalayer' %}
+
   {% if page_description %}
     <meta name="description" content="{{ page_description | escape }}">
   {% endif %}
 
   {% render 'meta-tags' %}
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="{{ 'swiper-config.js' | asset_url }}" defer="defer"></script>
+
+
 
   <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'form-script.js' | asset_url }}" defer="defer"></script>
@@ -281,6 +299,12 @@ or template.suffix == 'register-complete' %}
   {% section 'header' %}
 {% endif %}
 
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNL4X7N"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
 {% if template == 'cart' %}
 {{ 'shopping-bag.css' | asset_url | stylesheet_tag }}
@@ -298,7 +322,7 @@ or template.suffix == 'register-complete' %}
 </main>
 
 {% if is_only_content != true %}
-  {% section 'question-section' %}
+  {% comment %}{% section 'question-section' %}{% endcomment %}
   {% section 'footer' %}
 {% endif %}
 
@@ -365,5 +389,17 @@ or template.suffix == 'register-complete' %}
     window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
   </script>
 {% endcomment %}
-{%- render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp -%}</body>
+{%- render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp -%}
+{% render 'oneclickupsellapp-theme', oneclickupsellapp: oneclickupsellapp %}
+{% assign oneclickupsellapp = true %}
+</body>
 </html>
+<script type="text/javascript">
+var _learnq = _learnq || [];
+var classname = document.getElementsByClassName("product-form__submit");
+var addToCart = function() {
+_learnq.push(['track', 'Added to Cart', item]);
+}; for (var i = 0; i < classname.length; i++) {
+classname[i].addEventListener('click', addToCart, false);
+}
+</script>

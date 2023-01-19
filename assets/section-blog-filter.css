@@ -18,7 +18,11 @@
     border-radius: 20px; }
   .blog-filter__link-list-wrapper ::-webkit-scrollbar-thumb:hover {
     background-color: #850B65; }
-  .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:vertical:start:decrement, .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:vertical:end:increment, .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:vertical:end:increment, .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:horizontal:start:decrement, .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:horizontal:end:increment {
+  .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:vertical:start:decrement,
+  .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:vertical:end:increment,
+  .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:vertical:end:increment,
+  .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:horizontal:start:decrement,
+  .blog-filter__link-list-wrapper ::-webkit-scrollbar-button:horizontal:end:increment {
     display: none; }
 
 .blog-filter__link-list {
@@ -46,9 +50,9 @@
     height: 37px;
     transition: all 0.3s;
     white-space: nowrap; }
-  @media screen and (max-width: 767px) {
-    .blog-filter__link-list .blog-filter__link {
-      font-size: 16px; } }
+    @media screen and (max-width: 767px) {
+      .blog-filter__link-list .blog-filter__link {
+        font-size: 16px; } }
     .blog-filter__link-list .blog-filter__link.link-active {
       background-color: #5E697E;
       color: #ffffff; }

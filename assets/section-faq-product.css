@@ -26,23 +26,23 @@
     border-radius: 50%;
     z-index: -1;
     background-color: #F1F3F6; }
-  @media screen and (max-width: 991px) {
-    .faq-product__content:before {
-      width: 200px;
-      height: 200px; } }
-  @media screen and (max-width: 767px) {
-    .faq-product__content:before {
-      width: 150px;
-      height: 150px; } }
+    @media screen and (max-width: 991px) {
+      .faq-product__content:before {
+        width: 200px;
+        height: 200px; } }
+    @media screen and (max-width: 767px) {
+      .faq-product__content:before {
+        width: 150px;
+        height: 150px; } }
   .faq-product__content .faq-product__title {
     font-family: "futura", suns-serif;
     font-weight: 500;
     font-size: 36px;
     line-height: 1.5;
     color: #2A3241; }
-  @media screen and (max-width: 767px) {
-    .faq-product__content .faq-product__title {
-      font-size: 24px; } }
+    @media screen and (max-width: 767px) {
+      .faq-product__content .faq-product__title {
+        font-size: 24px; } }
 
 .faq-product__header {
   width: 180px;
@@ -164,6 +164,6 @@
     font-size: 20px;
     line-height: 1.5;
     color: #2A3241; }
-  @media screen and (max-width: 1300px) {
-    .faq-product__questions-tabs .faq-product__list-answers {
-      padding: 25px; } }
+    @media screen and (max-width: 1300px) {
+      .faq-product__questions-tabs .faq-product__list-answers {
+        padding: 25px; } }

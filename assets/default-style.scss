@@ -11,6 +11,14 @@
   padding-left: 10px;
   padding-right: 10px;
 
+  &.container--xl {
+    max-width: 1600px;
+
+    @include max-screen(1700) {
+      max-width: 1200px;
+    }
+  }
+
   @include max-screen(1300) {
     max-width: 960px;
   }

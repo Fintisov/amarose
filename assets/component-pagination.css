@@ -28,6 +28,8 @@
       transform: translate(-50%, -50%); }
       .pagination-list .pagination-button svg path {
         fill: #2A3241; }
+  .pagination-list span.pagination-button {
+    display: none; }
   .pagination-list .pagination-pages {
     display: inline-block;
     min-height: 35px;

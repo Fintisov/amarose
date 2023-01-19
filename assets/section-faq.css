@@ -30,9 +30,9 @@
     border-bottom: 1px solid;
     border-bottom-color: #B6BCC6;
     transition: border-bottom-color 0.3s; }
-  @media screen and (max-width: 767px) {
-    .faq__list .faq__list-item {
-      padding-bottom: 20px; } }
+    @media screen and (max-width: 767px) {
+      .faq__list .faq__list-item {
+        padding-bottom: 20px; } }
     .faq__list .faq__list-item.active {
       border-bottom-color: #850B65; }
       .faq__list .faq__list-item.active .icon-box:before {
@@ -98,9 +98,9 @@
     font-size: 22px;
     line-height: 1.5;
     margin-bottom: 20px; }
-  @media screen and (max-width: 767px) {
-    .faq__list-item-content p {
-      font-size: 18px; } }
+    @media screen and (max-width: 767px) {
+      .faq__list-item-content p {
+        font-size: 18px; } }
   .faq__list-item-content ul li {
     font-family: "futura", suns-serif;
     font-weight: 400;
@@ -110,10 +110,10 @@
     margin-bottom: 10px;
     padding-left: 30px;
     position: relative; }
-  @media screen and (max-width: 767px) {
-    .faq__list-item-content ul li {
-      font-size: 16px;
-      margin-bottom: 5px; } }
+    @media screen and (max-width: 767px) {
+      .faq__list-item-content ul li {
+        font-size: 16px;
+        margin-bottom: 5px; } }
     .faq__list-item-content ul li:before {
       content: "";
       width: 6px;

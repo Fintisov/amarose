@@ -7,15 +7,15 @@
   .product-how-it-works .product-how-it-works__content {
     display: flex;
     gap: 20px; }
-  @media screen and (max-width: 991px) {
-    .product-how-it-works .product-how-it-works__content {
-      flex-direction: column;
-      gap: 30px; } }
+    @media screen and (max-width: 991px) {
+      .product-how-it-works .product-how-it-works__content {
+        flex-direction: column;
+        gap: 30px; } }
   .product-how-it-works .product-how-it-works__header {
     max-width: 280px; }
-  @media screen and (max-width: 991px) {
-    .product-how-it-works .product-how-it-works__header {
-      max-width: 100%; } }
+    @media screen and (max-width: 991px) {
+      .product-how-it-works .product-how-it-works__header {
+        max-width: 100%; } }
     .product-how-it-works .product-how-it-works__header .how-it-works-pdp__title {
       font-family: "futura", suns-serif;
       font-weight: 400;
@@ -23,18 +23,18 @@
       line-height: 1.25;
       margin-bottom: 10px;
       color: #2A3241; }
-  @media screen and (max-width: 767px) {
-    .product-how-it-works .product-how-it-works__header .how-it-works-pdp__title {
-      font-size: 30px; } }
+      @media screen and (max-width: 767px) {
+        .product-how-it-works .product-how-it-works__header .how-it-works-pdp__title {
+          font-size: 30px; } }
     .product-how-it-works .product-how-it-works__header .how-it-works-pdp__text {
       font-family: "futura", suns-serif;
       font-weight: 400;
       font-size: 22px;
       line-height: 1.5;
       color: #5E697E; }
-  @media screen and (max-width: 767px) {
-    .product-how-it-works .product-how-it-works__header .how-it-works-pdp__text {
-      font-size: 18px; } }
+      @media screen and (max-width: 767px) {
+        .product-how-it-works .product-how-it-works__header .how-it-works-pdp__text {
+          font-size: 18px; } }
 
 .how-it-works-pdp__list-wrapper {
   min-width: 0;
@@ -52,9 +52,9 @@
     top: 50%;
     right: 0;
     transform: translate(50%, -50%); }
-  @media screen and (max-width: 767px) {
-    .how-it-works-pdp__list-wrapper .ingredient-btn-next {
-      display: none; } }
+    @media screen and (max-width: 767px) {
+      .how-it-works-pdp__list-wrapper .ingredient-btn-next {
+        display: none; } }
     .how-it-works-pdp__list-wrapper .ingredient-btn-next svg {
       position: absolute;
       top: 50%;
@@ -80,10 +80,10 @@
     width: 90px;
     height: 90px;
     margin-bottom: 20px; }
-  @media screen and (max-width: 767px) {
-    .how-it-works-item-pdp .how-it-works-item-pdp__icon {
-      width: 70px;
-      height: 70px; } }
+    @media screen and (max-width: 767px) {
+      .how-it-works-item-pdp .how-it-works-item-pdp__icon {
+        width: 70px;
+        height: 70px; } }
     .how-it-works-item-pdp .how-it-works-item-pdp__icon svg {
       width: 100%;
       height: 100%; }
@@ -93,6 +93,6 @@
     font-weight: 400;
     line-height: 1.25;
     color: #2A3241; }
-  @media screen and (max-width: 767px) {
-    .how-it-works-item-pdp .how-it-works-item-pdp__text {
-      font-size: 16px; } }
+    @media screen and (max-width: 767px) {
+      .how-it-works-item-pdp .how-it-works-item-pdp__text {
+        font-size: 16px; } }

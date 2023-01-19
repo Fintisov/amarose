@@ -17,21 +17,21 @@
     background-position: center;
     background-repeat: no-repeat;
     display: block; }
-  @media screen and (max-width: 767px) {
-    .search-page-card .search-page__image {
-      height: 220px; } }
-  @media screen and (max-width: 575px) {
-    .search-page-card .search-page__image {
-      height: 160px; } }
+    @media screen and (max-width: 767px) {
+      .search-page-card .search-page__image {
+        height: 220px; } }
+    @media screen and (max-width: 575px) {
+      .search-page-card .search-page__image {
+        height: 160px; } }
   .search-page-card .search-page__information {
     width: 100%;
     min-height: 207px;
     padding: 20px;
     margin-top: auto; }
-  @media screen and (max-width: 767px) {
-    .search-page-card .search-page__information {
-      font-size: 16px;
-      min-height: 42px; } }
+    @media screen and (max-width: 767px) {
+      .search-page-card .search-page__information {
+        font-size: 16px;
+        min-height: 42px; } }
     .search-page-card .search-page__information .search-page__top-wrapper {
       display: block;
       min-height: 29px;
@@ -51,20 +51,20 @@
         overflow: hidden;
         display: inline-block;
         max-width: 100%; }
-  @media screen and (max-width: 991px) {
-    .search-page-card .search-page__information .search-page__title-wrapper .title {
-      display: -webkit-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      /* количество строк */
-      min-height: 52px; } }
-  @media screen and (max-width: 767px) {
-    .search-page-card .search-page__information .search-page__title-wrapper .title {
-      font-size: 16px;
-      min-height: 42px; } }
+        @media screen and (max-width: 991px) {
+          .search-page-card .search-page__information .search-page__title-wrapper .title {
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            /* количество строк */
+            min-height: 52px; } }
+        @media screen and (max-width: 767px) {
+          .search-page-card .search-page__information .search-page__title-wrapper .title {
+            font-size: 16px;
+            min-height: 42px; } }
     .search-page-card .search-page__information .search-page__text {
       min-height: 54px;
       font-family: "futura", suns-serif;
@@ -79,20 +79,20 @@
       -webkit-line-clamp: 2;
       /* количество строк */
       margin: 0 0 10px; }
-  @media screen and (max-width: 991px) {
-    .search-page-card .search-page__information .search-page__text {
-      display: -webkit-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      /* количество строк */
-      min-height: 81px; } }
-  @media screen and (max-width: 767px) {
-    .search-page-card .search-page__information .search-page__text {
-      font-size: 14px;
-      min-height: 63px; } }
+      @media screen and (max-width: 991px) {
+        .search-page-card .search-page__information .search-page__text {
+          display: -webkit-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          /* количество строк */
+          min-height: 81px; } }
+      @media screen and (max-width: 767px) {
+        .search-page-card .search-page__information .search-page__text {
+          font-size: 14px;
+          min-height: 63px; } }
     .search-page-card .search-page__information .link-arrow {
       height: 24px;
       white-space: nowrap;

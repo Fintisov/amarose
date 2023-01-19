@@ -46,6 +46,13 @@
           "settings": {
             "product": "{{product}}"
           }
+        },
+        "6b5a87a0-9fd2-4ce6-85bd-8db017d79ce5": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<script type=\"text\/javascript\">\nvar _learnq = _learnq || [];\n  var classname = document.getElementsByClassName(\"add-to-cart\");\nvar addToCart = function() {\n_learnq.push(['track', 'Added to Cart', item]);\n}; for (var i = 0; i < classname.length; i++) {\nclassname[i].addEventListener('click', addToCart, false);\n}\n<\/script>"
+          }
         }
       },
       "block_order": [
@@ -55,7 +62,8 @@
         "variant_picker",
         "buy_buttons",
         "description",
-        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe"
+        "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe",
+        "6b5a87a0-9fd2-4ce6-85bd-8db017d79ce5"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -324,6 +332,15 @@
         "padding_bottom": 36
       }
     },
+    "f51a7ae0-949f-49e4-8841-f51db96d3318": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script type=\"text\/javascript\"> \nvar _learnq = _learnq || []; \nvar classname = document.getElementsByClassName(\"product-form__submit\"); \nvar addToCart = function() { \n_learnq.push(['track', 'Added to Cart', item]); \n}; for (var i = 0; i < classname.length; i++) { \nclassname[i].addEventListener('click', addToCart, false); \n} \n<\/script>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "16598113958f0d0b25": {
       "type": "faq-product",
       "settings": {
@@ -380,6 +397,7 @@
     "165981051437af0bd0",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
+    "f51a7ae0-949f-49e4-8841-f51db96d3318",
     "16598113958f0d0b25",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
