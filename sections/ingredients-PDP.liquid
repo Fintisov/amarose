@@ -1,0 +1,47 @@
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="ingredients-section">
+  <div class="container">
+
+    {% if product.metafields.Ingredients.heading != blank %}
+      <h2>{{ product.metafields.Ingredients.heading }}</h2>
+    {% endif %}
+
+    {{ product.metafields.Ingredients.content }}
+
+    {% assign q_size = product.metafields.Ingredients.ingredients_icon.size | minus: 1 %}
+    <div class="ingredient-list">
+      {%- for i in (0..q_size) -%}
+        <div class="ingredient-list__item">
+          {% if product.metafields.Ingredients.ingredients_icon[i] != blank %}
+            <span class="ingredient-list__icon">
+                  {{ product.metafields.Ingredients.ingredients_icon[i] }}
+                </span>
+          {% endif %}
+          <span class="ingredient-list__text">
+              {{ product.metafields.Ingredients.ingredients_text[i] }}
+              </span>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ingredients (PDP)",
+  "class": "section",
+  "settings": [
+  {
+    "type": "header",
+    "content": "t:sections.pdp-benefits.settings.header.content"
+  }
+],
+  "presets": [
+    {
+      "name": "Ingredients (PDP)"
+    }
+  ]
+}
+{% endschema %}
+

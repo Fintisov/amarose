@@ -23,6 +23,11 @@
           "settings": {
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "disabled": true,
@@ -34,11 +39,6 @@
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": false
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe": {
@@ -59,9 +59,9 @@
         "title",
         "1262beec-474b-434b-9761-994b21a45d40",
         "price",
+        "description",
         "variant_picker",
         "buy_buttons",
-        "description",
         "95f95c7c-21d6-4b47-ada5-72a3fdcc51fe",
         "6b5a87a0-9fd2-4ce6-85bd-8db017d79ce5"
       ],
@@ -123,6 +123,7 @@
     },
     "16589228130b221df1": {
       "type": "running-line",
+      "disabled": true,
       "blocks": {
         "386c512f-aa3b-48c5-bf13-77cbfb37254b": {
           "type": "featured_collection",
@@ -154,18 +155,8 @@
     },
     "1660807363d42faf82": {
       "type": "images-two-with-text",
-      "settings": {
-      }
-    },
-    "165979501095128c3c": {
-      "type": "video",
       "disabled": true,
       "settings": {
-        "heading": "Formulated to provide skin nutrition for optimal skin health.",
-        "text": "A clean beauty solution that delivers nutrients to preserve and enhance your best skin.",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "is_product": true
       }
     },
     "1659809705039b724e": {
@@ -174,8 +165,19 @@
       "settings": {
       }
     },
+    "afa8dc8c-5d74-45b1-a01f-679855eaf322": {
+      "type": "image-with-text-PDP",
+      "settings": {
+      }
+    },
+    "f284d9ef-1f57-4c1d-ae7f-9f557258db9d": {
+      "type": "ingredients-PDP",
+      "settings": {
+      }
+    },
     "165981051437af0bd0": {
       "type": "how-it-works-pdp",
+      "disabled": true,
       "blocks": {
         "0691b14b-e606-4c99-b06e-1b4901b80619": {
           "type": "ingredient",
@@ -343,6 +345,7 @@
     },
     "16598113958f0d0b25": {
       "type": "faq-product",
+      "disabled": true,
       "settings": {
       }
     },
@@ -392,8 +395,9 @@
     "f8f7bbe2-3b59-4fad-a114-8fe7e0e6bbe8",
     "16589228130b221df1",
     "1660807363d42faf82",
-    "165979501095128c3c",
     "1659809705039b724e",
+    "afa8dc8c-5d74-45b1-a01f-679855eaf322",
+    "f284d9ef-1f57-4c1d-ae7f-9f557258db9d",
     "165981051437af0bd0",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
     "2da1e4c6-fe51-4db4-95ad-7b550b5a3582",
