@@ -147,6 +147,8 @@
 
     @include max-screen(991) {
       padding-right: 0;
+      width: 100%;
+      max-width: 100%;
 
       &:not(:first-of-type) {
         .footer-block__heading {
