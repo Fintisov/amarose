@@ -240,12 +240,12 @@ button {
   }
 
   &.secondary-button {
-    background-color: $blush-25;
+    background-color: $roseMid;
+    color: $white;
     transition: 0.3s;
 
     &:hover {
-      color: $white;
-      background-color: $rose;
+      color: $black;
       transition: 0.3s;
     }
   }
