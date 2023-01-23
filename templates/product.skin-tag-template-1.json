@@ -109,8 +109,59 @@
         "padding_bottom": 0
       }
     },
+    "253406aa-52da-4a7e-83ee-82e2ea65592e": {
+      "type": "indication_in_circule_images",
+      "blocks": {
+        "08a73849-e58d-4b88-b0f8-b7dfb3a581f1": {
+          "type": "image",
+          "settings": {
+            "indication_title": "Light Moles",
+            "image": "shopify:\/\/shop_images\/Ellipse_27.png"
+          }
+        },
+        "ed685364-e5e5-44c0-8441-b2c0bb3ee0f6": {
+          "type": "image",
+          "settings": {
+            "indication_title": "Big Warts",
+            "image": "shopify:\/\/shop_images\/Ellipse_29.png"
+          }
+        },
+        "e7d379ec-3e0a-47e1-bde8-ed02b9a93c55": {
+          "type": "image",
+          "settings": {
+            "indication_title": "Skin Tags",
+            "image": "shopify:\/\/shop_images\/Ellipse_25.png"
+          }
+        },
+        "5b5ed3cd-56f4-4fe6-99bb-2d3243ff8214": {
+          "type": "image",
+          "settings": {
+            "indication_title": "Small Warts",
+            "image": "shopify:\/\/shop_images\/Ellipse_28.png"
+          }
+        },
+        "de3ec7f3-0673-43a1-8b3d-1af8eae40d6a": {
+          "type": "image",
+          "settings": {
+            "indication_title": "Dark Moles",
+            "image": "shopify:\/\/shop_images\/Ellipse_26.png"
+          }
+        }
+      },
+      "block_order": [
+        "08a73849-e58d-4b88-b0f8-b7dfb3a581f1",
+        "ed685364-e5e5-44c0-8441-b2c0bb3ee0f6",
+        "e7d379ec-3e0a-47e1-bde8-ed02b9a93c55",
+        "5b5ed3cd-56f4-4fe6-99bb-2d3243ff8214",
+        "de3ec7f3-0673-43a1-8b3d-1af8eae40d6a"
+      ],
+      "settings": {
+        "custom_text_title": "Amarose Skin Tag Remover Works&nbsp;to&nbsp;Eliminate..."
+      }
+    },
     "ce241671-8655-46d6-9cce-de518119113e": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/1.webp",
         "image_overlay_opacity": 0,
@@ -449,6 +500,7 @@
     "zp-product-header-content",
     "main",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
+    "253406aa-52da-4a7e-83ee-82e2ea65592e",
     "ce241671-8655-46d6-9cce-de518119113e",
     "7220e9ac-df52-49b7-9775-c3eaa6f3c48d",
     "c93445c3-8034-4a0e-9a6b-4c25c6f67b59",
