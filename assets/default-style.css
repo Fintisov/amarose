@@ -235,12 +235,12 @@ button {
   transition: 0.3s;
 }
 .button.secondary-button {
-  background-color: #F08B84;
-  color: #ffffff;
+  background-color: #FFEEEA;
   transition: 0.3s;
 }
 .button.secondary-button:hover {
-  color: #2A3241;
+  color: #ffffff;
+  background-color: #BA3A7D;
   transition: 0.3s;
 }
 .button.outline-button {

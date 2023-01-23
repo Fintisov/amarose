@@ -7,58 +7,6 @@
     padding: 32px 0 60px;
   }
 
-  &.image-with-text--additional {
-    .image-with-text__content {
-      @include max-screen(991) {
-        flex-direction: column;
-      }
-    }
-
-    .image-with-text__media {
-      width: calc(50% - 30px);
-      max-height: 600px;
-      border-radius: 20px;
-      overflow: hidden;
-
-      @include max-screen(991) {
-        width: 100%;
-      }
-
-      @include max-screen(767) {
-        max-height: 400px;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-    }
-
-    .image-with-text__text-content {
-      width: calc(50% - 30px);
-      padding: 10px;
-
-      @include max-screen(991) {
-        width: 100%;
-      }
-
-      .image-with-text-content__heading {
-        margin-bottom: 10px;
-        font-weight: 500;
-      }
-
-      p {
-        font-family: $futura;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.5;
-        color: $black;
-      }
-    }
-
-  }
-
   .image-with-text__content {
     display: flex;
     align-items: center;

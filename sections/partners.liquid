@@ -1,3 +1,39 @@
+{% comment %}
+<div class="differentiators">
+  <div class="container">
+    <div class="differentiators__content-wrapper">
+
+      <div class="differentiators__content">
+        {% if section.settings.title != blank %}
+          <h2 class="differentiators__title">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.text != blank %}
+          <p class="differentiators__text">{{ section.settings.text }}</p>
+        {% endif %}
+      </div>
+
+      <ul class="differentiators__list">
+        {%- for block in section.blocks -%}
+          {% if block.settings.list_item_icon_name != blank and block.settings.list_item_title != blank %}
+            <li class="differentiators__list-item">
+              {% if block.settings.list_item_icon_name != blank %}
+                <div class="differentiators__list-item-icon">
+                  {{ block.settings.list_item_icon_name }}
+                </div>
+              {% endif %}
+              {% if block.settings.list_item_title != blank %}
+                <h3 class="differentiators__list-item-title">{{ block.settings.list_item_title }}</h3>
+              {% endif %}
+            </li>
+          {% endif %}
+        {%- endfor -%}
+      </ul>
+
+    </div>
+  </div>
+</div>
+{% endcomment %}
+
 {{ 'section-partners.css' | asset_url | stylesheet_tag }}
 
 <section class="partners">

@@ -1,17 +1,11 @@
 @charset "UTF-8";
-@media screen and (max-width: 991px) {
-  .product .product-recommendations {
-    padding: 20px 0 50px;
-  }
-}
-
 .product-recommendations {
   padding: 80px 0;
   overflow: hidden;
 }
 
 .product-recommendations__content {
-  padding: 0 !important;
+  padding: 0;
   scrollbar-color: #BA3A7D transparent;
   scrollbar-width: thin;
   /* ползунок скроллбара */
