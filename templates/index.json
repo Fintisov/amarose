@@ -10,8 +10,8 @@
         "show_bg": false,
         "sub_heading": "",
         "sub_heading_color": "gray",
-        "heading": "Natural Ingredients for Naturally Beautiful Skin",
-        "description": "<p>Experience the rejuvenating powers of nature in our expertly formulated, all-natural skincare line.<\/p>",
+        "heading": "Brighter Skin for Your Brightest year.",
+        "description": "<p>Experience the full power of nature with our expertly formulated, all-natural skincare line<\/p>",
         "button_text": "SHOP NOW",
         "button_url": "shopify:\/\/collections\/shop-all"
       }
@@ -64,8 +64,8 @@
     "1658046660491a8b79": {
       "type": "collection-grid",
       "settings": {
-        "title": "Shop the Full Amarose Collection",
-        "description": "Works best when used routinely and together. Detoxify, cleanse, and moisturize. A better routine for a better you.",
+        "title": "Shop Amarose",
+        "description": "The Amarose collection works best when used routinely and together. First detoxify then moisturize. Skin looks and feels soft, silky, and seriously smooth.",
         "image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "collection": "shop-all",
@@ -115,7 +115,7 @@
       ],
       "settings": {
         "title": "The Amarose Touch",
-        "text": "All of our products are made using only high-quality, vegan-friendly ingredients and never tested animals."
+        "text": "All our products are made with care - using only vegan-friendly, high quality ingredients - and never tested on animals."
       }
     },
     "16582582924f93d67a": {
@@ -186,7 +186,7 @@
     "9121ac8b-8215-4d7d-8a12-0db2eb1fc9ce": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Check Out Our Most Popular Blog Posts",
+        "heading": "Check out our most popular blog posts.",
         "content": "",
         "blog": "blog",
         "show_date": false,
