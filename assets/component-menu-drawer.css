@@ -236,7 +236,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__navigation .menu-drawer__menu-item  {
   font-size: 21px;
   display: block;
-  padding: 10px 0 16px;
+  padding: 10px 10px 16px;
 }
 
 .js .menu-drawer__submenu {
