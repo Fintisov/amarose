@@ -64,8 +64,8 @@
     "1658046660491a8b79": {
       "type": "collection-grid",
       "settings": {
-        "title": "Shop Amarose",
-        "description": "The Amarose collection works best when used routinely and together. First detoxify then moisturize. Skin looks and feels soft, silky, and seriously smooth.",
+        "title": "Shop the Full Amarose Collection",
+        "description": "Works best when used routinely and together. Detoxify, cleanse, and moisturize. A better routine for a better you.",
         "image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "collection": "shop-all",
@@ -115,7 +115,7 @@
       ],
       "settings": {
         "title": "The Amarose Touch",
-        "text": "All our products are made with care - using only vegan-friendly, high quality ingredients - and never tested on animals."
+        "text": "All of our products are made using only high-quality, vegan-friendly ingredients and never tested animals."
       }
     },
     "16582582924f93d67a": {
@@ -186,7 +186,7 @@
     "9121ac8b-8215-4d7d-8a12-0db2eb1fc9ce": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Check out our most popular blog posts.",
+        "heading": "Check Out Our Most Popular Blog Posts",
         "content": "",
         "blog": "blog",
         "show_date": false,
