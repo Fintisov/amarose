@@ -1134,7 +1134,7 @@ input[type=checkbox] {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575px) {
   #judgeme_product_reviews {
     padding-top: 25px;
     padding-bottom: 25px;

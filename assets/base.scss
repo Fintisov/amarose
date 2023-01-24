@@ -1186,7 +1186,7 @@ input[type='checkbox'] {
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @include max-screen(576) {
+  @include max-screen(575) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
