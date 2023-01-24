@@ -682,10 +682,10 @@
           </div>
         {% endif %}
 
-        {% if product.metafields.ingredient.text != blank %}
+        {% if product.metafields.ingredients_accordion.text != blank %}
           <div class="accordion__slide">
             <button type="button" class="accordion__btn-opener">Ingredients</button>
-            <div class="accordion__content">{{ product.metafields.ingredient.text }}</div>
+            <div class="accordion__content">{{ product.metafields.ingredients_accordion.text }}</div>
           </div>
         {% endif %}
 
