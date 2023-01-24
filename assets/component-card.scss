@@ -188,15 +188,6 @@
           width: 100%;
           border-radius: 10px;
 
-          &.secondary-button {
-            background-color: $roseMid;
-            color: $white;
-
-            &:hover {
-              color: $black;
-            }
-          }
-
           @include max-screen(991) {
             padding: 0;
           }
