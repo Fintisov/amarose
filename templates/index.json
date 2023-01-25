@@ -10,8 +10,8 @@
         "show_bg": false,
         "sub_heading": "",
         "sub_heading_color": "gray",
-        "heading": "Brighter Skin for Your Brightest year.",
-        "description": "<p>Experience the full power of nature with our expertly formulated, all-natural skincare line<\/p>",
+        "heading": "All-Natural Skincare –  By Women, For Women",
+        "description": "<p>Bringing you the beauty of nature in an all-natural, expertly formulated skincare line<\/p>",
         "button_text": "SHOP NOW",
         "button_url": "shopify:\/\/collections\/shop-all"
       }
@@ -64,8 +64,8 @@
     "1658046660491a8b79": {
       "type": "collection-grid",
       "settings": {
-        "title": "Shop Amarose",
-        "description": "The Amarose collection works best when used routinely and together. First detoxify then moisturize. Skin looks and feels soft, silky, and seriously smooth.",
+        "title": "Shop the Full Amarose Collection",
+        "description": "The Amarose collection’s all-natural formulation helps to detoxify and moisturize while turning back the clock on aging – erasing lines, wrinkles, and skin blemishes.",
         "image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "mobile_image": "shopify:\/\/shop_images\/Card_Desk.jpg",
         "collection": "shop-all",
@@ -115,7 +115,7 @@
       ],
       "settings": {
         "title": "The Amarose Touch",
-        "text": "All our products are made with care - using only vegan-friendly, high quality ingredients - and never tested on animals."
+        "text": "The Amarose Collection is made using only high-quality, vegan-friendly ingredients and never tested animals."
       }
     },
     "16582582924f93d67a": {
