@@ -109,6 +109,28 @@
         "padding_bottom": 0
       }
     },
+    "ce241671-8655-46d6-9cce-de518119113e": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1.webp",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "7220e9ac-df52-49b7-9775-c3eaa6f3c48d": {
+      "type": "image-with-text-PDP",
+      "settings": {
+      }
+    },
     "253406aa-52da-4a7e-83ee-82e2ea65592e": {
       "type": "indication_in_circule_images",
       "blocks": {
@@ -156,29 +178,7 @@
         "de3ec7f3-0673-43a1-8b3d-1af8eae40d6a"
       ],
       "settings": {
-        "custom_text_title": "Amarose Skin Tag Remover Works&nbsp;to&nbsp;Eliminate..."
-      }
-    },
-    "ce241671-8655-46d6-9cce-de518119113e": {
-      "type": "image-banner",
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/1.webp",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "7220e9ac-df52-49b7-9775-c3eaa6f3c48d": {
-      "type": "image-with-text-PDP",
-      "settings": {
+        "custom_text_title": "Amarose Skin Tag Remover Works to Eliminate..."
       }
     },
     "c93445c3-8034-4a0e-9a6b-4c25c6f67b59": {
@@ -500,9 +500,9 @@
     "zp-product-header-content",
     "main",
     "c36273ce-8b82-43cd-ae42-3422524f6d6b",
-    "253406aa-52da-4a7e-83ee-82e2ea65592e",
     "ce241671-8655-46d6-9cce-de518119113e",
     "7220e9ac-df52-49b7-9775-c3eaa6f3c48d",
+    "253406aa-52da-4a7e-83ee-82e2ea65592e",
     "c93445c3-8034-4a0e-9a6b-4c25c6f67b59",
     "d2d8ffcc-e532-4538-b909-83ed3cb41e28",
     "1e6bedb1-4c15-40ba-b12f-b0bc6463de07",
