@@ -396,6 +396,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "You Might Also Like",
         "heading_size": "h2",
