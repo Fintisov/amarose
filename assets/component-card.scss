@@ -13,7 +13,7 @@
   }
 
   .price {
-    //min-height: 57px;
+    min-height: 43px;
   }
 
   .price__sale + .price__regular {
@@ -21,7 +21,6 @@
   }
 
   .price__regular {
-    padding-top: 24px;
   }
 
   .card__inner {
@@ -129,7 +128,7 @@
       }
 
       .information-content {
-        min-height: 60px;
+        min-height: 94px;
         width: 220px;
 
         @include max-screen(991) {
@@ -137,13 +136,14 @@
         }
 
         @include max-screen(767) {
-          min-height: 38px;
+          min-height: 58px;
         }
 
         .title {
           a {
             max-width: 100%;
             width: max-content;
+            height: 66px;
             font-family: $futura;
             font-weight: 500;
             font-size: 22px;
@@ -151,9 +151,11 @@
             color: $black;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
+            //white-space: nowrap;
+            @include line-text-hidden(2);
 
             @include max-screen(767) {
+              height: 40px;
               font-size: 16px;
               line-height: 1.25;
             }

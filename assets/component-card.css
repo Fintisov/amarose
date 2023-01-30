@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .card-wrapper {
   width: 380px;
   height: auto;
@@ -11,11 +12,11 @@
     width: 100%;
   }
 }
+.card-wrapper .price {
+  min-height: 43px;
+}
 .card-wrapper .price__sale + .price__regular {
   padding-top: 0;
-}
-.card-wrapper .price__regular {
-  padding-top: 24px;
 }
 .card-wrapper .card__inner {
   position: relative;
@@ -121,7 +122,7 @@
   }
 }
 .card-wrapper .card__content .card__information-wrapper .information-content {
-  min-height: 60px;
+  min-height: 94px;
   width: 220px;
 }
 @media screen and (max-width: 991px) {
@@ -131,12 +132,13 @@
 }
 @media screen and (max-width: 767px) {
   .card-wrapper .card__content .card__information-wrapper .information-content {
-    min-height: 38px;
+    min-height: 58px;
   }
 }
 .card-wrapper .card__content .card__information-wrapper .information-content .title a {
   max-width: 100%;
   width: max-content;
+  height: 66px;
   font-family: "futura", suns-serif;
   font-weight: 500;
   font-size: 22px;
@@ -144,10 +146,16 @@
   color: #2A3241;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* количество строк */
 }
 @media screen and (max-width: 767px) {
   .card-wrapper .card__content .card__information-wrapper .information-content .title a {
+    height: 40px;
     font-size: 16px;
     line-height: 1.25;
   }
