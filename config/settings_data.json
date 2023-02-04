@@ -60,6 +60,7 @@
           },
           "46c775f7-6807-48df-a06d-1788de651e20": {
             "type": "message",
+            "disabled": true,
             "settings": {
               "text": "<p><strong>Free Shipping on Orders $55+<\/strong><\/p>"
             }
