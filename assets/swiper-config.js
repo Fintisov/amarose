@@ -68,7 +68,7 @@ try {
 
 
     autoplay: {
-      delay: 3000,
+      delay: 1500,
       pauseOnMouseEnter: true,
       disableOnInteraction: false,
     },
