@@ -55,7 +55,7 @@
           "aec08000-edd6-41a8-95ad-ae6375f2e079": {
             "type": "message",
             "settings": {
-              "text": "<p><strong>VALENTINES DAY SALE<\/strong><\/p>"
+              "text": "<p><strong>VALENTINES DAY SALE | SPEND $50, GET $10 OFF<br\/>SPEND $100, GET $20 OFF<\/strong><\/p>"
             }
           },
           "46c775f7-6807-48df-a06d-1788de651e20": {
@@ -64,18 +64,11 @@
             "settings": {
               "text": "<p><strong>Free Shipping on Orders $55+<\/strong><\/p>"
             }
-          },
-          "c63890f5-069d-408e-bde3-b87d9c36f0aa": {
-            "type": "message",
-            "settings": {
-              "text": "<p><strong> SPEND $50, GET $10 OFF<br\/>SPEND $100, GET $20 OFF<\/strong><\/p>"
-            }
           }
         },
         "block_order": [
           "aec08000-edd6-41a8-95ad-ae6375f2e079",
-          "46c775f7-6807-48df-a06d-1788de651e20",
-          "c63890f5-069d-408e-bde3-b87d9c36f0aa"
+          "46c775f7-6807-48df-a06d-1788de651e20"
         ],
         "settings": {
           "timer": "",
