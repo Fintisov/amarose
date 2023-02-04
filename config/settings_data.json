@@ -55,7 +55,7 @@
           "aec08000-edd6-41a8-95ad-ae6375f2e079": {
             "type": "message",
             "settings": {
-              "text": "<p><strong>VALENTINES DAY SALE <\/strong>💖<strong> SPEND $50, GET $10 OFF <\/strong><\/p>"
+              "text": "<p><strong>VALENTINES DAY SALE <\/strong>💖<strong> <\/strong><\/p>"
             }
           },
           "46c775f7-6807-48df-a06d-1788de651e20": {
@@ -68,7 +68,7 @@
           "7c238a5f-ad43-4647-acf0-a8f0fbc56f64": {
             "type": "message",
             "settings": {
-              "text": "<p><strong>VALENTINES DAY SALE <\/strong>💖 <strong>SPEND $100, GET $20 OFF <\/strong><\/p>"
+              "text": "<p><strong>SPEND $50, GET $10 OFF <\/strong><\/p>"
             }
           }
         },
