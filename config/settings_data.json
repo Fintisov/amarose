@@ -64,11 +64,18 @@
             "settings": {
               "text": "<p><strong>Free Shipping on Orders $55+<\/strong><\/p>"
             }
+          },
+          "7c238a5f-ad43-4647-acf0-a8f0fbc56f64": {
+            "type": "message",
+            "settings": {
+              "text": "<p><strong>SPEND $100, GET $20 OFF <\/strong><\/p>"
+            }
           }
         },
         "block_order": [
           "aec08000-edd6-41a8-95ad-ae6375f2e079",
-          "46c775f7-6807-48df-a06d-1788de651e20"
+          "46c775f7-6807-48df-a06d-1788de651e20",
+          "7c238a5f-ad43-4647-acf0-a8f0fbc56f64"
         ],
         "settings": {
           "timer": "",
