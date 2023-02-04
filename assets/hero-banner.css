@@ -108,7 +108,7 @@
 }
 @media screen and (max-width: 991px) {
   .hero-banner__content .hero-banner__title {
-    font-size: 34px;
+    font-size: 25px;
   }
 }
 .hero-banner__content .hero-banner__description p {
@@ -118,6 +118,11 @@
   line-height: 1.5;
   color: #2A3241;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 767px) {
+  .hero-banner__content .hero-banner__description p {
+    font-size: 16px;
+  }
 }
 .hero-banner__content .button {
   min-height: 56px;
