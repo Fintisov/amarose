@@ -130,6 +130,9 @@
     @include max-screen(767) {
       font-size: 12px;
     }
+    @include max-screen(576) {
+      font-size: 10px;
+    }
 
     @include max-screen(414) {
       font-size: 9px;
