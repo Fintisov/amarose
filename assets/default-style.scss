@@ -301,8 +301,8 @@ button {
   }
 
   &.button-icon {
-    padding: 7.5px 32px;
-    font-size: 22px;
+    padding: 7.5px 31px;
+    font-size: 14px;
     line-height: 1.5;
 
     @include max-screen(767) {
@@ -914,7 +914,7 @@ button {
 .link-arrow {
   display: flex;
   font-family: $futura;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   align-items: center;
   color: $rose;
