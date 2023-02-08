@@ -29,7 +29,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 50px 40px;
+  gap: 50px 170px;
 }
 @media screen and (max-width: 575px) {
   .partners .partners__logo-wrapper {
@@ -40,7 +40,7 @@
   display: block;
   max-width: 100%;
   width: auto;
-  height: 50px;
+  height: 25px;
   object-fit: contain;
   object-position: center;
 }

@@ -289,8 +289,8 @@ button {
   fill: #5E697E;
 }
 .button.button-icon {
-  padding: 7.5px 32px;
-  font-size: 22px;
+  padding: 7.5px 31px;
+  font-size: 14px;
   line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
@@ -814,7 +814,7 @@ button {
 .link-arrow {
   display: flex;
   font-family: "futura", suns-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   align-items: center;
   color: #BA3A7D;

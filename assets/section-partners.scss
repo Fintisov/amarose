@@ -33,7 +33,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px 40px;
+    gap: 50px 170px;
     @include max-screen(575) {
       gap: 20px 30px;
     }
@@ -43,7 +43,7 @@
       display: block;
       max-width: 100%;
       width: auto;
-      height: 50px;
+      height: 25px;
       object-fit: contain;
       object-position: center;
 
