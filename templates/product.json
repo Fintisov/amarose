@@ -436,6 +436,26 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1676403180670f0e5d": {
+      "type": "apps",
+      "blocks": {
+        "f23fc560-2a48-4c68-ad34-cc617b1bb742": {
+          "type": "shopify:\/\/apps\/rebuy-personalization-engine\/blocks\/rebuy-widget\/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "74752",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "f23fc560-2a48-4c68-ad34-cc617b1bb742"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -455,6 +475,7 @@
     "judgeme_section_review_widget_2133",
     "product-recommendations",
     "zp-product-footer-content",
-    "167639288052f03b08"
+    "167639288052f03b08",
+    "1676403180670f0e5d"
   ]
 }
