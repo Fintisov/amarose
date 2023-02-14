@@ -491,11 +491,6 @@
         "padding_bottom": 28
       }
     },
-    "zp-product-footer-content": {
-      "type": "product-footer-content-zipifypages",
-      "settings": {
-      }
-    },
     "1676391943905722c5": {
       "type": "apps",
       "blocks": {
@@ -514,6 +509,11 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {
       }
     }
   },
@@ -537,7 +537,7 @@
     "e2c5df6b-073d-4717-b0db-cb9324023a39",
     "judgeme_section_review_widget_2133",
     "product-recommendations",
-    "zp-product-footer-content",
-    "1676391943905722c5"
+    "1676391943905722c5",
+    "zp-product-footer-content"
   ]
 }
