@@ -62,13 +62,13 @@
             "type": "message",
             "disabled": true,
             "settings": {
-              "text": "<p><strong>Free Shipping on Orders $55+<\/strong><\/p>"
+              "text": "<p><strong>SAVE 15% FOR INTERNATIONAL WOMENS DAY <\/strong>💖<\/p>"
             }
           },
           "7c238a5f-ad43-4647-acf0-a8f0fbc56f64": {
             "type": "message",
             "settings": {
-              "text": "<p><strong>TRY IT NOW WITH OUR 30-DAY MONEY-BACK GUARANTEE!<\/strong><\/p>"
+              "text": "<p><strong>TRY IT NOW WITH OUR 30-DAY MONEY-BACK GUARANTEE<\/strong><\/p>"
             }
           }
         },
